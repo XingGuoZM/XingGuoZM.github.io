@@ -14,7 +14,7 @@ export default function CompanyInfo(props) {
   return <div className="swiper">
     <div className="swiper-wrapper">
       {props.company.map(item => (
-        <div className="swiper-slide" key={item.value}>
+        <div className="swiper-slide" key={item.name}>
           <div className="companyCell">
             <div>{item.name}</div>
             <div>{item.addr}</div>

@@ -6,8 +6,6 @@
 .user-item-wrap {
   background-color:#3Eb575;
   border-radius:5px;
-  display:flex;
-  flex-wrap: wrap;
 }
 .user-item{
   height:60;
