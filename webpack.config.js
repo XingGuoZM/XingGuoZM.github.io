@@ -1,6 +1,6 @@
 const path = require('path');
-// const htmlWebpackPlugin = require('html-webpack-plugin');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const htmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -29,7 +29,13 @@ module.exports = {
       }
     ]
   },
-  plugins: [],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new htmlWebpackPlugin({
+      title: 'webpack-react',
+      templateContent: `<html><body><div id='root'></div></body></html>`
+    })
+  ],
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"]
   },

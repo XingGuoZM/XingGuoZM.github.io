@@ -1,0 +1,27 @@
+.swiper {
+  width: 7rem;
+  color:#fff;
+  overflow: hidden;
+  display: flex;
+  margin-top:0.2rem;
+  margin-left:0.25rem;
+  margin-right:0.25rem;
+  border-radius:10px;
+}
+
+.swiper-wrapper {
+  height: 300;
+  display: flex;
+}
+.swiper-slide {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.companyCell {
+  width:100%;
+  background-color: #3Eb575;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

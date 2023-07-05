@@ -1,0 +1,27 @@
+.user-wrap{
+  width:7rem;
+  margin-left:0.25rem;
+  margin-right:0.25rem;
+}
+.user-item-wrap {
+  background-color:#3Eb575;
+  border-radius:5px;
+  display:flex;
+  flex-wrap: wrap;
+}
+.user-item{
+  height:60;
+  display:flex;
+  align-items: center;
+  font-size:26;
+  margin-left:0.2rem;
+}
+
+.user-label{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.user-value{
+  
+}

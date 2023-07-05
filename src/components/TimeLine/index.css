@@ -1,0 +1,32 @@
+.timeLineDemo {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+/* .timeLineListWrap {
+  width: 300;
+  height: 500;
+  overflow-y: scroll;
+} */
+.timeLineList {
+  margin-left:0.25rem;
+  margin-right:0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.timeLineItemWrap {
+  display: flex;
+}
+.timeLineItemBar {
+  border-radius: 10;
+  background-color: #ebeef5;
+}
+.timeLineItemBarInner {
+  border-radius: 0.1rem;
+  background-color: gray;
+}
+.timeLineItem {
+  margin-left:-0.15rem;
+  position: relative;
+  display: flex;
+}

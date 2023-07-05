@@ -1,0 +1,23 @@
+.page-header {
+  position: relative;
+  width: 100%;
+}
+.page-header-bg {
+  width: 100%;
+  opacity: 0;
+}
+.page-header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.page-header-content-wrap {
+  width: 100%;
+}
+.page-header-content {
+  width:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
