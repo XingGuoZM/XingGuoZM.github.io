@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-import useStageProgress from "../../hooks/useProgressStage";
+// import useStageProgress from "../../hooks/useProgressStage";
 import Progress from "../Progress";
 import { DirectionEnum } from "../../constant";
 
 import ProjectNode from './ProjectNode';
-import "./index.css";
+import "./index.less";
 import { IProject } from "../../data";
 interface IProps {
   project: IProject[]

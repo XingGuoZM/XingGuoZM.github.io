@@ -506,7 +506,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Progress__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Progress */ "./src/components/Progress/index.tsx");
 /* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constant */ "./src/constant/index.ts");
 /* harmony import */ var _ProjectNode__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProjectNode */ "./src/components/ProjectInfo/ProjectNode/index.tsx");
-/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.css */ "./src/components/ProjectInfo/index.css");
+/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.less */ "./src/components/ProjectInfo/index.less");
+ // import useStageProgress from "../../hooks/useProgressStage";
 
 
 
@@ -1539,10 +1540,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".project {\n  display: flex;\n}\n.proj
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/ProjectInfo/index.css":
-/*!***************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/ProjectInfo/index.css ***!
-  \***************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/ProjectInfo/index.less":
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/ProjectInfo/index.less ***!
+  \****************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1558,7 +1559,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".projectInfo {\n  margin-top: 0.4rem;\n  display: flex;\n  align-items: center;\n}\n.projectList {\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  display: flex;\n  flex-direction: column;\n}\n.projectItemWrap {\n  display: flex;\n}\n.projectItemBar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.projectItemBarInner {\n  border-radius: 0.1rem;\n  background-color: #3Eb575;\n}\n.projectItem {\n  margin-left: -0.2rem;\n  position: relative;\n  display: flex;\n}\n", "",{"version":3,"sources":["webpack://./src/components/ProjectInfo/index.css"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,aAAA;EACA,mBAAA;AACF;AACA;EACE,oBAAA;EACA,qBAAA;EACA,aAAA;EACA,sBAAA;AACF;AACA;EACE,aAAA;AACF;AACA;EACE,qBAAA;EACA,yBAAA;AACF;AACA;EACE,qBAAA;EACA,yBAAA;AACF;AACA;EACE,oBAAA;EACA,kBAAA;EACA,aAAA;AACF","sourcesContent":[".projectInfo {\n  margin-top: 0.4rem;\n  display: flex;\n  align-items: center;\n}\n.projectList {\n  margin-left:0.25rem;\n  margin-right:0.25rem;\n  display: flex;\n  flex-direction: column;\n}\n.projectItemWrap {\n  display: flex;\n}\n.projectItemBar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.projectItemBarInner {\n  border-radius: 0.1rem;\n  background-color: #3Eb575;\n}\n.projectItem {\n  margin-left:-0.2rem;\n  position: relative;\n  display: flex;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".projectInfo {\n  width: 7rem;\n  margin-top: 0.4rem;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  display: flex;\n  align-items: center;\n}\n.projectList {\n  display: flex;\n  flex-direction: column;\n}\n.projectItemWrap {\n  width: 100%;\n  display: flex;\n}\n.projectItemBar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.projectItemBarInner {\n  border-radius: 0.1rem;\n  background-color: #3Eb575;\n}\n.projectItem {\n  margin-left: -0.14rem;\n  position: relative;\n  display: flex;\n}\n", "",{"version":3,"sources":["webpack://./src/components/ProjectInfo/index.less"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,kBAAA;EACA,oBAAA;EACA,qBAAA;EACA,aAAA;EACA,mBAAA;AACF;AACA;EACE,aAAA;EACA,sBAAA;AACF;AACA;EACE,WAAA;EACA,aAAA;AACF;AACA;EACE,qBAAA;EACA,yBAAA;AACF;AACA;EACE,qBAAA;EACA,yBAAA;AACF;AACA;EACE,qBAAA;EACA,kBAAA;EACA,aAAA;AACF","sourcesContent":[".projectInfo {\n  width: 7rem;\n  margin-top: 0.4rem;\n  margin-left:0.25rem;\n  margin-right:0.25rem;\n  display: flex;\n  align-items: center;\n}\n.projectList {\n  display: flex;\n  flex-direction: column;\n}\n.projectItemWrap {\n  width:100%;\n  display: flex;\n}\n.projectItemBar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.projectItemBarInner {\n  border-radius: 0.1rem;\n  background-color: #3Eb575;\n}\n.projectItem {\n  margin-left:-0.14rem;\n  position: relative;\n  display: flex;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1878,10 +1879,10 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./src/components/ProjectInfo/index.css":
-/*!**********************************************!*\
-  !*** ./src/components/ProjectInfo/index.css ***!
-  \**********************************************/
+/***/ "./src/components/ProjectInfo/index.less":
+/*!***********************************************!*\
+  !*** ./src/components/ProjectInfo/index.less ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1890,7 +1891,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/less-loader/dist/cjs.js!./index.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/ProjectInfo/index.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_index_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/less-loader/dist/cjs.js!./index.less */ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/ProjectInfo/index.less");
 
             
 
@@ -1899,11 +1900,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_index_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_index_less__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_index_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_index_less__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
