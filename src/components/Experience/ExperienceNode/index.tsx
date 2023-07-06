@@ -1,16 +1,16 @@
 import React from "react";
 import { IStage } from "../../../types";
-import "./index.css";
+import "./index.less";
 
-export default function Pending(props: IStage) {
+export default function Experience(props: IStage) {
   const { time, name, job } = props;
 
   return (
-    <div className="pendingStep">
-      <div className='pendingStepDot' />
-      <div className="pendingStepImage">{time}</div>
-      <div className='pendingStepDesc'>{name}</div>
-      {job && <div className='pendingStepJob'>{job}</div>}
+    <div className="experience-wrap">
+      <div className='experience-dot' />
+      <div className="experience-time">{time}</div>
+      <div className='experience-name'>{name}</div>
+      {job && <div className='experience-job'>{job}</div>}
     </div>
   );
 }

@@ -2,17 +2,21 @@ import React from "react";
 import { IProject } from '../../../data';
 import "./index.css";
 
-export default function ProjectNode({ projectName, projectTime, projectRole, desc, resultList }: IProject) {
+export default function ProjectNode({ projectName, projectTime, projectRole, situation, task, action, resultList }: IProject) {
   return (
-    <div className="done">
-      <div className="doneIcon" />
-      <div className="doneContent">
-        <div className='doneTitle'>
-          <div className='projectName'>{projectName}</div>
-          <div className='projectTime'>{projectTime}｜{projectRole}</div>
+    <div className="project">
+      <div className="project-icon" />
+      <div className="project-content">
+        <div className='project-title'>
+          <div className='project-name'>{projectName}</div>
+          <div className='project-time'>{projectTime}｜{projectRole}</div>
         </div>
-        <div className="doneDesc">{desc}</div>
-        {resultList?.map(item => <div className="doneResult" key={item}>{item}</div>)}
+        <div>
+          <div className='project-desc'>{situation}</div>
+          <div className='project-desc'>{task}</div>
+          <div className='project-desc'>{action}</div>
+        </div>
+        {resultList?.map(item => <div className="project-result" key={item}>{item}</div>)}
       </div>
     </div>
   );

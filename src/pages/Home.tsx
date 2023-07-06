@@ -2,7 +2,7 @@ import React, { useRef, useMemo } from 'react';
 import Header from '../components/PageHeader';
 import UserInfo from '../components/UserInfo';
 import Experience from '../components/Experience';
-import CompanyInfo from '../components/CompanyInfo';
+import Expert from '../components/Expert';
 import ProjectInfo from '../components/ProjectInfo';
 import Footer from '../components/Footer';
 import { data } from '../data';
@@ -22,8 +22,8 @@ export default function Home() {
     </Header>
     <div style={{ marginTop: `${getRpx2px(headerNormalHeight)}px` }}>
       <UserInfo user={data.user} />
-      <CompanyInfo company={data.expert} />
-      <Experience />
+      <Expert data={data.expert} />
+      <Experience data={data.experience} />
       <ProjectInfo project={data.project} />
       <Footer />
     </div>

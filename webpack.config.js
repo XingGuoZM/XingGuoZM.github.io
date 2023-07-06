@@ -24,8 +24,19 @@ module.exports = {
         options: { presets: ["@babel/preset-env"] }
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        test: /\.(svg|png|jpe?g|gif|woff2?|eot|ttf|otf)(\?.*)?$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(css|less)$/,
+        use: ["style-loader", "css-loader", "less-loader"]
       }
     ]
   },

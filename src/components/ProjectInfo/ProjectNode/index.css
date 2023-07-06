@@ -1,27 +1,27 @@
-.done {
+.project {
   display: flex;
 }
-.doneIcon {
+.project-icon {
   width: 20;
   height: 20;
   background-color: #3Eb575;
   border-radius: 50%;
 }
-.doneContent {
+.project-content {
   width: 6.4rem;
   margin-left: 10;
   margin-top: -10;
   margin-bottom: 20;
   padding:20;
   background-color: #3Eb575;
-  border-radius:10px;
+  border-radius:0.1rem;
   color:#fff;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.doneContent::before {
+.project-content::before {
   content: "";
   width: 0;
   height: 0;
@@ -35,23 +35,25 @@
   top: 10;
 }
 
-.doneTitle{
+.project-title{
   height:1rem;
   display:flex;
   flex-direction: column;
   justify-content: center;
 }
-.projectName{
+.project-name{
   font-size:0.3rem;
   font-weight: bolder;
 }
-.projectTime{
+.project-time{
   font-size:0.25rem;
 }
-.doneDesc{
-  display:flex;
+
+.project-desc{
+  text-indent: 0.5rem;
+  font-size:0.2rem;
 }
-.doneResult{
+.project-result{
   display:flex;
   flex-direction: row;
 }

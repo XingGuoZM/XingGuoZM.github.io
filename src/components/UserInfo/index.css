@@ -5,7 +5,7 @@
 }
 .user-item-wrap {
   background-color:#3Eb575;
-  border-radius:5px;
+  border-radius:0.1rem;
 }
 .user-item{
   height:60;

@@ -15,11 +15,11 @@
   position: relative;
 }
 .experienceBar {
-  border-radius: 10px;
+  border-radius: 0.01rem;
   background-color: #ebeef5;
 }
 .experienceBarInner {
-  height: 10px;
-  border-radius: 10px;
+  height: 0.1rem;
+  border-radius:0.05rem;
   background-color: #3Eb575;
 }

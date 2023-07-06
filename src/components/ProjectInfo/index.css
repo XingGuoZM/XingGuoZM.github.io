@@ -13,7 +13,7 @@
   display: flex;
 }
 .projectItemBar {
-  border-radius: 10;
+  border-radius: 0.1rem;
   background-color: #ebeef5;
 }
 .projectItemBarInner {
