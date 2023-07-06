@@ -11,11 +11,9 @@ export default function ProjectNode({ projectName, projectTime, projectRole, sit
           <div className='project-name'>{projectName}</div>
           <div className='project-time'>{projectTime}｜{projectRole}</div>
         </div>
-        <div>
-          <div className='project-desc'>{situation}</div>
-          <div className='project-desc'>{task}</div>
-          <div className='project-desc'>{action}</div>
-        </div>
+        <div className='project-desc'>{situation}</div>
+        <div className='project-desc'>{task}</div>
+        <div className='project-desc'>{action}</div>
         {resultList?.map(item => <div className="project-result" key={item}>{item}</div>)}
       </div>
     </div>

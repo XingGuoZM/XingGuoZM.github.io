@@ -12,7 +12,7 @@ interface IProps {
 
 export default function ProjectInfo({ project }: IProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const strokeList = new Array(project.length).fill("10px");
+  const strokeList = new Array(project.length).fill("0.1rem");
 
   return (
     <div className="project-list-wrap">
