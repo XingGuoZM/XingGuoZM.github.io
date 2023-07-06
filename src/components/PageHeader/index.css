@@ -5,6 +5,8 @@
 .page-header-bg {
   width: 100%;
   opacity: 0;
+  background-color:var(--theme-color);
+  color:#fff;
 }
 .page-header-fixed {
   position: fixed;
@@ -14,6 +16,7 @@
 }
 .page-header-content-wrap {
   width: 100%;
+  z-index: 2;
 }
 .page-header-content {
   width:100%;

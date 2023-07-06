@@ -1,10 +1,8 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import classnames from "classnames";
 import { navbarHeight, getRpx2px } from "../../utils";
 import "./index.css";
 import useEventListener from "../../hooks/useEventListener";
-
-const backgroundColor = "#fff";
 
 export default function HeaderBg ({ scroller }) {
   const [fullFixed, setFullFixed] = useState(false);
@@ -26,13 +24,15 @@ export default function HeaderBg ({ scroller }) {
       setFullFixed(false);
     }
   }, scroller);
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent('fullFixed', { detail: { fullFixed } }))
+  }, [fullFixed])
 
   return (
     <div
       className={classnames("page-header-bg", "page-header-fixed")}
       style={{
         height: `${getRpx2px(headerNormalHeight)}px`,
-        backgroundColor,
         opacity
       }}
     />

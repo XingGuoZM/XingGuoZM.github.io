@@ -35,7 +35,6 @@ export default function Home() {
           <div>{data.headTitle}</div>
           <div className='home-setting' onClick={() => openSettingModal()}>设置</div>
         </div>
-
       </Header>
       <div style={{ marginTop: `${getRpx2px(headerNormalHeight)}px` }}>
         <UserInfo user={data.user} />
