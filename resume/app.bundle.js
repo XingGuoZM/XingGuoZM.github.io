@@ -15,7 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/Home */ "./src/pages/Home.tsx");
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.css */ "./src/App.css");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils */ "./src/utils/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils */ "./src/utils/index.ts");
 
 
 
@@ -256,7 +256,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils */ "./src/utils/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils */ "./src/utils/index.ts");
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.css */ "./src/components/PageHeader/index.css");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -298,7 +298,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils */ "./src/utils/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils */ "./src/utils/index.ts");
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.css */ "./src/components/PageHeader/index.css");
 /* harmony import */ var _hooks_useEventListener__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/useEventListener */ "./src/hooks/useEventListener.ts");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -788,7 +788,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_getTargetElement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/getTargetElement */ "./src/utils/getTargetElement.js");
+/* harmony import */ var _utils_getTargetElement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/getTargetElement */ "./src/utils/getTargetElement.ts");
 
 
 
@@ -1039,7 +1039,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ProjectInfo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ProjectInfo */ "./src/components/ProjectInfo/index.tsx");
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Footer */ "./src/components/Footer/index.tsx");
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../data */ "./src/data/index.ts");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils */ "./src/utils/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils */ "./src/utils/index.ts");
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Home.css */ "./src/pages/Home.css");
 
 
@@ -1085,9 +1085,9 @@ function Home() {
 
 /***/ }),
 
-/***/ "./src/utils/getTargetElement.js":
+/***/ "./src/utils/getTargetElement.ts":
 /*!***************************************!*\
-  !*** ./src/utils/getTargetElement.js ***!
+  !*** ./src/utils/getTargetElement.ts ***!
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1113,9 +1113,9 @@ function getTargetElement(target, defaultElement) {
 
 /***/ }),
 
-/***/ "./src/utils/index.js":
+/***/ "./src/utils/index.ts":
 /*!****************************!*\
-  !*** ./src/utils/index.js ***!
+  !*** ./src/utils/index.ts ***!
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1610,7 +1610,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n  /* font-family: 'dakai';\n  src :url('../assets/font.woff2'); */\n}\n.home {\n  width: 100%;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: scroll;\n}\n.home-header {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 32;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Home.css"],"names":[],"mappings":"AACA;EAAE;qCACmC;AACrC;AAEA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,kBAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;EACA,aAAA;AAAF","sourcesContent":["\n@font-face{\n  /* font-family: 'dakai';\n  src :url('../assets/font.woff2'); */\n}\n.home{\n  width:100%;\n  height:100%;\n  overflow-x:hidden;\n  overflow-y:scroll;\n}\n.home-header{\n  width:100%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 32;\n  \n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* @font-face{\n  font-family: 'dakai';\n  src :url('../assets/font.woff2');\n} */\n.home {\n  width: 100%;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: scroll;\n}\n.home-header {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 32;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Home.css"],"names":[],"mappings":"AAAA;;;GAGG;AAEH;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,kBAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;EACA,aAAA;AAAF","sourcesContent":["\n/* @font-face{\n  font-family: 'dakai';\n  src :url('../assets/font.woff2');\n} */\n.home{\n  width:100%;\n  height:100%;\n  overflow-x:hidden;\n  overflow-y:scroll;\n}\n.home-header{\n  width:100%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 32;\n  \n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
