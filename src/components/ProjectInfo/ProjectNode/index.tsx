@@ -1,6 +1,6 @@
 import React from "react";
 import { IProject } from '../../../data';
-import "./index.css";
+import "./index.less";
 
 export default function ProjectNode({ projectName, projectTime, projectRole, situation, task, action, resultList }: IProject) {
   return (

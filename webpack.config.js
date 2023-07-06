@@ -1,6 +1,7 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const resolve = dir => path.resolve(__dirname, dir);
 
 module.exports = {
   entry: {
@@ -48,6 +49,9 @@ module.exports = {
     })
   ],
   resolve: {
+    alias: {
+      "@": resolve('src')
+    },
     extensions: [".js", ".jsx", ".ts", ".tsx"]
   },
   optimization: {

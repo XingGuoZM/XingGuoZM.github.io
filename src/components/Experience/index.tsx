@@ -3,7 +3,7 @@ import useStageProgress from "../../hooks/useProgressStage";
 import Progress from "../../components/Progress";
 import useElementScroll from "../../hooks/useElementScroll";
 import ExperienceNode from './ExperienceNode';
-import "./index.css";
+import "./index.less";
 import { IStage } from "../../types";
 
 export default function Experience({ data }) {

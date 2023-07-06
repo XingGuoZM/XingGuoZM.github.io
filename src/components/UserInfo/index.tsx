@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../Card';
-import './index.css';
+import './index.less';
 
 export default function UserInfo(props) {
 

@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css/pagination";
 import "swiper/css"
 
-import './index.css';
+import './index.less';
 
 export default function Expert({ data }) {
 
