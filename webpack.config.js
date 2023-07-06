@@ -8,7 +8,7 @@ module.exports = {
     vendor: ['react', 'react-dom']
   },
   devServer: {
-    contentBase: path.join(__dirname, '/public'),
+    contentBase: path.join(__dirname, '/resume'),
     compress: true,
     host: '0.0.0.0',
     port: 8000
@@ -57,6 +57,6 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: __dirname + '/public'
+    path: __dirname + '/resume'
   }
 }

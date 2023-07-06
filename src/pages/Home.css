@@ -1,14 +1,13 @@
 
 @font-face{
-  font-family: 'dakai';
-  src : url('../assets/font.woff2');
+  /* font-family: 'dakai';
+  src :url('../assets/font.woff2'); */
 }
 .home{
   width:100%;
   height:100%;
   overflow-x:hidden;
   overflow-y:scroll;
-  font-family: 'dakai';
 }
 .home-header{
   width:100%;
