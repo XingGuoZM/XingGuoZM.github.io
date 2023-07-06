@@ -1,0 +1,48 @@
+.pendingStep {
+  position: absolute;
+  top: -0.5rem;
+}
+.pendingStepDot{
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #3Eb575;
+  color:#fff;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.26rem;
+  border-radius: 50%;
+  margin-top:0.25rem;
+}
+.pendingStepImage {
+  position:absolute;
+  top:-0.1rem;
+  font-weight: bolder;
+}
+.pendingStepText {
+  text-align: center;
+  white-space: nowrap;
+}
+.pendingStepDesc{
+  width:5rem;
+  position:absolute;
+  left:0.25rem;
+  top:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:0.26rem;
+  font-weight: bolder;
+}
+.pendingStepJob{
+  width:5rem;
+  position:absolute;
+  left:0.25rem;
+  top:-10%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:0.26rem;
+  font-weight: bolder;
+}

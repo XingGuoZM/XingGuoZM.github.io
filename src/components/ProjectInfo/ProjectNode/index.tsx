@@ -1,8 +1,8 @@
 import React from "react";
-import { IStage } from "../../../types";
+import { IProject } from '../../../data';
 import "./index.css";
 
-export default function Done({ projectName, projectTime, projectRole, desc, resultList }: IStage) {
+export default function ProjectNode({ projectName, projectTime, projectRole, desc, resultList }: IProject) {
   return (
     <div className="done">
       <div className="doneIcon" />

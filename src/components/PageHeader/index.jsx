@@ -5,7 +5,7 @@ import "./index.css";
 
 export default function PageHeader ({ children, scroller }) {
   return (
-    <div className={["page-header"]}>
+    <div className="page-header">
       <HeaderBg scroller={scroller} />
       <Content>{children}</Content>
     </div>

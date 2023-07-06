@@ -1,32 +1,27 @@
-.timeLineDemo {
+.projectInfo {
   margin-top: 0.4rem;
   display: flex;
   align-items: center;
 }
-/* .timeLineListWrap {
-  width: 300;
-  height: 500;
-  overflow-y: scroll;
-} */
-.timeLineList {
+.projectList {
   margin-left:0.25rem;
   margin-right:0.25rem;
   display: flex;
   flex-direction: column;
 }
-.timeLineItemWrap {
+.projectItemWrap {
   display: flex;
 }
-.timeLineItemBar {
+.projectItemBar {
   border-radius: 10;
   background-color: #ebeef5;
 }
-.timeLineItemBarInner {
+.projectItemBarInner {
   border-radius: 0.1rem;
-  background-color: gray;
+  background-color: #3Eb575;
 }
-.timeLineItem {
-  margin-left:-0.15rem;
+.projectItem {
+  margin-left:-0.14rem;
   position: relative;
   display: flex;
 }

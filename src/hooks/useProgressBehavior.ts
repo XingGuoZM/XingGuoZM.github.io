@@ -1,4 +1,4 @@
-import { useCallback, useMemo, ReactNode, useEffect } from "react";
+import { useMemo, ReactNode, useEffect } from "react";
 import { DirectionEnum } from "../constant";
 
 export interface IProps {
