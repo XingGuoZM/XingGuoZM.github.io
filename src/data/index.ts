@@ -28,6 +28,7 @@ export interface data {
 
 export const data = {
   headTitle: '个人简历',
+  theme: ['#ff6a00', '#3Eb575', '#1479d7', '#121212'],
   user: [
     { label: '基本信息', value: '李志铭 | 1995 | 男' },
     { label: '联系方式', value: '18969176324' },

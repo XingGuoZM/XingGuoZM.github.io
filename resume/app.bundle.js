@@ -540,6 +540,237 @@ function ProjectInfo(_ref) {
 
 /***/ }),
 
+/***/ "./src/components/PromisifyModal/SettingModal/index.tsx":
+/*!**************************************************************!*\
+  !*** ./src/components/PromisifyModal/SettingModal/index.tsx ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SettingModal)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _assets_check_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/check.svg */ "./src/assets/check.svg");
+/* harmony import */ var _utils_setBodyStyleProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../utils/setBodyStyleProperty */ "./src/utils/setBodyStyleProperty.ts");
+/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.less */ "./src/components/PromisifyModal/SettingModal/index.less");
+/* harmony import */ var _PromisifyModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../PromisifyModal */ "./src/components/PromisifyModal/index.tsx");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+function SettingModal(_ref) {
+  var data = _ref.data;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(localStorage.getItem('--theme-color')),
+      _useState2 = _slicedToArray(_useState, 2),
+      theme = _useState2[0],
+      setTheme = _useState2[1];
+
+  var handleSetting = function handleSetting(item) {
+    (0,_utils_setBodyStyleProperty__WEBPACK_IMPORTED_MODULE_2__["default"])('--theme-color', item);
+    localStorage.setItem('--theme-color', item);
+    setTheme(item);
+  };
+
+  var handleComfirm = function handleComfirm() {
+    _PromisifyModal__WEBPACK_IMPORTED_MODULE_4__["default"].hide(SettingModal);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "setting-modal"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "setting-content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "setting-title"
+  }, "\u8BBE\u7F6E"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "setting-item"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "setting-label"
+  }, "\u4E3B\u9898\u6362\u80A4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "setting-value"
+  }, data.map(function (item) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "setting-value-item",
+      style: {
+        backgroundColor: item
+      },
+      onClick: function onClick() {
+        return handleSetting(item);
+      }
+    }, item === theme && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      src: _assets_check_svg__WEBPACK_IMPORTED_MODULE_1__["default"],
+      className: "setting-value-item-active"
+    }));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "setting-btn-wrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "setting-btn",
+    onClick: handleComfirm
+  }, "\u786E\u5B9A"))));
+}
+
+/***/ }),
+
+/***/ "./src/components/PromisifyModal/index.tsx":
+/*!*************************************************!*\
+  !*** ./src/components/PromisifyModal/index.tsx ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var symModalId = Symbol("ModalId");
+var initialState = {};
+var ModalContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(initialState);
+
+var reducer = function reducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  var _ref = action.payload || {},
+      id = _ref.id;
+
+  switch (action.type) {
+    case "show":
+      return _objectSpread(_objectSpread({}, state), {}, _defineProperty({}, id, _objectSpread({}, state[id])));
+
+    case "hide":
+      var newState = _objectSpread({}, state);
+
+      delete newState[id];
+      return newState;
+
+    default:
+      return state;
+  }
+};
+
+var showAction = function showAction(id) {
+  return {
+    type: "show",
+    payload: {
+      id: id
+    }
+  };
+};
+
+var hideAction = function hideAction(id) {
+  return {
+    type: "hide",
+    payload: {
+      id: id
+    }
+  };
+};
+
+var dispatch;
+var modalsCallback = {};
+var hideModalsCallback = {};
+var Store = new Map();
+var uidSeed = 0;
+
+var getModalId = function getModalId(modal) {
+  if (!modal[symModalId]) modal[symModalId] = "modal_".concat(uidSeed++);
+  return modal[symModalId];
+};
+
+function register(id, modal, props) {
+  Store.set(id, {
+    id: id,
+    Comp: function Comp() {
+      return modal(props);
+    }
+  });
+}
+
+var promisifyCallback = function promisifyCallback(callback, modalId) {
+  var theResolve, theReject;
+  var promise = new Promise(function (resolve, reject) {
+    theResolve = resolve;
+    theReject = reject;
+  });
+  callback[modalId] = {
+    resolve: theResolve,
+    reject: theReject,
+    promise: promise
+  };
+  return callback[modalId].promise;
+};
+
+function show(modal, props) {
+  var modalId = getModalId(modal);
+  register(modalId, modal, props);
+  dispatch(showAction(modalId, modal));
+  return promisifyCallback(modalsCallback, modalId);
+}
+
+function hide(modal) {
+  var modalId = getModalId(modal);
+  dispatch(hideAction(modalId, modal));
+  delete hideModalsCallback[modalId];
+  return promisifyCallback(hideModalsCallback, modalId);
+}
+
+function Provider(_ref2) {
+  var children = _ref2.children;
+  var arr = (0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(reducer, initialState);
+  var modalIds = Object.keys(arr[0]);
+  dispatch = arr[1];
+  var toRender = modalIds.map(function (id) {
+    return {
+      id: id,
+      Comp: Store.get(id).Comp
+    };
+  });
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    modalIds.forEach(function (id) {
+      return modalsCallback[id].resolve();
+    });
+  }, [modalIds]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ModalContext.Provider, {
+    value: arr[0]
+  }, children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "modals"
+  }, toRender.map(function (t) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(t.Comp, {
+      key: t.id
+    });
+  })));
+}
+
+var Modal = {
+  Provider: Provider,
+  show: show,
+  hide: hide
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Modal);
+
+/***/ }),
+
 /***/ "./src/components/UserInfo/index.tsx":
 /*!*******************************************!*\
   !*** ./src/components/UserInfo/index.tsx ***!
@@ -622,6 +853,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var data = {
   headTitle: '个人简历',
+  theme: ['#ff6a00', '#3Eb575', '#1479d7', '#121212'],
   user: [{
     label: '基本信息',
     value: '李志铭 | 1995 | 男'
@@ -1039,8 +1271,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ProjectInfo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ProjectInfo */ "./src/components/ProjectInfo/index.tsx");
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Footer */ "./src/components/Footer/index.tsx");
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../data */ "./src/data/index.ts");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils */ "./src/utils/index.ts");
-/* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Home.css */ "./src/pages/Home.css");
+/* harmony import */ var _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/PromisifyModal */ "./src/components/PromisifyModal/index.tsx");
+/* harmony import */ var _components_PromisifyModal_SettingModal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/PromisifyModal/SettingModal */ "./src/components/PromisifyModal/SettingModal/index.tsx");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../utils */ "./src/utils/index.ts");
+/* harmony import */ var _Home_less__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Home.less */ "./src/pages/Home.less");
+/* harmony import */ var _utils_setBodyStyleProperty__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../utils/setBodyStyleProperty */ "./src/utils/setBodyStyleProperty.ts");
+
+
+
 
 
 
@@ -1053,12 +1291,23 @@ __webpack_require__.r(__webpack_exports__);
 
 function Home() {
   var scroller = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  var statusBarHeight = _utils__WEBPACK_IMPORTED_MODULE_8__.navbarHeight.statusBarHeight,
-      navBarHeight = _utils__WEBPACK_IMPORTED_MODULE_8__.navbarHeight.navBarHeight;
+  var statusBarHeight = _utils__WEBPACK_IMPORTED_MODULE_10__.navbarHeight.statusBarHeight,
+      navBarHeight = _utils__WEBPACK_IMPORTED_MODULE_10__.navbarHeight.navBarHeight;
   var headerNormalHeight = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
     return statusBarHeight + navBarHeight;
   }, [navBarHeight, statusBarHeight]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+
+  var openSettingModal = function openSettingModal() {
+    _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_8__["default"].show(_components_PromisifyModal_SettingModal__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      data: _data__WEBPACK_IMPORTED_MODULE_7__.data.theme
+    });
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var theme = localStorage.getItem('--theme-color');
+    theme && (0,_utils_setBodyStyleProperty__WEBPACK_IMPORTED_MODULE_12__["default"])('--theme-color', theme);
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PromisifyModal__WEBPACK_IMPORTED_MODULE_8__["default"].Provider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "home",
     ref: scroller
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PageHeader__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1066,11 +1315,16 @@ function Home() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "home-header",
     style: {
-      height: "".concat((0,_utils__WEBPACK_IMPORTED_MODULE_8__.getRpx2px)(headerNormalHeight), "px")
+      height: "".concat((0,_utils__WEBPACK_IMPORTED_MODULE_10__.getRpx2px)(headerNormalHeight), "px")
     }
-  }, _data__WEBPACK_IMPORTED_MODULE_7__.data.headTitle)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, _data__WEBPACK_IMPORTED_MODULE_7__.data.headTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "home-setting",
+    onClick: function onClick() {
+      return openSettingModal();
+    }
+  }, "\u8BBE\u7F6E"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     style: {
-      marginTop: "".concat((0,_utils__WEBPACK_IMPORTED_MODULE_8__.getRpx2px)(headerNormalHeight), "px")
+      marginTop: "".concat((0,_utils__WEBPACK_IMPORTED_MODULE_10__.getRpx2px)(headerNormalHeight), "px")
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_UserInfo__WEBPACK_IMPORTED_MODULE_2__["default"], {
     user: _data__WEBPACK_IMPORTED_MODULE_7__.data.user
@@ -1080,7 +1334,7 @@ function Home() {
     data: _data__WEBPACK_IMPORTED_MODULE_7__.data.experience
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ProjectInfo__WEBPACK_IMPORTED_MODULE_5__["default"], {
     project: _data__WEBPACK_IMPORTED_MODULE_7__.data.project
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], null))));
 }
 
 /***/ }),
@@ -1305,6 +1559,22 @@ function viewport() {
 
 /***/ }),
 
+/***/ "./src/utils/setBodyStyleProperty.ts":
+/*!*******************************************!*\
+  !*** ./src/utils/setBodyStyleProperty.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ setBodyStyleProperty)
+/* harmony export */ });
+function setBodyStyleProperty(key, value) {
+  document.body.style.setProperty(key, value);
+}
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/App.css":
 /*!**************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/App.css ***!
@@ -1376,7 +1646,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".experience-wrap {\n  position: absolute;\n  top: -0.5rem;\n}\n.experience-dot {\n  width: 0.5rem;\n  height: 0.5rem;\n  background-color: #ff6a00;\n  color: #fff;\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  border-radius: 50%;\n  margin-top: 0.25rem;\n}\n.experience-time {\n  position: absolute;\n  top: -0.1rem;\n  font-weight: bolder;\n  font-size: 0.26rem;\n}\n.experience-name {\n  width: 5rem;\n  position: absolute;\n  left: 0.25rem;\n  top: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  font-weight: bolder;\n}\n.experience-job {\n  width: 5rem;\n  position: absolute;\n  left: 0.25rem;\n  top: -10%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  font-weight: bolder;\n}\n", "",{"version":3,"sources":["webpack://./src/components/Experience/ExperienceNode/index.less"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,YAAA;AADF;AAGA;EACE,aAAA;EACA,cAAA;EACA,yBAAA;EACA,WAAA;EACA,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,kBAAA;EACA,YAAA;EACA,mBAAA;EACA,kBAAA;AADF;AAGA;EACE,WAAA;EACA,kBAAA;EACA,aAAA;EACA,SAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,WAAA;EACA,kBAAA;EACA,aAAA;EACA,SAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AADF","sourcesContent":["@import \"~@/styles/index.less\";\n\n.experience-wrap {\n  position: absolute;\n  top: -0.5rem;\n}\n.experience-dot{\n  width: 0.5rem;\n  height: 0.5rem;\n  background-color: @theme-color;\n  color:#fff;\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  border-radius: 50%;\n  margin-top:0.25rem;\n}\n.experience-time {\n  position:absolute;\n  top:-0.1rem;\n  font-weight: bolder;\n  font-size:0.26rem;\n}\n.experience-name{\n  width:5rem;\n  position:absolute;\n  left:0.25rem;\n  top:100%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size:0.26rem;\n  font-weight: bolder;\n}\n.experience-job{\n  width:5rem;\n  position:absolute;\n  left:0.25rem;\n  top:-10%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size:0.26rem;\n  font-weight: bolder;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --theme-color: #3Eb575;\n}\n.experience-wrap {\n  position: absolute;\n  top: -0.5rem;\n}\n.experience-dot {\n  width: 0.3rem;\n  height: 0.3rem;\n  background-color: var(--theme-color);\n  color: #fff;\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  border-radius: 50%;\n  margin-top: 0.4rem;\n}\n.experience-time {\n  position: absolute;\n  top: -0.1rem;\n  font-weight: bolder;\n  font-size: 0.26rem;\n}\n.experience-name {\n  width: 5rem;\n  position: absolute;\n  left: 0.25rem;\n  top: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  font-weight: bolder;\n}\n.experience-job {\n  width: 5rem;\n  position: absolute;\n  left: 0.25rem;\n  top: -10%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  font-weight: bolder;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.less","webpack://./src/components/Experience/ExperienceNode/index.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF;AAAA;EACE,kBAAA;EACA,YAAA;AAEF;AAAA;EACE,aAAA;EACA,cAAA;EACA,oCAAA;EACA,WAAA;EACA,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,kBAAA;EACA,kBAAA;AAEF;AAAA;EACE,kBAAA;EACA,YAAA;EACA,mBAAA;EACA,kBAAA;AAEF;AAAA;EACE,WAAA;EACA,kBAAA;EACA,aAAA;EACA,SAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AAEF;AAAA;EACE,WAAA;EACA,kBAAA;EACA,aAAA;EACA,SAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AAEF","sourcesContent":[":root {\n  --theme-color: #3Eb575;\n}\n// @theme-color:#3Eb575; // #ff6a00;","@import \"~@/styles/index.less\";\n\n.experience-wrap {\n  position: absolute;\n  top: -0.5rem;\n}\n.experience-dot{\n  width: 0.3rem;\n  height: 0.3rem;\n  background-color: var(--theme-color);\n  color:#fff;\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  border-radius: 50%;\n  margin-top:0.4rem;\n}\n.experience-time {\n  position:absolute;\n  top:-0.1rem;\n  font-weight: bolder;\n  font-size:0.26rem;\n}\n.experience-name{\n  width:5rem;\n  position:absolute;\n  left:0.25rem;\n  top:100%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size:0.26rem;\n  font-weight: bolder;\n}\n.experience-job{\n  width:5rem;\n  position:absolute;\n  left:0.25rem;\n  top:-10%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size:0.26rem;\n  font-weight: bolder;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1402,7 +1672,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".experienceListWrap {\n  width: 7rem;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  overflow-x: scroll;\n}\n.experienceList {\n  width: 100%;\n  height: 2rem;\n  display: flex;\n  align-items: center;\n}\n.experienceWrap {\n  position: relative;\n}\n.experienceBar {\n  border-radius: 0.01rem;\n  background-color: #ebeef5;\n}\n.experienceBarInner {\n  height: 0.1rem;\n  border-radius: 0.05rem;\n  background-color: #ff6a00;\n}\n", "",{"version":3,"sources":["webpack://./src/components/Experience/index.less"],"names":[],"mappings":"AACA;EACE,WAAA;EACA,oBAAA;EACA,qBAAA;EACA,kBAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;AAAF;AAEA;EACE,kBAAA;AAAF;AAEA;EACE,sBAAA;EACA,yBAAA;AAAF;AAEA;EACE,cAAA;EACA,sBAAA;EACA,yBAAA;AAAF","sourcesContent":["@import '~@/styles/index.less';\n.experienceListWrap {\n  width: 7rem;\n  margin-left:0.25rem;\n  margin-right:0.25rem;\n  overflow-x: scroll;\n}\n.experienceList {\n  width:100%;\n  height:2rem;\n  display: flex;\n  align-items: center;\n}\n.experienceWrap {\n  position: relative;\n}\n.experienceBar {\n  border-radius: 0.01rem;\n  background-color: #ebeef5;\n}\n.experienceBarInner {\n  height: 0.1rem;\n  border-radius:0.05rem;\n  background-color: @theme-color;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --theme-color: #3Eb575;\n}\n.experienceListWrap {\n  width: 7rem;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  overflow-x: scroll;\n}\n.experienceList {\n  width: 100%;\n  height: 2rem;\n  display: flex;\n  align-items: center;\n}\n.experienceWrap {\n  position: relative;\n}\n.experienceBar {\n  border-radius: 0.01rem;\n  background-color: #ebeef5;\n}\n.experienceBarInner {\n  height: 0.1rem;\n  border-radius: 0.05rem;\n  background-color: var(--theme-color);\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.less","webpack://./src/components/Experience/index.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF;AADA;EACE,WAAA;EACA,oBAAA;EACA,qBAAA;EACA,kBAAA;AAGF;AADA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;AAGF;AADA;EACE,kBAAA;AAGF;AADA;EACE,sBAAA;EACA,yBAAA;AAGF;AADA;EACE,cAAA;EACA,sBAAA;EACA,oCAAA;AAGF","sourcesContent":[":root {\n  --theme-color: #3Eb575;\n}\n// @theme-color:#3Eb575; // #ff6a00;","@import '~@/styles/index.less';\n.experienceListWrap {\n  width: 7rem;\n  margin-left:0.25rem;\n  margin-right:0.25rem;\n  overflow-x: scroll;\n}\n.experienceList {\n  width:100%;\n  height:2rem;\n  display: flex;\n  align-items: center;\n}\n.experienceWrap {\n  position: relative;\n}\n.experienceBar {\n  border-radius: 0.01rem;\n  background-color: #ebeef5;\n}\n.experienceBarInner {\n  height: 0.1rem;\n  border-radius:0.05rem;\n  background-color: var(--theme-color);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1428,7 +1698,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".expertWrap {\n  width: 7rem;\n  height: 3rem;\n  margin-top: 0.2rem;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  display: flex;\n  border-radius: 0.1rem;\n  overflow: hidden;\n}\n.expert {\n  width: 100%;\n  height: 100%;\n  background-color: #ff6a00;\n  color: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.expertCell {\n  width: 90%;\n  height: 90%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.expertIcon {\n  width: 2rem;\n  height: 2rem;\n}\n.expertText {\n  width: 3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.expertTitle {\n  height: 0.5rem;\n  font-size: 0.32rem;\n  font-weight: bolder;\n  display: flex;\n  align-items: center;\n}\n.expertDesc {\n  height: 0.5rem;\n  font-size: 0.25rem;\n  display: flex;\n  align-items: center;\n}\n.swiper {\n  z-index: auto;\n}\n.swiper-wrapper {\n  z-index: auto;\n}\n.expertWrap > .swiper-pagination-fraction,\n.swiper-pagination-custom,\n.swiper-horizontal > .swiper-pagination-bullets,\n.swiper-pagination-bullets.swiper-pagination-horizontal {\n  bottom: 0.2rem;\n  left: 0;\n  width: 100%;\n}\n.swiper-pagination-bullet {\n  width: 0.2rem;\n  height: 0.06rem;\n  border-radius: 0.1rem;\n  background-color: rgba(0, 0, 0, 0.6);\n  margin-left: 0.03rem;\n  margin-right: 0.03rem;\n}\n.swiper-pagination-bullet-active {\n  width: 0.4rem;\n  height: 0.06rem;\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n", "",{"version":3,"sources":["webpack://./src/components/Expert/index.less"],"names":[],"mappings":"AACA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,oBAAA;EACA,qBAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;EACA,yBAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAEA;EACE,UAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AAAF;AAGA;EACE,cAAA;EACA,kBAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;AADF;AAGA;EACE,cAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;AADF;AAIA;EACE,aAAA;AAFF;AAIA;EACE,aAAA;AAFF;AAKA;;;;EACE,cAAA;EACA,OAAA;EACA,WAAA;AAAF;AAEA;EACE,aAAA;EACA,eAAA;EACA,qBAAA;EACA,oCAAA;EACA,oBAAA;EACA,qBAAA;AAAF;AAEA;EACE,aAAA;EACA,eAAA;EACA,qBAAA;EACA,yBAAA;AAAF","sourcesContent":["@import \"~@/styles/index.less\";\n.expertWrap{\n  width:7rem;\n  height:3rem;\n  margin-top:0.2rem;\n  margin-left:0.25rem;\n  margin-right:0.25rem;\n  display:flex;\n  border-radius:0.1rem;\n  overflow:hidden;\n}\n.expert{\n  width:100%;\n  height:100%;\n  background-color: @theme-color;\n  color:#fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.expertCell {\n  width:90%;\n  height:90%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.expertIcon{\n  width:2rem;\n  height:2rem;\n}\n.expertText{\n  width:3rem;\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n\n}\n.expertTitle{\n  height:0.5rem;\n  font-size:0.32rem;\n  font-weight: bolder;\n  display:flex;\n  align-items: center;\n}\n.expertDesc{\n  height:0.5rem;\n  font-size:0.25rem;\n  display:flex;\n  align-items: center;\n}\n\n.swiper {\n  z-index:auto;\n}\n.swiper-wrapper{\n  z-index:auto;\n\n}\n.expertWrap > .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{\n  bottom: 0.2rem;\n  left: 0;\n  width: 100%;\n}\n.swiper-pagination-bullet{\n  width:0.2rem;\n  height:0.06rem;\n  border-radius:0.1rem;\n  background-color:rgba(0,0,0,.6);\n  margin-left:0.03rem;\n  margin-right:0.03rem;\n}\n.swiper-pagination-bullet-active{\n  width:0.4rem;\n  height:0.06rem;\n  border-radius:0.1rem;\n  background-color:#ebeef5;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --theme-color: #3Eb575;\n}\n.expertWrap {\n  width: 7rem;\n  height: 3rem;\n  margin-top: 0.2rem;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  display: flex;\n  border-radius: 0.1rem;\n  overflow: hidden;\n}\n.expert {\n  width: 100%;\n  height: 100%;\n  background-color: var(--theme-color);\n  color: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.expertCell {\n  width: 90%;\n  height: 90%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.expertIcon {\n  width: 2rem;\n  height: 2rem;\n}\n.expertText {\n  width: 3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.expertTitle {\n  height: 0.5rem;\n  font-size: 0.32rem;\n  font-weight: bolder;\n  display: flex;\n  align-items: center;\n}\n.expertDesc {\n  height: 0.5rem;\n  font-size: 0.25rem;\n  display: flex;\n  align-items: center;\n}\n.swiper {\n  z-index: auto;\n}\n.swiper-wrapper {\n  z-index: auto;\n}\n.expertWrap > .swiper-pagination-fraction,\n.swiper-pagination-custom,\n.swiper-horizontal > .swiper-pagination-bullets,\n.swiper-pagination-bullets.swiper-pagination-horizontal {\n  bottom: 0.2rem;\n  left: 0;\n  width: 100%;\n}\n.swiper-pagination {\n  z-index: auto;\n}\n.swiper-pagination-bullet {\n  width: 0.2rem;\n  height: 0.06rem;\n  border-radius: 0.1rem;\n  background-color: rgba(0, 0, 0, 0.6);\n  margin-left: 0.03rem;\n  margin-right: 0.03rem;\n}\n.swiper-pagination-bullet-active {\n  width: 0.4rem;\n  height: 0.06rem;\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.less","webpack://./src/components/Expert/index.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF;AADA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,oBAAA;EACA,qBAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;AAGF;AADA;EACE,WAAA;EACA,YAAA;EACA,oCAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAGF;AADA;EACE,UAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAGF;AADA;EACE,WAAA;EACA,YAAA;AAGF;AADA;EACE,WAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AAGF;AAAA;EACE,cAAA;EACA,kBAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;AAEF;AAAA;EACE,cAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;AAEF;AACA;EACE,aAAA;AACF;AACA;EACE,aAAA;AACF;AAEA;;;;EACE,cAAA;EACA,OAAA;EACA,WAAA;AAGF;AADA;EACE,aAAA;AAGF;AADA;EACE,aAAA;EACA,eAAA;EACA,qBAAA;EACA,oCAAA;EACA,oBAAA;EACA,qBAAA;AAGF;AADA;EACE,aAAA;EACA,eAAA;EACA,qBAAA;EACA,yBAAA;AAGF","sourcesContent":[":root {\n  --theme-color: #3Eb575;\n}\n// @theme-color:#3Eb575; // #ff6a00;","@import \"~@/styles/index.less\";\n.expertWrap{\n  width:7rem;\n  height:3rem;\n  margin-top:0.2rem;\n  margin-left:0.25rem;\n  margin-right:0.25rem;\n  display:flex;\n  border-radius:0.1rem;\n  overflow:hidden;\n}\n.expert{\n  width:100%;\n  height:100%;\n  background-color: var(--theme-color);\n  color:#fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.expertCell {\n  width:90%;\n  height:90%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.expertIcon{\n  width:2rem;\n  height:2rem;\n}\n.expertText{\n  width:3rem;\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n\n}\n.expertTitle{\n  height:0.5rem;\n  font-size:0.32rem;\n  font-weight: bolder;\n  display:flex;\n  align-items: center;\n}\n.expertDesc{\n  height:0.5rem;\n  font-size:0.25rem;\n  display:flex;\n  align-items: center;\n}\n\n.swiper {\n  z-index:auto;\n}\n.swiper-wrapper{\n  z-index:auto;\n\n}\n.expertWrap > .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{\n  bottom: 0.2rem;\n  left: 0;\n  width: 100%;\n}\n.swiper-pagination{\n  z-index:auto;\n}\n.swiper-pagination-bullet{\n  width:0.2rem;\n  height:0.06rem;\n  border-radius:0.1rem;\n  background-color:rgba(0,0,0,.6);\n  margin-left:0.03rem;\n  margin-right:0.03rem;\n}\n.swiper-pagination-bullet-active{\n  width:0.4rem;\n  height:0.06rem;\n  border-radius:0.1rem;\n  background-color:#ebeef5;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1454,7 +1724,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".footer {\n  width: 100%;\n  height: 1rem;\n  background-color: #ff6a00;\n  color: #fff;\n  font-size: 0.22rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n", "",{"version":3,"sources":["webpack://./src/components/Footer/index.less"],"names":[],"mappings":"AACA;EACE,WAAA;EACA,YAAA;EACA,yBAAA;EACA,WAAA;EACA,kBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF","sourcesContent":["@import \"~@/styles/index.less\";\n.footer{\n  width:100%;\n  height:1rem;\n  background-color:@theme-color;\n  color:#fff;\n  font-size:0.22rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --theme-color: #3Eb575;\n}\n.footer {\n  width: 100%;\n  height: 1rem;\n  background-color: var(--theme-color);\n  color: #fff;\n  font-size: 0.22rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.less","webpack://./src/components/Footer/index.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF;AADA;EACE,WAAA;EACA,YAAA;EACA,oCAAA;EACA,WAAA;EACA,kBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAGF","sourcesContent":[":root {\n  --theme-color: #3Eb575;\n}\n// @theme-color:#3Eb575; // #ff6a00;","@import \"~@/styles/index.less\";\n.footer{\n  width:100%;\n  height:1rem;\n  background-color:var(--theme-color);\n  color:#fff;\n  font-size:0.22rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1532,7 +1802,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".project {\n  display: flex;\n}\n.project-icon {\n  width: 0.2rem;\n  height: 0.2rem;\n  background-color: #ff6a00;\n  border-radius: 50%;\n}\n.project-content {\n  width: 6.2rem;\n  margin-left: 0.1rem;\n  margin-top: -0.1rem;\n  margin-bottom: 0.2rem;\n  padding: 0.2rem;\n  background-color: #ff6a00;\n  border-radius: 0.1rem;\n  color: #fff;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n/* .project-content::before {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border: 0.8rem solid transparent;\n  border-left-width: 0.8rem;\n  border-left-style: solid;\n  border-left-color: #ebeef5;\n  transform: rotateZ(180deg);\n  position: absolute;\n  left: -0.16rem;\n  top: 0.1rem;\n} */\n.project-title {\n  height: 1rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.project-name {\n  font-size: 0.3rem;\n  font-weight: bolder;\n}\n.project-time {\n  font-size: 0.25rem;\n}\n.project-desc {\n  text-indent: 0.5rem;\n  font-size: 0.2rem;\n}\n.project-result {\n  font-size: 0.2rem;\n}\n", "",{"version":3,"sources":["webpack://./src/components/ProjectInfo/ProjectNode/index.less"],"names":[],"mappings":"AACA;EACE,aAAA;AAAF;AAEA;EACE,aAAA;EACA,cAAA;EACA,yBAAA;EACA,kBAAA;AAAF;AAEA;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,qBAAA;EACA,eAAA;EACA,yBAAA;EACA,qBAAA;EACA,WAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AAAF;AACA;;;;;;;;;;;;GAYG;AAGH;EACE,YAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AADF;AAGA;EACE,iBAAA;EACA,mBAAA;AADF;AAGA;EACE,kBAAA;AADF;AAIA;EACE,mBAAA;EACA,iBAAA;AAFF;AAIA;EACE,iBAAA;AAFF","sourcesContent":["@import \"~@/styles/index.less\";\n.project {\n  display: flex;\n}\n.project-icon {\n  width: 0.2rem;\n  height: 0.2rem;\n  background-color: @theme-color;\n  border-radius: 50%;\n}\n.project-content {\n  width: 6.2rem;\n  margin-left: 0.1rem;\n  margin-top: -0.1rem;\n  margin-bottom: 0.2rem;\n  padding:0.2rem;\n  background-color: @theme-color;\n  border-radius:0.1rem;\n  color:#fff;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n/* .project-content::before {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border: 0.8rem solid transparent;\n  border-left-width: 0.8rem;\n  border-left-style: solid;\n  border-left-color: #ebeef5;\n  transform: rotateZ(180deg);\n  position: absolute;\n  left: -0.16rem;\n  top: 0.1rem;\n} */\n\n.project-title{\n  height:1rem;\n  display:flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.project-name{\n  font-size:0.3rem;\n  font-weight: bolder;\n}\n.project-time{\n  font-size:0.25rem;\n}\n\n.project-desc{\n  text-indent: 0.5rem;\n  font-size:0.2rem;\n}\n.project-result{\n  font-size:0.2rem;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --theme-color: #3Eb575;\n}\n.project {\n  display: flex;\n}\n.project-icon {\n  width: 0.2rem;\n  height: 0.2rem;\n  background-color: var(--theme-color);\n  border-radius: 50%;\n}\n.project-content {\n  width: 6.2rem;\n  margin-left: 0.1rem;\n  margin-top: -0.1rem;\n  margin-bottom: 0.2rem;\n  padding: 0.2rem;\n  background-color: var(--theme-color);\n  border-radius: 0.1rem;\n  color: #fff;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n/* .project-content::before {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border: 0.8rem solid transparent;\n  border-left-width: 0.8rem;\n  border-left-style: solid;\n  border-left-color: #ebeef5;\n  transform: rotateZ(180deg);\n  position: absolute;\n  left: -0.16rem;\n  top: 0.1rem;\n} */\n.project-title {\n  height: 1rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.project-name {\n  font-size: 0.3rem;\n  font-weight: bolder;\n}\n.project-time {\n  font-size: 0.25rem;\n}\n.project-desc {\n  text-indent: 0.5rem;\n  font-size: 0.2rem;\n}\n.project-result {\n  font-size: 0.2rem;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.less","webpack://./src/components/ProjectInfo/ProjectNode/index.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF;AADA;EACE,aAAA;AAGF;AADA;EACE,aAAA;EACA,cAAA;EACA,oCAAA;EACA,kBAAA;AAGF;AADA;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,qBAAA;EACA,eAAA;EACA,oCAAA;EACA,qBAAA;EACA,WAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AAGF;AACA;;;;;;;;;;;;GAYG;AAAH;EACE,YAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AAEF;AAAA;EACE,iBAAA;EACA,mBAAA;AAEF;AAAA;EACE,kBAAA;AAEF;AACA;EACE,mBAAA;EACA,iBAAA;AACF;AACA;EACE,iBAAA;AACF","sourcesContent":[":root {\n  --theme-color: #3Eb575;\n}\n// @theme-color:#3Eb575; // #ff6a00;","@import \"~@/styles/index.less\";\n.project {\n  display: flex;\n}\n.project-icon {\n  width: 0.2rem;\n  height: 0.2rem;\n  background-color: var(--theme-color);\n  border-radius: 50%;\n}\n.project-content {\n  width: 6.2rem;\n  margin-left: 0.1rem;\n  margin-top: -0.1rem;\n  margin-bottom: 0.2rem;\n  padding:0.2rem;\n  background-color: var(--theme-color);\n  border-radius:0.1rem;\n  color:#fff;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n/* .project-content::before {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border: 0.8rem solid transparent;\n  border-left-width: 0.8rem;\n  border-left-style: solid;\n  border-left-color: #ebeef5;\n  transform: rotateZ(180deg);\n  position: absolute;\n  left: -0.16rem;\n  top: 0.1rem;\n} */\n\n.project-title{\n  height:1rem;\n  display:flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.project-name{\n  font-size:0.3rem;\n  font-weight: bolder;\n}\n.project-time{\n  font-size:0.25rem;\n}\n\n.project-desc{\n  text-indent: 0.5rem;\n  font-size:0.2rem;\n}\n.project-result{\n  font-size:0.2rem;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1558,7 +1828,33 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".project-list-wrap {\n  width: 7rem;\n  margin-top: 0.4rem;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  display: flex;\n  align-items: center;\n}\n.project-list {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n.project-item-wrap {\n  width: 100%;\n  display: flex;\n}\n.project-item-bar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.project-item-bar-inner {\n  border-radius: 0.1rem;\n  background-color: #ff6a00;\n}\n.project-item {\n  margin-left: -0.14rem;\n  position: relative;\n  display: flex;\n}\n", "",{"version":3,"sources":["webpack://./src/components/ProjectInfo/index.less"],"names":[],"mappings":"AACA;EACE,WAAA;EACA,kBAAA;EACA,oBAAA;EACA,qBAAA;EACA,aAAA;EACA,mBAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;EACA,sBAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;AAAF;AAEA;EACE,qBAAA;EACA,yBAAA;AAAF;AAEA;EACE,qBAAA;EACA,yBAAA;AAAF;AAEA;EACE,qBAAA;EACA,kBAAA;EACA,aAAA;AAAF","sourcesContent":["@import \"~@/styles/index.less\";\n.project-list-wrap {\n  width: 7rem;\n  margin-top: 0.4rem;\n  margin-left:0.25rem;\n  margin-right:0.25rem;\n  display: flex;\n  align-items: center;\n}\n.project-list {\n  width:100%;\n  display: flex;\n  flex-direction: column;\n}\n.project-item-wrap {\n  width:100%;\n  display: flex;\n}\n.project-item-bar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.project-item-bar-inner {\n  border-radius: 0.1rem;\n  background-color: @theme-color;\n}\n.project-item {\n  margin-left:-0.14rem;\n  position: relative;\n  display: flex;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --theme-color: #3Eb575;\n}\n.project-list-wrap {\n  width: 7rem;\n  margin-top: 0.4rem;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  display: flex;\n  align-items: center;\n}\n.project-list {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n.project-item-wrap {\n  width: 100%;\n  display: flex;\n}\n.project-item-bar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.project-item-bar-inner {\n  border-radius: 0.1rem;\n  background-color: var(--theme-color);\n}\n.project-item {\n  margin-left: -0.14rem;\n  position: relative;\n  display: flex;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.less","webpack://./src/components/ProjectInfo/index.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF;AADA;EACE,WAAA;EACA,kBAAA;EACA,oBAAA;EACA,qBAAA;EACA,aAAA;EACA,mBAAA;AAGF;AADA;EACE,WAAA;EACA,aAAA;EACA,sBAAA;AAGF;AADA;EACE,WAAA;EACA,aAAA;AAGF;AADA;EACE,qBAAA;EACA,yBAAA;AAGF;AADA;EACE,qBAAA;EACA,oCAAA;AAGF;AADA;EACE,qBAAA;EACA,kBAAA;EACA,aAAA;AAGF","sourcesContent":[":root {\n  --theme-color: #3Eb575;\n}\n// @theme-color:#3Eb575; // #ff6a00;","@import \"~@/styles/index.less\";\n.project-list-wrap {\n  width: 7rem;\n  margin-top: 0.4rem;\n  margin-left:0.25rem;\n  margin-right:0.25rem;\n  display: flex;\n  align-items: center;\n}\n.project-list {\n  width:100%;\n  display: flex;\n  flex-direction: column;\n}\n.project-item-wrap {\n  width:100%;\n  display: flex;\n}\n.project-item-bar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.project-item-bar-inner {\n  border-radius: 0.1rem;\n  background-color: var(--theme-color);\n}\n.project-item {\n  margin-left:-0.14rem;\n  position: relative;\n  display: flex;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/PromisifyModal/SettingModal/index.less":
+/*!********************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/PromisifyModal/SettingModal/index.less ***!
+  \********************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".setting-modal {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-content {\n  width: 5rem;\n  height: 5rem;\n  background-color: #fff;\n  border-radius: 0.1rem;\n  position: relative;\n}\n.setting-title {\n  width: 100%;\n  height: 1rem;\n  font-size: 0.32rem;\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-item {\n  width: 100%;\n  height: 1rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-value {\n  display: flex;\n}\n.setting-value-item {\n  width: 0.6rem;\n  height: 0.6rem;\n  border-radius: 0.02rem;\n  margin-left: 0.15rem;\n  margin-right: 0.15rem;\n  position: relative;\n}\n.setting-value-item-active {\n  width: 0.3rem;\n  height: 0.3rem;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n}\n.setting-btn-wrap {\n  width: 100%;\n  height: 1rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  bottom: 0;\n}\n.setting-btn {\n  width: 2rem;\n  height: 0.6rem;\n  color: #fff;\n  border-radius: 0.3rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--theme-color);\n}\n", "",{"version":3,"sources":["webpack://./src/components/PromisifyModal/SettingModal/index.less"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,aAAA;EACA,eAAA;EACA,MAAA;EACA,OAAA;EACA,oCAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;AACA;EACE,WAAA;EACA,YAAA;EACA,sBAAA;EACA,qBAAA;EACA,kBAAA;AACF;AAEA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAIA;EACE,aAAA;AAFF;AAIA;EACE,aAAA;EACA,cAAA;EACA,sBAAA;EACA,oBAAA;EACA,qBAAA;EACA,kBAAA;AAFF;AAIA;EACE,aAAA;EACA,cAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;AAFF;AAKA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,SAAA;AAHF;AAMA;EACE,WAAA;EACA,cAAA;EACA,WAAA;EACA,qBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,oCAAA;AAJF","sourcesContent":[".setting-modal {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-content {\n  width: 5rem;\n  height: 5rem;\n  background-color: #fff;\n  border-radius:0.1rem;\n  position:relative;\n}\n\n.setting-title{\n  width:100%;\n  height:1rem;\n  font-size:0.32rem;\n  font-weight:bolder;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-item{\n  width:100%;\n  height:1rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-label{\n}\n.setting-value{\n  display:flex;\n}\n.setting-value-item{\n  width:0.6rem;\n  height:0.6rem;\n  border-radius:0.02rem;\n  margin-left:0.15rem;\n  margin-right:0.15rem;\n  position: relative;\n}\n.setting-value-item-active{\n  width:0.3rem;\n  height:0.3rem;\n  position:absolute;\n  bottom:0;\n  right:0;\n}\n\n.setting-btn-wrap{\n  width:100%;\n  height:1rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  position:absolute;\n  bottom:0;\n}\n\n.setting-btn{\n  width:2rem;\n  height:0.6rem;\n  color:#fff;\n  border-radius:0.3rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  background-color:var(--theme-color);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1584,17 +1880,17 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".user-wrap {\n  width: 7rem;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n}\n.user-item-wrap {\n  background-color: #ff6a00;\n  border-radius: 0.1rem;\n}\n.user-item {\n  height: 0.6rem;\n  display: flex;\n  align-items: center;\n  font-size: 0.26rem;\n  margin-left: 0.2rem;\n}\n.user-label {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n", "",{"version":3,"sources":["webpack://./src/components/UserInfo/index.less"],"names":[],"mappings":"AAGA;EACE,WAAA;EACA,oBAAA;EACA,qBAAA;AAFF;AAIA;EACE,yBAAA;EACA,qBAAA;AAFF;AAIA;EACE,cAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AAFF;AAKA;EACE,aAAA;EACA,yBAAA;EACA,mBAAA;AAHF","sourcesContent":["\n@import '~@/styles/index.less';\n\n.user-wrap{\n  width:7rem;\n  margin-left:0.25rem;\n  margin-right:0.25rem;\n}\n.user-item-wrap {\n  background-color: @theme-color;\n  border-radius:0.1rem;\n}\n.user-item{\n  height:0.6rem;\n  display:flex;\n  align-items: center;\n  font-size:0.26rem;\n  margin-left:0.2rem;\n}\n\n.user-label{\n  display:flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n.user-value{\n  \n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --theme-color: #3Eb575;\n}\n.user-wrap {\n  width: 7rem;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n}\n.user-item-wrap {\n  background-color: var(--theme-color);\n  border-radius: 0.1rem;\n}\n.user-item {\n  height: 0.6rem;\n  display: flex;\n  align-items: center;\n  font-size: 0.26rem;\n  margin-left: 0.2rem;\n}\n.user-label {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.less","webpack://./src/components/UserInfo/index.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF;AACA;EACE,WAAA;EACA,oBAAA;EACA,qBAAA;AACF;AACA;EACE,oCAAA;EACA,qBAAA;AACF;AACA;EACE,cAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AACF;AAEA;EACE,aAAA;EACA,yBAAA;EACA,mBAAA;AAAF","sourcesContent":[":root {\n  --theme-color: #3Eb575;\n}\n// @theme-color:#3Eb575; // #ff6a00;","\n@import '~@/styles/index.less';\n\n.user-wrap{\n  width:7rem;\n  margin-left:0.25rem;\n  margin-right:0.25rem;\n}\n.user-item-wrap {\n  background-color: var(--theme-color);\n  border-radius:0.1rem;\n}\n.user-item{\n  height:0.6rem;\n  display:flex;\n  align-items: center;\n  font-size:0.26rem;\n  margin-left:0.2rem;\n}\n\n.user-label{\n  display:flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n.user-value{\n  \n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/pages/Home.css":
-/*!*********************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/pages/Home.css ***!
-  \*********************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/pages/Home.less":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/pages/Home.less ***!
+  \**********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1610,7 +1906,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* @font-face{\n  font-family: 'dakai';\n  src :url('../assets/font.woff2');\n} */\n.home {\n  width: 100%;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: scroll;\n}\n.home-header {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 32;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Home.css"],"names":[],"mappings":"AAAA;;;GAGG;AAEH;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,kBAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;EACA,aAAA;AAAF","sourcesContent":["\n/* @font-face{\n  font-family: 'dakai';\n  src :url('../assets/font.woff2');\n} */\n.home{\n  width:100%;\n  height:100%;\n  overflow-x:hidden;\n  overflow-y:scroll;\n}\n.home-header{\n  width:100%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 32;\n  \n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* @font-face{\n  font-family: 'dakai';\n  src :url('../assets/font.woff2');\n} */\n.home {\n  width: 100%;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: scroll;\n}\n.home-header {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 32;\n  position: relative;\n}\n.home-setting {\n  position: absolute;\n  right: 0.25rem;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Home.less"],"names":[],"mappings":"AAAA;;;GAGG;AAEH;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,kBAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;EACA,aAAA;EACA,kBAAA;AAAF;AAEA;EACE,kBAAA;EACA,cAAA;AAAF","sourcesContent":["\n/* @font-face{\n  font-family: 'dakai';\n  src :url('../assets/font.woff2');\n} */\n.home{\n  width:100%;\n  height:100%;\n  overflow-x:hidden;\n  overflow-y:scroll;\n}\n.home-header{\n  width:100%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 32;\n  position:relative;\n}\n.home-setting {\n  position:absolute;\n  right:0.25rem;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1907,6 +2203,35 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./src/components/PromisifyModal/SettingModal/index.less":
+/*!***************************************************************!*\
+  !*** ./src/components/PromisifyModal/SettingModal/index.less ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_index_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/less-loader/dist/cjs.js!./index.less */ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/PromisifyModal/SettingModal/index.less");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_index_less__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_index_less__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./src/components/UserInfo/index.less":
 /*!********************************************!*\
   !*** ./src/components/UserInfo/index.less ***!
@@ -1936,10 +2261,10 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./src/pages/Home.css":
-/*!****************************!*\
-  !*** ./src/pages/Home.css ***!
-  \****************************/
+/***/ "./src/pages/Home.less":
+/*!*****************************!*\
+  !*** ./src/pages/Home.less ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1948,7 +2273,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_Home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!../../node_modules/less-loader/dist/cjs.js!./Home.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/pages/Home.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_Home_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!../../node_modules/less-loader/dist/cjs.js!./Home.less */ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/pages/Home.less");
 
             
 
@@ -1957,11 +2282,25 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_Home_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_Home_less__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_Home_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_Home_less__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./src/assets/check.svg":
+/*!******************************!*\
+  !*** ./src/assets/check.svg ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/svg+xml;base64,PHN2ZyB0PSIxNjg4NjU0NDMxMDA4IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjM1NjgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4Ij48cGF0aCBkPSJNMjE2LjgwMTA0MyA0ODUuMzM1NzMyYy0xNS41Nzg2MTUtMTQuMzgxMDk0LTM5Ljg4MTI1NS0xMy40MDc1NDMtNTQuMjYwNTQzIDIuMTc0Njg1LTE0LjM5MTkzMSAxNS41Nzg2MTUtMTMuNDE2NTc1IDM5Ljg3MjIyNCAyLjE2MjA0MSA1NC4yNjIzNDlsMTg4Ljc5MTE0MyAxNzQuMjYxOTRjNDEuNTUzODEyIDM4LjM2MDQyMSAxMDYuMzM3MzcxIDM1Ljc2NjY5NSAxNDQuNjk3NzkzLTUuNzg1MzExbDM4OC45NTA2MTMtNDIxLjM2Njc3NmMxNC4zODI5LTE1LjU5MzA2NSAxMy40MTY1NzUtMzkuODg0ODY4LTIuMTcyODc5LTU0LjI2MjM1LTE1LjU4MDQyMi0xNC4zOTAxMjUtMzkuODcyMjI0LTEzLjQxNDc2OC01NC4yNjIzNDkgMi4xNjM4NDgtMTI5LjY0MTE3MyAxNDAuNDU0OTktMjU5LjI5ODYwMiAyODAuOTA5OTgtMzg4Ljk1MDYxMyA0MjEuMzY2Nzc2LTEyLjI3ODY1OCAxMy4zMDYzOTUtMjIuODY2Njk4IDEzLjcyMzYzMS0zNi4xNzMwOTMgMS40NDY3NzktNjIuOTMwMzgxLTU4LjA4OTcyMi0xMjUuODUxNzMyLTExNi4xNzU4MzEtMTg4Ljc4MjExMy0xNzQuMjYxOTR6IiBmaWxsPSIjZmZmZmZmIiBwLWlkPSIzNTY5Ij48L3BhdGg+PHBhdGggZD0iTTk0Ny4xOTE1NTYgMTAyLjM5MjU5NXY4NDQuNzk5ODY0SDEwMi4zOTcxMWMtMTguMTAwMDkzIDAtMjUuNTk5NTAzLTcuNDkwMzc5LTI1LjU5OTUwMy0yNS41OTk1MDNWMTAyLjM5MjU5NWMwLTE4LjA5ODI4NyA3LjQ5OTQxLTI1LjU5NzY5NyAyNS41OTk1MDMtMjUuNTk3Njk4aDgxOS4xOTQ5NDNjMTguMTEwOTMxIDAgMjUuNTk5NTAzIDcuNTAxMjE2IDI1LjU5OTUwMyAyNS41OTc2OTh6TTEwMi4zOTcxMSAxMDI0aDgxOS4xOTQ5NDNjNTYuNTU2MjQ0IDAgMTAyLjQwNTIzOC00NS44NTI2MDYgMTAyLjQwNTIzOC0xMDIuNDA1MjM4VjEwMi4zOTQ0MDFDMTAyMy45OTkwOTcgNDUuODM5OTYzIDk3OC4xNDgyOTcgMCA5MjEuNTkyMDUzIDBIMTAyLjM5NzExQzQ1Ljg0MjY3MiAwIDAuMDAwOTAzIDQ1LjgzOTk2MyAwLjAwMDkwMyAxMDIuMzkyNTk1djgxOS4yMDAzNjFjMCA1Ni41NTQ0MzggNDUuODQxNzY5IDEwMi40MDcwNDQgMTAyLjM5NjIwNyAxMDIuNDA3MDQ0eiIgZmlsbD0iI2ZmZmZmZiIgcC1pZD0iMzU3MCI+PC9wYXRoPjwvc3ZnPg==");
 
 /***/ }),
 
