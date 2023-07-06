@@ -50,7 +50,10 @@
   align-items: center;
 }
 
+.swiper .swiper-wrapper{
+  z-index:auto;
 
+}
 .expertWrap > .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
   bottom: 0.2rem;
   left: 0;

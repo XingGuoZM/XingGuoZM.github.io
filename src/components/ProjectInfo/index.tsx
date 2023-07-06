@@ -15,26 +15,24 @@ export default function ProjectInfo({ project }: IProps) {
   const strokeList = new Array(project.length).fill("10px");
 
   return (
-    <div className="projectInfo">
-      <div ref={scrollRef}>
-        <div className="projectList">
-          {project.map((item: IProject, index: number) => {
-            return (
-              <div className="projectItemWrap" key={item.projectName}>
-                <Progress
-                  className="projectItemBar"
-                  barClassName="projectItemBarInner"
-                  direction={DirectionEnum.Column}
-                  percent={100}
-                  strokeWidth={strokeList[index]}
-                />
-                <div className="projectItem">
-                  <ProjectNode {...item} />
-                </div>
+    <div className="project-list-wrap">
+      <div className="project-list" ref={scrollRef}>
+        {project.map((item: IProject, index: number) => {
+          return (
+            <div className="project-item-wrap" key={item.projectName}>
+              <Progress
+                className="project-item-bar"
+                barClassName="project-item-bar-inner"
+                direction={DirectionEnum.Column}
+                percent={100}
+                strokeWidth={strokeList[index]}
+              />
+              <div className="project-item">
+                <ProjectNode {...item} />
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
