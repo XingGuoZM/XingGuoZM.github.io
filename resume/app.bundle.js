@@ -90,7 +90,7 @@ function Achievement() {
     className: "achievement-title"
   }, "\u6280\u672F\u603B\u7ED3blog"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "achievement-content-wrap"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, "\u5173\u4E8E\u539F\u578B\u94FE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, "\u5173\u4E8E\u4F5C\u7528\u57DF")))));
+  }))));
 }
 
 /***/ }),
