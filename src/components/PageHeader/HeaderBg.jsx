@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from "react";
 import classnames from "classnames";
-import { navbarHeight, getRpx2px } from "../../utils";
+import { navbarHeight, getRpx2px, isMobile } from "../../utils";
 import "./index.less";
 import useEventListener from "../../hooks/useEventListener";
 
@@ -32,7 +32,7 @@ export default function HeaderBg ({ scroller }) {
     <div
       className={classnames("page-header-bg", "page-header-fixed")}
       style={{
-        height: `${getRpx2px(headerNormalHeight)}px`,
+        height: isMobile && `${getRpx2px(headerNormalHeight)}px`,
         opacity
       }}
     />

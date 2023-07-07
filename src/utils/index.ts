@@ -63,9 +63,10 @@ export const navbarHeight = (() => {
 
 
 export const getRpx2px = (rpx) => (rpx * window.screen.width) / 750;
+export const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent)
 
 
-export function viewport () {
+export function viewport() {
   // flexible的动态计算，兼容了很多场景
   const doc = window.document;
   const docEl = doc.documentElement;
@@ -138,9 +139,9 @@ export function viewport () {
       doc.write(wrap.innerHTML);
     }
   }
-  function refreshRem () {
+  function refreshRem() {
     const width = docEl.clientWidth || docEl.getBoundingClientRect().width;
-    const rem = 100 * (width / 750);
+    const rem = isMobile ? 100 * (width / 750) : 50 * (width / 750);
     docEl.style.fontSize = "".concat(rem, "px"); // @ts-ignore
 
     if (window._customerStore) {

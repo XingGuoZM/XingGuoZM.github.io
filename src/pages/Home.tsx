@@ -12,7 +12,7 @@ import { data } from '../data';
 import Modal from "../components/PromisifyModal";
 import SettingModal from "../components/PromisifyModal/SettingModal";
 import MoreIcon from '../assets/more.svg';
-import { navbarHeight, getRpx2px } from "../utils";
+import { navbarHeight, getRpx2px, isMobile } from "../utils";
 import './Home.less'
 import setBodyStyleProperty from '../utils/setBodyStyleProperty';
 
@@ -33,15 +33,15 @@ export default function Home() {
   }, [])
   return <Modal.Provider>
     <div className='home' ref={scroller}>
-      <Header scroller={scroller}>
-        <div className='home-header' style={{ height: `${getRpx2px(headerNormalHeight)}px` }}>
-          <div>{data.headTitle}</div>
-          <div className='home-setting' onClick={() => openSettingModal()}>
-            <img className='home-setting-icon' src={MoreIcon} />
+      <div className='home-content' >
+        <Header scroller={scroller}>
+          <div className='home-header'>
+            <div className='home-header-title'>{data.headTitle}</div>
+            <div className='home-setting' onClick={() => openSettingModal()}>
+              <img className='home-setting-icon' src={MoreIcon} />
+            </div>
           </div>
-        </div>
-      </Header>
-      <div style={{ marginTop: `${getRpx2px(headerNormalHeight)}px` }}>
+        </Header>
         <Floor>
           <UserInfo user={data.user} />
         </Floor>

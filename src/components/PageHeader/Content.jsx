@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
 import classnames from "classnames";
-import { navbarHeight, getRpx2px } from "../../utils";
+import { navbarHeight, getRpx2px, isMobile } from "../../utils";
 import "./index.less";
 
 export default function HeaderContent ({ children }) {
@@ -26,7 +26,7 @@ export default function HeaderContent ({ children }) {
         ["page-header-content-wrap"]: true,
         ["page-header-fixed"]: true
       })}
-      style={{ height: `${getRpx2px(headerNormalHeight)}px`, color }}
+      style={{ height: isMobile ? `${getRpx2px(headerNormalHeight)}px` : '1rem', color }}
     >
       <div className={["page-header-content"]}>{children}</div>
     </div>

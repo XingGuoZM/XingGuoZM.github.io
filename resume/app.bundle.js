@@ -780,7 +780,7 @@ function HeaderContent(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()((_classnames = {}, _defineProperty(_classnames, "page-header-content-wrap", true), _defineProperty(_classnames, "page-header-fixed", true), _classnames)),
     style: {
-      height: "".concat((0,_utils__WEBPACK_IMPORTED_MODULE_2__.getRpx2px)(headerNormalHeight), "px"),
+      height: _utils__WEBPACK_IMPORTED_MODULE_2__.isMobile ? "".concat((0,_utils__WEBPACK_IMPORTED_MODULE_2__.getRpx2px)(headerNormalHeight), "px") : '1rem',
       color: color
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -858,7 +858,7 @@ function HeaderBg(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("page-header-bg", "page-header-fixed"),
     style: {
-      height: "".concat((0,_utils__WEBPACK_IMPORTED_MODULE_2__.getRpx2px)(headerNormalHeight), "px"),
+      height: _utils__WEBPACK_IMPORTED_MODULE_2__.isMobile && "".concat((0,_utils__WEBPACK_IMPORTED_MODULE_2__.getRpx2px)(headerNormalHeight), "px"),
       opacity: opacity
     }
   });
@@ -2190,14 +2190,15 @@ function Home() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PromisifyModal__WEBPACK_IMPORTED_MODULE_11__["default"].Provider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "home",
     ref: scroller
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "home-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PageHeader__WEBPACK_IMPORTED_MODULE_1__["default"], {
     scroller: scroller
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "home-header",
-    style: {
-      height: "".concat((0,_utils__WEBPACK_IMPORTED_MODULE_14__.getRpx2px)(headerNormalHeight), "px")
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, _data__WEBPACK_IMPORTED_MODULE_10__.data.headTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "home-header"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "home-header-title"
+  }, _data__WEBPACK_IMPORTED_MODULE_10__.data.headTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "home-setting",
     onClick: function onClick() {
       return openSettingModal();
@@ -2205,11 +2206,7 @@ function Home() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "home-setting-icon",
     src: _assets_more_svg__WEBPACK_IMPORTED_MODULE_13__["default"]
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    style: {
-      marginTop: "".concat((0,_utils__WEBPACK_IMPORTED_MODULE_14__.getRpx2px)(headerNormalHeight), "px")
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Floor__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_UserInfo__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Floor__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_UserInfo__WEBPACK_IMPORTED_MODULE_3__["default"], {
     user: _data__WEBPACK_IMPORTED_MODULE_10__.data.user
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Floor__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "\u4E13\u4E1A\u6280\u80FD"
@@ -2274,6 +2271,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "isHair": () => (/* binding */ isHair),
 /* harmony export */   "navbarHeight": () => (/* binding */ navbarHeight),
 /* harmony export */   "getRpx2px": () => (/* binding */ getRpx2px),
+/* harmony export */   "isMobile": () => (/* binding */ isMobile),
 /* harmony export */   "viewport": () => (/* binding */ viewport)
 /* harmony export */ });
 var getDeviceInfo = function () {
@@ -2352,6 +2350,7 @@ var navbarHeight = function () {
 var getRpx2px = function getRpx2px(rpx) {
   return rpx * window.screen.width / 750;
 };
+var isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
 function viewport() {
   // flexible的动态计算，兼容了很多场景
   var doc = window.document;
@@ -2428,7 +2427,7 @@ function viewport() {
 
   function refreshRem() {
     var width = docEl.clientWidth || docEl.getBoundingClientRect().width;
-    var rem = 100 * (width / 750);
+    var rem = isMobile ? 100 * (width / 750) : 50 * (width / 750);
     docEl.style.fontSize = "".concat(rem, "px"); // @ts-ignore
 
     if (window._customerStore) {
@@ -2775,7 +2774,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".test-modal {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.test-content {\n  width: 5rem;\n  height: 5rem;\n  background-color: #fff;\n  border-radius: 0.1rem;\n  position: relative;\n}\n.test-title {\n  width: 100%;\n  height: 1rem;\n  font-size: 0.32rem;\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.test-btn-wrap {\n  width: 100%;\n  height: 1rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  bottom: 0;\n}\n.test-btn {\n  width: 2rem;\n  height: 0.6rem;\n  color: #fff;\n  border-radius: 0.3rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--theme-color);\n}\n", "",{"version":3,"sources":["webpack://./src/components/Modal/TestModal/index.less"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,aAAA;EACA,eAAA;EACA,MAAA;EACA,OAAA;EACA,oCAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;AAEA;EACE,WAAA;EACA,YAAA;EACA,sBAAA;EACA,qBAAA;EACA,kBAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAGA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,SAAA;AADF;AAIA;EACE,WAAA;EACA,cAAA;EACA,WAAA;EACA,qBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,oCAAA;AAFF","sourcesContent":[".test-modal {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.test-content {\n  width: 5rem;\n  height: 5rem;\n  background-color: #fff;\n  border-radius:0.1rem;\n  position:relative;\n}\n.test-title{\n  width:100%;\n  height:1rem;\n  font-size:0.32rem;\n  font-weight:bolder;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.test-btn-wrap{\n  width:100%;\n  height:1rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  position:absolute;\n  bottom:0;\n}\n\n.test-btn{\n  width:2rem;\n  height:0.6rem;\n  color:#fff;\n  border-radius:0.3rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  background-color:var(--theme-color);\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".test-modal {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 2;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.test-content {\n  width: 5rem;\n  height: 5rem;\n  background-color: #fff;\n  border-radius: 0.1rem;\n  position: relative;\n}\n.test-title {\n  width: 100%;\n  height: 1rem;\n  font-size: 0.32rem;\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.test-btn-wrap {\n  width: 100%;\n  height: 1rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  bottom: 0;\n}\n.test-btn {\n  width: 2rem;\n  height: 0.6rem;\n  color: #fff;\n  border-radius: 0.3rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--theme-color);\n}\n", "",{"version":3,"sources":["webpack://./src/components/Modal/TestModal/index.less"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,aAAA;EACA,eAAA;EACA,MAAA;EACA,OAAA;EACA,UAAA;EACA,oCAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;AAEA;EACE,WAAA;EACA,YAAA;EACA,sBAAA;EACA,qBAAA;EACA,kBAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAGA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,SAAA;AADF;AAIA;EACE,WAAA;EACA,cAAA;EACA,WAAA;EACA,qBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,oCAAA;AAFF","sourcesContent":[".test-modal {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index:2;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.test-content {\n  width: 5rem;\n  height: 5rem;\n  background-color: #fff;\n  border-radius:0.1rem;\n  position:relative;\n}\n.test-title{\n  width:100%;\n  height:1rem;\n  font-size:0.32rem;\n  font-weight:bolder;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.test-btn-wrap{\n  width:100%;\n  height:1rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  position:absolute;\n  bottom:0;\n}\n\n.test-btn{\n  width:2rem;\n  height:0.6rem;\n  color:#fff;\n  border-radius:0.3rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  background-color:var(--theme-color);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2801,7 +2800,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".page-header {\n  position: relative;\n  width: 100%;\n}\n.page-header-bg {\n  width: 100%;\n  opacity: 0;\n  background-color: var(--theme-color);\n  color: #fff;\n}\n.page-header-fixed {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 1;\n}\n.page-header-content-wrap {\n  width: 100%;\n  z-index: 2;\n}\n.page-header-content {\n  width: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/components/PageHeader/index.less"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;AACF;AACA;EACE,WAAA;EACA,UAAA;EACA,oCAAA;EACA,WAAA;AACF;AACA;EACE,eAAA;EACA,MAAA;EACA,OAAA;EACA,UAAA;AACF;AACA;EACE,WAAA;EACA,UAAA;AACF;AACA;EACE,WAAA;EACA,kBAAA;EACA,MAAA;EACA,OAAA;AACF","sourcesContent":[".page-header {\n  position: relative;\n  width: 100%;\n}\n.page-header-bg {\n  width: 100%;\n  opacity: 0;\n  background-color:var(--theme-color);\n  color:#fff;\n}\n.page-header-fixed {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 1;\n}\n.page-header-content-wrap {\n  width: 100%;\n  z-index: 2;\n}\n.page-header-content {\n  width:100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".page-header {\n  position: relative;\n  width: 100%;\n}\n.page-header-bg {\n  width: 100%;\n  opacity: 0;\n  background-color: var(--theme-color);\n  color: #fff;\n}\n.page-header-fixed {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 1;\n}\n.page-header-content-wrap {\n  width: 100%;\n  z-index: 2;\n}\n.page-header-content {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/components/PageHeader/index.less"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;AACF;AACA;EACE,WAAA;EACA,UAAA;EACA,oCAAA;EACA,WAAA;AACF;AACA;EACE,eAAA;EACA,MAAA;EACA,OAAA;EACA,UAAA;AACF;AACA;EACE,WAAA;EAEA,UAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,MAAA;EACA,OAAA;AAAF","sourcesContent":[".page-header {\n  position: relative;\n  width: 100%;\n}\n.page-header-bg {\n  width: 100%;\n  opacity: 0;\n  background-color:var(--theme-color);\n  color:#fff;\n}\n.page-header-fixed {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 1;\n}\n.page-header-content-wrap {\n  width: 100%;\n\n  z-index: 2;\n}\n.page-header-content {\n  width:100%;\n  height:100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2983,7 +2982,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* @font-face{\n  font-family: 'dakai';\n  src :url('../assets/font.woff2');\n} */\n.home {\n  width: 100%;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: scroll;\n}\n.home-header {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 32;\n  position: relative;\n  background-color: var(--theme-color);\n  color: #fff;\n}\n.home-setting {\n  position: absolute;\n  right: 0.25rem;\n}\n.home-setting-icon {\n  width: 0.5rem;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Home.less"],"names":[],"mappings":"AAAA;;;GAGG;AAEH;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,kBAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;EACA,aAAA;EACA,kBAAA;EACA,oCAAA;EACA,WAAA;AAAF;AAEA;EACE,kBAAA;EACA,cAAA;AAAF;AAEA;EACE,aAAA;AAAF","sourcesContent":["\n/* @font-face{\n  font-family: 'dakai';\n  src :url('../assets/font.woff2');\n} */\n.home{\n  width:100%;\n  height:100%;\n  overflow-x:hidden;\n  overflow-y:scroll;\n}\n.home-header{\n  width:100%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 32;\n  position:relative;\n  background-color:var(--theme-color);\n  color:#fff;\n}\n.home-setting {\n  position:absolute;\n  right:0.25rem;\n}\n.home-setting-icon{\n  width:0.5rem;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* @font-face{\n  font-family: 'dakai';\n  src :url('../assets/font.woff2');\n} */\n.home {\n  width: 100%;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: scroll;\n}\n.home-header {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 0.32rem;\n  position: relative;\n  background-color: var(--theme-color);\n  color: #fff;\n}\n.home-content {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.home-setting {\n  position: absolute;\n  right: 0.25rem;\n}\n.home-setting-icon {\n  width: 0.5rem;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Home.less"],"names":[],"mappings":"AAAA;;;GAGG;AAEH;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,kBAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;EACA,kBAAA;EACA,kBAAA;EACA,oCAAA;EACA,WAAA;AAAF;AAEA;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;AAAF;AAEA;EACE,kBAAA;EACA,cAAA;AAAF;AAEA;EACE,aAAA;AAAF","sourcesContent":["\n/* @font-face{\n  font-family: 'dakai';\n  src :url('../assets/font.woff2');\n} */\n.home{\n  width:100%;\n  height:100%;\n  overflow-x:hidden;\n  overflow-y:scroll;\n}\n.home-header{\n  width:100%;\n  height:100%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bolder;\n  font-size: 0.32rem;\n  position:relative;\n  background-color:var(--theme-color);\n  color:#fff;\n}\n.home-content{\n  display:flex;\n  flex-direction: column;\n  align-items:center;\n}\n.home-setting {\n  position:absolute;\n  right:0.25rem;\n}\n.home-setting-icon{\n  width:0.5rem;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
