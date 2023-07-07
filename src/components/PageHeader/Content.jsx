@@ -13,7 +13,6 @@ export default function HeaderContent ({ children }) {
   ]);
   useEffect(() => {
     window.addEventListener('fullFixed', (e) => {
-      console.log(e.detail)
       if (e.detail?.fullFixed) {
         setColor('#fff')
       } else {

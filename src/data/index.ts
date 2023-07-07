@@ -1,5 +1,12 @@
 import ReactIcon from '../assets/react.svg';
 import WebpackIcon from '../assets/webpack.svg';
+import JsIcon from '../assets/javascript.svg';
+// import HybridIcon from '../assets/HybridIcon';
+import IphoneIcon from '../assets/iphone.svg';
+import AndroidIcon from '../assets/android.svg';
+import CpuIcon from '../assets/cpu.svg';
+import NetWorkIcon from '../assets/network.svg';
+import RenderIcon from '../assets/render.svg';
 
 export interface IUser {
   label: string;
@@ -36,10 +43,11 @@ export const data = {
     // { label: '', value: 'github', href: 'https://github.com' },
   ],
   expert: [
-    { title: '性能优化', desc: ['网络瓶颈', 'CUP瓶颈', '渲染瓶颈'] },
-    { title: 'React', icon: ReactIcon },
-    { title: 'hybrid h5' },
-    { title: 'webpack', icon: WebpackIcon }
+    { title: '性能优化', desc: ['网络瓶颈', 'CUP瓶颈', '渲染瓶颈'], icon: [RenderIcon, NetWorkIcon, CpuIcon] },
+    { title: 'React', desc: ['Function Components', 'React Hook', '渲染优化'], icon: ReactIcon },
+    { title: 'Hybrid H5', desc: ['Webview', 'JsBridge', '兼容性'], icon: [IphoneIcon, AndroidIcon] },
+    { title: 'Webpack', desc: ['原理 & 优化', 'Plugin & Loader', 'webpack-dev-server'], icon: WebpackIcon },
+    { title: 'JavaScript', desc: ['Es6/7', '对象 & 原型链', '作用域 & 执行上下文', '事件循环'], icon: JsIcon }
   ],
   experience: {
     amount: "300",
@@ -99,5 +107,36 @@ export const data = {
         '封装过可拖拽的⾃定义指令，并在团队内部使⽤。'
       ],
     }
-  ]
+  ],
+  projectList: [{
+    projectName: '淘特年迎财神活动页面',
+    projectTime: '2022.12～2023.1',
+    projectRole: '前端负责人',
+    projectDesc: '该项⽬是淘特2023春节活动玩法，端⾸⻚流量⼊⼝，主要是创新业务的探索，⾸先选择财神模版、然后调⽤ 相机拍摄或者选择相册照⽚、识别⼈脸后裁剪照⽚、合成新照⽚，最后引导分享好友获取红包的活 动玩法。主要完成了前端⼈脸的识别，图⽚编辑合成，财神动效模版轮播展示及优化，打通分享链 路，分享记录列表、被分享记录列表和红包领取记录的分⻚展示',
+    projectResult: ['• 前端可交互时间1.5s', '• 前端投⼊20⼈/⽇（2名前端），前端bug总量15个，bug reopen率5%，平均关闭时⻓0.69天']
+  }, {
+    projectName: '淘特消消乐',
+    projectTime: '2020.10～2021.6  ',
+    projectRole: '前端核⼼开发',
+    projectDesc: '该项⽬是淘特版的消消乐游戏，负责中⼩需求的技术⽅案编写和代码实现，⼤版本迭代的代码实现。主要完成了 组件通信数据状态管理、数据请求优化、⻚⾯请求封装统⼀管理(promisify),以及优先级、并发、重试、超时等',
+    projectResult: []
+  }, {
+    projectName: '淘特⽉卡（特省卡）',
+    projectTime: '2020.5～2020.10',
+    projectRole: '前端核⼼开发',
+    projectDesc: '对标拼多多省钱⽉卡，完成开卡送⻔槛红包、拼单免单的玩法。负责核⼼代码的实现，红包状态的 管理、商品⻓列表(带tab)优化、react组件库',
+    projectResult: []
+  }, {
+    projectName: '淘特下单返现金',
+    projectTime: '2020.5～2020.6',
+    projectRole: '前端核⼼开发',
+    projectDesc: '该项目为促进用户在指定的商品列表下单，返还一定金额的购物红包，根据视觉稿完成页面还原，理解整体链路和多个部门人员进行合作开发，与客户端购物车、客户端侧商品详情页面、第三方（支付宝）结算支付流程等协调沟通，进行技术方案的设计，涉及用户权益，前端容错容灾处理保证流程不阻塞。前端使用React技术栈进行开发，历时一周',
+    projectResult: []
+  }, {
+    projectName: '营销会场活动⻚⾯搭建，模块开发',
+    projectTime: '2019.5～2020.5 ',
+    projectRole: '前端核⼼开发',
+    projectDesc: '营销会场的⻚⾯搭建业务，主要开发适配模块供⻚⾯搭建系统消费。开发并维护12个（共60）业务 模块国际化多语⾔⽅案（i18n）、前端组件单元测试、主题换肤、埋点上报、⻚⾯多端适配、node提效⼩⼯具 ',
+    projectResult: []
+  }]
 };

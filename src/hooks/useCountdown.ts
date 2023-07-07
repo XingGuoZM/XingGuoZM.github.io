@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 const parseMs = (milliseconds) => {
   return {
@@ -10,24 +10,24 @@ const parseMs = (milliseconds) => {
   };
 };
 
-export default function useCountdown(timeRemain,onEnd){
-  const [timeLeft,setTimeLeft] = useState(Number(timeRemain));
-  useEffect(()=>{
-    const timer = setInterval(()=>{
-      setTimeLeft(val=>{
-        const v = val-1000;
-        if(v<=0){
+export default function useCountdown(timeRemain, onEnd) {
+  const [timeLeft, setTimeLeft] = useState(Number(timeRemain));
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(val => {
+        const v = val - 1000;
+        if (v <= 0) {
           clearInterval(timer);
-          onEnd(); 
+          onEnd();
           return 0;
         }
         return v
       });
-    },1000);
-    return ()=>{
+    }, 1000);
+    return () => {
       clearInterval(timer)
     }
-  },[])
-  
+  }, [])
+
   return parseMs(timeLeft);
 }

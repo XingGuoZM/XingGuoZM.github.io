@@ -7,17 +7,17 @@ import ProjectNode from './ProjectNode';
 import "./index.less";
 import { IProject } from "../../data";
 interface IProps {
-  project: IProject[]
+  data: IProject[]
 }
 
-export default function ProjectInfo({ project }: IProps) {
+export default function ProjectInfo({ data }: IProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const strokeList = new Array(project.length).fill("0.1rem");
+  const strokeList = new Array(data.length).fill("0.1rem");
 
   return (
     <div className="project-list-wrap">
       <div className="project-list" ref={scrollRef}>
-        {project.map((item: IProject, index: number) => {
+        {data.map((item: IProject, index: number) => {
           return (
             <div className="project-item-wrap" key={item.projectName}>
               <Progress

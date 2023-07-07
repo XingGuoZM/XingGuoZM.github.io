@@ -20,7 +20,7 @@ export default function Experience({ data }) {
   const { percentList } = useStageProgress(data);
 
   const onComplete = () => {
-    console.log("step progress scroll completed");
+    // console.log("step progress scroll completed");
   };
 
   useElementScroll({ scrollRef, left, onComplete });
