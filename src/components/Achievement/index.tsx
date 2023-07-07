@@ -26,5 +26,14 @@ export default function Achievement() {
         </div>)}
       </div>
     </div>
+    <div className='achievement'>
+      <div className='achievement-title'>技术总结blog</div>
+      <div>
+        <div className='achievement-content-wrap'>
+          <a>关于原型链</a>
+          <a>关于作用域</a>
+        </div>
+      </div>
+    </div>
   </Card>
 }
