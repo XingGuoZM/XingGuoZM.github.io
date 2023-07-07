@@ -14,7 +14,7 @@ export default function Expert({ data }) {
       modules={[Pagination]}
       pagination={{ clickable: true }}
     >
-      {data.map(item => <SwiperSlide>
+      {data.map(item => <SwiperSlide key={item.title}>
         <div className='expert'>
           <div className="expertCell">
             <div className='expertIconWrap'>
@@ -23,7 +23,7 @@ export default function Expert({ data }) {
             <div className='expertTextWrap'>
               <div className='expertText'>
                 <div className='expertTitle'>{item.title}</div>
-                {item.desc && item.desc.map(desc => <div className='expertDesc'>➣ {desc}</div>)}
+                {item.desc && item.desc.map(desc => <div className='expertDesc' key={desc}>➣ {desc}</div>)}
               </div>
             </div>
           </div>

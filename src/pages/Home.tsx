@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 import { data } from '../data';
 import Modal from "../components/PromisifyModal";
 import SettingModal from "../components/PromisifyModal/SettingModal";
+import MoreIcon from '../assets/more.svg';
 import { navbarHeight, getRpx2px } from "../utils";
 import './Home.less'
 import setBodyStyleProperty from '../utils/setBodyStyleProperty';
@@ -35,11 +36,15 @@ export default function Home() {
       <Header scroller={scroller}>
         <div className='home-header' style={{ height: `${getRpx2px(headerNormalHeight)}px` }}>
           <div>{data.headTitle}</div>
-          <div className='home-setting' onClick={() => openSettingModal()}>设置</div>
+          <div className='home-setting' onClick={() => openSettingModal()}>
+            <img className='home-setting-icon' src={MoreIcon} />
+          </div>
         </div>
       </Header>
       <div style={{ marginTop: `${getRpx2px(headerNormalHeight)}px` }}>
-        <UserInfo user={data.user} />
+        <Floor>
+          <UserInfo user={data.user} />
+        </Floor>
         <Floor title='专业技能'>
           <Expert data={data.expert} />
         </Floor>

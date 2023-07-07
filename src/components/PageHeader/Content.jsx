@@ -1,8 +1,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 import classnames from "classnames";
 import { navbarHeight, getRpx2px } from "../../utils";
-import "./index.css";
-import useEventListener from "../../hooks/useEventListener";
+import "./index.less";
 
 export default function HeaderContent ({ children }) {
   const [color, setColor] = useState('');
@@ -11,15 +10,15 @@ export default function HeaderContent ({ children }) {
     navBarHeight,
     statusBarHeight
   ]);
-  useEffect(() => {
-    window.addEventListener('fullFixed', (e) => {
-      if (e.detail?.fullFixed) {
-        setColor('#fff')
-      } else {
-        setColor('#000');
-      }
-    })
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('fullFixed', (e) => {
+  //     if (e.detail?.fullFixed) {
+  //       setColor('#fff')
+  //     } else {
+  //       setColor('#000');
+  //     }
+  //   })
+  // }, []);
 
   return (
     <div

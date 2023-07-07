@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import classnames from "classnames";
 import { navbarHeight, getRpx2px } from "../../utils";
-import "./index.css";
+import "./index.less";
 import useEventListener from "../../hooks/useEventListener";
 
 export default function HeaderBg ({ scroller }) {
@@ -24,9 +24,9 @@ export default function HeaderBg ({ scroller }) {
       setFullFixed(false);
     }
   }, scroller);
-  useEffect(() => {
-    window.dispatchEvent(new CustomEvent('fullFixed', { detail: { fullFixed } }))
-  }, [fullFixed])
+  // useEffect(() => {
+  //   window.dispatchEvent(new CustomEvent('fullFixed', { detail: { fullFixed } }))
+  // }, [fullFixed])
 
   return (
     <div

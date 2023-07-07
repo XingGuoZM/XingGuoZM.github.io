@@ -1,6 +1,6 @@
 
 
-import React, { ReactElement, useCallback } from 'react';
+import React, { Fragment, ReactElement, useCallback } from 'react';
 import './index.less'
 
 export enum CardTypeEnum {
@@ -38,10 +38,10 @@ export default function Card({ type, children, data }: IProps) {
 
         return <div className='card-medium'>
           <div className='card-medium-left'>
-            {data.filter((_, index) => index % 2 === 0).map(children)}
+            {data.filter((_, index) => index % 2 === 0).map((item) => <Fragment key={item.projectName}>{children(item)}</Fragment>)}
           </div>
           <div className='card-medium-right'>
-            {data.filter((_, index) => index % 2 !== 0).map(children)}
+            {data.filter((_, index) => index % 2 !== 0).map((item) => <Fragment key={item.projectName}>{children(item)}</Fragment>)}
           </div>
         </div>;
       case CardTypeEnum.Small:
