@@ -17,10 +17,8 @@ export default function Home() {
 
   return <Modal.Provider>
     <div className={style.home} ref={scroller}>
-      <Header scroller={scroller}></Header>
-      <Floor>
-        <UserInfo user={data.user} />
-      </Floor>
+      <Header scroller={scroller} immersive></Header>
+      <UserInfo user={data.user} />
       <Floor title='专业技能'>
         <Expert data={data.expert} />
       </Floor>

@@ -2128,7 +2128,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Header(_ref) {
-  var scroller = _ref.scroller;
+  var scroller = _ref.scroller,
+      immersive = _ref.immersive;
 
   var openSettingModal = function openSettingModal() {
     _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_5__["default"].show(_components_PromisifyModal_SettingModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2137,7 +2138,8 @@ function Header(_ref) {
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PageHeader__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    scroller: scroller
+    scroller: scroller,
+    immersive: immersive
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -2371,10 +2373,11 @@ function Home() {
     className: _index_module_less__WEBPACK_IMPORTED_MODULE_12__["default"].home,
     ref: scroller
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    scroller: scroller
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Floor__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_UserInfo__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    scroller: scroller,
+    immersive: true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_UserInfo__WEBPACK_IMPORTED_MODULE_3__["default"], {
     user: _data__WEBPACK_IMPORTED_MODULE_10__.data.user
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Floor__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Floor__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "\u4E13\u4E1A\u6280\u80FD"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Expert__WEBPACK_IMPORTED_MODULE_5__["default"], {
     data: _data__WEBPACK_IMPORTED_MODULE_10__.data.expert
@@ -3184,7 +3187,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".user-item-wrap {\n  background-color: var(--theme-color);\n  border-radius: 0.1rem;\n  color: #fff;\n  margin-top: 1rem;\n}\n.user-item {\n  height: 0.5rem;\n  display: flex;\n  align-items: center;\n  font-size: 0.26rem;\n  margin-left: 0.2rem;\n}\n.user-label {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Home/components/UserInfo/index.less"],"names":[],"mappings":"AAEA;EACE,oCAAA;EACA,qBAAA;EACA,WAAA;EACA,gBAAA;AADF;AAGA;EACE,cAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,aAAA;EACA,yBAAA;EACA,mBAAA;AADF","sourcesContent":["\n\n.user-item-wrap {\n  background-color: var(--theme-color);\n  border-radius:0.1rem;\n  color:#fff;\n  margin-top:1rem;\n}\n.user-item{\n  height:0.5rem;\n  display:flex;\n  align-items: center;\n  font-size:0.26rem;\n  margin-left:0.2rem;\n}\n.user-label{\n  display:flex;\n  justify-content: flex-end;\n  align-items: center;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".user-item-wrap {\n  background: linear-gradient(var(--theme-color) 40%, #fff);\n  color: #fff;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  height: 2.5rem;\n}\n.user-item {\n  height: 0.6rem;\n  display: flex;\n  align-items: center;\n  font-size: 0.26rem;\n  margin-left: 0.2rem;\n}\n.user-label {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Home/components/UserInfo/index.less"],"names":[],"mappings":"AAEA;EAEE,yDAAA;EAEA,WAAA;EAEA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,cAAA;AAJF;AAMA;EACE,cAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AAJF;AAMA;EACE,aAAA;EACA,yBAAA;EACA,mBAAA;AAJF","sourcesContent":["\n\n.user-item-wrap {\n  // background-color: var(--theme-color);\n  background: linear-gradient(var(--theme-color) 40%, #fff);\n  // background:radial-gradient(var(--theme-color) 30%, #fff);\n  color:#fff;\n  // color:var(--theme-color);\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  height:2.5rem;\n}\n.user-item{\n  height:0.6rem;\n  display:flex;\n  align-items: center;\n  font-size:0.26rem;\n  margin-left:0.2rem;\n}\n.user-label{\n  display:flex;\n  justify-content: flex-end;\n  align-items: center;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

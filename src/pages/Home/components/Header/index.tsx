@@ -7,11 +7,11 @@ import Modal from "@/components/PromisifyModal";
 import { data } from '@/data';
 import './index.less';
 
-export default function Header({ scroller }) {
+export default function Header({ scroller, immersive }) {
   const openSettingModal = () => {
     Modal.show(SettingModal, { data: data.theme });
   }
-  return <PageHeader scroller={scroller}>
+  return <PageHeader scroller={scroller} immersive={immersive}>
     <div className='header'>
       <div className='header-goback'>
         <img className='header-goback-icon' src={GobackIcon} />
