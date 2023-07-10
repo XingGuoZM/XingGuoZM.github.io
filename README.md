@@ -24,5 +24,5 @@
 工程配置：webpack、react、less、css-module
 工具提效：typescript、babel、
 标准约束：eslint、prettier、hasky
-
 ```
+8. flex row 横向无法滚动
