@@ -13,7 +13,7 @@ export default function Header({ scroller, immersive }) {
   }
   return <PageHeader scroller={scroller} immersive={immersive}>
     <div className='header'>
-      <div className='header-goback'>
+      <div className='header-goback' onClick={() => { window.location.href = `https://xingguozm.github.io?backurl=${window.location.href}` }}>
         <img className='header-goback-icon' src={GobackIcon} />
       </div>
       <div className='header-title'>{data.headTitle}</div>

@@ -26,3 +26,4 @@
 标准约束：eslint、prettier、hasky
 ```
 8. flex row 横向无法滚动
+9. 沉浸头部，吸顶之后无法点击设置

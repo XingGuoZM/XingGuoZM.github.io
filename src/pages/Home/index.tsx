@@ -14,7 +14,6 @@ import style from './index.module.less'
 
 export default function Home() {
   const scroller = useRef(null);
-
   return <Modal.Provider>
     <div className={style.home} ref={scroller}>
       <Header scroller={scroller} immersive></Header>
