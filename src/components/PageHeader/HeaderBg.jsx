@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from "react";
 import classnames from "classnames";
-import { navbarHeight, getRpx2px, isMobile } from "../../utils";
+import { navbarHeight, getRpx2px } from "../../utils";
 import "./index.less";
 import useEventListener from "../../hooks/useEventListener";
 
