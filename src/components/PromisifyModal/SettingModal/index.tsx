@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import checkedIcon from '../../../assets/check.svg';
 import setBodyStyleProperty from '../../../utils/setBodyStyleProperty';
 import "./index.less";
-import Modal from '../../PromisifyModal';
+import Modal from '@/components/PromisifyModal';
 
 export default function SettingModal({ data }) {
   const [theme, setTheme] = useState(localStorage.getItem('--theme-color'));

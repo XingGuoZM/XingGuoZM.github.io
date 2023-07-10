@@ -4,7 +4,7 @@ import { navbarHeight, getRpx2px, isMobile } from "../../utils";
 import "./index.less";
 import useEventListener from "../../hooks/useEventListener";
 
-export default function HeaderBg ({ scroller }) {
+export default function HeaderBg ({ scroller, children }) {
   const [fullFixed, setFullFixed] = useState(false);
   const [opacity, setOpacity] = useState(0);
   const { statusBarHeight, navBarHeight } = navbarHeight;
@@ -24,17 +24,17 @@ export default function HeaderBg ({ scroller }) {
       setFullFixed(false);
     }
   }, scroller);
-  // useEffect(() => {
-  //   window.dispatchEvent(new CustomEvent('fullFixed', { detail: { fullFixed } }))
-  // }, [fullFixed])
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent('fullFixed', { detail: { fullFixed } }))
+  }, [fullFixed])
 
   return (
     <div
       className={classnames("page-header-bg", "page-header-fixed")}
       style={{
-        height: isMobile && `${getRpx2px(headerNormalHeight)}px`,
+        height: `${getRpx2px(headerNormalHeight)}px`,
         opacity
       }}
-    />
+    >{children}</div>
   );
 }

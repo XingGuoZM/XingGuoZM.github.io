@@ -1,17 +1,35 @@
-import React, { createContext, useEffect, useReducer } from "react";
+import React, { createContext, useEffect, useReducer, ReactElement } from "react";
 
 const symModalId = Symbol("ModalId");
 
 const initialState = {};
 
 const ModalContext = createContext(initialState);
+interface IAction {
+  type: string;
+  payload: { id: string }
+}
+interface IModal {
+  [key: string]: string;
+};
+interface IProps {
 
-const reducer = (state = initialState, action) => {
+}
+type dispatch = (action: IAction) => {
+
+}
+
+enum TypeEnum {
+  Show = 'show',
+  Hide = 'hide',
+}
+
+const reducer = (state = initialState, action: IAction) => {
   const { id } = action.payload || {};
   switch (action.type) {
-    case "show":
+    case TypeEnum.Show:
       return { ...state, [id]: { ...state[id] } };
-    case "hide":
+    case TypeEnum.Hide:
       const newState = { ...state };
       delete newState[id];
       return newState;
@@ -19,9 +37,9 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
-const showAction = (id) => ({ type: "show", payload: { id } });
+const showAction = (id: string) => ({ type: TypeEnum.Show, payload: { id } });
 
-const hideAction = (id) => ({ type: "hide", payload: { id } });
+const hideAction = (id: string) => ({ type: TypeEnum.Hide, payload: { id } });
 
 let dispatch;
 const modalsCallback = {};
@@ -29,14 +47,14 @@ const hideModalsCallback = {};
 const Store = new Map();
 
 let uidSeed = 0;
-const getModalId = (modal) => {
+const getModalId = (modal: IModal) => {
   if (!modal[symModalId]) modal[symModalId] = `modal_${uidSeed++}`;
   return modal[symModalId];
 };
-function register(id, modal, props) {
+function register(id: string, modal: ReactElement, props) {
   Store.set(id, { id, Comp: () => modal(props) });
 }
-const promisifyCallback = (callback, modalId) => {
+const promisifyCallback = (callback, modalId: string) => {
   let theResolve, theReject;
   const promise = new Promise((resolve, reject) => {
     theResolve = resolve;

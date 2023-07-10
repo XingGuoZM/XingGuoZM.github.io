@@ -1,5 +1,5 @@
 {
-  "name": "react-canvas",
+  "name": "xingguozm.github.io",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -33,6 +33,7 @@
     "react-hot-loader": "^4.13.0",
     "style-loader": "^2.0.0",
     "swiper": "^10.0.3",
+    "ts-loader": "^9.4.4",
     "typescript": "^4.2.3",
     "url-loader": "^4.1.1",
     "webpack": "^5.11.1",

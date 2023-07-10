@@ -1,5 +1,5 @@
 import React from 'react';
-import PromisifyModal from '../PromisifyModal';
+import PromisifyModal from '@/components/PromisifyModal';
 import TestModal from './TestModal';
 
 export default function Modal() {

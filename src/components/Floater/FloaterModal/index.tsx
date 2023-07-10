@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import useMobileDrag from "../../../hooks/useMobileDrag";
-import Modal from '../../PromisifyModal';
+import Modal from '@/components/PromisifyModal';
 import "./index.less";
 
 export default function FloaterModal() {

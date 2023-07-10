@@ -3,11 +3,11 @@ import HeaderBg from "./HeaderBg";
 import Content from "./Content";
 import "./index.less";
 
-export default function PageHeader ({ children, scroller }) {
+export default function PageHeader ({ children, scroller, immersive = false }) {
   return (
     <div className="page-header">
-      <Content>{children}</Content>
-      <HeaderBg scroller={scroller} />
+      <Content>{!immersive && children}</Content>
+      <HeaderBg scroller={scroller}>{immersive && children}</HeaderBg>
     </div>
   );
 }

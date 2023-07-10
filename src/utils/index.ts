@@ -141,7 +141,7 @@ export function viewport() {
   }
   function refreshRem() {
     const width = docEl.clientWidth || docEl.getBoundingClientRect().width;
-    const rem = isMobile ? 100 * (width / 750) : 50 * (width / 750);
+    const rem = 100 * (width / 750);
     docEl.style.fontSize = "".concat(rem, "px"); // @ts-ignore
 
     if (window._customerStore) {

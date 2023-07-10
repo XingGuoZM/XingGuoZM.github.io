@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import PromisifyModal from '../PromisifyModal';
+import PromisifyModal from '@/components/PromisifyModal';
 import FloaterModal from './FloaterModal';
 
 export default function Floater() {
