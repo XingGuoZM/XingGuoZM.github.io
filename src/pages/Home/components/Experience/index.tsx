@@ -3,8 +3,7 @@ import useStageProgress from "@/hooks/useProgressStage";
 import Progress from "@/components/Progress";
 import useElementScroll from "@/hooks/useElementScroll";
 import ExperienceNode from './ExperienceNode';
-import "./index.less";
-import { IStage } from "../../types";
+import styles from "./index.module.less";
 
 export default function Experience({ data }) {
   const { stageList } = data;
@@ -14,31 +13,27 @@ export default function Experience({ data }) {
   const stroke = new Array(stageList.length).fill(0.1);
   // 计算滚动距离
   const targetId = "4";
-  const targetIndex = stageList.findIndex((item: IStage) => item.id === targetId);
-  const left = range.slice(0, targetIndex + 1).reduce((pre, cur) => pre + cur);
+  const targetIndex = stageList.findIndex((item) => item.id === targetId);
+  const left = range.slice(0, targetIndex).reduce((pre, cur) => pre + cur);
   const scrollRef = useRef<HTMLDivElement>(null);
   const { percentList } = useStageProgress(data);
 
-  const onComplete = () => {
-    // console.log("step progress scroll completed");
-  };
-
-  useElementScroll({ scrollRef, left, onComplete });
+  useElementScroll({ scrollRef, left });
 
   return (
-    <div className="experienceListWrap" ref={scrollRef}>
-      <div className="experienceList">
+    <div className={styles.listWrap} ref={scrollRef}>
+      <div className={styles.list}>
         {stageList.map((item, index) => {
           return (
-            <div className="experienceWrap" key={item.id}>
+            <div className={styles.item} key={item.id}>
               <Progress
-                className="experienceBar"
-                barClassName="experienceBarInner"
+                className={styles.bar}
+                barClassName={styles.barInner}
                 total={`${range[index]}rem`}
                 percent={percentList[index]}
                 strokeWidth={`${stroke[index]}rem`}
               />
-              <ExperienceNode {...item} />
+              <ExperienceNode {...item} index={index} />
             </div>
           );
         })}

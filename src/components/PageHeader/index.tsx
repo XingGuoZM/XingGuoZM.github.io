@@ -6,8 +6,8 @@ import "./index.less";
 export default function PageHeader ({ children, scroller, immersive = false }) {
   return (
     <div className="page-header">
-      {!immersive && <Content>{children}</Content>}
-      <HeaderBg scroller={scroller}>{immersive && children}</HeaderBg>
+      <Content immersive={immersive}>{children}</Content>
+      <HeaderBg scroller={scroller} immersive={immersive}>{immersive && children}</HeaderBg>
     </div>
   );
 }

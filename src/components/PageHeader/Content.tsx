@@ -3,10 +3,13 @@ import classnames from "classnames";
 import { navbarHeight, getRpx2px } from "../../utils";
 import "./index.less";
 
-export default function HeaderContent ({ children }) {
+export default function HeaderContent({ children, immersive }) {
   const [color, setColor] = useState('');
   const { statusBarHeight, navBarHeight } = navbarHeight;
-  const headerNormalHeight = useMemo(() => statusBarHeight + navBarHeight, [
+  const height = useMemo(() => {
+    if (immersive) return 0;
+    return `${getRpx2px(statusBarHeight + navBarHeight)}px`
+  }, [
     navBarHeight,
     statusBarHeight
   ]);
@@ -24,11 +27,11 @@ export default function HeaderContent ({ children }) {
     <div
       className={classnames({
         ["page-header-content-wrap"]: true,
-        ["page-header-fixed"]: true
+        ["page-header-fixed"]: !immersive,
       })}
-      style={{ height: `${getRpx2px(headerNormalHeight)}px`, color }}
+      style={{ height, color }}
     >
-      <div className={["page-header-content"]}>{children}</div>
+      <div className="page-header-content">{children}</div>
     </div>
   );
 }

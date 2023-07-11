@@ -1,14 +1,21 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { navbarHeight, getRpx2px } from "@/utils";
+import useEventListener from "@/hooks/useEventListener";
 import classnames from "classnames";
-import { navbarHeight, getRpx2px } from "../../utils";
 import "./index.less";
-import useEventListener from "../../hooks/useEventListener";
 
-export default function HeaderBg ({ scroller, children }) {
+export default function HeaderBg({ scroller, children, immersive }) {
   const [fullFixed, setFullFixed] = useState(false);
   const [opacity, setOpacity] = useState(0);
   const { statusBarHeight, navBarHeight } = navbarHeight;
-  const headerNormalHeight = useMemo(() => statusBarHeight + navBarHeight, [
+  const height = useMemo(() => {
+    if (opacity === 0) {
+      return 0;
+    }
+    return `${getRpx2px(statusBarHeight + navBarHeight)}px`
+  }, [
+    opacity,
+    immersive,
     navBarHeight,
     statusBarHeight
   ]);
@@ -30,11 +37,8 @@ export default function HeaderBg ({ scroller, children }) {
 
   return (
     <div
-      className={classnames("page-header-bg", "page-header-fixed")}
-      style={{
-        height: `${getRpx2px(headerNormalHeight)}px`,
-        opacity
-      }}
+      className={classnames({ ["page-header-bg"]: true, ["page-header-fixed"]: immersive })}
+      style={{ height, opacity }}
     >{children}</div>
   );
 }

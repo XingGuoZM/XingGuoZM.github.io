@@ -1,15 +1,15 @@
 import React from 'react';
-import Floor from '../Floor';
-import './index.less';
+import AvatarIcon from '@/assets/avatar.svg';
+import styles from './index.module.less';
 
-export default function UserInfo(props) {
+export default function UserInfo({ data }) {
 
-  return <div className='user-item-wrap'>
-    {props.user.map(item => {
-      return <div className='user-item' key={item.label}>
-        {item.label && <div className='user-label'>{item.label}：</div>}
-        {item.href ? <a href={item.href}>{item.value}</a> : <div className='user-value'>{item.value}</div>}
-      </div>
-    })}
+  return <div className={styles.wrap}>
+    <div className={styles.avatarWrap}>
+      <img className={styles.avatar} src={AvatarIcon} />
+    </div>
+    <div className={styles.item} >
+      <div>{data.value}</div>
+    </div>
   </div>
 }

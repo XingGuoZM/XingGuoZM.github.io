@@ -8,6 +8,17 @@ import CpuIcon from '../assets/cpu.svg';
 import NetWorkIcon from '../assets/network.svg';
 import RenderIcon from '../assets/render.svg';
 
+import Job from '@/assets/job.svg';
+import City from '@/assets/city.svg';
+
+import School from '@/assets/school.svg';
+import SchoolCourse from '@/assets/schoolCourse.svg';
+import SchoolDate from '@/assets/schoolDate.svg';
+
+import Telphone from '@/assets/telphone.svg';
+import Email from '@/assets/email.svg';
+import Wechat from '@/assets/wechat.svg';
+
 export interface IUser {
   label: string;
   value: string;
@@ -36,11 +47,34 @@ export interface data {
 export const data = {
   headTitle: '个人简历',
   theme: ['#ff6a00', '#3Eb575', '#1479d7', '#121212'],
-  user: [
-    { label: '基本信息', value: '李志铭 | 1995 | 男' },
-    { label: '联系方式', value: '18969176324' },
-    { label: '工作意向', value: '高级前端开发工程师 | 深圳' },
-    // { label: '', value: 'github', href: 'https://github.com' },
+  userInfo: { value: '李志铭｜1995｜男｜5年前端经验' },
+  userDetail: [
+    {
+      label: '联系方式', list: [{
+        icon: Telphone, value: '18969176324'
+      }, {
+        icon: Email, value: '18969176324@163.com'
+      }, {
+        icon: Wechat, value: 'M-sharp'
+      }]
+    },
+    {
+      label: '教育背景',
+      list: [{
+        icon: School, value: '江西财经大学'
+      }, {
+        icon: SchoolCourse, value: '软件工程'
+      }, {
+        icon: SchoolDate, value: '2014～2018'
+      }]
+    },
+    {
+      label: '求职意向', list: [{
+        icon: Job, value: '前端工程师'
+      }, {
+        icon: City, value: '深圳'
+      }]
+    },
   ],
   expert: [
     { title: '性能优化', desc: ['网络瓶颈', 'CUP瓶颈', '渲染瓶颈'], icon: [RenderIcon, NetWorkIcon, CpuIcon] },
@@ -52,10 +86,12 @@ export const data = {
   experience: {
     amount: "300",
     stageList: [
-      { id: "1", time: "2014.9", name: '江西财经大学 | 软件工程', status: "-1", threshold: "100" },
-      { id: "2", time: "2018.6", name: '上海中电电子系统科技股份有限公司', job: 'web前端开发工程师', status: "-1", threshold: "200" },
-      { id: "3", time: "2019.5", name: '武汉佰钧成信息技术有限公司', job: '前端开发工程师', status: "-1", threshold: "300" },
-      { id: '4', time: '2023.4', threshold: '400' }
+      { id: '1', time: '2023.4', name: '武汉佰钧成信息技术有限公司', job: '前端开发工程师', },
+      { id: "2", time: "2019.5", name: '上海中电电子系统科技股份有限公司', job: 'web前端开发工程师' },
+      // { id: '3', time: '2018.5', name: '江西财经大学 | 软件工程' },
+      { id: "3", time: "2018.5" },
+
+      // { id: '4', time: '2023.4', threshold: '400' }
     ]
   },
   project: [

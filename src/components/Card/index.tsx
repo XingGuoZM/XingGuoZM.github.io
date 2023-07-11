@@ -45,7 +45,9 @@ export default function Card({ type, children, data }: IProps) {
           </div>
         </div>;
       case CardTypeEnum.Small:
-        return <div>four</div>;
+        return <div className='card-small'>
+          {data.map((item) => <Fragment key={item.label}>{children(item)}</Fragment>)}
+        </div>;
       default:
         return;
     }
