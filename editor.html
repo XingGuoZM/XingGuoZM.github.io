@@ -46,7 +46,6 @@
     <button id='saveBtn'>保存</button>
   </div>
 
-  <script src='./js/indexDB.js'></script>
   <script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
   <script>
     const { createEditor, createToolbar } = window.wangEditor
@@ -77,10 +76,12 @@
     })
     function handleSave() {
       // localStorage.setItem('editorHtml', editorHtml);
-
+      console.log(editorHtml);
     }
+    document.getElementById('saveBtn').addEventListener('click', () => {
+      handleSave();
+    })
 
-    document.getElementById('saveBtn').addEventListener('click', handleSave);
   </script>
 
 </body>

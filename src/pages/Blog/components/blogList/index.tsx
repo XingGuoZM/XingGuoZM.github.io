@@ -1,7 +1,7 @@
-import React from 'react';
+import React from '@/pages/Blog/components/BlogList/node_modules/react';
 import TabList from '@/components/TabList';
-import "swiper/css/pagination";
-import "swiper/css"
+import "@/pages/Blog/components/BlogList/node_modules/swiper/css/pagination";
+import "@/pages/Blog/components/BlogList/node_modules/swiper/css"
 
 import styles from './index.module.less';
 

@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import Modal from '@/components/PromisifyModal';
 import Header from './components/Header';
-import BlogList from './components/blogList';
+import BlogList from './components/BlogList';
+import BlogTemplate from './components/BlogTemplate';
 import styles from './index.module.less';
 
 export default function Blog() {
@@ -10,7 +11,7 @@ export default function Blog() {
     <div className={styles.wrap} ref={scroller}>
       <Header scroller={scroller}></Header>
       <div className={styles.content}>
-        <BlogList />
+        <BlogTemplate />
       </div>
     </div>
   </Modal.Provider>
