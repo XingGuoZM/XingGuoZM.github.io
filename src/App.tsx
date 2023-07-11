@@ -13,7 +13,7 @@ export default function App() {
     theme && setBodyStyleProperty('--theme-color', theme);
   }, [])
   return <div className='app'>
-    {/* <Home></Home> */}
-    <Blog />
+    <Home></Home>
+    {/* <Blog /> */}
   </div>
 }
