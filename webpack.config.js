@@ -7,8 +7,10 @@ module.exports = {
   entry: {
     resume: './src/resume.tsx',
     blog: './src/blog.tsx',
+    article: './src/article.tsx',
   },
   devServer: {
+
     static: {
       directory: path.join(__dirname, '/mobile'),
     },
@@ -62,15 +64,21 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new htmlWebpackPlugin({
-      title: 'webpack-react',
+      title: 'resume',
       filename: 'resume/index.html',
       chunks: ['resume'],
       templateContent: `<html><body><div id='root'></div></body></html>`
     }),
     new htmlWebpackPlugin({
-      title: 'webpack-react',
+      title: 'blog',
       filename: 'blog/index.html',
       chunks: ['blog'],
+      templateContent: `<html><body><div id='root'></div></body></html>`
+    }),
+    new htmlWebpackPlugin({
+      title: 'article',
+      filename: 'article/index.html',
+      chunks: ['article'],
       templateContent: `<html><body><div id='root'></div></body></html>`
     })
   ],
@@ -86,9 +94,7 @@ module.exports = {
     }
   },
   output: {
-    filename: (chunkData) => {
-      return chunkData.chunk.name === 'resume' ? 'resume/[name].js' : 'blog/[name].js'
-    },
+    filename: '[name]/index.js',
     asyncChunks: true,
     path: __dirname + '/mobile'
   }

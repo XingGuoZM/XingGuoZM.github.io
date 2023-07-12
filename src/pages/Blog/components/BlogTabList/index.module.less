@@ -10,7 +10,8 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    font-size:0.24rem;
+    font-size:0.28rem;
+    color:var(--theme-color);
   }
   .list{
     width:100%;
@@ -39,21 +40,75 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    color:#000;
     background-color:#fff;
+    // background:linear-gradient(-45deg, var(--theme-color),transparent);
   }
-  .label{
-    width:100%;
+
+  .iconWrap{
+    width:2.5rem;
+    height:2.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:0.1rem;
+  }
+  .icon{
+    width:2rem;
+    height:2rem;
+    filter: drop-shadow(0.02rem 0.04rem 0.06rem var(--theme-color));
+  }
+  .titleWrap{
+    width:4.3rem;
+    height:2.5rem;
+    margin-left:0.1rem;
     font-size:0.26rem;
+  }
+  .title{
+    width:4rem;
+    font-size:0.32rem;
+    height:0.5rem;
+    font-weight: bolder;
+    display:flex;
+    justify-content: flex-start;
+    color:var(--theme-color);
+  }
+  .subtitle{
+    font-size:0.2rem;
+    display:flex;
+    margin-top:0.1rem;
+    margin-bottom:0.1rem;
+  }
+  .subtitleCell{
+    height:0.2rem;
+    padding:0.1rem;
+    font-size:0.2rem;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border:solid var(--theme-color) 1px;
+
+    border-radius:0.05rem;
+    color:var(--theme-color);
+  }
+  .subtitleCell+.subtitleCell{
+    margin-left:0.05rem;
+  }
+  .desc{
+    width:4rem;
+    height:1.5rem;
+    font-size:0.24rem;
+    line-height:0.38rem;
+    overflow: hidden;
+    color:var(--theme-color);
   }
   :global{
     .swiper-slide-thumb-active{
-      border:solid 0.01rem #fff;
-      color:#fff;
+      border:solid 0.01rem var(--theme-color);
+      color:var(--theme-color);
       font-weight: bolder;
       border-radius: 0.1rem;
-      font-size:0.28rem;
-      background-color:var(--theme-color);
+      font-size:0.32rem;
+      // background-color:var(--theme-color);
     }
   }
     

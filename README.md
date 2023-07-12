@@ -31,3 +31,4 @@
 11. markdown转html插件
 12. node遍历文件夹下所有文件
 13. htmlWebpackPlugin输出多个html,配置多个出口之后，所有页面会同时加载
+14. 本地环境和线上环境，url前缀不一致，跳转问题

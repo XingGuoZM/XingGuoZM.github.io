@@ -11,7 +11,8 @@
         hljs.highlightElement(el);
       });
     },[])
-    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h3>关键词</h3>
+    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h1>作用域</h1>
+<h3>关键词</h3>
 <ul>
 <li>var、let/const、变量提升、暂时性死区</li>
 <li>词法作用域、执行上下文</li>

@@ -11,7 +11,8 @@
         hljs.highlightElement(el);
       });
     },[])
-    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h3>关键词</h3>
+    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h1>原型链</h1>
+<h3>关键词</h3>
 <ul>
 <li>__proto__、prototype、constructor</li>
 <li>class、extends、super、new、new.target</li>

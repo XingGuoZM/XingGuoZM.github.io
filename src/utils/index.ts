@@ -162,3 +162,14 @@ export function viewport() {
   }, false);
   refreshRem();
 };
+
+
+export function getBaseUrl() {
+  let baseUrl = ''
+  if (location.hostname === 'localhost') {
+    baseUrl = 'http://localhost:8000';
+  } else {
+    baseUrl = 'https://xingguozm.github.io/mobile'
+  }
+  return baseUrl;
+}

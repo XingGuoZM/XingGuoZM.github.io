@@ -174,5 +174,55 @@ export const data = {
     projectRole: '前端核⼼开发',
     projectDesc: '营销会场的⻚⾯搭建业务，主要开发适配模块供⻚⾯搭建系统消费。开发并维护12个（共60）业务 模块国际化多语⾔⽅案（i18n）、前端组件单元测试、主题换肤、埋点上报、⻚⾯多端适配、node提效⼩⼯具 ',
     projectResult: []
+  }],
+  blogList: [{
+    tabTitle: 'js基础',
+    tabData: [{
+      title: '原型链',
+      subtitle: ['prototype', '__proto__'],
+      desc: '构造函数和实例对象的连接的纽带，函数和对象的关系（横向），js中原型是继承的基础。每个对象（object）都有一个原型链对象（也叫隐式原型）',
+      url: '/article?id=0001',
+      icon: JsIcon
+    }, {
+      title: '作用域',
+      subtitle: ['变量提升', '暂时死区', '闭包'],
+      desc: '作用域是变量/常量的访问规则，或者说是变量/常量的影响范围，通过指定作用域的类型来分配变量的访问权限，例如函数作用域只在函数代码块内生效，全局作用域在全局任何地方都能访问',
+      url: '/article?id=0000',
+      icon: JsIcon
+    }, {
+      name: '事件循环',
+      url: '',
+      icon: JsIcon
+    }, {
+      name: '',
+      icon: JsIcon,
+    }]
+  }, {
+    tabTitle: 'react',
+    tabData: [{ name: 'hook原理' }]
+  }, {
+    tabTitle: '性能优化',
+    tabData: [{ name: 'chrome渲染原理' }]
+  }, {
+    tabTitle: 'webpack',
+    tabData: [{ name: 'webpack原理' }]
+  }, {
+    tabTitle: 'hybrid h5',
+    tabData: [{ name: 'webview' }]
+  }, {
+    tabTitle: 'http网络',
+    tabData: [{
+      name: 'htt发展历程'
+    }]
+  }, {
+    tabTitle: '常用算法',
+    tabData: [{
+      name: '数组去重'
+    }, {
+      name: '二叉树遍历'
+    }]
+  }, {
+    tabTitle: '面试题',
+    tabData: [{ name: '面试题汇总' }]
   }]
 };
