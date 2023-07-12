@@ -5,11 +5,13 @@ const resolve = dir => path.resolve(__dirname, dir);
 
 module.exports = {
   entry: {
-    app: './src/index.tsx',
-    vendor: ['react', 'react-dom']
+    resume: './src/resume.tsx',
+    blog: './src/blog.tsx',
   },
   devServer: {
-    contentBase: path.join(__dirname, '/resume'),
+    static: {
+      directory: path.join(__dirname, '/mobile'),
+    },
     compress: true,
     host: '0.0.0.0',
     port: 8000
@@ -61,6 +63,14 @@ module.exports = {
     new CleanWebpackPlugin(),
     new htmlWebpackPlugin({
       title: 'webpack-react',
+      filename: 'resume/index.html',
+      chunks: ['resume'],
+      templateContent: `<html><body><div id='root'></div></body></html>`
+    }),
+    new htmlWebpackPlugin({
+      title: 'webpack-react',
+      filename: 'blog/index.html',
+      chunks: ['blog'],
       templateContent: `<html><body><div id='root'></div></body></html>`
     })
   ],
@@ -76,7 +86,10 @@ module.exports = {
     }
   },
   output: {
-    filename: '[name].bundle.js',
-    path: __dirname + '/resume'
+    filename: (chunkData) => {
+      return chunkData.chunk.name === 'resume' ? 'resume/[name].js' : 'blog/[name].js'
+    },
+    asyncChunks: true,
+    path: __dirname + '/mobile'
   }
 }

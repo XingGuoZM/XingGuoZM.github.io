@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import PageBg from './components/PageBg';
 import Header from './components/Header';
 import Floor from '@/components/Floor';
@@ -12,10 +12,17 @@ import Achievement from './components/Achievement';
 import Footer from './components/Footer';
 import { data } from '@/data';
 import Modal from "@/components/PromisifyModal";
-import style from './index.module.less'
+import { viewport } from '@/utils';
+import setBodyStyleProperty from '@/utils/setBodyStyleProperty';
+import style from './index.module.less';
 
-export default function Home() {
+viewport();
+export default function Resume() {
   const scroller = useRef(null);
+  useEffect(() => {
+    const theme = localStorage.getItem('--theme-color')
+    theme && setBodyStyleProperty('--theme-color', theme);
+  }, [])
   return <Modal.Provider>
     <div className={style.home} ref={scroller}>
       <PageBg>

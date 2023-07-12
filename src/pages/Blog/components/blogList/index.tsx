@@ -1,21 +1,29 @@
-import React from '@/pages/Blog/components/BlogList/node_modules/react';
-import TabList from '@/components/TabList';
-import "@/pages/Blog/components/BlogList/node_modules/swiper/css/pagination";
-import "@/pages/Blog/components/BlogList/node_modules/swiper/css"
 
+import React, { useState, ReactElement } from 'react';
 import styles from './index.module.less';
+import 作用域 from './作用域';
+import 原型链 from './原型链';
 
-const data = [1, 2, 3, 4]
-export default function BlogList() {
+const compKeys = ['作用域', '原型链'];
+const CompMap: { [key: string]: ReactElement } = {
+  '作用域': <作用域 />, '原型链': <原型链 />
+}
+
+export default () => {
+  const [compKey, setCompKey] = useState('');
 
   return (
-    <TabList
-      data={data}
-      renderTabCell={(item) => <div className={styles.tabCell}>{item}</div>}
-      renderListCell={(item) => <div className={styles.listCell}>
-        <div className={styles.listCellItem}>
+    <div>
+      {compKeys.map(item => (
+        <div
+          style={styles.nav}
+          onClick={() => setCompKey(item)}
+          key={item}
+        >
           {item}
         </div>
-      </div>}
-    />)
+      ))}
+      {CompMap[compKey]}
+    </div>
+  );
 }

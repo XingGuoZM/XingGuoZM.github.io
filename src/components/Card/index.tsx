@@ -32,7 +32,7 @@ export default function Card({ type, children, data }: IProps) {
     switch (type) {
       case CardTypeEnum.Large:
         return <div className="card-large">
-          {children}
+          {data.map(item => <Fragment key={item.label}>{children(item)}</Fragment>)}
         </div>;
       case CardTypeEnum.Medium:
 

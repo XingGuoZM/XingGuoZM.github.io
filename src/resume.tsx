@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import  App from './App';
+import Resume from '@/pages/Resume';
+import './index.less'
 
 ReactDOM.render(
-  <App />,
+  <Resume />,
   document.querySelector('#root')
 );
