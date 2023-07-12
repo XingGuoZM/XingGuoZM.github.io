@@ -19,6 +19,9 @@ import Telphone from '@/assets/telphone.svg';
 import Email from '@/assets/email.svg';
 import Wechat from '@/assets/wechat.svg';
 
+import AlgorithmIcon from '@/assets/algorithm.svg';
+import InterviewIcon from '@/assets/interview.svg';
+
 export interface IUser {
   label: string;
   value: string;
@@ -194,35 +197,45 @@ export const data = {
       url: '',
       icon: JsIcon
     }, {
-      name: '',
+      name: 'this与执行上下文',
       icon: JsIcon,
     }]
   }, {
     tabTitle: 'react',
-    tabData: [{ name: 'hook原理' }]
+
+    tabData: [{ name: 'hook原理', icon: ReactIcon, }]
   }, {
     tabTitle: '性能优化',
-    tabData: [{ name: 'chrome渲染原理' }]
+
+    tabData: [{ name: 'chrome渲染原理', icon: RenderIcon, }]
   }, {
     tabTitle: 'webpack',
-    tabData: [{ name: 'webpack原理' }]
+
+    tabData: [{ name: 'webpack原理', icon: WebpackIcon, }]
   }, {
     tabTitle: 'hybrid h5',
-    tabData: [{ name: 'webview' }]
+
+    tabData: [{ name: 'webview', icon: IphoneIcon, }]
   }, {
     tabTitle: 'http网络',
+
     tabData: [{
-      name: 'htt发展历程'
+      name: 'htt发展历程',
+      icon: NetWorkIcon,
     }]
   }, {
     tabTitle: '常用算法',
+
     tabData: [{
-      name: '数组去重'
+      name: '数组去重',
+      icon: AlgorithmIcon,
     }, {
-      name: '二叉树遍历'
+      name: '二叉树遍历',
+      icon: AlgorithmIcon,
     }]
   }, {
     tabTitle: '面试题',
-    tabData: [{ name: '面试题汇总' }]
+
+    tabData: [{ name: '面试题汇总', icon: InterviewIcon, }]
   }]
 };
