@@ -1,16 +1,8 @@
 # xingguozm.github.io
 
+* 在线简历，预览地址：https://xingguozm.github.io/mobile/resume/
 
-必要个人信息
-
-时间轴 progress，学校->公司经历
-
-专业技能，swiper
-
-项目经历 时间轴
-
-作品展示，github。。。
-
+* 在线博客，预览地址：https://xingguozm.github.io/mobile/blog/
 
 ### 问题
 1. 主体换肤方案、兼容性、style-resources-loader
