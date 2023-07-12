@@ -19,15 +19,22 @@
 const fs = require('fs');
 const path = require('path');
 
+
+const formatId = (index) => {
+  if (index < 10) return `000${index}`;
+  if (index < 100) return `00${index}`;
+  if (index < 1000) return `0${index}`;
+  return index;
+}
 // 遍历目录下所有文件
 function getPath (dir) {
   return new Promise(resolve => {
     let ans = []
     function traverse (dir, ans) {
-      fs.readdirSync(dir, { withFileTypes: true }).forEach((file) => {
+      fs.readdirSync(dir, { withFileTypes: true }).forEach((file, index) => {
         let filepath = path.join(dir, file.name)
         if (file.isFile()) {
-          ans.push({ path: filepath, name: file.name })
+          ans.push({ id: formatId(index), path: filepath, name: file.name })
         } else if (file.isDirectory()) {
           traverse(filepath, ans)
         }
@@ -49,7 +56,7 @@ const parseMd2Html = (mdStr, file) => {
   const MarkdownIt = require('markdown-it');
   const md = new MarkdownIt();
   const result = md.render(mdStr);
-  generatorReactFile(`../src/pages/Blog/components/BlogList/${file}.tsx`, result);
+  generatorReactFile(`../src/pages/Article/components/ArticleList/${file}.tsx`, result);
 
 }
 
@@ -58,43 +65,49 @@ const parseHtml = (htmlStr) => {
   return htmlStr.replace(/&lt;/g, '<').replace(/&gt;/g, '>')
 }
 
+const generatorId2Name = (filepath, fileArr) => {
+  const mapNameStr = fileArr.map(item => {
+    return ({
+      id: item.id,
+      name: item.name.split('.')[0]
+    })
+  })
+
+  fs.writeFile(filepath, JSON.stringify(mapNameStr), 'utf8', (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+  });
+}
 // 将文件名写入映射文件
 const generatorMapFile = (filepath, fileArr) => {
 
-  const names = fileArr.map(item => item.name.split('.')[0]);
-  const compKeys = names.map(item => `'${item}'`);
-  const compImport = names.map(name => `import ${name} from './${name}';`);
-  const compCompMap = names.map(name => {
-    return `'${name}': <${name} />`
+
+  const names = fileArr.map(item => ({ id: item.id, name: item.name.split('.')[0] }));
+
+  const compKeys = names.map(item => `'${item.name}'`);
+  const compImport = names.map(item => `import ${item.name} from './${item.name}';`);
+  const compCompMap = names.map(item => {
+    return `'${item.id}': <${item.name} />`
   })
 
   const mapCompStr = `
-import React, { useState, ReactElement } from 'react';
-${compImport.join('\n')}
+  import React, { ReactElement } from 'react';
+  ${compImport.join('\n')}
 
-const compKeys = [${compKeys}];
-const CompMap: {[key: string]: ReactElement} = {
-  ${compCompMap}
-}
-
-export default ()=> {
-  const [compKey, setCompKey] = useState('');
-
-  return (
-    <div>
-      {compKeys.map(item => (
-        <div 
-          style={{fontSize:'0.48rem'}}
-          onClick={() => setCompKey(item)} 
-          key={item}
-        >
-          {item}
-        </div>
-      ))}
-      {CompMap[compKey]}
-    </div>
-  );
-}`
+  const compKeys = [${compKeys}];
+  const CompMap: {[key: string]: ReactElement} = {
+    ${compCompMap}
+  }
+  
+  export default ()=> {
+    const id = location.search.split('=')[1]
+    
+    return (
+      <div>
+        {CompMap[id]}
+      </div>
+    );
+  }`
 
   fs.writeFile(filepath, mapCompStr, 'utf8', (err) => {
     if (err) throw err;
@@ -127,11 +140,10 @@ const generatorReactFile = (filepath, str) => {
   });
 }
 
-
-
 try {
   getPath('../blogs').then(fileArr => {
-    generatorMapFile(`../src/pages/Blog/components/BlogList/index.tsx`, fileArr);
+    generatorMapFile(`../src/pages/Article/components/ArticleList/index.tsx`, fileArr);
+    generatorId2Name(`../src/data/articleMap.json`, fileArr);
     for (const file of fileArr) {
       getFileDataStr(file.path).then((data) => {
         const name = file.name.split('.')[0]

@@ -9,9 +9,12 @@ const devServerOptions = webpackConfig.devServer
 const server = new WebpackDevServer(devServerOptions, compiler);
 const runServer = async () => {
   console.log('Starting server...');
-  exec('node markdown2html.js');
+
   await server.start();
 
-};
 
-runServer();
+};
+exec('node markdown2html.js', () => {
+  console.log('生成成功')
+  runServer();
+});
