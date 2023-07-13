@@ -15,7 +15,7 @@ export default function TabList({ data, renderTabCell, renderListCell }) {
       watchSlidesProgress
       slidesPerView={3}
       onSwiper={setThumbsSwiper}>
-      {data.map(item => <SwiperSlide key={item.tabTitle}>
+      {data.map(item => <SwiperSlide key={item.id}>
         {renderTabCell(item)}
       </SwiperSlide>)}
     </Swiper>
@@ -26,7 +26,7 @@ export default function TabList({ data, renderTabCell, renderListCell }) {
         swiper: thumbsSwiper,
         watchSlidesVisibility: true,
       }}>
-      {data.map(item => <SwiperSlide key={item.tabTitle}>
+      {data.map(item => <SwiperSlide key={item.id}>
         {renderListCell(item)}
       </SwiperSlide>)}
     </Swiper>

@@ -11,6 +11,7 @@ export enum CardTypeEnum {
   Tiny = 'Tiny',
 }
 interface IData {
+  id: string;
   projectName: string;
   projectTime: string;
   projectRole: string;
@@ -34,7 +35,7 @@ export default function Card({ type, children, data }: IProps) {
     switch (type) {
       case CardTypeEnum.Large:
         return <div className="card-large">
-          {data.map(item => <Fragment key={item.label}>{children(item)}</Fragment>)}
+          {data.map(item => <Fragment key={item.id}>{children(item)}</Fragment>)}
         </div>;
       case CardTypeEnum.Medium:
 

@@ -1,0 +1,81 @@
+
+.project {
+  display: flex;
+}
+.projectIcon {
+  width: 0.2rem;
+  height: 0.2rem;
+  background-color: var(--theme-color);
+  border-radius: 50%;
+}
+.projectContent {
+  width: 6.2rem;
+  margin-left: 0.1rem;
+  margin-bottom: 0.2rem;
+  padding:0.2rem;
+  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);
+  color: var(--theme-color);
+  border-radius:0.1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projectTitle{
+  height:1rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.projectName{
+  font-size:0.36rem;
+  font-weight: bolder;
+}
+.projectTime{
+  font-size:0.25rem;
+  font-weight: bolder;
+}
+.projectDescWrap{
+  display:flex;
+  margin-bottom:0.1rem;
+}
+
+.projectDescIconWrap{
+  width: 0.5rem;
+  height: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: solid 1px var(--theme-color);
+  .projectDescIcon{
+    width:0.25rem;
+    height:0.25rem;
+  }
+}
+.projectDesc{
+  width:5rem;
+  font-size:0.26rem;
+  line-height:0.5rem;
+  margin-left:0.1rem;
+}
+.projectDescLine{
+  border-bottom:solid 1px var(--theme-color);
+  position: relative;
+}
+.projectDescLine:after{
+  content:'';
+  display:block;
+  width:1px;
+  height:calc(100% - 0.4rem);
+  position:absolute;
+  left: -0.35rem;
+  top: 0.5rem;
+  background-color:var(--theme-color);
+}
+.projectResult{
+  font-size:0.26rem;
+  line-height:0.5rem;
+  text-indent:0.2rem;
+}

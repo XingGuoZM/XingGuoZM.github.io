@@ -11,7 +11,7 @@ export default function UserDetail({ data }) {
         <div className={styles.cardSmallContent}>
           {item.list.map(ele => <div className={styles.valueWrap} key={ele.value}>
             {ele.name && <div className={styles.name}>{ele.name}</div>}
-            {ele.icon && <img className={styles.icon} src={ele.icon} />}
+            {ele.Icon && <ele.Icon className={styles.icon} />}
             <div className={styles.value}>{ele.value}</div>
           </div>)}
         </div>

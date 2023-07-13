@@ -20,7 +20,6 @@ export default function Blog() {
   return <Modal.Provider>
     <div className={styles.wrap} ref={scroller}>
       <Header scroller={scroller}></Header>
-      {/* <BlogList /> */}
       <BlogCarousel />
       <BlogTabList />
     </div>

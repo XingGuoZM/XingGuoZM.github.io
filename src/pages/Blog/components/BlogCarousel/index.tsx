@@ -4,6 +4,7 @@ import IconList from '@/components/IconList';
 import { data } from '@/data';
 import styles from './index.module.less';
 
+const iconFillColor = localStorage.getItem('--theme-color');
 
 export default function BlogCarousel() {
 
@@ -13,7 +14,7 @@ export default function BlogCarousel() {
       {(item) => {
         return <div className={styles.cell}>
           <div className={styles.iconWrap}>
-            <IconList data={item.icon} className={styles.icon} />
+            <IconList data={item.iconList} fill={iconFillColor} />
           </div>
           <div className={styles.textWrap}>
             <div className={styles.text}>

@@ -41,7 +41,7 @@ function Card(_ref) {
           className: "card-large"
         }, data.map(function (item) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-            key: item.label
+            key: item.id
           }, children(item));
         }));
 
@@ -168,18 +168,20 @@ function IconList(_ref) {
   var _ref$data = _ref.data,
       data = _ref$data === void 0 ? '' : _ref$data,
       _ref$className = _ref.className,
-      className = _ref$className === void 0 ? '' : _ref$className;
+      className = _ref$className === void 0 ? '' : _ref$className,
+      _ref$fill = _ref.fill,
+      fill = _ref$fill === void 0 ? '#fff' : _ref$fill;
 
   if (Array.isArray(data) && data.length === 2) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "expertIcon2"
-    }, data === null || data === void 0 ? void 0 : data.map(function (icon) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    }, data === null || data === void 0 ? void 0 : data.map(function (Icon, index) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Icon, {
         className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(_defineProperty({
           'expertSmallIcon2': true
         }, className, true)),
-        src: icon,
-        key: icon
+        key: index,
+        fill: fill
       });
     }));
   }
@@ -187,22 +189,23 @@ function IconList(_ref) {
   if (Array.isArray(data) && data.length === 3) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "expertIcon3"
-    }, data === null || data === void 0 ? void 0 : data.map(function (icon, index) {
+    }, data === null || data === void 0 ? void 0 : data.map(function (Icon, index) {
       var _classnames2;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        key: icon,
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Icon, {
+        key: index,
         className: classnames__WEBPACK_IMPORTED_MODULE_1___default()((_classnames2 = {}, _defineProperty(_classnames2, 'expertSmallIcon3', true), _defineProperty(_classnames2, 'firstExpertSmallIcon3', index === 0), _defineProperty(_classnames2, className, true), _classnames2)),
-        src: icon
+        fill: fill
       });
     }));
   }
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  var Icon = data[0];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Icon, {
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(_defineProperty({
       'expertIcon': true
     }, className, true)),
-    src: data
+    fill: fill
   });
 }
 
@@ -253,7 +256,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".expertIcon {\n  width: 1.5rem;\n  height: 1.5rem;\n}\n.expertIcon2 {\n  width: 1rem;\n  height: 1rem;\n  display: flex;\n  align-items: center;\n}\n.expertSmallIcon2 {\n  width: 1rem;\n  height: 1rem;\n}\n.expertIcon3 {\n  width: 2rem;\n  height: 2rem;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: wrap;\n}\n.firstExpertSmallIcon3 {\n  flex-basis: 2rem;\n}\n.expertSmallIcon3 {\n  width: 0.6rem;\n  height: 0.6rem;\n}\n", "",{"version":3,"sources":["webpack://./src/components/IconList/index.less"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,cAAA;AACF;AAEA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;AAAF;AAGA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,6BAAA;EACA,mBAAA;EACA,eAAA;AADF;AAGA;EACE,gBAAA;AADF;AAGA;EACE,aAAA;EACA,cAAA;AADF","sourcesContent":[".expertIcon{\n  width:1.5rem;\n  height:1.5rem;\n}\n\n.expertIcon2{\n  width:1rem;\n  height:1rem;\n  display:flex;\n  align-items: center;\n}\n.expertSmallIcon2{\n  width:1rem;\n  height:1rem;\n}\n\n.expertIcon3{\n  width:2rem;\n  height:2rem;\n  display:flex;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: wrap;\n}\n.firstExpertSmallIcon3{\n  flex-basis: 2rem;\n}\n.expertSmallIcon3{\n  width:0.6rem;\n  height:0.6rem;\n}\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".expertIcon {\n  width: 1.5rem;\n  height: 1.5rem;\n}\n.expertIcon2 {\n  display: flex;\n  align-items: center;\n}\n.expertSmallIcon2 {\n  width: 1rem;\n  height: 1rem;\n}\n.expertIcon3 {\n  width: 2rem;\n  height: 2rem;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: wrap;\n}\n.firstExpertSmallIcon3 {\n  flex-basis: 2rem;\n}\n.expertSmallIcon3 {\n  width: 0.6rem;\n  height: 0.6rem;\n}\n", "",{"version":3,"sources":["webpack://./src/components/IconList/index.less"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,cAAA;AACF;AAEA;EACE,aAAA;EACA,mBAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;AAAF;AAGA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,6BAAA;EACA,mBAAA;EACA,eAAA;AADF;AAGA;EACE,gBAAA;AADF;AAGA;EACE,aAAA;EACA,cAAA;AADF","sourcesContent":[".expertIcon{\n  width:1.5rem;\n  height:1.5rem;\n}\n\n.expertIcon2{\n  display:flex;\n  align-items: center;\n}\n.expertSmallIcon2{\n  width:1rem;\n  height:1rem;\n}\n\n.expertIcon3{\n  width:2rem;\n  height:2rem;\n  display:flex;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: wrap;\n}\n.firstExpertSmallIcon3{\n  flex-basis: 2rem;\n}\n.expertSmallIcon3{\n  width:0.6rem;\n  height:0.6rem;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

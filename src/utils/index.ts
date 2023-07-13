@@ -1,7 +1,9 @@
 export const getDeviceInfo = (() => {
   const ua = window.navigator?.userAgent;
+
   const isAndroid = /android/i.test(ua);
   const isIos = /iPhone|iPad|iPod|iOS/i.test(ua);
+  const isMobile = /Mobi|Android|iPhone/i.test(ua);
   const matchs = typeof ua === "string" && ua.match(/AliApp\(LT\/([\d.]+)\)/i);
   let appVersion = "";
 
@@ -10,6 +12,7 @@ export const getDeviceInfo = (() => {
   }
 
   return {
+    isMobile,
     isAndroid,
     isIos,
     appVersion
@@ -24,13 +27,15 @@ export const isHair = () => {
   return heightIndex > -1 && widthLengths[heightIndex] === screenWidth;
 };
 export const navbarHeight = (() => {
-  const { isIos, isAndroid } = getDeviceInfo;
+  const { isIos, isAndroid, isMobile } = getDeviceInfo;
   let statusBarHeight = 0;
   let navBarHeight = 0;
   let topNavHeight = 1000;
   const scale = 375 / window.screen.width;
-
-  if (isHair()) {
+  if (!isMobile) {
+    statusBarHeight = 0;
+    navBarHeight = 20;
+  } else if (isHair()) {
     statusBarHeight = 44 * scale;
     navBarHeight = 44 * scale;
   } else if (isIos) {
@@ -63,7 +68,7 @@ export const navbarHeight = (() => {
 
 
 export const getRpx2px = (rpx) => (rpx * window.screen.width) / 750;
-export const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent)
+
 
 
 export function viewport() {
@@ -72,6 +77,7 @@ export function viewport() {
   const docEl = doc.documentElement;
   let metaEl = doc.querySelector('meta[name="viewport"]');
   const flexibleEl = doc.querySelector('meta[name="flexible"]');
+  const { isMobile } = getDeviceInfo;
   let dpr = 0;
   let scale = 0;
   let tid;
@@ -141,7 +147,7 @@ export function viewport() {
   }
   function refreshRem() {
     const width = docEl.clientWidth || docEl.getBoundingClientRect().width;
-    const rem = isMobile ? 100 * (width / 750) : 40 * (width / 750);
+    const rem = isMobile ? 100 * (width / 750) : '60';
     docEl.style.fontSize = "".concat(rem, "px"); // @ts-ignore
 
     if (window._customerStore) {
