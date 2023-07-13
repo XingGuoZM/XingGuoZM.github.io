@@ -5,7 +5,7 @@
 * 在线博客，预览地址：https://xingguozm.github.io/mobile/blog/
 
 ### 问题
-1. 主体换肤方案、兼容性、style-resources-loader
+1. 主体换肤方案、兼容性、style-resources-loader,如何区分深色和浅色
 2. flex实现一个三筒、实现两列列表
 3. 如何判断页面是否在pc端打开
 4. webpack配置alias之后，ts/eslint无法识别，会报错（找不到模块），但是可以运行成功

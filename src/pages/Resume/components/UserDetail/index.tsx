@@ -7,7 +7,7 @@ export default function UserDetail({ data }) {
   return <Card type={CardTypeEnum.Small} data={data} >
     {(item) => {
       return <div className={styles.cardSmall}>
-        <div className={styles.cardSmallTitle}>{item.label}</div>
+        <div className={styles.cardSmallTitle}>{item.title}</div>
         <div className={styles.cardSmallContent}>
           {item.list.map(ele => <div className={styles.valueWrap} key={ele.value}>
             {ele.name && <div className={styles.name}>{ele.name}</div>}

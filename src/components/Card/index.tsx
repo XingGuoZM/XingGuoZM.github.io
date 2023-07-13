@@ -1,12 +1,14 @@
 
 
 import React, { Fragment, ReactElement, useCallback } from 'react';
+import classnames from 'classnames';
 import './index.less'
 
 export enum CardTypeEnum {
   Large = 'Large',
   Medium = 'Medium',
   Small = 'Small',
+  Tiny = 'Tiny',
 }
 interface IData {
   projectName: string;
@@ -46,8 +48,31 @@ export default function Card({ type, children, data }: IProps) {
         </div>;
       case CardTypeEnum.Small:
         return <div className='card-small'>
-          {data.map((item) => <Fragment key={item.label}>{children(item)}</Fragment>)}
+          <div className='card-small-left'>
+            {data.filter((_, index) => index % 3 === 0).map((item) => <Fragment key={item.id}>{children(item)}</Fragment>)}
+          </div>
+          <div className='card-small-center'>
+            {data.filter((_, index) => index % 3 === 1).map((item) => <Fragment key={item.id}>{children(item)}</Fragment>)}
+          </div>
+          <div className='card-small-right'>
+            {data.filter((_, index) => index % 3 === 2).map((item) => <Fragment key={item.id}>{children(item)}</Fragment>)}
+          </div>
         </div>;
+      case CardTypeEnum.Tiny:
+        return <div className='card-tiny-wrap'>
+          <div className='card-tiny-1'>
+            {data.filter((_, index) => index % 4 === 0).map(item => <Fragment key={item.id}>{children(item)}</Fragment>)}
+          </div>
+          <div className='card-tiny-2'>
+            {data.filter((_, index) => index % 4 === 1).map(item => <Fragment key={item.id}>{children(item)}</Fragment>)}
+          </div>
+          <div className='card-tiny-3'>
+            {data.filter((_, index) => index % 4 === 2).map(item => <Fragment key={item.id}>{children(item)}</Fragment>)}
+          </div>
+          <div className='card-tiny-4'>
+            {data.filter((_, index) => index % 4 === 3).map(item => <Fragment key={item.id}>{children(item)}</Fragment>)}
+          </div>
+        </div>
       default:
         return;
     }

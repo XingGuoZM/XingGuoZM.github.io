@@ -49,34 +49,39 @@ export interface data {
 
 export const data = {
   headTitle: '个人简历',
-  theme: ['#ff6a00', '#3Eb575', '#1479d7', '#121212'],
+  theme: [
+    { id: 'orange', value: '#ff6a00' },
+    { id: 'green', value: '#3Eb575' },
+    { id: 'blue', value: '#1479d7' },
+    { id: 'black', value: '#121212' },
+  ],
   userInfo: { value: '李志铭｜1995｜男｜5年前端经验' },
   userDetail: [
     {
-      label: '联系方式', list: [{
-        icon: Telphone, value: '18969176324'
-      }, {
-        icon: Email, value: '18969176324@163.com'
-      }, {
-        icon: Wechat, value: 'M-sharp'
-      }]
+      id: '1',
+      title: '联系方式',
+      list: [
+        { icon: Telphone, value: '18969176324' },
+        { icon: Email, value: '18969176324@163.com' },
+        { icon: Wechat, value: 'M-sharp' }
+      ]
     },
     {
-      label: '教育背景',
-      list: [{
-        icon: School, value: '江西财经大学'
-      }, {
-        icon: SchoolCourse, value: '软件工程'
-      }, {
-        icon: SchoolDate, value: '2014～2018'
-      }]
+      id: '2',
+      title: '教育背景',
+      list: [
+        { icon: School, value: '江西财经大学' },
+        { icon: SchoolCourse, value: '软件工程' },
+        { icon: SchoolDate, value: '2014～2018' }
+      ]
     },
     {
-      label: '求职意向', list: [{
-        icon: Job, value: '前端工程师'
-      }, {
-        icon: City, value: '深圳'
-      }]
+      id: '3',
+      title: '求职意向',
+      list: [
+        { icon: Job, value: '前端工程师' },
+        { icon: City, value: '深圳' }
+      ]
     },
   ],
   expert: [
@@ -178,6 +183,12 @@ export const data = {
     projectDesc: '营销会场的⻚⾯搭建业务，主要开发适配模块供⻚⾯搭建系统消费。开发并维护12个（共60）业务 模块国际化多语⾔⽅案（i18n）、前端组件单元测试、主题换肤、埋点上报、⻚⾯多端适配、node提效⼩⼯具 ',
     projectResult: []
   }],
+  achievement: [
+    { id: '1', title: '在线博客', subTitle: '', url: 'https://xingguozm.github.io/mobile/blog' },
+    { id: '2', title: 'Github', subTitle: '', url: 'https://github.com' },
+    { id: '3', title: '组件库', subTitle: '(建设中)', url: '' },
+    { id: '4', title: '在线演示', subTitle: '(建设中)', url: '' },
+  ],
   blogList: [{
     tabTitle: 'js基础',
     tabData: [{

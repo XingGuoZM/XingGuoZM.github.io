@@ -7,15 +7,16 @@ import Modal from '@/components/PromisifyModal';
 export default function SettingModal({ data }) {
   const [theme, setTheme] = useState(localStorage.getItem('--theme-color'));
   const handleSetting = (item) => {
-    setBodyStyleProperty('--theme-color', item);
-    localStorage.setItem('--theme-color', item);
-    setTheme(item);
+    setBodyStyleProperty('--theme-color', item.value);
+    localStorage.setItem('--theme-color', item.value);
+    setTheme(item.value);
   }
   const handleComfirm = () => {
     Modal.hide(SettingModal);
   }
   return (
     <div className="setting-modal">
+      <div className='setting-bg' />
       <div className="setting-content">
         <div className='setting-title'>设置</div>
         <div className='setting-item'>
@@ -24,10 +25,10 @@ export default function SettingModal({ data }) {
             {data.map(item => (
               <div
                 className='setting-value-item'
-                style={{ backgroundColor: item }}
+                style={{ backgroundColor: item.value }}
                 onClick={() => handleSetting(item)}
               >
-                {item === theme && <img src={checkedIcon} className='setting-value-item-active' />}
+                {item.value === theme && <img src={checkedIcon} className='setting-value-item-active' />}
               </div>
             ))}
           </div>

@@ -241,9 +241,9 @@ function SettingModal(_ref) {
       setTheme = _useState2[1];
 
   var handleSetting = function handleSetting(item) {
-    (0,_utils_setBodyStyleProperty__WEBPACK_IMPORTED_MODULE_2__["default"])('--theme-color', item);
-    localStorage.setItem('--theme-color', item);
-    setTheme(item);
+    (0,_utils_setBodyStyleProperty__WEBPACK_IMPORTED_MODULE_2__["default"])('--theme-color', item.value);
+    localStorage.setItem('--theme-color', item.value);
+    setTheme(item.value);
   };
 
   var handleComfirm = function handleComfirm() {
@@ -253,6 +253,8 @@ function SettingModal(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "setting-modal"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "setting-bg"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "setting-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "setting-title"
@@ -266,12 +268,12 @@ function SettingModal(_ref) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "setting-value-item",
       style: {
-        backgroundColor: item
+        backgroundColor: item.value
       },
       onClick: function onClick() {
         return handleSetting(item);
       }
-    }, item === theme && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    }, item.value === theme && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       src: _assets_check_svg__WEBPACK_IMPORTED_MODULE_1__["default"],
       className: "setting-value-item-active"
     }));
@@ -487,12 +489,25 @@ __webpack_require__.r(__webpack_exports__);
 
 var data = {
   headTitle: '个人简历',
-  theme: ['#ff6a00', '#3Eb575', '#1479d7', '#121212'],
+  theme: [{
+    id: 'orange',
+    value: '#ff6a00'
+  }, {
+    id: 'green',
+    value: '#3Eb575'
+  }, {
+    id: 'blue',
+    value: '#1479d7'
+  }, {
+    id: 'black',
+    value: '#121212'
+  }],
   userInfo: {
     value: '李志铭｜1995｜男｜5年前端经验'
   },
   userDetail: [{
-    label: '联系方式',
+    id: '1',
+    title: '联系方式',
     list: [{
       icon: _assets_telphone_svg__WEBPACK_IMPORTED_MODULE_13__["default"],
       value: '18969176324'
@@ -504,7 +519,8 @@ var data = {
       value: 'M-sharp'
     }]
   }, {
-    label: '教育背景',
+    id: '2',
+    title: '教育背景',
     list: [{
       icon: _assets_school_svg__WEBPACK_IMPORTED_MODULE_10__["default"],
       value: '江西财经大学'
@@ -516,7 +532,8 @@ var data = {
       value: '2014～2018'
     }]
   }, {
-    label: '求职意向',
+    id: '3',
+    title: '求职意向',
     list: [{
       icon: _assets_job_svg__WEBPACK_IMPORTED_MODULE_8__["default"],
       value: '前端工程师'
@@ -628,6 +645,27 @@ var data = {
     projectRole: '前端核⼼开发',
     projectDesc: '营销会场的⻚⾯搭建业务，主要开发适配模块供⻚⾯搭建系统消费。开发并维护12个（共60）业务 模块国际化多语⾔⽅案（i18n）、前端组件单元测试、主题换肤、埋点上报、⻚⾯多端适配、node提效⼩⼯具 ',
     projectResult: []
+  }],
+  achievement: [{
+    id: '1',
+    title: '在线博客',
+    subTitle: '',
+    url: 'https://xingguozm.github.io/mobile/blog'
+  }, {
+    id: '2',
+    title: 'Github',
+    subTitle: '',
+    url: 'https://github.com'
+  }, {
+    id: '3',
+    title: '组件库',
+    subTitle: '(建设中)',
+    url: ''
+  }, {
+    id: '4',
+    title: '在线演示',
+    subTitle: '(建设中)',
+    url: ''
   }],
   blogList: [{
     tabTitle: 'js基础',
@@ -948,7 +986,7 @@ function viewport() {
 
   function refreshRem() {
     var width = docEl.clientWidth || docEl.getBoundingClientRect().width;
-    var rem = 100 * (width / 750);
+    var rem = isMobile ? 100 * (width / 750) : 40 * (width / 750);
     docEl.style.fontSize = "".concat(rem, "px"); // @ts-ignore
 
     if (window._customerStore) {
@@ -1020,7 +1058,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".page-header {\n  position: relative;\n  width: 100%;\n}\n.page-header-bg {\n  width: 100%;\n  opacity: 0;\n}\n.page-header-fixed {\n  position: fixed;\n  overflow: hidden;\n  top: 0;\n  left: 0;\n  z-index: 1;\n}\n.page-header-content-wrap {\n  width: 100%;\n  z-index: 2;\n}\n.page-header-content {\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/components/PageHeader/index.less"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;AACF;AACA;EACE,WAAA;EACA,UAAA;AACF;AACA;EACE,eAAA;EACA,gBAAA;EACA,MAAA;EACA,OAAA;EACA,UAAA;AACF;AACA;EACE,WAAA;EACA,UAAA;AACF;AACA;EACE,WAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;EACA,MAAA;EACA,OAAA;AACF","sourcesContent":[".page-header {\n  position: relative;\n  width: 100%;\n}\n.page-header-bg {\n  width: 100%;\n  opacity: 0;\n}\n.page-header-fixed {\n  position: fixed;\n  overflow:hidden;\n  top: 0;\n  left: 0;\n  z-index: 1;\n}\n.page-header-content-wrap {\n  width: 100%;\n  z-index: 2;\n}\n.page-header-content {\n  width:100%;\n  height:100%;\n  overflow:hidden;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".page-header {\n  position: relative;\n  width: 7.5rem;\n}\n.page-header-bg {\n  width: 7.5rem;\n  opacity: 0;\n}\n.page-header-fixed {\n  position: fixed;\n  overflow: hidden;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 1;\n}\n.page-header-content-wrap {\n  width: 7.5rem;\n  z-index: 2;\n}\n.page-header-content {\n  width: 7.5rem;\n  height: 100%;\n  overflow: hidden;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/components/PageHeader/index.less"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,aAAA;AACF;AACA;EACE,aAAA;EACA,UAAA;AACF;AACA;EACE,eAAA;EACA,gBAAA;EACA,MAAA;EAEA,SAAA;EACA,2BAAA;EACA,UAAA;AAAF;AAEA;EACE,aAAA;EACA,UAAA;AAAF;AAEA;EACE,aAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;EACA,MAAA;EACA,OAAA;AAAF","sourcesContent":[".page-header {\n  position: relative;\n  width: 7.5rem;\n}\n.page-header-bg {\n  width: 7.5rem;\n  opacity: 0;\n}\n.page-header-fixed {\n  position: fixed;\n  overflow:hidden;\n  top: 0;\n  // left: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 1;\n}\n.page-header-content-wrap {\n  width: 7.5rem;\n  z-index: 2;\n}\n.page-header-content {\n  width:7.5rem;\n  height:100%;\n  overflow:hidden;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1046,7 +1084,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".setting-modal {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 2;\n}\n.setting-content {\n  width: 5rem;\n  height: 5rem;\n  background-color: #fff;\n  border-radius: 0.1rem;\n  position: relative;\n}\n.setting-title {\n  width: 100%;\n  height: 1rem;\n  font-size: 0.32rem;\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-item {\n  width: 100%;\n  height: 1rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-label {\n  font-size: 0.26rem;\n}\n.setting-value {\n  display: flex;\n}\n.setting-value-item {\n  width: 0.6rem;\n  height: 0.6rem;\n  border-radius: 0.02rem;\n  margin-left: 0.15rem;\n  margin-right: 0.15rem;\n  position: relative;\n}\n.setting-value-item-active {\n  width: 0.3rem;\n  height: 0.3rem;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n}\n.setting-btn-wrap {\n  width: 100%;\n  height: 1rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  bottom: 0;\n}\n.setting-btn {\n  width: 2rem;\n  height: 0.6rem;\n  color: #fff;\n  border-radius: 0.3rem;\n  font-size: 0.26rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--theme-color);\n}\n", "",{"version":3,"sources":["webpack://./src/components/PromisifyModal/SettingModal/index.less"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,aAAA;EACA,eAAA;EACA,MAAA;EACA,OAAA;EACA,oCAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,UAAA;AACF;AACA;EACE,WAAA;EACA,YAAA;EACA,sBAAA;EACA,qBAAA;EACA,kBAAA;AACF;AAEA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAEA;EACE,kBAAA;AAAF;AAEA;EACE,aAAA;AAAF;AAGA;EACE,aAAA;EACA,cAAA;EACA,sBAAA;EACA,oBAAA;EACA,qBAAA;EACA,kBAAA;AADF;AAGA;EACE,aAAA;EACA,cAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;AADF;AAIA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,SAAA;AAFF;AAKA;EACE,WAAA;EACA,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,oCAAA;AAHF","sourcesContent":[".setting-modal {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index:2;\n}\n.setting-content {\n  width: 5rem;\n  height: 5rem;\n  background-color: #fff;\n  border-radius:0.1rem;\n  position:relative;\n}\n\n.setting-title{\n  width:100%;\n  height:1rem;\n  font-size:0.32rem;\n  font-weight:bolder;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-item{\n  width:100%;\n  height:1rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-label{\n  font-size:0.26rem;\n}\n.setting-value{\n  display:flex;\n\n}\n.setting-value-item{\n  width:0.6rem;\n  height:0.6rem;\n  border-radius:0.02rem;\n  margin-left:0.15rem;\n  margin-right:0.15rem;\n  position: relative;\n}\n.setting-value-item-active{\n  width:0.3rem;\n  height:0.3rem;\n  position:absolute;\n  bottom:0;\n  right:0;\n}\n\n.setting-btn-wrap{\n  width:100%;\n  height:1rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  position:absolute;\n  bottom:0;\n}\n\n.setting-btn{\n  width:2rem;\n  height:0.6rem;\n  color:#fff;\n  border-radius:0.3rem;\n  font-size:0.26rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  background-color:var(--theme-color);\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".setting-modal {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 2;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-bg {\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 2;\n  backdrop-filter: blur(0.05rem);\n}\n.setting-content {\n  width: 5rem;\n  height: 5rem;\n  background-color: #fff;\n  border-radius: 0.1rem;\n  position: relative;\n  z-index: 2;\n}\n.setting-title {\n  width: 100%;\n  height: 1rem;\n  font-size: 0.32rem;\n  color: var(--theme-color);\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-item {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-label {\n  font-size: 0.26rem;\n  color: var(--theme-color);\n}\n.setting-value {\n  width: 3.8rem;\n  display: flex;\n  flex-wrap: wrap;\n}\n.setting-value-item {\n  width: 0.6rem;\n  height: 0.6rem;\n  border-radius: 0.02rem;\n  margin-left: 0.15rem;\n  margin-right: 0.15rem;\n  position: relative;\n}\n.setting-value-item-active {\n  width: 0.3rem;\n  height: 0.3rem;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n}\n.setting-btn-wrap {\n  width: 100%;\n  height: 1rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  bottom: 0;\n}\n.setting-btn {\n  width: 2rem;\n  height: 0.6rem;\n  color: #fff;\n  border-radius: 0.3rem;\n  font-size: 0.26rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--theme-color);\n}\n", "",{"version":3,"sources":["webpack://./src/components/PromisifyModal/SettingModal/index.less"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,aAAA;EACA,eAAA;EACA,MAAA;EACA,OAAA;EACA,UAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;AAEA;EACE,WAAA;EACA,YAAA;EACA,oCAAA;EACA,eAAA;EACA,MAAA;EACA,OAAA;EACA,UAAA;EACA,8BAAA;AAAF;AAEA;EACE,WAAA;EACA,YAAA;EACA,sBAAA;EACA,qBAAA;EACA,kBAAA;EACA,UAAA;AAAF;AAGA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,yBAAA;EACA,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AADF;AAGA;EACE,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AADF;AAGA;EACE,kBAAA;EACA,yBAAA;AADF;AAGA;EACE,aAAA;EACA,aAAA;EACF,eAAA;AADA;AAGA;EACE,aAAA;EACA,cAAA;EACA,sBAAA;EACA,oBAAA;EACA,qBAAA;EACA,kBAAA;AADF;AAGA;EACE,aAAA;EACA,cAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;AADF;AAIA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,SAAA;AAFF;AAKA;EACE,WAAA;EACA,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,oCAAA;AAHF","sourcesContent":[".setting-modal {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index:2;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n}\n.setting-bg{\n  width:100%;\n  height:100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  position:fixed;\n  top:0;\n  left:0;\n  z-index:2;\n  backdrop-filter:blur(0.05rem);\n}\n.setting-content {\n  width: 5rem;\n  height: 5rem;\n  background-color: #fff;\n  border-radius:0.1rem;\n  position:relative;\n  z-index:2;\n}\n\n.setting-title{\n  width:100%;\n  height:1rem;\n  font-size:0.32rem;\n  color:var(--theme-color);\n  font-weight:bolder;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-item{\n  width:100%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n.setting-label{\n  font-size:0.26rem;\n  color:var(--theme-color);\n}\n.setting-value{\n  width:3.8rem;\n  display:flex;\nflex-wrap: wrap;\n}\n.setting-value-item{\n  width:0.6rem;\n  height:0.6rem;\n  border-radius:0.02rem;\n  margin-left:0.15rem;\n  margin-right:0.15rem;\n  position: relative;\n}\n.setting-value-item-active{\n  width:0.3rem;\n  height:0.3rem;\n  position:absolute;\n  bottom:0;\n  right:0;\n}\n\n.setting-btn-wrap{\n  width:100%;\n  height:1rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  position:absolute;\n  bottom:0;\n}\n\n.setting-btn{\n  width:2rem;\n  height:0.6rem;\n  color:#fff;\n  border-radius:0.3rem;\n  font-size:0.26rem;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  background-color:var(--theme-color);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1072,7 +1110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --theme-color: #3Eb575;\n}\n* {\n  margin: 0;\n  padding: 0;\n}\n.app {\n  font-size: 30px;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.less","webpack://./src/index.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF;AAAA;EACE,SAAA;EACA,UAAA;AAEF;AAAA;EACE,eAAA;AAEF","sourcesContent":[":root {\n  --theme-color: #3Eb575;\n}\n// @theme-color:#3Eb575; // #ff6a00;","@import \"~@/styles/index.less\";\n\n*{\n  margin:0;\n  padding:0;\n}\n.app{\n  font-size: 30px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --theme-color: #3Eb575;\n}\n* {\n  margin: 0;\n  padding: 0;\n}\n.app {\n  font-size: 30px;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.less","webpack://./src/index.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF;AAAA;EACE,SAAA;EACA,UAAA;AAEF;AAAA;EACE,eAAA;AAEF","sourcesContent":[":root {\n  --theme-color: #3Eb575;\n}\n// @theme-color:#3Eb575; // #ff6a00;\n\n// .icon{\n//   filter: brightness(0.1);\n// }","@import \"~@/styles/index.less\";\n\n*{\n  margin:0;\n  padding:0;\n}\n.app{\n  font-size: 30px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

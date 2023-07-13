@@ -22,6 +22,8 @@ export default function Resume() {
   useEffect(() => {
     const theme = localStorage.getItem('--theme-color')
     theme && setBodyStyleProperty('--theme-color', theme);
+    // setBodyStyleProperty('background-color', theme)
+    setBodyStyleProperty('color', '#fff');
   }, [])
   return <Modal.Provider>
     <div className={style.home} ref={scroller}>
