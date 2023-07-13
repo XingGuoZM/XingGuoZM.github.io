@@ -4,9 +4,8 @@ import SettingModal from "@/components/PromisifyModal/SettingModal";
 import MoreIcon from '@/assets/more.svg';
 import GobackIcon from '@/assets/goback.svg';
 import Modal from "@/components/PromisifyModal";
-import classnames from 'classnames';
 import { data } from '@/data';
-import './index.less';
+import styles from './index.module.less';
 
 export default function Header({ scroller }) {
   const [fixed, setFixed] = useState(false);
@@ -18,18 +17,17 @@ export default function Header({ scroller }) {
   }
   useEffect(() => {
     window.addEventListener('fullFixed', (e) => {
-      // console.log(e.detail.fullFixed)
       setFixed(e.detail.fullFixed);
     })
   }, [])
   return <PageHeader scroller={scroller} immersive={true}>
-    <div className={classnames({ ['header']: true })}>
-      <div className='header-goback' onClick={handleGoback}>
-        <img className='header-goback-icon' src={GobackIcon} />
+    <div className={styles.header}>
+      <div className={styles.goback} onClick={handleGoback}>
+        <img className={styles.gobackIcon} src={GobackIcon} />
       </div>
-      <div className='header-title'>{data.headTitle}</div>
-      <div className='header-setting' onClick={openSettingModal}>
-        <img className='header-setting-icon' src={MoreIcon} />
+      <div className={styles.title}>{data.headTitle}</div>
+      <div className={styles.setting} onClick={openSettingModal}>
+        <img className={styles.settingIcon} src={MoreIcon} />
       </div>
     </div>
   </PageHeader>

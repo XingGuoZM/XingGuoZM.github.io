@@ -15,10 +15,11 @@ export default function BlogCarousel() {
             <IconList data={item.iconList} />
           </div>
           <div className={styles.textWrap}>
-            <div className={styles.text}>
+            <div className={styles.title}>{item.title}</div>
+            {/* <div className={styles.text}>
               <div className={styles.title}>{item.title}</div>
               {item.desc && item.desc.map(desc => <div className={styles.desc} key={desc}>➣ {desc}</div>)}
-            </div>
+            </div> */}
           </div>
         </div>
       }}

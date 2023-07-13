@@ -179,3 +179,11 @@ export function getBaseUrl() {
   }
   return baseUrl;
 }
+
+export function setBodyStyleProperty(key: string, value: string) {
+  document.body.style.setProperty(key, value)
+}
+
+export function getBodyStyleProperty(key: string) {
+  return document.body.style.getPropertyValue(key)
+}

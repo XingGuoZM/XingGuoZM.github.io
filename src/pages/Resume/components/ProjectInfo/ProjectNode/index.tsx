@@ -3,9 +3,9 @@ import { IProject } from '@/data';
 import classnames from 'classnames';
 import styles from "./index.module.less";
 
-const iconFillColor = localStorage.getItem('--theme-color');
-
 export default function ProjectNode({ projectName, projectTime, projectRole, projectDetail }: IProject) {
+
+  const theme = localStorage.getItem('--theme-color');
 
   return (
     <div className={styles.project}>
@@ -18,7 +18,7 @@ export default function ProjectNode({ projectName, projectTime, projectRole, pro
         {projectDetail.map((item, index) => {
           return <div className={styles.projectDescWrap} key={item.id}>
             <div className={styles.projectDescIconWrap}>
-              <item.Icon fill={iconFillColor} className={styles.projectDescIcon} />
+              <item.Icon fill={theme} className={styles.projectDescIcon} />
             </div>
             <div className={classnames({
               [styles.projectDescLine]: index !== 3,

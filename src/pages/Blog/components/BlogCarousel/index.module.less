@@ -27,11 +27,12 @@
 }
 .cell {
   width:100%;
-  height:90%;
+  height:100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background:linear-gradient(var(--theme-color) 10%,transparent);
+  background:linear-gradient(var(--theme-color),#e5e7eb);
   cursor: pointer;
 }
 .iconWrap{
@@ -45,12 +46,11 @@
 }
 .textWrap{
   width:4rem;
-  height:3rem;
+  // height:3rem;
   display:flex;
   justify-content: center;
   align-items: center;
-  // color:var(--theme-color);
-  color:#fff;
+  color:var(--theme-color);
   font-size:0.36rem;
 }
 .title{

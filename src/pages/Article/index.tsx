@@ -2,8 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import Modal from '@/components/PromisifyModal';
 import Header from './components/Header';
 import ArticlePage from './components/ArticleList';
-import { viewport } from '@/utils';
-import setBodyStyleProperty from '@/utils/setBodyStyleProperty';
+import { viewport, setBodyStyleProperty } from '@/utils';
 import PageBg from './components/PageBg';
 import styles from './index.module.less';
 

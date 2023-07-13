@@ -12,15 +12,14 @@ import Achievement from './components/Achievement';
 import Footer from './components/Footer';
 import { data } from '@/data';
 import Modal from "@/components/PromisifyModal";
-import { viewport } from '@/utils';
-import setBodyStyleProperty from '@/utils/setBodyStyleProperty';
+import { viewport, setBodyStyleProperty } from '@/utils';
 import style from './index.module.less';
 
 viewport();
 export default function Resume() {
   const scroller = useRef(null);
   useEffect(() => {
-    const theme = localStorage.getItem('--theme-color')
+    const theme = localStorage.getItem('--theme-color');
     theme && setBodyStyleProperty('--theme-color', theme);
     // setBodyStyleProperty('background-color', theme)
     setBodyStyleProperty('color', '#fff');
@@ -28,7 +27,7 @@ export default function Resume() {
   return <Modal.Provider>
     <div className={style.home} ref={scroller}>
       <PageBg>
-        <Header scroller={scroller}></Header>
+        <Header scroller={scroller} />
 
         <UserInfo data={data.userInfo} />
         <Floor>

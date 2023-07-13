@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import checkedIcon from '../../../assets/check.svg';
-import setBodyStyleProperty from '../../../utils/setBodyStyleProperty';
+import { setBodyStyleProperty } from '@/utils';
 import "./index.less";
 import Modal from '@/components/PromisifyModal';
 

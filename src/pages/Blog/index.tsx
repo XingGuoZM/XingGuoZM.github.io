@@ -7,7 +7,7 @@ import PageBg from './components/PageBg';
 import styles from './index.module.less';
 
 import { viewport } from '@/utils';
-import setBodyStyleProperty from '@/utils/setBodyStyleProperty';
+import { setBodyStyleProperty } from '@/utils';
 
 viewport();
 
