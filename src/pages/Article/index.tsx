@@ -4,6 +4,7 @@ import Header from './components/Header';
 import ArticlePage from './components/ArticleList';
 import { viewport } from '@/utils';
 import setBodyStyleProperty from '@/utils/setBodyStyleProperty';
+import PageBg from './components/PageBg';
 import styles from './index.module.less';
 
 viewport();
@@ -17,11 +18,13 @@ export default function Article() {
 
   return <Modal.Provider>
     <div className={styles.wrap} ref={scroller}>
-      <Header scroller={scroller}></Header>
-      <div className={styles.article}>
-        <ArticlePage />
-      </div>
-
+      <PageBg>
+        <Header scroller={scroller}></Header>
+        <div className={styles.article}>
+          <ArticlePage />
+        </div>
+      </PageBg>
     </div>
+
   </Modal.Provider>
 }
