@@ -1,8 +1,16 @@
-# xingguozm.github.io
 
 * 在线简历，预览地址：https://xingguozm.github.io/mobile/resume/
 
 * 在线博客，预览地址：https://xingguozm.github.io/mobile/blog/
+
+* 组件库，预览地址：https://xingguozm.github.io/mobile/library/
+
+### 简介
+该项目包含4个页面
+1. 个人在线简历
+2. 博客首页
+3. 博客详情页面（博客使用markdown写，通过node文件流进行动态生成）
+4. 沉淀的组件库（业务组件和通用组件）建设中。。。
 
 ### 问题
 1. 主体换肤方案、兼容性、style-resources-loader,如何区分深色和浅色
@@ -26,3 +34,5 @@
 14. 本地环境和线上环境，url前缀不一致，跳转问题
 15. svg改变颜色
 16. 使用node.js读、写文件，遍历、清空目录
+17. 使用ndoe.js读取文件前100个字符
+18. 正则去除html标签

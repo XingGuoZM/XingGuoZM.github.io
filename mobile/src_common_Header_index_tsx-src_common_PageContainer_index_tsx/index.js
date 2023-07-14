@@ -19,6 +19,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ComponentsSvg": () => (/* binding */ ComponentsSvg),
 /* harmony export */   "CpuSvg": () => (/* binding */ CpuSvg),
 /* harmony export */   "CssSvg": () => (/* binding */ CssSvg),
+/* harmony export */   "DateSvg": () => (/* binding */ DateSvg),
 /* harmony export */   "EmailSvg": () => (/* binding */ EmailSvg),
 /* harmony export */   "GobackSvg": () => (/* binding */ GobackSvg),
 /* harmony export */   "HybridSvg": () => (/* binding */ HybridSvg),
@@ -290,11 +291,32 @@ function CssSvg(_ref10) {
   }));
 }
 ;
-function EmailSvg(_ref11) {
+function DateSvg(_ref11) {
   var _ref11$fill = _ref11.fill,
       fill = _ref11$fill === void 0 ? "#ffffff" : _ref11$fill,
       _ref11$className = _ref11.className,
       className = _ref11$className === void 0 ? "" : _ref11$className;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    t: "1689321140726",
+    className: className,
+    viewBox: "0 0 1024 1024",
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    "p-id": "1647",
+    width: "200",
+    height: "200"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M883.278513 148.539035l-43.016723 0 0-12.780071c0-38.310537-31.199583-69.632917-69.323878-69.632917l-1.02433 0c-38.129412 0-69.323878 31.321356-69.323878 69.632917l0 12.780071L317.20292 148.539035l0-12.780071c0-38.310537-31.195489-69.632917-69.323878-69.632917l-1.055029 0c-38.127366 0-69.322855 31.321356-69.322855 69.632917l0 12.780071-42.924625 0c-38.127366 0-69.323878 31.351032-69.323878 69.609381l0 665.701614c0 38.309514 31.195489 69.632917 69.323878 69.632917l748.70198 0c38.127366 0 69.322855-31.323403 69.322855-69.632917l0-665.701614C952.601368 179.890067 921.405879 148.539035 883.278513 148.539035L883.278513 148.539035zM728.318232 135.758963c0-23.024389 18.632359-41.777499 41.594327-41.777499l1.02433 0c22.931269 0 41.593304 18.753109 41.593304 41.777499L812.530193 259.615852c0 23.024389-18.662035 41.778522-41.593304 41.778522l-1.02433 0c-22.961968 0-41.594327-18.754133-41.594327-41.778522L728.318232 135.758963 728.318232 135.758963zM205.23071 135.758963c0-23.024389 18.632359-41.777499 41.599444-41.777499l1.048889 0c22.903639 0 41.594327 18.753109 41.594327 41.777499L289.473369 259.615852c0 23.024389-18.691711 41.778522-41.594327 41.778522l-1.048889 0c-22.967084 0-41.599444-18.754133-41.599444-41.778522L205.23071 135.758963 205.23071 135.758963zM883.278513 897.807926l-748.70198 0c-7.519254 0-13.864776-6.468318-13.864776-13.957897L120.711757 394.394489l776.433578 0 0 489.455541C897.144312 891.338584 890.797767 897.807926 883.278513 897.807926L883.278513 897.807926zM222.614635 494.083955l127.918391 0 0 62.950727L222.614635 557.034682 222.614635 494.083955 222.614635 494.083955zM445.963493 494.083955l126.906342 0 0 62.950727L445.963493 557.034682 445.963493 494.083955 445.963493 494.083955zM668.299277 494.083955l124.873032 0 0 62.950727L668.299277 557.034682 668.299277 494.083955 668.299277 494.083955zM222.614635 622.00951l127.918391 0 0 61.927421L222.614635 683.936931 222.614635 622.00951 222.614635 622.00951zM445.963493 622.00951l126.906342 0 0 61.927421L445.963493 683.936931 445.963493 622.00951 445.963493 622.00951zM668.299277 622.00951l124.873032 0 0 61.927421L668.299277 683.936931 668.299277 622.00951 668.299277 622.00951zM222.614635 746.884588l127.918391 0 0 64.97278L222.614635 811.857369 222.614635 746.884588 222.614635 746.884588zM445.963493 746.884588l126.906342 0 0 64.97278L445.963493 811.857369 445.963493 746.884588 445.963493 746.884588zM668.299277 746.884588l124.873032 0 0 64.97278L668.299277 811.857369 668.299277 746.884588 668.299277 746.884588zM668.299277 746.884588",
+    fill: fill,
+    "p-id": "1648"
+  }));
+}
+;
+function EmailSvg(_ref12) {
+  var _ref12$fill = _ref12.fill,
+      fill = _ref12$fill === void 0 ? "#ffffff" : _ref12$fill,
+      _ref12$className = _ref12.className,
+      className = _ref12$className === void 0 ? "" : _ref12$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689058098952",
     className: className,
@@ -311,11 +333,11 @@ function EmailSvg(_ref11) {
   }));
 }
 ;
-function GobackSvg(_ref12) {
-  var _ref12$fill = _ref12.fill,
-      fill = _ref12$fill === void 0 ? "#ffffff" : _ref12$fill,
-      _ref12$className = _ref12.className,
-      className = _ref12$className === void 0 ? "" : _ref12$className;
+function GobackSvg(_ref13) {
+  var _ref13$fill = _ref13.fill,
+      fill = _ref13$fill === void 0 ? "#ffffff" : _ref13$fill,
+      _ref13$className = _ref13.className,
+      className = _ref13$className === void 0 ? "" : _ref13$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688729082038",
     className: className,
@@ -332,11 +354,11 @@ function GobackSvg(_ref12) {
   }));
 }
 ;
-function HybridSvg(_ref13) {
-  var _ref13$fill = _ref13.fill,
-      fill = _ref13$fill === void 0 ? "#ffffff" : _ref13$fill,
-      _ref13$className = _ref13.className,
-      className = _ref13$className === void 0 ? "" : _ref13$className;
+function HybridSvg(_ref14) {
+  var _ref14$fill = _ref14.fill,
+      fill = _ref14$fill === void 0 ? "#ffffff" : _ref14$fill,
+      _ref14$className = _ref14.className,
+      className = _ref14$className === void 0 ? "" : _ref14$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688691976793",
     className: className,
@@ -393,11 +415,11 @@ function HybridSvg(_ref13) {
   }));
 }
 ;
-function InterviewSvg(_ref14) {
-  var _ref14$fill = _ref14.fill,
-      fill = _ref14$fill === void 0 ? "#ffffff" : _ref14$fill,
-      _ref14$className = _ref14.className,
-      className = _ref14$className === void 0 ? "" : _ref14$className;
+function InterviewSvg(_ref15) {
+  var _ref15$fill = _ref15.fill,
+      fill = _ref15$fill === void 0 ? "#ffffff" : _ref15$fill,
+      _ref15$className = _ref15.className,
+      className = _ref15$className === void 0 ? "" : _ref15$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689176007551",
     className: className,
@@ -430,11 +452,11 @@ function InterviewSvg(_ref14) {
   }));
 }
 ;
-function IphoneSvg(_ref15) {
-  var _ref15$fill = _ref15.fill,
-      fill = _ref15$fill === void 0 ? "#ffffff" : _ref15$fill,
-      _ref15$className = _ref15.className,
-      className = _ref15$className === void 0 ? "" : _ref15$className;
+function IphoneSvg(_ref16) {
+  var _ref16$fill = _ref16.fill,
+      fill = _ref16$fill === void 0 ? "#ffffff" : _ref16$fill,
+      _ref16$className = _ref16.className,
+      className = _ref16$className === void 0 ? "" : _ref16$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688693903226",
     className: className,
@@ -467,11 +489,11 @@ function IphoneSvg(_ref15) {
   }));
 }
 ;
-function JavascriptSvg(_ref16) {
-  var _ref16$fill = _ref16.fill,
-      fill = _ref16$fill === void 0 ? "#ffffff" : _ref16$fill,
-      _ref16$className = _ref16.className,
-      className = _ref16$className === void 0 ? "" : _ref16$className;
+function JavascriptSvg(_ref17) {
+  var _ref17$fill = _ref17.fill,
+      fill = _ref17$fill === void 0 ? "#ffffff" : _ref17$fill,
+      _ref17$className = _ref17.className,
+      className = _ref17$className === void 0 ? "" : _ref17$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688691666564",
     className: className,
@@ -492,11 +514,11 @@ function JavascriptSvg(_ref16) {
   }));
 }
 ;
-function JobSvg(_ref17) {
-  var _ref17$fill = _ref17.fill,
-      fill = _ref17$fill === void 0 ? "#ffffff" : _ref17$fill,
-      _ref17$className = _ref17.className,
-      className = _ref17$className === void 0 ? "" : _ref17$className;
+function JobSvg(_ref18) {
+  var _ref18$fill = _ref18.fill,
+      fill = _ref18$fill === void 0 ? "#ffffff" : _ref18$fill,
+      _ref18$className = _ref18.className,
+      className = _ref18$className === void 0 ? "" : _ref18$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689056959849",
     className: className,
@@ -513,11 +535,11 @@ function JobSvg(_ref17) {
   }));
 }
 ;
-function MapSvg(_ref18) {
-  var _ref18$fill = _ref18.fill,
-      fill = _ref18$fill === void 0 ? "#ffffff" : _ref18$fill,
-      _ref18$className = _ref18.className,
-      className = _ref18$className === void 0 ? "" : _ref18$className;
+function MapSvg(_ref19) {
+  var _ref19$fill = _ref19.fill,
+      fill = _ref19$fill === void 0 ? "#ffffff" : _ref19$fill,
+      _ref19$className = _ref19.className,
+      className = _ref19$className === void 0 ? "" : _ref19$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689054634120",
     className: className,
@@ -538,11 +560,11 @@ function MapSvg(_ref18) {
   }));
 }
 ;
-function MoreSvg(_ref19) {
-  var _ref19$fill = _ref19.fill,
-      fill = _ref19$fill === void 0 ? "#ffffff" : _ref19$fill,
-      _ref19$className = _ref19.className,
-      className = _ref19$className === void 0 ? "" : _ref19$className;
+function MoreSvg(_ref20) {
+  var _ref20$fill = _ref20.fill,
+      fill = _ref20$fill === void 0 ? "#ffffff" : _ref20$fill,
+      _ref20$className = _ref20.className,
+      className = _ref20$className === void 0 ? "" : _ref20$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688694512631",
     className: className,
@@ -567,11 +589,11 @@ function MoreSvg(_ref19) {
   }));
 }
 ;
-function NetworkSvg(_ref20) {
-  var _ref20$fill = _ref20.fill,
-      fill = _ref20$fill === void 0 ? "#ffffff" : _ref20$fill,
-      _ref20$className = _ref20.className,
-      className = _ref20$className === void 0 ? "" : _ref20$className;
+function NetworkSvg(_ref21) {
+  var _ref21$fill = _ref21.fill,
+      fill = _ref21$fill === void 0 ? "#ffffff" : _ref21$fill,
+      _ref21$className = _ref21.className,
+      className = _ref21$className === void 0 ? "" : _ref21$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688692129874",
     className: className,
@@ -588,11 +610,11 @@ function NetworkSvg(_ref20) {
   }));
 }
 ;
-function ReactSvg(_ref21) {
-  var _ref21$fill = _ref21.fill,
-      fill = _ref21$fill === void 0 ? "#ffffff" : _ref21$fill,
-      _ref21$className = _ref21.className,
-      className = _ref21$className === void 0 ? "" : _ref21$className;
+function ReactSvg(_ref22) {
+  var _ref22$fill = _ref22.fill,
+      fill = _ref22$fill === void 0 ? "#ffffff" : _ref22$fill,
+      _ref22$className = _ref22.className,
+      className = _ref22$className === void 0 ? "" : _ref22$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688691810908",
     className: className,
@@ -609,11 +631,11 @@ function ReactSvg(_ref21) {
   }));
 }
 ;
-function RenderSvg(_ref22) {
-  var _ref22$fill = _ref22.fill,
-      fill = _ref22$fill === void 0 ? "#ffffff" : _ref22$fill,
-      _ref22$className = _ref22.className,
-      className = _ref22$className === void 0 ? "" : _ref22$className;
+function RenderSvg(_ref23) {
+  var _ref23$fill = _ref23.fill,
+      fill = _ref23$fill === void 0 ? "#ffffff" : _ref23$fill,
+      _ref23$className = _ref23.className,
+      className = _ref23$className === void 0 ? "" : _ref23$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688694897797",
     className: className,
@@ -638,11 +660,11 @@ function RenderSvg(_ref22) {
   }));
 }
 ;
-function ResultSvg(_ref23) {
-  var _ref23$fill = _ref23.fill,
-      fill = _ref23$fill === void 0 ? "#ffffff" : _ref23$fill,
-      _ref23$className = _ref23.className,
-      className = _ref23$className === void 0 ? "" : _ref23$className;
+function ResultSvg(_ref24) {
+  var _ref24$fill = _ref24.fill,
+      fill = _ref24$fill === void 0 ? "#ffffff" : _ref24$fill,
+      _ref24$className = _ref24.className,
+      className = _ref24$className === void 0 ? "" : _ref24$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689227230243",
     className: className,
@@ -663,11 +685,11 @@ function ResultSvg(_ref23) {
   }));
 }
 ;
-function SchoolSvg(_ref24) {
-  var _ref24$fill = _ref24.fill,
-      fill = _ref24$fill === void 0 ? "#ffffff" : _ref24$fill,
-      _ref24$className = _ref24.className,
-      className = _ref24$className === void 0 ? "" : _ref24$className;
+function SchoolSvg(_ref25) {
+  var _ref25$fill = _ref25.fill,
+      fill = _ref25$fill === void 0 ? "#ffffff" : _ref25$fill,
+      _ref25$className = _ref25.className,
+      className = _ref25$className === void 0 ? "" : _ref25$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689057395513",
     className: className,
@@ -684,11 +706,11 @@ function SchoolSvg(_ref24) {
   }));
 }
 ;
-function SchoolcourseSvg(_ref25) {
-  var _ref25$fill = _ref25.fill,
-      fill = _ref25$fill === void 0 ? "#ffffff" : _ref25$fill,
-      _ref25$className = _ref25.className,
-      className = _ref25$className === void 0 ? "" : _ref25$className;
+function SchoolcourseSvg(_ref26) {
+  var _ref26$fill = _ref26.fill,
+      fill = _ref26$fill === void 0 ? "#ffffff" : _ref26$fill,
+      _ref26$className = _ref26.className,
+      className = _ref26$className === void 0 ? "" : _ref26$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689057512893",
     className: className,
@@ -717,11 +739,11 @@ function SchoolcourseSvg(_ref25) {
   }));
 }
 ;
-function SchooldateSvg(_ref26) {
-  var _ref26$fill = _ref26.fill,
-      fill = _ref26$fill === void 0 ? "#ffffff" : _ref26$fill,
-      _ref26$className = _ref26.className,
-      className = _ref26$className === void 0 ? "" : _ref26$className;
+function SchooldateSvg(_ref27) {
+  var _ref27$fill = _ref27.fill,
+      fill = _ref27$fill === void 0 ? "#ffffff" : _ref27$fill,
+      _ref27$className = _ref27.className,
+      className = _ref27$className === void 0 ? "" : _ref27$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689057730152",
     className: className,
@@ -750,11 +772,11 @@ function SchooldateSvg(_ref26) {
   }));
 }
 ;
-function SettingSvg(_ref27) {
-  var _ref27$fill = _ref27.fill,
-      fill = _ref27$fill === void 0 ? "#ffffff" : _ref27$fill,
-      _ref27$className = _ref27.className,
-      className = _ref27$className === void 0 ? "" : _ref27$className;
+function SettingSvg(_ref28) {
+  var _ref28$fill = _ref28.fill,
+      fill = _ref28$fill === void 0 ? "#ffffff" : _ref28$fill,
+      _ref28$className = _ref28.className,
+      className = _ref28$className === void 0 ? "" : _ref28$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688694472619",
     className: className,
@@ -791,11 +813,11 @@ function SettingSvg(_ref27) {
   }));
 }
 ;
-function SituationSvg(_ref28) {
-  var _ref28$fill = _ref28.fill,
-      fill = _ref28$fill === void 0 ? "#ffffff" : _ref28$fill,
-      _ref28$className = _ref28.className,
-      className = _ref28$className === void 0 ? "" : _ref28$className;
+function SituationSvg(_ref29) {
+  var _ref29$fill = _ref29.fill,
+      fill = _ref29$fill === void 0 ? "#ffffff" : _ref29$fill,
+      _ref29$className = _ref29.className,
+      className = _ref29$className === void 0 ? "" : _ref29$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689227330902",
     className: className,
@@ -828,11 +850,11 @@ function SituationSvg(_ref28) {
   }));
 }
 ;
-function TaskSvg(_ref29) {
-  var _ref29$fill = _ref29.fill,
-      fill = _ref29$fill === void 0 ? "#ffffff" : _ref29$fill,
-      _ref29$className = _ref29.className,
-      className = _ref29$className === void 0 ? "" : _ref29$className;
+function TaskSvg(_ref30) {
+  var _ref30$fill = _ref30.fill,
+      fill = _ref30$fill === void 0 ? "#ffffff" : _ref30$fill,
+      _ref30$className = _ref30.className,
+      className = _ref30$className === void 0 ? "" : _ref30$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689226928558",
     className: className,
@@ -853,11 +875,11 @@ function TaskSvg(_ref29) {
   }));
 }
 ;
-function TelphoneSvg(_ref30) {
-  var _ref30$fill = _ref30.fill,
-      fill = _ref30$fill === void 0 ? "#ffffff" : _ref30$fill,
-      _ref30$className = _ref30.className,
-      className = _ref30$className === void 0 ? "" : _ref30$className;
+function TelphoneSvg(_ref31) {
+  var _ref31$fill = _ref31.fill,
+      fill = _ref31$fill === void 0 ? "#ffffff" : _ref31$fill,
+      _ref31$className = _ref31.className,
+      className = _ref31$className === void 0 ? "" : _ref31$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689058049283",
     className: className,
@@ -874,11 +896,11 @@ function TelphoneSvg(_ref30) {
   }));
 }
 ;
-function WebpackSvg(_ref31) {
-  var _ref31$fill = _ref31.fill,
-      fill = _ref31$fill === void 0 ? "#ffffff" : _ref31$fill,
-      _ref31$className = _ref31.className,
-      className = _ref31$className === void 0 ? "" : _ref31$className;
+function WebpackSvg(_ref32) {
+  var _ref32$fill = _ref32.fill,
+      fill = _ref32$fill === void 0 ? "#ffffff" : _ref32$fill,
+      _ref32$className = _ref32.className,
+      className = _ref32$className === void 0 ? "" : _ref32$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688691781343",
     className: className,
@@ -895,11 +917,11 @@ function WebpackSvg(_ref31) {
   }));
 }
 ;
-function WechatSvg(_ref32) {
-  var _ref32$fill = _ref32.fill,
-      fill = _ref32$fill === void 0 ? "#ffffff" : _ref32$fill,
-      _ref32$className = _ref32.className,
-      className = _ref32$className === void 0 ? "" : _ref32$className;
+function WechatSvg(_ref33) {
+  var _ref33$fill = _ref33.fill,
+      fill = _ref33$fill === void 0 ? "#ffffff" : _ref33$fill,
+      _ref33$className = _ref33.className,
+      className = _ref33$className === void 0 ? "" : _ref33$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689058077272",
     className: className,
@@ -927,7 +949,6 @@ function WechatSvg(_ref32) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "HeaderType": () => (/* binding */ HeaderType),
 /* harmony export */   "HeaderTitleMap": () => (/* binding */ HeaderTitleMap),
 /* harmony export */   "default": () => (/* binding */ Header)
 /* harmony export */ });
@@ -953,19 +974,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var HeaderType;
-
-(function (HeaderType) {
-  HeaderType["Resume"] = "Resume";
-  HeaderType["Blog"] = "Blog";
-  HeaderType["Article"] = "Article";
-  HeaderType["Library"] = "Library";
-})(HeaderType || (HeaderType = {}));
-
-var HeaderTitleMap = (_HeaderTitleMap = {}, _defineProperty(_HeaderTitleMap, HeaderType.Resume, '我的简历'), _defineProperty(_HeaderTitleMap, HeaderType.Blog, '我的博客'), _defineProperty(_HeaderTitleMap, HeaderType.Article, '我的文章'), _defineProperty(_HeaderTitleMap, HeaderType.Library, '我的组件库'), _HeaderTitleMap);
+var HeaderTitleMap = (_HeaderTitleMap = {}, _defineProperty(_HeaderTitleMap, _utils__WEBPACK_IMPORTED_MODULE_7__.PageType.Resume, '我的简历'), _defineProperty(_HeaderTitleMap, _utils__WEBPACK_IMPORTED_MODULE_7__.PageType.Blog, '我的博客'), _defineProperty(_HeaderTitleMap, _utils__WEBPACK_IMPORTED_MODULE_7__.PageType.Article, '我的文章'), _defineProperty(_HeaderTitleMap, _utils__WEBPACK_IMPORTED_MODULE_7__.PageType.Library, '我的组件库'), _HeaderTitleMap);
 function Header(_ref) {
-  var scroller = _ref.scroller,
-      type = _ref.type;
+  var type = _ref.type;
 
   // const [fixed, setFixed] = useState(false);
   var handleGoback = function handleGoback() {
@@ -976,24 +987,16 @@ function Header(_ref) {
     _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_5__["default"].show(_components_PromisifyModal_SettingModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
       data: _data__WEBPACK_IMPORTED_MODULE_6__.data.theme
     });
-  };
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    var theme = localStorage.getItem('--theme-color');
-
-    if (theme) {
-      (0,_utils__WEBPACK_IMPORTED_MODULE_7__.setBodyStyleProperty)('--theme-color', theme);
-      (0,_utils__WEBPACK_IMPORTED_MODULE_7__.setBodyStyleProperty)('color', theme);
-    }
-  }, []); // useEffect(() => {
+  }; // useEffect(() => {
   //   window.addEventListener('fullFixed', (e) => {
   //     setFixed(e.detail.fullFixed);
   //   })
   // }, [])
 
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PageHeader__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    scroller: scroller,
-    immersive: true
+    immersive: true,
+    scroller: "#J-Container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _index_module_less__WEBPACK_IMPORTED_MODULE_8__["default"].header
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1023,36 +1026,38 @@ function Header(_ref) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PageContainerType": () => (/* binding */ PageContainerType),
 /* harmony export */   "default": () => (/* binding */ PageContainer)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.module.less */ "./src/common/PageContainer/index.module.less");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/utils */ "./src/utils/index.ts");
+/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.less */ "./src/common/PageContainer/index.less");
 var _ClassNameMap;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
-var PageContainerType;
 
-(function (PageContainerType) {
-  PageContainerType["Resume"] = "Resume";
-  PageContainerType["Blog"] = "Blog";
-  PageContainerType["Article"] = "Article";
-  PageContainerType["Library"] = "Library";
-})(PageContainerType || (PageContainerType = {}));
-
-var ClassNameMap = (_ClassNameMap = {}, _defineProperty(_ClassNameMap, PageContainerType.Resume, _index_module_less__WEBPACK_IMPORTED_MODULE_1__["default"].resumeWrap), _defineProperty(_ClassNameMap, PageContainerType.Blog, _index_module_less__WEBPACK_IMPORTED_MODULE_1__["default"].blogWrap), _defineProperty(_ClassNameMap, PageContainerType.Article, _index_module_less__WEBPACK_IMPORTED_MODULE_1__["default"].articleWrap), _defineProperty(_ClassNameMap, PageContainerType.Library, _index_module_less__WEBPACK_IMPORTED_MODULE_1__["default"].libraryWrap), _ClassNameMap);
+var ClassNameMap = (_ClassNameMap = {}, _defineProperty(_ClassNameMap, _utils__WEBPACK_IMPORTED_MODULE_1__.PageType.Resume, 'resumeWrap'), _defineProperty(_ClassNameMap, _utils__WEBPACK_IMPORTED_MODULE_1__.PageType.Blog, 'blogWrap'), _defineProperty(_ClassNameMap, _utils__WEBPACK_IMPORTED_MODULE_1__.PageType.Article, 'articleWrap'), _defineProperty(_ClassNameMap, _utils__WEBPACK_IMPORTED_MODULE_1__.PageType.Library, 'libraryWrap'), _ClassNameMap);
+(0,_utils__WEBPACK_IMPORTED_MODULE_1__.viewport)();
 function PageContainer(_ref) {
   var children = _ref.children,
       type = _ref.type;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var theme = localStorage.getItem(_utils__WEBPACK_IMPORTED_MODULE_1__.LocalStorageKey.ThemeColor);
+
+    if (theme) {
+      (0,_utils__WEBPACK_IMPORTED_MODULE_1__.setBodyStyleProperty)(_utils__WEBPACK_IMPORTED_MODULE_1__.LocalStorageKey.ThemeColor, theme);
+      (0,_utils__WEBPACK_IMPORTED_MODULE_1__.setBodyStyleProperty)('color', theme);
+    }
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: ClassNameMap[type]
+    className: ClassNameMap[type],
+    id: "J-Container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_1__["default"].bg
+    className: "bg"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_1__["default"].content
+    className: "content"
   }, children));
 }
 
@@ -1170,8 +1175,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function HeaderBg(_ref) {
   var _classnames;
 
-  var scroller = _ref.scroller,
-      children = _ref.children,
+  var children = _ref.children,
+      scroller = _ref.scroller,
       immersive = _ref.immersive;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
@@ -1194,7 +1199,7 @@ function HeaderBg(_ref) {
     return "".concat((0,_utils__WEBPACK_IMPORTED_MODULE_1__.getRpx2px)(statusBarHeight + navBarHeight), "px");
   }, [opacity, immersive, navBarHeight, statusBarHeight]);
   (0,_hooks_useEventListener__WEBPACK_IMPORTED_MODULE_2__["default"])("scroll", function () {
-    var scrollTop = scroller.current.scrollTop || document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollTop = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getTargetElement)(scroller, document).scrollTop || document.documentElement.scrollTop || document.body.scrollTop;
 
     if (scrollTop / 50 >= 1) {
       setOpacity(1);
@@ -1268,10 +1273,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ SettingModal)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _assets_check_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/check.svg */ "./src/assets/check.svg");
+/* harmony import */ var _assets_check_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets/check.svg */ "./src/assets/check.svg");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/utils */ "./src/utils/index.ts");
-/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.less */ "./src/components/PromisifyModal/SettingModal/index.less");
-/* harmony import */ var _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/PromisifyModal */ "./src/components/PromisifyModal/index.tsx");
+/* harmony import */ var _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/PromisifyModal */ "./src/components/PromisifyModal/index.tsx");
+/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.less */ "./src/components/PromisifyModal/SettingModal/index.less");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -1292,7 +1297,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function SettingModal(_ref) {
   var data = _ref.data;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(localStorage.getItem('--theme-color')),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(localStorage.getItem(_utils__WEBPACK_IMPORTED_MODULE_2__.LocalStorageKey.ThemeColor)),
       _useState2 = _slicedToArray(_useState, 2),
       theme = _useState2[0],
       setTheme = _useState2[1];
@@ -1304,13 +1309,13 @@ function SettingModal(_ref) {
       (0,_utils__WEBPACK_IMPORTED_MODULE_2__.setBodyStyleProperty)('color', item.value);
     }
 
-    (0,_utils__WEBPACK_IMPORTED_MODULE_2__.setBodyStyleProperty)('--theme-color', item.value);
-    localStorage.setItem('--theme-color', item.value);
+    (0,_utils__WEBPACK_IMPORTED_MODULE_2__.setBodyStyleProperty)(_utils__WEBPACK_IMPORTED_MODULE_2__.LocalStorageKey.ThemeColor, item.value);
+    localStorage.setItem(_utils__WEBPACK_IMPORTED_MODULE_2__.LocalStorageKey.ThemeColor, item.value);
     setTheme(item.value);
   };
 
   var handleComfirm = function handleComfirm() {
-    _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_4__["default"].hide(SettingModal);
+    _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_3__["default"].hide(SettingModal);
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1568,6 +1573,9 @@ var data = {
     }, {
       Icon: _assets__WEBPACK_IMPORTED_MODULE_0__.CitySvg,
       value: '深圳'
+    }, {
+      Icon: _assets__WEBPACK_IMPORTED_MODULE_0__.DateSvg,
+      value: '一周内到岗'
     }]
   }],
   expert: [{
@@ -1869,7 +1877,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_getTargetElement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/getTargetElement */ "./src/utils/getTargetElement.ts");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./src/utils/index.ts");
 
 
 
@@ -1885,7 +1893,7 @@ var useEventListener = function useEventListener(eventName, handler) {
   }, [handler]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     // 需要使用的时候获取ref里的dom值
-    var targetElement = (0,_utils_getTargetElement__WEBPACK_IMPORTED_MODULE_1__.getTargetElement)(element.current, window);
+    var targetElement = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getTargetElement)(element, window);
     if (!(targetElement !== null && targetElement !== void 0 && targetElement.addEventListener)) return;
     var opts = {
       capture: capture,
@@ -1894,45 +1902,19 @@ var useEventListener = function useEventListener(eventName, handler) {
     };
 
     var eventListener = function eventListener(event) {
-      return savedHandler === null || savedHandler === void 0 ? void 0 : savedHandler.current(event);
+      if (savedHandler.current) {
+        savedHandler === null || savedHandler === void 0 ? void 0 : savedHandler.current(event);
+      }
     };
 
     targetElement.addEventListener(eventName, eventListener, opts);
     return function () {
       return targetElement.removeEventListener(eventName, eventListener, opts);
     };
-  }, [eventName, capture, once, passive], element);
+  }, [eventName, capture, once, passive]);
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useEventListener);
-
-/***/ }),
-
-/***/ "./src/utils/getTargetElement.ts":
-/*!***************************************!*\
-  !*** ./src/utils/getTargetElement.ts ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getTargetElement": () => (/* binding */ getTargetElement)
-/* harmony export */ });
-function getTargetElement(target, defaultElement) {
-  if (!target) {
-    return defaultElement;
-  }
-
-  var targetElement;
-
-  if ('current' in target) {
-    targetElement = target.current;
-  } else {
-    targetElement = target;
-  }
-
-  return targetElement;
-}
 
 /***/ }),
 
@@ -1951,7 +1933,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "viewport": () => (/* binding */ viewport),
 /* harmony export */   "getBaseUrl": () => (/* binding */ getBaseUrl),
 /* harmony export */   "setBodyStyleProperty": () => (/* binding */ setBodyStyleProperty),
-/* harmony export */   "getBodyStyleProperty": () => (/* binding */ getBodyStyleProperty)
+/* harmony export */   "getBodyStyleProperty": () => (/* binding */ getBodyStyleProperty),
+/* harmony export */   "depsAreSame": () => (/* binding */ depsAreSame),
+/* harmony export */   "getTargetElement": () => (/* binding */ getTargetElement),
+/* harmony export */   "PageType": () => (/* binding */ PageType),
+/* harmony export */   "LocalStorageKey": () => (/* binding */ LocalStorageKey)
 /* harmony export */ });
 var getDeviceInfo = function () {
   var _window$navigator;
@@ -2152,6 +2138,46 @@ function setBodyStyleProperty(key, value) {
 function getBodyStyleProperty(key) {
   return document.body.style.getPropertyValue(key);
 }
+function depsAreSame(oldDeps, deps) {
+  if (oldDeps === deps) return true;
+
+  for (var i = 0; i < oldDeps.length; i++) {
+    if (!Object.is(oldDeps[i], deps[i])) return false;
+  }
+
+  return true;
+}
+function getTargetElement(target, defaultElement) {
+  if (!target) {
+    return defaultElement;
+  }
+
+  var targetElement;
+
+  if (typeof target === 'string') {
+    targetElement = document.querySelector(target);
+  } else if ('current' in target) {
+    targetElement = target.current;
+  } else {
+    targetElement = target;
+  }
+
+  return targetElement;
+}
+var PageType;
+
+(function (PageType) {
+  PageType["Resume"] = "Resume";
+  PageType["Blog"] = "Blog";
+  PageType["Article"] = "Article";
+  PageType["Library"] = "Library";
+})(PageType || (PageType = {}));
+
+var LocalStorageKey;
+
+(function (LocalStorageKey) {
+  LocalStorageKey["ThemeColor"] = "--theme-color";
+})(LocalStorageKey || (LocalStorageKey = {}));
 
 /***/ }),
 
@@ -2188,10 +2214,10 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/common/PageContainer/index.module.less":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/common/PageContainer/index.module.less ***!
-  \*****************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/common/PageContainer/index.less":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/common/PageContainer/index.less ***!
+  \**********************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2207,16 +2233,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".src-common-PageContainer-index-module__resumeWrap--p8366 {\n  width: 7.5rem;\n  position: relative;\n}\n.src-common-PageContainer-index-module__resumeWrap--p8366 .src-common-PageContainer-index-module__bg--O0dxk {\n  width: 100%;\n  height: 15rem;\n  background: linear-gradient(var(--theme-color), transparent);\n}\n.src-common-PageContainer-index-module__resumeWrap--p8366 .src-common-PageContainer-index-module__content--ZHAwf {\n  width: 100%;\n  position: absolute;\n  top: 0;\n  color: #fff;\n}\n.src-common-PageContainer-index-module__blogWrap--kEYRv {\n  width: 7.5rem;\n  position: relative;\n}\n.src-common-PageContainer-index-module__blogWrap--kEYRv .src-common-PageContainer-index-module__content--ZHAwf {\n  width: 100%;\n  position: absolute;\n  top: 0;\n}\n.src-common-PageContainer-index-module__articleWrap--b5aVd {\n  width: 7.5rem;\n  position: relative;\n}\n.src-common-PageContainer-index-module__articleWrap--b5aVd .src-common-PageContainer-index-module__content--ZHAwf {\n  width: 100%;\n  position: absolute;\n  top: 0;\n}\n.src-common-PageContainer-index-module__libraryWrap--4vBsM {\n  width: 7.5rem;\n  position: relative;\n}\n.src-common-PageContainer-index-module__libraryWrap--4vBsM .src-common-PageContainer-index-module__bg--O0dxk {\n  width: 100%;\n  height: 100%;\n}\n.src-common-PageContainer-index-module__libraryWrap--4vBsM .src-common-PageContainer-index-module__content--ZHAwf {\n  width: 100%;\n  position: absolute;\n  top: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/common/PageContainer/index.module.less"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,kBAAA;AACF;AAHA;EAII,WAAA;EACA,aAAA;EACA,4DAAA;AAEJ;AARA;EASI,WAAA;EACA,kBAAA;EACA,MAAA;EACA,WAAA;AAEJ;AACA;EACE,aAAA;EACA,kBAAA;AACF;AAHA;EAII,WAAA;EACA,kBAAA;EACA,MAAA;AAEJ;AACA;EACE,aAAA;EACA,kBAAA;AACF;AAHA;EAII,WAAA;EACA,kBAAA;EACA,MAAA;AAEJ;AACA;EACE,aAAA;EACA,kBAAA;AACF;AAHA;EAII,WAAA;EACA,YAAA;AAEJ;AAPA;EAQI,WAAA;EACA,kBAAA;EACA,MAAA;AAEJ","sourcesContent":[".resumeWrap{\n  width:7.5rem;\n  position:relative;\n  .bg{\n    width:100%;\n    height:15rem;\n    background: linear-gradient( var(--theme-color),transparent);\n  }\n  .content{\n    width:100%;\n    position:absolute;\n    top:0;\n    color:#fff;\n  }\n}\n.blogWrap{\n  width:7.5rem;\n  position:relative;\n  .content{\n    width:100%;\n    position:absolute;\n    top:0;\n  }\n}\n.articleWrap{\n  width:7.5rem;\n  position:relative;\n  .content{\n    width:100%;\n    position:absolute;\n    top:0;\n  }\n}\n.libraryWrap{\n  width:7.5rem;\n  position:relative;\n  .bg{\n    width:100%;\n    height:100%;\n  }\n  .content{\n    width:100%;\n    position:absolute;\n    top:0;\n    // color:#fff;\n  }\n}\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --theme-color: #3Eb575;\n}\n* {\n  margin: 0;\n  padding: 0;\n}\n#root {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n}\np {\n  line-height: 0.5rem;\n}\nul li,\nol li {\n  margin-left: 0.24rem;\n}\n.resumeWrap {\n  width: 7.5rem;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.resumeWrap .bg {\n  width: 100%;\n  height: 15rem;\n  background: linear-gradient(var(--theme-color), transparent);\n}\n.resumeWrap .content {\n  margin-top: -15rem;\n  color: #fff;\n}\n.blogWrap {\n  width: 7.5rem;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: auto;\n  position: relative;\n}\n.blogWrap .bg {\n  width: 100%;\n}\n.blogWrap .content {\n  width: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  color: var(--theme-color);\n  background-color: #e5e7eb;\n}\n.articleWrap {\n  width: 7.5rem;\n  position: relative;\n}\n.articleWrap .bg {\n  width: 100%;\n  height: 100%;\n  background-color: #e5e7eb;\n}\n.articleWrap .content {\n  width: 100%;\n  position: absolute;\n  top: 0;\n  color: #000;\n}\n.libraryWrap {\n  width: 7.5rem;\n  position: relative;\n}\n.libraryWrap .bg {\n  width: 100%;\n  height: 100%;\n}\n.libraryWrap .content {\n  width: 100%;\n  position: absolute;\n  top: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.less","webpack://./src/common/PageContainer/index.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF;AADA;EACE,SAAA;EACA,UAAA;AAGF;AADA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;AAGF;AADA;EACE,mBAAA;AAGF;AADA;;EACE,oBAAA;AAIF;AAFA;EACE,aAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;AAIF;AARA;EAMI,WAAA;EACA,aAAA;EACA,4DAAA;AAKJ;AAbA;EAWI,kBAAA;EACA,WAAA;AAKJ;AAFA;EACE,aAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;EACA,kBAAA;AAIF;AATA;EAOI,WAAA;AAKJ;AAZA;EAUI,WAAA;EACA,kBAAA;EACA,MAAA;EACA,OAAA;EACA,yBAAA;EACA,yBAAA;AAKJ;AAFA;EACE,aAAA;EACA,kBAAA;AAIF;AANA;EAII,WAAA;EACA,YAAA;EACA,yBAAA;AAKJ;AAXA;EASI,WAAA;EACA,kBAAA;EACA,MAAA;EACA,WAAA;AAKJ;AAFA;EACE,aAAA;EACA,kBAAA;AAIF;AANA;EAII,WAAA;EACA,YAAA;AAKJ;AAVA;EAQI,WAAA;EACA,kBAAA;EACA,MAAA;AAKJ","sourcesContent":[":root {\n  --theme-color: #3Eb575;\n}\n// @theme-color:#3Eb575; // #ff6a00;\n\n// .icon{\n//   filter: brightness(0.1);\n// }\n\n","@import \"~@/styles/index.less\";\n*{\n  margin:0;\n  padding:0;\n}\n#root {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n}\np{\n  line-height: 0.5rem;\n}\nul li,ol li{\n  margin-left:0.24rem;\n}\n.resumeWrap{\n  width:7.5rem;\n  height:100%;\n  overflow-x:hidden;\n  overflow-y:auto;\n  .bg{\n    width:100%;\n    height:15rem;\n    background: linear-gradient(var(--theme-color),transparent);\n  }\n  .content{\n    margin-top:-15rem;\n    color:#fff;\n  }\n}\n.blogWrap{\n  width:7.5rem;\n  height:100%;\n  overflow-x:hidden;\n  overflow-y:auto;\n  position:relative;\n  .bg{\n    width:100%;\n  }\n  .content{\n    width:100%;\n    position:absolute;\n    top:0;\n    left:0;\n    color:var(--theme-color);\n    background-color:#e5e7eb;\n  }\n}\n.articleWrap{\n  width:7.5rem;\n  position:relative;\n  .bg{\n    width:100%;\n    height:100%;\n    background-color:#e5e7eb;\n  }\n  .content{\n    width:100%;\n    position:absolute;\n    top:0;\n    color:#000;\n  }\n}\n.libraryWrap{\n  width:7.5rem;\n  position:relative;\n  .bg{\n    width:100%;\n    height:100%;\n  }\n  .content{\n    width:100%;\n    position:absolute;\n    top:0;\n    // color:#fff;\n  }\n}\n\n"],"sourceRoot":""}]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {
-	"resumeWrap": "src-common-PageContainer-index-module__resumeWrap--p8366",
-	"bg": "src-common-PageContainer-index-module__bg--O0dxk",
-	"content": "src-common-PageContainer-index-module__content--ZHAwf",
-	"blogWrap": "src-common-PageContainer-index-module__blogWrap--kEYRv",
-	"articleWrap": "src-common-PageContainer-index-module__articleWrap--b5aVd",
-	"libraryWrap": "src-common-PageContainer-index-module__libraryWrap--4vBsM"
-};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
@@ -2303,10 +2321,10 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./src/common/PageContainer/index.module.less":
-/*!****************************************************!*\
-  !*** ./src/common/PageContainer/index.module.less ***!
-  \****************************************************/
+/***/ "./src/common/PageContainer/index.less":
+/*!*********************************************!*\
+  !*** ./src/common/PageContainer/index.less ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2315,7 +2333,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_module_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./index.module.less */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/common/PageContainer/index.module.less");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./index.less */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/common/PageContainer/index.less");
 
             
 
@@ -2324,11 +2342,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_module_less__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_less__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_module_less__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_less__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 

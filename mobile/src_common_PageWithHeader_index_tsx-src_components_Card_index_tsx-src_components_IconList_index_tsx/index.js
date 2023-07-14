@@ -1,5 +1,35 @@
 "use strict";
-(self["webpackChunkxingguozm_github_io"] = self["webpackChunkxingguozm_github_io"] || []).push([["src_components_Card_index_tsx-src_components_IconList_index_tsx"],{
+(self["webpackChunkxingguozm_github_io"] = self["webpackChunkxingguozm_github_io"] || []).push([["src_common_PageWithHeader_index_tsx-src_components_Card_index_tsx-src_components_IconList_index_tsx"],{
+
+/***/ "./src/common/PageWithHeader/index.tsx":
+/*!*********************************************!*\
+  !*** ./src/common/PageWithHeader/index.tsx ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ PageWithHeader)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/PromisifyModal */ "./src/components/PromisifyModal/index.tsx");
+/* harmony import */ var _common_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/common/Header */ "./src/common/Header/index.tsx");
+/* harmony import */ var _common_PageContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/common/PageContainer */ "./src/common/PageContainer/index.tsx");
+
+
+
+
+function PageWithHeader(_ref) {
+  var children = _ref.children,
+      type = _ref.type;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PromisifyModal__WEBPACK_IMPORTED_MODULE_1__["default"].Provider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_common_PageContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    type: type
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_common_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    type: type
+  }), children));
+}
+
+/***/ }),
 
 /***/ "./src/components/Card/index.tsx":
 /*!***************************************!*\

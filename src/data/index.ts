@@ -22,6 +22,7 @@ import {
   TaskSvg,
   ActionSvg,
   ResultSvg,
+  DateSvg,
 } from '@/assets';
 
 export interface IUser {
@@ -82,7 +83,8 @@ export const data = {
       title: '求职意向',
       list: [
         { Icon: JobSvg, value: '前端工程师' },
-        { Icon: CitySvg, value: '深圳' }
+        { Icon: CitySvg, value: '深圳' },
+        { Icon: DateSvg, value: '一周内到岗' }
       ]
     },
   ],

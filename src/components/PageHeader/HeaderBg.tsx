@@ -1,10 +1,10 @@
 import React, { useState, useMemo, useEffect } from "react";
-import { navbarHeight, getRpx2px } from "@/utils";
+import { navbarHeight, getRpx2px, getTargetElement } from "@/utils";
 import useEventListener from "@/hooks/useEventListener";
 import classnames from "classnames";
 import "./index.less";
 
-export default function HeaderBg({ scroller, children, immersive }) {
+export default function HeaderBg({ children, scroller, immersive }) {
   const [fullFixed, setFullFixed] = useState(false);
   const [opacity, setOpacity] = useState(0);
   const { statusBarHeight, navBarHeight } = navbarHeight;
@@ -21,8 +21,7 @@ export default function HeaderBg({ scroller, children, immersive }) {
   ]);
   useEventListener("scroll", () => {
     const scrollTop =
-      scroller.current.scrollTop || document.documentElement.scrollTop || document.body.scrollTop;
-
+      getTargetElement(scroller, document).scrollTop || document.documentElement.scrollTop || document.body.scrollTop;
     if (scrollTop / 50 >= 1) {
       setOpacity(1);
       setFullFixed(true);

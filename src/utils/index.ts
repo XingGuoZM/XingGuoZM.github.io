@@ -187,3 +187,41 @@ export function setBodyStyleProperty(key: string, value: string) {
 export function getBodyStyleProperty(key: string) {
   return document.body.style.getPropertyValue(key)
 }
+
+
+
+export function depsAreSame(oldDeps, deps) {
+  if (oldDeps === deps) return true;
+  for (let i = 0; i < oldDeps.length; i++) {
+    if (!Object.is(oldDeps[i], deps[i])) return false;
+  }
+  return true;
+}
+export function getTargetElement(target, defaultElement) {
+
+  if (!target) {
+    return defaultElement;
+  }
+
+  let targetElement;
+  if (typeof target === 'string') {
+    targetElement = document.querySelector(target);
+  } else if ('current' in target) {
+    targetElement = target.current;
+  } else {
+    targetElement = target;
+  }
+
+  return targetElement;
+}
+
+export enum PageType {
+  Resume = 'Resume',
+  Blog = 'Blog',
+  Article = 'Article',
+  Library = 'Library'
+}
+
+export enum LocalStorageKey {
+  ThemeColor = '--theme-color'
+}

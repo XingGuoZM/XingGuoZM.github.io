@@ -113,15 +113,12 @@ var list = [{
 }];
 
 function Library() {
-  var scroller = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_6__["default"].libray,
-    ref: scroller
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_6__["default"].libray
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_common_PageContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    type: _common_PageContainer__WEBPACK_IMPORTED_MODULE_2__.PageContainerType.Library
+    type: _utils__WEBPACK_IMPORTED_MODULE_5__.PageType.Library
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_common_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    scroller: scroller,
-    type: _common_Header__WEBPACK_IMPORTED_MODULE_3__.HeaderType.Libray
+    type: _utils__WEBPACK_IMPORTED_MODULE_5__.PageType.Libray
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _index_module_less__WEBPACK_IMPORTED_MODULE_6__["default"].list
   }, list.map(function (item, index) {

@@ -1,29 +1,31 @@
-import React, { ReactElement } from 'react';
-import styles from './index.module.less';
+import React, { useEffect, ReactElement } from 'react';
+import { viewport, PageType, setBodyStyleProperty, LocalStorageKey } from '@/utils';
+import './index.less';
 
 interface IProps {
   children: ReactElement | ReactElement[];
-  type: PageContainerType
-}
-
-export enum PageContainerType {
-  Resume = 'Resume',
-  Blog = 'Blog',
-  Article = 'Article',
-  Library = 'Library'
+  type: PageType
 }
 
 const ClassNameMap = {
-  [PageContainerType.Resume]: styles.resumeWrap,
-  [PageContainerType.Blog]: styles.blogWrap,
-  [PageContainerType.Article]: styles.articleWrap,
-  [PageContainerType.Library]: styles.libraryWrap,
+  [PageType.Resume]: 'resumeWrap',
+  [PageType.Blog]: 'blogWrap',
+  [PageType.Article]: 'articleWrap',
+  [PageType.Library]: 'libraryWrap',
 }
-
+viewport();
 export default function PageContainer({ children, type }: IProps) {
-  return <div className={ClassNameMap[type]}>
-    <div className={styles.bg} />
-    <div className={styles.content}>
+
+  useEffect(() => {
+    const theme = localStorage.getItem(LocalStorageKey.ThemeColor);
+    if (theme) {
+      setBodyStyleProperty(LocalStorageKey.ThemeColor, theme);
+      setBodyStyleProperty('color', theme);
+    }
+  }, [])
+  return <div className={ClassNameMap[type]} id='J-Container'>
+    <div className='bg' />
+    <div className='content'>
       {children}
     </div>
   </div>

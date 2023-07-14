@@ -1,10 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import PageContainer, { PageContainerType } from '@/common/PageContainer';
-import Header, { HeaderType } from '@/common/Header';
+import PageContainer from '@/common/PageContainer';
+import Header from '@/common/Header';
 import Button, { ButtonType } from '@/components/Button';
-import { viewport } from '@/utils';
-
+import { viewport, PageType } from '@/utils';
 import styles from './index.module.less';
 
 viewport();
@@ -20,10 +19,9 @@ const list = [
 ]
 
 function Library() {
-  const scroller = useRef(null);
-  return <div className={styles.libray} ref={scroller}>
-    <PageContainer type={PageContainerType.Library}>
-      <Header scroller={scroller} type={HeaderType.Libray} />
+  return <div className={styles.libray} >
+    <PageContainer type={PageType.Library}>
+      <Header type={PageType.Libray} />
       <div className={styles.list}>
         {list.map((item, index) => <div className={styles.item} key={index}>
           <div className={styles.title}>{item.title}</div>

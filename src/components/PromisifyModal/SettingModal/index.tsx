@@ -1,19 +1,28 @@
 import React, { useState } from 'react';
-import checkedIcon from '../../../assets/check.svg';
-import { setBodyStyleProperty } from '@/utils';
-import "./index.less";
+import checkedIcon from '@/assets/check.svg';
+import { setBodyStyleProperty, LocalStorageKey } from '@/utils';
 import Modal from '@/components/PromisifyModal';
+import "./index.less";
 
-export default function SettingModal({ data }) {
-  const [theme, setTheme] = useState(localStorage.getItem('--theme-color'));
-  const handleSetting = (item) => {
+
+interface ITheme {
+  id: string;
+  value: string;
+}
+interface IProps {
+  data: ITheme[];
+}
+
+export default function SettingModal({ data }: IProps) {
+  const [theme, setTheme] = useState(localStorage.getItem(LocalStorageKey.ThemeColor));
+  const handleSetting = (item: ITheme) => {
     if (item.id === 'white') {
       setBodyStyleProperty('color', '#000');
     } else {
       setBodyStyleProperty('color', item.value);
     }
-    setBodyStyleProperty('--theme-color', item.value);
-    localStorage.setItem('--theme-color', item.value);
+    setBodyStyleProperty(LocalStorageKey.ThemeColor, item.value);
+    localStorage.setItem(LocalStorageKey.ThemeColor, item.value);
     setTheme(item.value);
   }
   const handleComfirm = () => {
