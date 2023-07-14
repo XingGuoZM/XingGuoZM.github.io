@@ -1,7 +1,7 @@
 import React from 'react';
 import TabList from '@/components/TabList';
 import Card, { CardTypeEnum } from '@/components/Card';
-import { data } from '@/data';
+import { data } from '../../data';
 import { getBaseUrl } from '@/utils';
 import styles from './index.module.less';
 

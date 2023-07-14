@@ -188,8 +188,6 @@ export function getBodyStyleProperty(key: string) {
   return document.body.style.getPropertyValue(key)
 }
 
-
-
 export function depsAreSame(oldDeps, deps) {
   if (oldDeps === deps) return true;
   for (let i = 0; i < oldDeps.length; i++) {

@@ -1,4 +1,6 @@
 
+@import url("~@/styles/index.less");
+
 .wrap{
   width:7.5rem;
   height:5rem;
@@ -36,17 +38,22 @@
   cursor: pointer;
 }
 .iconWrap{
-  width:3rem;
+  width:4rem;
   height:3rem;
-  border-radius:0.05rem;
   display:flex;
   justify-content: center; 
   align-items: center;
-
 }
+.icon{
+  width:2rem;
+  height:2rem;
+  margin-left:0.25rem;
+  margin-right:0.25rem;
+}
+
+
 .textWrap{
   width:4rem;
-  // height:3rem;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -62,4 +69,20 @@
   align-items: center;
   font-size:0.32rem;
   font-weight: bolder;
+}
+
+.ringAnim{
+  .animation(ring);
+}
+.shakeAnim{
+  .animation(shake);
+}
+.spinAnim{
+  .animation(spin);
+}
+.flipAnim{
+  .animation(flip);
+}
+.bounceinAnim{
+  .animation(bounceinT);
 }

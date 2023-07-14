@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import PageContainer from '@/common/PageContainer';
 import Header from '@/common/Header';
 import Button, { ButtonType } from '@/components/Button';
-import { viewport, PageType } from '@/utils';
+import { viewport, PageType, getDeviceInfo } from '@/utils';
 import styles from './index.module.less';
 
 viewport();
@@ -17,6 +17,8 @@ const list = [
     ]
   }
 ]
+
+if (!getDeviceInfo.isMobile) alert('当前页面不是在手机端打开,可能会会失效');
 
 function Library() {
   return <div className={styles.libray} >

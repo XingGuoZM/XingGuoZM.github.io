@@ -35,7 +35,7 @@ export default function Button({ children, type = ButtonType.Medium, onClick, ef
       dom.removeEventListener('touchstart', handleStart);
       document.removeEventListener('touchend', handleEnd);
     }
-  }, []);
+  }, [effect]);
   return <div
     className={classnames(['btn', BtnTypeMap[type]])}
     onClick={onClick}

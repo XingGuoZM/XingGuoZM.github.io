@@ -1,9 +1,125 @@
 :root {
   --theme-color: #3Eb575;
 }
-// @theme-color:#3Eb575; // #ff6a00;
+//css动画
 
-// .icon{
-//   filter: brightness(0.1);
-// }
+.animation(@name,@time:4s,@delay:3s, @count:infinite,@ease:ease-out,@fillmode:forwards){
+  animation-name:@name;
+  animation-duration:@time;
+  animation-delay: @delay;
+  animation-timing-function:@ease;
+  animation-fill-mode:@fillmode;
+  animation-iteration-count: @count;
+}
+
+// 摇晃
+@keyframes shake {
+  35%,
+  40% {
+    transform: rotate(15deg);
+  }
+  37.5% {
+    transform: rotate(-15deg);
+  }
+
+  12.5%,
+  42.5% {
+    transform: rotate(0);
+  }
+}
+/* 翻转 */
+@keyframes flip {
+  0% ,100%{
+      transform: perspective(4rem) rotateY(0);
+      animation-timing-function: ease-out;
+  }
+
+  10% {
+      transform: perspective(4rem) translateZ(1.5rem) rotateY(170deg);
+      animation-timing-function: ease-out;
+  }
+
+  12.50% {
+      transform: perspective(4rem) translateZ(1.5rem) rotateY(190deg) scale(1);
+      animation-timing-function: ease-in;
+  }
+
+  20% {
+      transform: perspective(4rem) rotateY(360deg) scale(0.95);
+      animation-timing-function: ease-in;
+  }
+
+  25% {
+      transform: perspective(4rem) scale(1);
+      animation-timing-function: ease-in;
+  }
+}
+
+// 旋转
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  20%{
+    transform: rotate(340deg);
+  }
+  22.5%{
+    transform:rotate(350deg);
+  }
+  25%,100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 震铃 */
+@keyframes ring {
+  0%,100% {
+      transform: scale(1);
+  }
+
+  2.5%,
+  5% {
+      transform: scale(0.9) rotate(-3deg);
+  }
+
+  7.5%,
+  12.5%,
+  17.5%,
+  22.5% {
+      transform: scale(1.1) rotate(3deg);
+  }
+
+  10%,
+  15%,
+  20% {
+      transform: scale(1.1) rotate(-3deg);
+  }
+
+  25% {
+      transform: scale(1) rotate(0);
+  }
+}
+
+/* 弹入-从上 */
+@keyframes bounceinT {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  15% {
+      opacity: 1;
+      transform: translateY(0.3rem);
+  }
+
+  20% {
+      transform: translateY(-0.1rem);
+  }
+
+  25%, 100% {
+      transform: translateY(0);
+  }
+}
+
+
 
