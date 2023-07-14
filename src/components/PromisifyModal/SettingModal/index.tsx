@@ -7,6 +7,11 @@ import Modal from '@/components/PromisifyModal';
 export default function SettingModal({ data }) {
   const [theme, setTheme] = useState(localStorage.getItem('--theme-color'));
   const handleSetting = (item) => {
+    if (item.id === 'white') {
+      setBodyStyleProperty('color', '#000');
+    } else {
+      setBodyStyleProperty('color', item.value);
+    }
     setBodyStyleProperty('--theme-color', item.value);
     localStorage.setItem('--theme-color', item.value);
     setTheme(item.value);

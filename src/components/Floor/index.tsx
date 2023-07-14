@@ -6,7 +6,7 @@ interface IProps {
   children: ReactElement;
 }
 
-export default function Floor({ title, subtitle, children }: IProps) {
+export default function Floor({ title, children }: IProps) {
   return <div className='floor'>
     {title && <div className='floor-title'>{title}</div>}
     {children}

@@ -5,9 +5,10 @@ const resolve = dir => path.resolve(__dirname, dir);
 
 module.exports = {
   entry: {
-    resume: './src/resume.tsx',
-    blog: './src/blog.tsx',
-    article: './src/article.tsx',
+    resume: './src/pages/Resume/index.tsx',
+    blog: './src/pages/Blog/index.tsx',
+    article: './src/pages/Article/index.tsx',
+    library: './src/pages/Library/index.tsx',
   },
   devServer: {
 
@@ -79,6 +80,12 @@ module.exports = {
       title: 'article',
       filename: 'article/index.html',
       chunks: ['article'],
+      templateContent: `<html><body><div id='root'></div></body></html>`
+    }),
+    new htmlWebpackPlugin({
+      title: 'library',
+      filename: 'library/index.html',
+      chunks: ['library'],
       templateContent: `<html><body><div id='root'></div></body></html>`
     })
   ],

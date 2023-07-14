@@ -1,14 +1,15 @@
 import React, { useRef, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import Modal from '@/components/PromisifyModal';
-import Header from './components/Header';
+import Header from '@/common/Header';
 import ArticlePage from './components/ArticleList';
 import { viewport, setBodyStyleProperty } from '@/utils';
-import PageBg from './components/PageBg';
+import PageContainer, { PageContainerType } from '@/common/PageContainer';
 import styles from './index.module.less';
 
 viewport();
 
-export default function Article() {
+function Article() {
   const scroller = useRef(null);
   useEffect(() => {
     const theme = localStorage.getItem('--theme-color')
@@ -17,13 +18,17 @@ export default function Article() {
 
   return <Modal.Provider>
     <div className={styles.wrap} ref={scroller}>
-      <PageBg>
+      <PageContainer type={PageContainerType.Article}>
         <Header scroller={scroller}></Header>
         <div className={styles.article}>
           <ArticlePage />
         </div>
-      </PageBg>
+      </PageContainer>
     </div>
-
   </Modal.Provider>
 }
+
+ReactDOM.render(
+  <Article />,
+  document.querySelector('#root')
+);

@@ -259,7 +259,7 @@ export const data = {
   achievement: [
     { id: '1', title: '在线博客', subTitle: '', url: 'https://xingguozm.github.io/mobile/blog' },
     { id: '2', title: 'Github', subTitle: '', url: 'https://github.com' },
-    { id: '3', title: '组件库', subTitle: '(建设中)', url: '' },
+    { id: '3', title: '组件库', subTitle: '', url: 'https://xingguozm.github.io/mobile/library' },
     { id: '4', title: '在线演示', subTitle: '(建设中)', url: '' },
   ],
   blogList: [{

@@ -1,29 +1,28 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
+import ReactDOM from 'react-dom';
 import Modal from '@/components/PromisifyModal';
-import Header from './components/Header';
+import Header, { HeaderType } from '@/common/Header';
+import PageContainer, { PageContainerType } from '@/common/PageContainer';
 import BlogCarousel from './components/BlogCarousel';
 import BlogTabList from './components/BlogTabList';
-import PageBg from './components/PageBg';
+
 import styles from './index.module.less';
-
 import { viewport } from '@/utils';
-import { setBodyStyleProperty } from '@/utils';
-
 viewport();
 
-export default function Blog() {
+function Blog() {
   const scroller = useRef(null);
-  useEffect(() => {
-    const theme = localStorage.getItem('--theme-color')
-    theme && setBodyStyleProperty('--theme-color', theme);
-  }, [])
-  return <Modal.Provider>
-    <div className={styles.wrap} ref={scroller}>
-      <PageBg>
-        <Header scroller={scroller} />
-        <BlogCarousel />
-        <BlogTabList />
-      </PageBg>
-    </div>
-  </Modal.Provider>
+
+  return <div className={styles.wrap} ref={scroller}>
+    <PageContainer type={PageContainerType.Blog}>
+      <Header scroller={scroller} type={HeaderType.Blog} />
+      <BlogCarousel />
+      <BlogTabList />
+    </PageContainer>
+  </div>
 }
+
+ReactDOM.render(
+  <Modal.Provider><Blog /></Modal.Provider>,
+  document.querySelector('#root')
+);

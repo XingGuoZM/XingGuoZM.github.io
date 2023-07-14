@@ -19,7 +19,6 @@ export default function TabList({ data, renderTabCell, renderListCell }) {
         {renderTabCell(item)}
       </SwiperSlide>)}
     </Swiper>
-
     <Swiper
       modules={[Thumbs]}
       thumbs={{

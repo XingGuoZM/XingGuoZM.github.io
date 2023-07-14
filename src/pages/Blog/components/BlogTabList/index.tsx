@@ -29,7 +29,7 @@ export default function BlogTabList() {
               <div className={styles.titleWrap}>
                 <div className={styles.title}>{item.title}</div>
                 <div className={styles.subtitle}>
-                  {item?.subtitle?.map((ele: string) => <div className={styles.subtitleCell} key={ele.subtitle}>{ele}</div>)}
+                  {item.subtitle?.map((ele: string) => <div className={styles.subtitleCell} key={ele.subtitle}>{ele}</div>)}
                 </div>
                 <div className={styles.desc}>{item.desc}</div>
               </div>
