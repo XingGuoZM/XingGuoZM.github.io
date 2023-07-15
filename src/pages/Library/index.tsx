@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import PageContainer from '@/common/PageContainer';
 import Header from '@/common/Header';
-import Button, { ButtonType } from '@/components/Button';
+import Button, { ButtonType } from './BizLib/Button';
 import { viewport, PageType, getDeviceInfo } from '@/utils';
 import styles from './index.module.less';
 
@@ -11,9 +11,10 @@ viewport();
 const list = [
   {
     title: '按钮', compList: [
-      () => <Button type={ButtonType.Small} effect={false} >按钮</Button>,
-      () => <Button type={ButtonType.Medium} onClick={() => alert(111)}>按钮</Button>,
+      () => <Button type={ButtonType.Small}>按钮</Button>,
+      () => <Button type={ButtonType.Medium}>按钮</Button>,
       () => <Button type={ButtonType.Large}>按钮</Button>,
+
     ]
   }
 ]
@@ -28,7 +29,7 @@ function Library() {
         {list.map((item, index) => <div className={styles.item} key={index}>
           <div className={styles.title}>{item.title}</div>
           <div className={styles.compList} key={index}>
-            {item.compList.map((Comp, index) => <div className={styles.compItem}><Comp key={index} /></div>)}
+            {item.compList.map((Comp, index) => <div className={styles.compItem} key={index}><Comp /></div>)}
           </div>
         </div>)}
       </div>

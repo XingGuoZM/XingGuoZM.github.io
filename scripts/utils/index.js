@@ -16,6 +16,7 @@ function removeHtmlTag (htmlstr) {
   return htmlstr.replace(/(<[^>]+>|\n)/g, '');
 }
 
+
 module.exports = {
   formatCompName,
   getLastDirName,

@@ -12,10 +12,10 @@ export default function IconList({ data = '', className = '', fill = '#fff' }: I
 
   if (Array.isArray(data) && data.length === 2) {
     return (
-      <div className='expertIcon2'>
+      <div className='icon-list-2'>
         {data?.map((Icon: string, index: number) => <Icon
           className={classnames({
-            'expertSmallIcon2': true,
+            'small-icon-list-2': true,
             [className]: true,
           })} key={index} fill={fill} />)}
       </div>
@@ -23,13 +23,13 @@ export default function IconList({ data = '', className = '', fill = '#fff' }: I
   }
   if (Array.isArray(data) && data.length === 3) {
     return (
-      <div className='expertIcon3'>
+      <div className='icon-list-3'>
         {data?.map((Icon: string, index: number) => <Icon
           key={index}
           className={
             classnames({
-              ['expertSmallIcon3']: true,
-              ['firstExpertSmallIcon3']: index === 0, [className]: true
+              ['small-icon-list-3']: true,
+              ['first-small-icon-list-3']: index === 0, [className]: true
             })}
           fill={fill}
         />)}
@@ -37,5 +37,5 @@ export default function IconList({ data = '', className = '', fill = '#fff' }: I
     );
   }
   const Icon = data[0];
-  return <Icon className={classnames({ 'expertIcon': true, [className]: true })} fill={fill} />
+  return <Icon className={classnames({ 'icon-list': true, [className]: true })} fill={fill} />
 }

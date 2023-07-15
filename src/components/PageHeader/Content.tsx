@@ -3,6 +3,7 @@ import classnames from "classnames";
 import { navbarHeight, getRpx2px } from "../../utils";
 import "./index.less";
 
+
 export default function HeaderContent({ children, immersive }) {
   const [color, setColor] = useState('');
   const { statusBarHeight, navBarHeight } = navbarHeight;

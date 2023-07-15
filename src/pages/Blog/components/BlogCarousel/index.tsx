@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import Carousel from '@/components/Carousel';
 import classnames from 'classnames';
-// import IconList from '@/components/IconList';
+import IconList from '@/components/IconList';
 import { data } from '../../data';
 import styles from './index.module.less';
 
@@ -21,10 +21,13 @@ export default function BlogCarousel() {
       {(item) => {
         return <div className={styles.cell}>
           <div className={styles.iconWrap}>
-            {/* <IconList data={item.iconList} /> */}
-            {item.iconList.map((Icon: ReactElement, index: number) => Icon({
+            <IconList
+              data={item.iconList}
+              className={classnames(styles.icon, AnimMap[item.id])}
+            />
+            {/* {item.iconList.map((Icon: ReactElement, index: number) => Icon({
               className: classnames(styles.icon, AnimMap[item.id]), key: index
-            }))}
+            }))} */}
           </div>
           <div className={styles.textWrap}>
             <div className={styles.title}>{item.title}</div>

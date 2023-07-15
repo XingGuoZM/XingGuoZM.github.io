@@ -4,7 +4,6 @@ const { getAllFileFromDir, cleanAllFileFromDir } = require('../utils/dir');
 const { setStr2File, getStrFromFile } = require('../utils/file');
 const { getLastDirName, getFileName, removeHtmlTag } = require('../utils/index');
 const MarkdownIt = require('markdown-it');
-
 // 将md字符串转成html字符串
 const parseMd2Html = (mdStr) => {
   return new MarkdownIt().render(mdStr);
@@ -57,17 +56,24 @@ const parseFileName2ReactMap = (allFile) => {
   `
 }
 // 根据文件生成博客信息对象
-const parseFile2Obj = (fileObj) => {
-  // return allFile.map(item => ({
-  //   id: item.id,
-  //   dir: getLastDirName(item.filepath),
-  //   name: getFileName(item.name),
-  //   url: `/article?id=${item.id}`
-  // }))
+const parseArr2TabList = (arr) => {
+  const map = {};
+  let res = [];
+  for (let item of arr) {
+    if (map[item.dir] === undefined) {
+      res.push({ id: res.length, tabTitle: item.dir, tabData: [] })
+      map[item.dir] = res.length - 1;
+    }
+    const index = map[item.dir];
+    res[index].tabData.push({ ...item })
+  }
+  return res;
 }
 // html字符串转译
 const handleHtmlStr = (htmlStr) => {
-  return htmlStr.replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+  return htmlStr
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
 }
 const generatorBlogFile = async ({ sourceDir, targetDir }) => {
   // 清空目标目录下所有文件
@@ -77,9 +83,8 @@ const generatorBlogFile = async ({ sourceDir, targetDir }) => {
   // 生成文件名->react组件的映射
   const reactMapStr = parseFileName2ReactMap(allFile);
 
-  const fileArr = [];
-
-
+  // const fileArr = [];
+  let fileArr = []
 
   // 遍历刚才存取的数组，读取所有文件内容，转化为字符串,
   for (const file of allFile) {
@@ -92,15 +97,20 @@ const generatorBlogFile = async ({ sourceDir, targetDir }) => {
     const htmlStr = parseMd2Html(mdStr);
     // handle html string
     const resHtmlStr = handleHtmlStr(htmlStr);
+    const filename = getFileName(file.name);
+    const dirname = getLastDirName(file.filepath)
     const fileObj = {
       id: file.id,
-      dir: getLastDirName(file.filepath),
-      name: getFileName(file.name),
-      title: getFileName(file.name),
+      dir: dirname,
+      name: filename,
+      title: filename,
       desc: removeHtmlTag(resHtmlStr).slice(0, 100),
       url: `/article?id=${file.id}`
     }
+    console.log(getLastDirName(file.filepath))
     fileArr.push(fileObj)
+
+
     // html string -> react string
     const reactStr = parseHtmlStr2ReactTemplate(resHtmlStr);
     // react string 写入文件
@@ -111,7 +121,8 @@ const generatorBlogFile = async ({ sourceDir, targetDir }) => {
   // react string map 写入文件
   await setStr2File({ filepath: `${targetDir}/index.tsx`, str: reactMapStr });
   console.log('react 映射文件写入成功');
-  await setStr2File({ filepath: '../../src/pages/Blog/data/index.json', str: JSON.stringify(fileArr) })
+  const resFileArr = parseArr2TabList(fileArr);
+  await setStr2File({ filepath: '../../src/pages/Blog/data/data.js', str: `export const data = ${JSON.stringify(resFileArr)}` })
 }
 
 const sourceDir = '../../blogs';

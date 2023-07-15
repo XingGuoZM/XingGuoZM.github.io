@@ -12,7 +12,7 @@ const formatId = (index) => {
 }
 
 // 遍历文件夹下所有文件，返回文件相关信息（id，文件路径，文件名）
-function getAllFileFromDir ({ dir }) {
+function getAllFileFromDir ({ dir, type = 'md' }) {
   let index = 0;
   return new Promise(resolve => {
     let ans = []
@@ -22,7 +22,11 @@ function getAllFileFromDir ({ dir }) {
         let filepath = path.join(dir, file.name)
         if (file.isFile()) {
           index += 1;
-          ans.push({ id: formatId(index), filepath, name: file.name })
+          const fileType = file.name.split('.')[1]
+          if (fileType === type) {
+
+            ans.push({ id: formatId(index), filepath, name: file.name })
+          }
         } else if (file.isDirectory()) {
           traverse(filepath, ans)
         }

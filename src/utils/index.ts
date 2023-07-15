@@ -69,8 +69,6 @@ export const navbarHeight = (() => {
 
 export const getRpx2px = (rpx) => (rpx * window.screen.width) / 750;
 
-
-
 export function viewport() {
   // flexible的动态计算，兼容了很多场景
   const doc = window.document;

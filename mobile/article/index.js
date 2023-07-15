@@ -32,9 +32,9 @@ function PageWithHeader(_ref) {
 
 /***/ }),
 
-/***/ "./src/pages/Article/components/ArticleList/CompDNS和CDN0005.tsx":
+/***/ "./src/pages/Article/components/ArticleList/CompDNS和CDN0006.tsx":
 /*!**********************************************************************!*\
-  !*** ./src/pages/Article/components/ArticleList/CompDNS和CDN0005.tsx ***!
+  !*** ./src/pages/Article/components/ArticleList/CompDNS和CDN0006.tsx ***!
   \**********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -68,9 +68,9 @@ var hljs = __webpack_require__(/*! highlight.js */ "./node_modules/highlight.js/
 
 /***/ }),
 
-/***/ "./src/pages/Article/components/ArticleList/CompHTTP网络的发展0006.tsx":
+/***/ "./src/pages/Article/components/ArticleList/CompHTTP网络的发展0007.tsx":
 /*!************************************************************************!*\
-  !*** ./src/pages/Article/components/ArticleList/CompHTTP网络的发展0006.tsx ***!
+  !*** ./src/pages/Article/components/ArticleList/CompHTTP网络的发展0007.tsx ***!
   \************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -104,9 +104,9 @@ var hljs = __webpack_require__(/*! highlight.js */ "./node_modules/highlight.js/
 
 /***/ }),
 
-/***/ "./src/pages/Article/components/ArticleList/Compthis0001.tsx":
+/***/ "./src/pages/Article/components/ArticleList/Compthis0002.tsx":
 /*!*******************************************************************!*\
-  !*** ./src/pages/Article/components/ArticleList/Compthis0001.tsx ***!
+  !*** ./src/pages/Article/components/ArticleList/Compthis0002.tsx ***!
   \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -140,9 +140,9 @@ var hljs = __webpack_require__(/*! highlight.js */ "./node_modules/highlight.js/
 
 /***/ }),
 
-/***/ "./src/pages/Article/components/ArticleList/Comp事件循环0002.tsx":
+/***/ "./src/pages/Article/components/ArticleList/Comp事件循环0003.tsx":
 /*!*******************************************************************!*\
-  !*** ./src/pages/Article/components/ArticleList/Comp事件循环0002.tsx ***!
+  !*** ./src/pages/Article/components/ArticleList/Comp事件循环0003.tsx ***!
   \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -176,9 +176,9 @@ var hljs = __webpack_require__(/*! highlight.js */ "./node_modules/highlight.js/
 
 /***/ }),
 
-/***/ "./src/pages/Article/components/ArticleList/Comp作用域0003.tsx":
+/***/ "./src/pages/Article/components/ArticleList/Comp作用域0004.tsx":
 /*!******************************************************************!*\
-  !*** ./src/pages/Article/components/ArticleList/Comp作用域0003.tsx ***!
+  !*** ./src/pages/Article/components/ArticleList/Comp作用域0004.tsx ***!
   \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -212,9 +212,9 @@ var hljs = __webpack_require__(/*! highlight.js */ "./node_modules/highlight.js/
 
 /***/ }),
 
-/***/ "./src/pages/Article/components/ArticleList/Comp原型链0004.tsx":
+/***/ "./src/pages/Article/components/ArticleList/Comp原型链0005.tsx":
 /*!******************************************************************!*\
-  !*** ./src/pages/Article/components/ArticleList/Comp原型链0004.tsx ***!
+  !*** ./src/pages/Article/components/ArticleList/Comp原型链0005.tsx ***!
   \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -248,9 +248,45 @@ var hljs = __webpack_require__(/*! highlight.js */ "./node_modules/highlight.js/
 
 /***/ }),
 
-/***/ "./src/pages/Article/components/ArticleList/Comp网络模型0007.tsx":
+/***/ "./src/pages/Article/components/ArticleList/Comp如何写一个按钮组件0001.tsx":
+/*!************************************************************************!*\
+  !*** ./src/pages/Article/components/ArticleList/Comp如何写一个按钮组件0001.tsx ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var highlight_js_styles_xcode_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! highlight.js/styles/xcode.css */ "./node_modules/highlight.js/styles/xcode.css");
+
+
+
+var hljs = __webpack_require__(/*! highlight.js */ "./node_modules/highlight.js/lib/index.js");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    document.querySelectorAll('code').forEach(function (el) {
+      el.style.backgroundColor = '#f8f8f8';
+      hljs.highlightElement(el);
+    });
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    style: {
+      fontSize: '0.26rem'
+    },
+    dangerouslySetInnerHTML: {
+      __html: "<h2>\u6309\u94AE\u7EC4\u4EF6</h2>\n<p>\u6309\u94AE\u7684\u4E1A\u52A1\u5C5E\u6027\u662F\u53EF\u4EA4\u4E92\uFF0C\u70B9\u51FB\u53EF\u4EE5\u7ED9\u5230\u67D0\u79CD\u53CD\u9988\u3002\u9996\u5148\u662F\u8981\u5438\u5F15\u4F60\u53EF\u4EE5\u70B9\u51FB\u5B83\uFF0C\u7136\u540E\u70B9\u51FB\u5B83\u4E4B\u540E\u80FD\u6709\u4E00\u4E9B\u53CD\u5E94\uFF08\u53D8\u5316\uFF09\u3002\u56E0\u6B64\u6211\u4EEC\u53EF\u4EE5\u5B9A\u4E49\u6309\u94AE\u7EC4\u4EF6\u7684\u529F\u80FD</p>\n<ol>\n<li>\u53EF\u4EE5\u5438\u5F15\u70B9\u51FB\uFF1A\u80FD\u591F\u81EA\u52A8\u6267\u884C\u52A8\u753B\uFF0C\u5305\u62EC\u4F46\u4E0D\u4EC5\u9650\u4E8E\u547C\u5438\u3001\u6296\u52A8\u3001\u80CC\u666F\u5149\u65CB\u8F6C\u7B49</li>\n<li>\u7ED9\u4E88\u67D0\u79CD\u53CD\u9988\uFF1A\u70B9\u51FB\u80FD\u6709\u4E00\u4E9B\u53D8\u5316\uFF0C\u5305\u62EC\u4F46\u4E0D\u4EC5\u9650\u4E8E\u5927\u5C0F\u3001\u80CC\u666F\u8272\u3001\u80CC\u666F\u56FE\u3001\u6587\u6848\u7B49</li>\n<li>\u5B8C\u6210\u81EA\u5B9A\u4E49\u4E1A\u52A1\uFF1A\u70B9\u51FB\u4E4B\u540E\u80FD\u6267\u884C\u6307\u5B9A\u4E1A\u52A1\uFF0C\u5305\u62EC\u4F46\u4E0D\u4EC5\u9650\u4E8EonClick\u56DE\u8C03\u51FD\u6570\u3001</li>\n<li>\u901A\u7528\u6309\u94AE\u7EC4\u4EF6\uFF1A\u80FD\u4ECE\u5916\u90E8\u81EA\u5B9A\u4E49\u6837\u5F0F\uFF0C\u6309\u94AE\u53EA\u505A\u6838\u5FC3\u901A\u7528(\u70B9\u51FB\u4E4B\u540E\u5F62\u53D8+\u6309\u94AE\u7684\u9ED8\u8BA4\u6837\u5F0F)</li>\n</ol>\n<h2>\u6280\u672F\u65B9\u6848\u548C\u8F93\u5165\u8F93\u51FA</h2>\n<p>\u6267\u884C\u81EA\u5B9A\u4E49\u52A8\u753B\u53EF\u4EE5\u901A\u8FC7\u6DFB\u52A0className\u6216\u8005style\u7684\u5F62\u5F0F\u5B9E\u73B0\u3002\u70B9\u51FB\u4E4B\u540E\u7684\u53D8\u5316\u53EF\u4EE5\u901A\u8FC7\u76D1\u542CaddEventListener touchstart\u548Ctouchend\u6765\u5B9E\u73B0\uFF0C\u5982\u679C\u8003\u8651pc\u7AEF\u517C\u5BB9\u6027\uFF0C\u53EF\u4EE5\u901A\u8FC7mousedown\u3001mouseup\u6765\u5B9E\u73B0\u3002\u5B8C\u6210\u6307\u5B9A\u4E1A\u52A1\u53EF\u4EE5\u901A\u8FC7\u7ED1\u5B9A\u70B9\u51FB\u4E8B\u4EF6\uFF0C\u5916\u90E8\u4F20\u5165\u56DE\u8C03\u51FD\u6570\u6765\u5B9E\u73B0\u3002\u901A\u7528\u6309\u94AE\u53EF\u4EE5\u901A\u8FC7props.chilren\u5916\u90E8\u52A8\u6001\u4F20\u5165\u7EC4\u4EF6\u3002\u73B0\u5728\u6211\u4EEC\u53EF\u4EE5\u5B9A\u4E49\u5165\u53C2\u548C\u51FA\u53C2\u4E86</p>\n<h3>\u5165\u53C2</h3>\n<pre><code class=\"language-ts\">interface IButton {\n  children: ReactElement | string;\n  onClick?: (event: TouchEvent) => {};\n  className?: string;\n  style?: CSSStyleDeclaration;\n}\n</code></pre>\n<h3>\u51FA\u53C2</h3>\n<pre><code class=\"language-jsx\">// \u4F8B\u5982\n<Button className={className} onClick={handleClk}><img/></Button>\n</code></pre>\n<h2>\u5B9E\u73B0\u53C2\u8003\u4EE3\u7801</h2>\n<pre><code class=\"language-tsx\">\nexport default function Button({ children, onClick, className, style }: IButton) {\n  const btnRef = useRef<HTMLDivElement | null>(null);\n  useEffect(() => {\n    const dom = btnRef.current as HTMLDivElement;\n\n    const handleStart = () => dom.style.transform = 'scale(0.9)';\n    const handleEnd = () => dom.style.transform = 'scale(1)';\n\n    dom.addEventListener('touchstart', handleStart)\n    document.addEventListener('touchend', handleEnd)\n    return () => {\n      dom.removeEventListener('touchstart', handleStart);\n      document.removeEventListener('touchend', handleEnd);\n    }\n  }, [])\n  return <div\n    style={style}\n    className={classnames('btn', className)}\n    onClick={onClick}\n    ref={btnRef}\n  >\n    {children}\n  </div>\n}\n</code></pre>\n"
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/pages/Article/components/ArticleList/Comp网络模型0008.tsx":
 /*!*******************************************************************!*\
-  !*** ./src/pages/Article/components/ArticleList/Comp网络模型0007.tsx ***!
+  !*** ./src/pages/Article/components/ArticleList/Comp网络模型0008.tsx ***!
   \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -295,13 +331,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Compthis0001__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Compthis0001 */ "./src/pages/Article/components/ArticleList/Compthis0001.tsx");
-/* harmony import */ var _Comp_0002__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Comp事件循环0002 */ "./src/pages/Article/components/ArticleList/Comp事件循环0002.tsx");
-/* harmony import */ var _Comp_0003__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Comp作用域0003 */ "./src/pages/Article/components/ArticleList/Comp作用域0003.tsx");
-/* harmony import */ var _Comp_0004__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Comp原型链0004 */ "./src/pages/Article/components/ArticleList/Comp原型链0004.tsx");
-/* harmony import */ var _CompDNS_CDN0005__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CompDNS和CDN0005 */ "./src/pages/Article/components/ArticleList/CompDNS和CDN0005.tsx");
-/* harmony import */ var _CompHTTP_0006__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./CompHTTP网络的发展0006 */ "./src/pages/Article/components/ArticleList/CompHTTP网络的发展0006.tsx");
-/* harmony import */ var _Comp_0007__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Comp网络模型0007 */ "./src/pages/Article/components/ArticleList/Comp网络模型0007.tsx");
+/* harmony import */ var _Comp_0001__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Comp如何写一个按钮组件0001 */ "./src/pages/Article/components/ArticleList/Comp如何写一个按钮组件0001.tsx");
+/* harmony import */ var _Compthis0002__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Compthis0002 */ "./src/pages/Article/components/ArticleList/Compthis0002.tsx");
+/* harmony import */ var _Comp_0003__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Comp事件循环0003 */ "./src/pages/Article/components/ArticleList/Comp事件循环0003.tsx");
+/* harmony import */ var _Comp_0004__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Comp作用域0004 */ "./src/pages/Article/components/ArticleList/Comp作用域0004.tsx");
+/* harmony import */ var _Comp_0005__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Comp原型链0005 */ "./src/pages/Article/components/ArticleList/Comp原型链0005.tsx");
+/* harmony import */ var _CompDNS_CDN0006__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./CompDNS和CDN0006 */ "./src/pages/Article/components/ArticleList/CompDNS和CDN0006.tsx");
+/* harmony import */ var _CompHTTP_0007__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./CompHTTP网络的发展0007 */ "./src/pages/Article/components/ArticleList/CompHTTP网络的发展0007.tsx");
+/* harmony import */ var _Comp_0008__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Comp网络模型0008 */ "./src/pages/Article/components/ArticleList/Comp网络模型0008.tsx");
+
 
 
 
@@ -311,13 +349,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var CompMap = {
-  '0001': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Compthis0001__WEBPACK_IMPORTED_MODULE_1__["default"], null),
-  '0002': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Comp_0002__WEBPACK_IMPORTED_MODULE_2__["default"], null),
+  '0001': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Comp_0001__WEBPACK_IMPORTED_MODULE_1__["default"], null),
+  '0002': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Compthis0002__WEBPACK_IMPORTED_MODULE_2__["default"], null),
   '0003': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Comp_0003__WEBPACK_IMPORTED_MODULE_3__["default"], null),
   '0004': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Comp_0004__WEBPACK_IMPORTED_MODULE_4__["default"], null),
-  '0005': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CompDNS_CDN0005__WEBPACK_IMPORTED_MODULE_5__["default"], null),
-  '0006': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CompHTTP_0006__WEBPACK_IMPORTED_MODULE_6__["default"], null),
-  '0007': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Comp_0007__WEBPACK_IMPORTED_MODULE_7__["default"], null)
+  '0005': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Comp_0005__WEBPACK_IMPORTED_MODULE_5__["default"], null),
+  '0006': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CompDNS_CDN0006__WEBPACK_IMPORTED_MODULE_6__["default"], null),
+  '0007': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CompHTTP_0007__WEBPACK_IMPORTED_MODULE_7__["default"], null),
+  '0008': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Comp_0008__WEBPACK_IMPORTED_MODULE_8__["default"], null)
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
   var id = location.search.split('=')[1];

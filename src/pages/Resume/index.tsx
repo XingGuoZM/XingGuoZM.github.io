@@ -10,6 +10,7 @@ import Expert from './components/Expert';
 import ProjectInfo from './components/ProjectInfo';
 import ProjectList from './components/ProjectList';
 import Achievement from './components/Achievement';
+import Floater from './components/Floater';
 import { data } from '@/data';
 import { PageType } from '@/utils';
 
@@ -35,7 +36,8 @@ function Resume() {
     <Floor title='作品展示'>
       <Achievement />
     </Floor>
-    <Footer />
+    <Floater />
+    <Footer>感谢你花时间阅读我的简历，期待能有机会与你共事。</Footer>
   </PageWithHeader>
 }
 

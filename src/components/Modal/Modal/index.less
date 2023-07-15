@@ -1,0 +1,35 @@
+@import url("~@/styles/index.less");
+
+.modal {
+  width: 7.5rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform:translateX(-50%);
+  z-index:2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-bg{
+  width:100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:2;
+  backdrop-filter:blur(0.05rem);
+}
+.modal-content {
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  border-radius:0.1rem;
+  position:relative;
+  z-index:2;
+}
+.flipAnim{
+  .animation(ring,2s,0,1s);
+}

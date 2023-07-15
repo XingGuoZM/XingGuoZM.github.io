@@ -12,9 +12,6 @@ interface IAction {
 interface IModal {
   [key: string]: string;
 };
-interface IProps {
-
-}
 type dispatch = (action: IAction) => {
 
 }

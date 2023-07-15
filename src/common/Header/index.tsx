@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import PageHeader from '@/components/PageHeader';
-import SettingModal from "@/components/PromisifyModal/SettingModal";
+import Modal from "@/components/PromisifyModal";
+import SettingModal from "@/components/Modal/SettingModal";
 import MoreIcon from '@/assets/more.svg';
 import GobackIcon from '@/assets/goback.svg';
-import Modal from "@/components/PromisifyModal";
 import { data } from '@/data';
 import { PageType } from '@/utils';
 import styles from './index.module.less';
@@ -21,7 +21,8 @@ export const HeaderTitleMap = {
 export default function Header({ type }: IProps) {
   // const [fixed, setFixed] = useState(false);
   const handleGoback = () => {
-    window.location.href = `https://xingguozm.github.io?backurl=${window.location.href}`
+    // window.location.href = `https://xingguozm.github.io?backurl=${window.location.href}`
+    window.history.back();
   }
   const openSettingModal = () => {
     Modal.show(SettingModal, { data: data.theme });
