@@ -68,6 +68,19 @@ export const navbarHeight = (() => {
 
 
 export const getRpx2px = (rpx) => (rpx * window.screen.width) / 750;
+// ms->hh时mm分ss秒
+export const formatMs = (ms: number) => {
+  let remain = 0;
+  const h = Math.floor(ms / (1000 * 60 * 60));
+  remain = ms % (1000 * 60 * 60);
+  const m = Math.floor(remain / (1000 * 60));
+  remain = remain % (1000 * 60);
+  const s = Math.floor(remain / 1000);
+  remain = remain % 1000;
+  if (h >= 1) return `${h}时${m}分${s}秒`
+  if (m >= 1) return `${m}分${s}秒`
+  return `${s}秒`
+}
 
 export function viewport() {
   // flexible的动态计算，兼容了很多场景

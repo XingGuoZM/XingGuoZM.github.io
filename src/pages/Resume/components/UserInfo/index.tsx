@@ -6,7 +6,6 @@ export default function UserInfo({ data }) {
 
   return <div className={styles.wrap}>
     <div className={styles.avatarWrap}>
-      {/* <img className={styles.avatar} src={AvatarIcon} /> */}
       <AvatarSvg className={styles.avatar} />
     </div>
     <div className={styles.item} >

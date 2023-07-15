@@ -23,7 +23,7 @@ const traverseAllFile = async (allFile) => {
 
 // 执行
 const run = async ({ dir, filepath }) => {
-  const allFile = await getAllFileFromDir({ dir });
+  const allFile = await getAllFileFromDir({ dir, type: 'svg' });
   const str = await traverseAllFile(allFile);
   await setStr2File({ filepath, str });
   console.log('convert success!');
