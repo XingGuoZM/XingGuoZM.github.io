@@ -68,7 +68,7 @@ module.exports = {
       title: 'resume',
       filename: 'resume/index.html',
       chunks: ['resume'],
-      templateContent: `<html><body><div id='root'></div></body></html>`
+      templateContent: `<html><meta name="format-detection" content="telephone=yes"/><body><div id='root'></div></body></html>`
     }),
     new htmlWebpackPlugin({
       title: 'blog',

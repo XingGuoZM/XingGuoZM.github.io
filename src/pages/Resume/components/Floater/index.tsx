@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import classnames from 'classnames';
 import Modal from "@/components/PromisifyModal";
 import FloaterModal from "@/components/Modal/FloaterModal";
@@ -14,7 +14,7 @@ export default function Floater() {
 
   const duration = 10000;
   const speed = 1000 / 60 / duration;
-
+  const showTitle = useMemo(() => percent >= 100 || (timeRef.current > 0 && percent <= 10), [percent])
   const completeHandler = useCallback(() => {
     timeRef.current += duration;
   }, []);
@@ -62,7 +62,13 @@ export default function Floater() {
       strokeColor: { "100%": theme },
       trailColor: { "100%": "#fff" }
     }} />
-    <CountdownSvg className={styles.icon} fill={theme} />
-    <div className={styles.title}>欢迎浏览</div>
+    <CountdownSvg
+      className={classnames({
+        [styles.spinAmin]: showTitle,
+        [styles.icon]: true
+      })}
+      fill={theme}
+    />
+    {showTitle && <div className={styles.title}>{`+${Math.floor(duration / 1000)}s`}</div>}
   </div>
 }

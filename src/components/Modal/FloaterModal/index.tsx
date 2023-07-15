@@ -7,7 +7,10 @@ import styles from "./index.module.less";
 export default function FloaterModal({ title, timeRef, minTime }) {
   console.log(timeRef.current, minTime)
 
-  const time = useMemo(() => formatMs(timeRef.current + minTime), [timeRef, minTime])
+  const time = useMemo(() => formatMs(timeRef.current + minTime), [timeRef, minTime]);
+  const handleClick = () => {
+    window.location.href = 'tel:18969176324';
+  }
   const handleComfirm = () => {
     promiseModal.hide(FloaterModal);
   }
@@ -20,7 +23,7 @@ export default function FloaterModal({ title, timeRef, minTime }) {
           <div className={styles.descMain}>{time}</div>
           <div className={styles.desc}>打个电话聊聊吧！</div>
         </div>
-        <div></div>
+        <div className={styles.tel} onClick={handleClick}>189 6917 6324</div>
       </div>
       <div className={styles.btnWrap}>
         <div className={styles.btn} onClick={handleComfirm}>确定</div>

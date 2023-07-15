@@ -1,4 +1,5 @@
 
+@import url("~@/styles/index.less");
 .ball{
   border-radius:50%;
   border:solid 1px var(--theme-color);
@@ -30,12 +31,16 @@
   transform:rotate(-90deg)
 }
 .icon{
-  width:0.8rem;
-  height:0.8rem;
+  width:0.6rem;
+  height:0.6rem;
 }
+.spinAmin{
+  .animation(spin180,2s,0,1);
+}
+
 .title{
-  padding-left:0.1rem;
-  padding-right:0.1rem;
+  padding-left:0.15rem;
+  padding-right:0.15rem;
   height:0.3rem;
   background-color:#fff;
   position:absolute;
@@ -48,4 +53,5 @@
   justify-content: center;
   align-items: center;
   white-space: nowrap;
+  .animation(enLarge,0.3s,0,1)
 }
