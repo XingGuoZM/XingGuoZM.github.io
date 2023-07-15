@@ -12,6 +12,7 @@ export default function FloaterModal({ title, timeRef, minTime }) {
     window.location.href = 'tel:18969176324';
   }
   const handleComfirm = () => {
+    handleClick();
     promiseModal.hide(FloaterModal);
   }
   return (

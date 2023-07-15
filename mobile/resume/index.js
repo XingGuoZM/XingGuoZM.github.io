@@ -185,6 +185,7 @@ function FloaterModal(_ref) {
   };
 
   var handleComfirm = function handleComfirm() {
+    handleClick();
     _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_1__["default"].hide(FloaterModal);
   };
 
