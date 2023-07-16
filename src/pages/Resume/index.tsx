@@ -15,7 +15,6 @@ import { data } from '@/data';
 import { PageType } from '@/constant';
 
 function Resume() {
-
   return <PageWithHeader type={PageType.Resume}>
     <UserInfo />
     <Floor>

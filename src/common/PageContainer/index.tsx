@@ -1,4 +1,5 @@
-import React, { useEffect, ReactElement } from 'react';
+import React, { useEffect, useContext, ReactElement } from 'react';
+import { ModalContext } from '@/components/PromisifyModal';
 import { viewport, setBodyStyleProperty } from '@/utils';
 import { PageType, LocalStorageKey } from '@/constant';
 import './index.less';
@@ -16,9 +17,8 @@ const ClassNameMap = {
 }
 viewport();
 export default function PageContainer({ children, type }: IProps) {
-
+  const { theme } = useContext(ModalContext);
   useEffect(() => {
-    const theme = localStorage.getItem(LocalStorageKey.ThemeColor);
     if (theme) {
       setBodyStyleProperty(LocalStorageKey.ThemeColor, theme);
       setBodyStyleProperty('color', theme);

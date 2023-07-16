@@ -1,16 +1,17 @@
-import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
+import React, { useEffect, useContext, useRef, useState, useCallback, useMemo } from 'react';
 import classnames from 'classnames';
 import Modal from "@/components/PromisifyModal";
 import FloaterModal from "@/components/Modal/FloaterModal";
 import SvgCircle from '@/components/Circle';
 import { CountdownSvg } from '@/assets';
+import { ModalContext } from '@/components/PromisifyModal';
 import styles from './index.module.less';
 
 export default function Floater() {
   const [show, setShow] = useState(false);
   const [percent, setPercent] = useState(1);
   const timeRef = useRef<number>(0)
-  const theme = localStorage.getItem('--theme-color');
+  const { theme } = useContext(ModalContext);
 
   const duration = 10000;
   const speed = 1000 / 60 / duration;

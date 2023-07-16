@@ -5,23 +5,13 @@ const symModalId = Symbol("ModalId");
 const initialState = {};
 
 const ModalContext = createContext(initialState);
-interface IAction {
-  type: string;
-  payload: { id: string }
-}
-interface IModal {
-  [key: string]: string;
-};
-type dispatch = (action: IAction) => {
-
-}
 
 enum TypeEnum {
   Show = 'show',
   Hide = 'hide',
 }
 
-const reducer = (state = initialState, action: IAction) => {
+const reducer = (state = initialState, action) => {
   const { id } = action.payload || {};
   switch (action.type) {
     case TypeEnum.Show:
@@ -44,7 +34,7 @@ const hideModalsCallback = {};
 const Store = new Map();
 
 let uidSeed = 0;
-const getModalId = (modal: IModal) => {
+const getModalId = (modal) => {
   if (!modal[symModalId]) modal[symModalId] = `modal_${uidSeed++}`;
   return modal[symModalId];
 };
@@ -78,18 +68,16 @@ function hide(modal) {
   return promisifyCallback(hideModalsCallback, modalId);
 }
 
-function Provider({ children }) {
-  const arr = useReducer(reducer, initialState);
+function Provider({ children, value }) {
+  const arr = useReducer(reducer, { ...initialState });
   const modalIds = Object.keys(arr[0]);
-
   dispatch = arr[1];
   const toRender = modalIds.map((id) => ({ id, Comp: Store.get(id).Comp }));
   useEffect(() => {
     modalIds.forEach((id) => modalsCallback[id].resolve());
   }, [modalIds]);
-
   return (
-    <ModalContext.Provider value={arr[0]}>
+    <ModalContext.Provider value={{ ...arr[0], ...value }}>
       {children}
       <div className="modals">
         {toRender.map((t) => (
@@ -100,5 +88,6 @@ function Provider({ children }) {
   );
 }
 
-const Modal = { Provider, show, hide };
+const Modal = { Provider, ModalContext, show, hide };
+export { Provider, ModalContext, show, hide };
 export default Modal;

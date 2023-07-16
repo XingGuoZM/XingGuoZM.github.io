@@ -523,33 +523,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/Card */ "./src/components/Card/index.tsx");
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/data */ "./src/data/index.ts");
-/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/Achievement/index.module.less");
+/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/assets */ "./src/assets/index.tsx");
+/* harmony import */ var _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/PromisifyModal */ "./src/components/PromisifyModal/index.tsx");
+/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/Achievement/index.module.less");
+
+
 
 
 
 
 function Achievement() {
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_components_PromisifyModal__WEBPACK_IMPORTED_MODULE_4__.ModalContext),
+      theme = _useContext.theme;
+
   var handleClick = function handleClick(url) {
     if (url) {
       window.location.href = url;
     }
   };
 
+  var IconMap = {
+    blog: _assets__WEBPACK_IMPORTED_MODULE_3__.BlogSvg,
+    github: _assets__WEBPACK_IMPORTED_MODULE_3__.GithubSvg,
+    library: _assets__WEBPACK_IMPORTED_MODULE_3__.LibrarySvg,
+    demonstration: _assets__WEBPACK_IMPORTED_MODULE_3__.DemonstrationSvg
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].wrap
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].wrap
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Card__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: _components_Card__WEBPACK_IMPORTED_MODULE_1__.CardTypeEnum.Tiny,
     data: _data__WEBPACK_IMPORTED_MODULE_2__.data.achievement
   }, function (item) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].tiny
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].title,
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].tiny,
       onClick: function onClick() {
         return handleClick(item.url);
       }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].iconWrap
+    }, IconMap[item.id] && IconMap[item.id]({
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].icon,
+      fill: theme
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].title
     }, item.title), item.subTitle && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].subTitle
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].subTitle
     }, item.subTitle));
   }));
 }
@@ -577,7 +595,6 @@ function Experience(props) {
   var time = props.time,
       name = props.name,
       job = props.job;
-  var theme = localStorage.getItem('--theme-color');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].wrap
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -766,6 +783,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function Floater() {
   var _classnames, _classnames2;
 
@@ -780,7 +798,10 @@ function Floater() {
       setPercent = _useState4[1];
 
   var timeRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0);
-  var theme = localStorage.getItem('--theme-color');
+
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_components_PromisifyModal__WEBPACK_IMPORTED_MODULE_2__.ModalContext),
+      theme = _useContext.theme;
+
   var duration = 10000;
   var speed = 1000 / 60 / duration;
   var showTitle = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
@@ -873,8 +894,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets */ "./src/assets/index.tsx");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/ProjectInfo/ProjectNode/index.module.less");
+/* harmony import */ var _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/PromisifyModal */ "./src/components/PromisifyModal/index.tsx");
+/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/ProjectInfo/ProjectNode/index.module.less");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -885,34 +908,49 @@ function ProjectNode(_ref) {
       projectTime = _ref.projectTime,
       projectRole = _ref.projectRole,
       projectDetail = _ref.projectDetail;
-  var theme = localStorage.getItem('--theme-color');
+
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_components_PromisifyModal__WEBPACK_IMPORTED_MODULE_3__["default"].ModalContext),
+      theme = _useContext.theme;
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].project
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].project
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectIconWrap
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].projectIconWrap
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets__WEBPACK_IMPORTED_MODULE_1__.ProjectSvg, {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectIcon
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].projectIcon
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectContent
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].projectContent
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectTitle
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].titleWrap
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectName
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].title
   }, projectName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectTime
-  }, projectTime, "\uFF5C", projectRole)), projectDetail.map(function (item, index) {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitle
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets__WEBPACK_IMPORTED_MODULE_1__.DateSvg, {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitleIcon,
+    fill: theme
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitleText
+  }, projectTime), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitleText
+  }, "\uFF5C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets__WEBPACK_IMPORTED_MODULE_1__.AvatarSvg, {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitleIcon,
+    fill: theme
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitleText
+  }, projectRole))), projectDetail.map(function (item, index) {
     var _classnames;
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectDescWrap,
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].projectDescWrap,
       key: item.id
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectDescIconWrap
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].projectDescIconWrap
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(item.Icon, {
       fill: theme,
-      className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectDescIcon
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].projectDescIcon
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: classnames__WEBPACK_IMPORTED_MODULE_2___default()((_classnames = {}, _defineProperty(_classnames, _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectDescLine, index !== 3), _defineProperty(_classnames, _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectDesc, true), _classnames))
+      className: classnames__WEBPACK_IMPORTED_MODULE_2___default()((_classnames = {}, _defineProperty(_classnames, _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].projectDescLine, index !== 3), _defineProperty(_classnames, _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].projectDesc, true), _classnames))
     }, Array.isArray(item.desc) ? item.desc.map(function (ele) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         key: ele
@@ -983,26 +1021,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/Card */ "./src/components/Card/index.tsx");
-/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.less */ "./src/pages/Resume/components/ProjectList/index.less");
+/* harmony import */ var _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/PromisifyModal */ "./src/components/PromisifyModal/index.tsx");
+/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/assets */ "./src/assets/index.tsx");
+/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/ProjectList/index.module.less");
+
+
 
 
 
 function ProjectList(_ref) {
   var data = _ref.data;
+
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_components_PromisifyModal__WEBPACK_IMPORTED_MODULE_2__.ModalContext),
+      theme = _useContext.theme;
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Card__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: _components_Card__WEBPACK_IMPORTED_MODULE_1__.CardTypeEnum.Medium,
     data: data
   }, function (item) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "project-list-cell"
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].wrap
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "project-list-cell-title"
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].title
     }, item.projectName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "project-list-cell-time"
-    }, item.projectTime), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "project-list-cell-time"
-    }, item.projectRole), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "project-list-cell-desc"
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitleWrap
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets__WEBPACK_IMPORTED_MODULE_3__.DateSvg, {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitleIcon,
+      fill: theme
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitle
+    }, item.projectTime)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitleWrap
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets__WEBPACK_IMPORTED_MODULE_3__.AvatarSvg, {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitleIcon,
+      fill: theme
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].subTitle
+    }, item.projectRole)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].desc
     }, item.projectDesc, " "));
   });
 }
@@ -1264,11 +1320,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".src-pages-Resume-components-Achievement-index-module__wrap--hmjsS .src-pages-Resume-components-Achievement-index-module__tiny--2szx7 {\n  width: 1.6rem;\n  height: 2rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  color: var(--theme-color);\n  border-radius: 0.1rem;\n  border: solid 0.01rem var(--theme-color);\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  margin-bottom: 0.2rem;\n}\n.src-pages-Resume-components-Achievement-index-module__wrap--hmjsS .src-pages-Resume-components-Achievement-index-module__title--Bdw73 {\n  font-size: 0.26rem;\n  font-weight: bolder;\n  text-decoration: underline;\n  cursor: pointer;\n}\n.src-pages-Resume-components-Achievement-index-module__wrap--hmjsS .src-pages-Resume-components-Achievement-index-module__subTitle--03p8r {\n  font-size: 0.2rem;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/Achievement/index.module.less"],"names":[],"mappings":"AAAA;EAEI,aAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,yBAAA;EACA,qBAAA;EACA,wCAAA;EACA,6DAAA;EACA,qBAAA;AAAJ;AAZA;EAeI,kBAAA;EACA,mBAAA;EACA,0BAAA;EACA,eAAA;AAAJ;AAlBA;EAqBI,iBAAA;AAAJ","sourcesContent":[".wrap{\n  .tiny{\n    width:1.6rem;\n    height:2rem;\n    display:flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    color:var(--theme-color);\n    border-radius: 0.1rem;\n    border:solid 0.01rem var(--theme-color);\n    box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n    margin-bottom:0.2rem;\n  }\n  .title{\n    font-size:0.26rem;\n    font-weight: bolder;\n    text-decoration: underline;\n    cursor: pointer;\n  }\n  .subTitle{\n    font-size:0.2rem;\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".src-pages-Resume-components-Achievement-index-module__wrap--hmjsS .src-pages-Resume-components-Achievement-index-module__tiny--2szx7 {\n  width: 1.6rem;\n  height: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: var(--theme-color);\n  border-radius: 0.1rem;\n  border: solid 0.01rem var(--theme-color);\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  margin-bottom: 0.2rem;\n}\n.src-pages-Resume-components-Achievement-index-module__wrap--hmjsS .src-pages-Resume-components-Achievement-index-module__iconWrap--u-AoR {\n  width: 1.2rem;\n  height: 1.2rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.src-pages-Resume-components-Achievement-index-module__wrap--hmjsS .src-pages-Resume-components-Achievement-index-module__icon--RIFq3 {\n  width: 0.8rem;\n  height: 0.8rem;\n}\n.src-pages-Resume-components-Achievement-index-module__wrap--hmjsS .src-pages-Resume-components-Achievement-index-module__title--Bdw73 {\n  font-size: 0.26rem;\n  font-weight: bolder;\n  text-decoration: underline;\n  cursor: pointer;\n}\n.src-pages-Resume-components-Achievement-index-module__wrap--hmjsS .src-pages-Resume-components-Achievement-index-module__subTitle--03p8r {\n  font-size: 0.2rem;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/Achievement/index.module.less"],"names":[],"mappings":"AAAA;EAEI,aAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,yBAAA;EACA,qBAAA;EACA,wCAAA;EACA,6DAAA;EACA,qBAAA;AAAJ;AAXA;EAcI,aAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAJ;AAlBA;EAqBI,aAAA;EACA,cAAA;AAAJ;AAtBA;EAyBI,kBAAA;EACA,mBAAA;EACA,0BAAA;EACA,eAAA;AAAJ;AA5BA;EAgCI,iBAAA;AADJ","sourcesContent":[".wrap{\n  .tiny{\n    width:1.6rem;\n    height:2rem;\n    display:flex;\n    flex-direction: column;\n    align-items: center;\n    color:var(--theme-color);\n    border-radius: 0.1rem;\n    border:solid 0.01rem var(--theme-color);\n    box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n    margin-bottom:0.2rem;\n  }\n  .iconWrap{\n    width:1.2rem;\n    height:1.2rem;\n    display:flex;\n    justify-content: center;\n    align-items: center;\n  }\n  .icon{\n    width: 0.8rem;\n    height: 0.8rem;\n  }\n  .title{\n    font-size:0.26rem;\n    font-weight: bolder;\n    text-decoration: underline;\n    cursor: pointer;\n  }\n\n  .subTitle{\n    font-size:0.2rem;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"wrap": "src-pages-Resume-components-Achievement-index-module__wrap--hmjsS",
 	"tiny": "src-pages-Resume-components-Achievement-index-module__tiny--2szx7",
+	"iconWrap": "src-pages-Resume-components-Achievement-index-module__iconWrap--u-AoR",
+	"icon": "src-pages-Resume-components-Achievement-index-module__icon--RIFq3",
 	"title": "src-pages-Resume-components-Achievement-index-module__title--Bdw73",
 	"subTitle": "src-pages-Resume-components-Achievement-index-module__subTitle--03p8r"
 };
@@ -1443,16 +1501,19 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__project--g1skX {\n  display: flex;\n  position: relative;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectIconWrap--HuWBg {\n  width: 0.5rem;\n  height: 0.5rem;\n  position: absolute;\n  top: -0.25rem;\n  left: -0.15rem;\n  background: radial-gradient(var(--theme-color), #fff);\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectIcon--Nn\\+Im {\n  width: 0.3rem;\n  height: 0.3rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectContent--lq\\+L9 {\n  width: 6.2rem;\n  margin-left: 0.3rem;\n  margin-bottom: 0.2rem;\n  padding: 0.2rem;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  border-radius: 0.1rem;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectTitle--QiV\\+Z {\n  height: 1rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectName--ok913 {\n  font-size: 0.36rem;\n  font-weight: bolder;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectTime--mTwr3 {\n  font-size: 0.25rem;\n  font-weight: bolder;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescWrap--eRirh {\n  display: flex;\n  margin-bottom: 0.1rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIconWrap--KF18L {\n  width: 0.5rem;\n  height: 0.5rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  background-color: #fff;\n  box-shadow: inset 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIconWrap--KF18L .src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIcon--a9xAE {\n  width: 0.25rem;\n  height: 0.25rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDesc--JnRKt {\n  width: 5.8rem;\n  font-size: 0.26rem;\n  line-height: 0.5rem;\n  margin-left: 0.1rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescLine--bZgYu {\n  border-bottom: solid 1px var(--theme-color);\n  position: relative;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescLine--bZgYu:after {\n  content: '';\n  display: block;\n  width: 1px;\n  height: calc(100% - 0.4rem);\n  position: absolute;\n  left: -0.35rem;\n  top: 0.5rem;\n  background-color: var(--theme-color);\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectResult--oxmqd {\n  font-size: 0.26rem;\n  line-height: 0.5rem;\n  text-indent: 0.2rem;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/ProjectInfo/ProjectNode/index.module.less"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,kBAAA;AAAF;AAEA;EACE,aAAA;EACA,cAAA;EACA,kBAAA;EACA,aAAA;EACA,cAAA;EACA,qDAAA;EACA,kBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAEA;EACE,aAAA;EACA,cAAA;AAAF;AAEA;EACE,aAAA;EACA,mBAAA;EACA,qBAAA;EACA,eAAA;EACA,6DAAA;EACA,yBAAA;EACA,qBAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AAAF;AAGA;EACE,YAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AADF;AAGA;EACE,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,aAAA;EACA,qBAAA;AADF;AAIA;EACE,aAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,sBAAA;EACA,mEAAA;AAFF;AANA;EAUI,cAAA;EACA,eAAA;AADJ;AAIA;EACE,aAAA;EACA,kBAAA;EACA,mBAAA;EACA,mBAAA;AAFF;AAIA;EACE,2CAAA;EACA,kBAAA;AAFF;AAIA;EACE,WAAA;EACA,cAAA;EACA,UAAA;EACA,2BAAA;EACA,kBAAA;EACA,cAAA;EACA,WAAA;EACA,oCAAA;AAFF;AAIA;EACE,kBAAA;EACA,mBAAA;EACA,mBAAA;AAFF","sourcesContent":["\n.project {\n  display: flex;\n  position: relative;\n}\n.projectIconWrap {\n  width: 0.5rem;\n  height: 0.5rem;\n  position:absolute;\n  top:-0.25rem;\n  left:-0.15rem;\n  background:radial-gradient(var(--theme-color),#fff);\n  border-radius: 50%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n.projectIcon{\n  width:0.3rem;\n  height:0.3rem;\n}\n.projectContent {\n  width: 6.2rem;\n  margin-left: 0.3rem;\n  margin-bottom: 0.2rem;\n  padding:0.2rem;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  border-radius:0.1rem;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n\n.projectTitle{\n  height:1rem;\n  display:flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.projectName{\n  font-size:0.36rem;\n  font-weight: bolder;\n}\n.projectTime{\n  font-size:0.25rem;\n  font-weight: bolder;\n}\n.projectDescWrap{\n  display:flex;\n  margin-bottom:0.1rem;\n}\n\n.projectDescIconWrap{\n  width: 0.5rem;\n  height: 0.5rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  background-color: #fff;\n  box-shadow: inset 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  .projectDescIcon{\n    width:0.25rem;\n    height:0.25rem;\n  }\n}\n.projectDesc{\n  width:5.8rem;\n  font-size:0.26rem;\n  line-height:0.5rem;\n  margin-left:0.1rem;\n}\n.projectDescLine{\n  border-bottom:solid 1px var(--theme-color);\n  position: relative;\n}\n.projectDescLine:after{\n  content:'';\n  display:block;\n  width:1px;\n  height:calc(100% - 0.4rem);\n  position:absolute;\n  left: -0.35rem;\n  top: 0.5rem;\n  background-color:var(--theme-color);\n}\n.projectResult{\n  font-size:0.26rem;\n  line-height:0.5rem;\n  text-indent:0.2rem;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__project--g1skX {\n  display: flex;\n  position: relative;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectIconWrap--HuWBg {\n  width: 0.5rem;\n  height: 0.5rem;\n  position: absolute;\n  top: -0.25rem;\n  left: -0.15rem;\n  background: radial-gradient(var(--theme-color), #fff);\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectIcon--Nn\\+Im {\n  width: 0.3rem;\n  height: 0.3rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectContent--lq\\+L9 {\n  width: 6.2rem;\n  margin-left: 0.3rem;\n  margin-bottom: 0.2rem;\n  padding: 0.2rem;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  border-radius: 0.1rem;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__titleWrap--WWyV3 {\n  height: 1rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__title--F-4Fp {\n  font-size: 0.36rem;\n  font-weight: bolder;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__subTitle--2vehe {\n  font-size: 0.25rem;\n  font-weight: bolder;\n  display: flex;\n  align-items: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__subTitleIcon--26E0m {\n  width: 0.25rem;\n  height: 0.25rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__subTitleText--DTff3 {\n  font-size: 0.25rem;\n  margin-left: 0.1rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__time--bvOlt {\n  font-size: 0.25rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescWrap--eRirh {\n  display: flex;\n  margin-bottom: 0.1rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIconWrap--KF18L {\n  width: 0.5rem;\n  height: 0.5rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  background-color: #fff;\n  box-shadow: inset 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIconWrap--KF18L .src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIcon--a9xAE {\n  width: 0.25rem;\n  height: 0.25rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDesc--JnRKt {\n  width: 5.8rem;\n  font-size: 0.26rem;\n  line-height: 0.5rem;\n  margin-left: 0.1rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescLine--bZgYu {\n  border-bottom: solid 1px var(--theme-color);\n  position: relative;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescLine--bZgYu:after {\n  content: '';\n  display: block;\n  width: 1px;\n  height: calc(100% - 0.4rem);\n  position: absolute;\n  left: -0.35rem;\n  top: 0.5rem;\n  background-color: var(--theme-color);\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectResult--oxmqd {\n  font-size: 0.26rem;\n  line-height: 0.5rem;\n  text-indent: 0.2rem;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/ProjectInfo/ProjectNode/index.module.less"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,kBAAA;AAAF;AAEA;EACE,aAAA;EACA,cAAA;EACA,kBAAA;EACA,aAAA;EACA,cAAA;EACA,qDAAA;EACA,kBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAEA;EACE,aAAA;EACA,cAAA;AAAF;AAEA;EACE,aAAA;EACA,mBAAA;EACA,qBAAA;EACA,eAAA;EACA,6DAAA;EACA,yBAAA;EACA,qBAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AAAF;AAGA;EACE,YAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AADF;AAGA;EACE,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,kBAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;AADF;AAGA;EACE,cAAA;EACA,eAAA;AADF;AAGA;EACE,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,kBAAA;AADF;AAGA;EACE,aAAA;EACA,qBAAA;AADF;AAIA;EACE,aAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,sBAAA;EACA,mEAAA;AAFF;AANA;EAUI,cAAA;EACA,eAAA;AADJ;AAIA;EACE,aAAA;EACA,kBAAA;EACA,mBAAA;EACA,mBAAA;AAFF;AAIA;EACE,2CAAA;EACA,kBAAA;AAFF;AAIA;EACE,WAAA;EACA,cAAA;EACA,UAAA;EACA,2BAAA;EACA,kBAAA;EACA,cAAA;EACA,WAAA;EACA,oCAAA;AAFF;AAIA;EACE,kBAAA;EACA,mBAAA;EACA,mBAAA;AAFF","sourcesContent":["\n.project {\n  display: flex;\n  position: relative;\n}\n.projectIconWrap {\n  width: 0.5rem;\n  height: 0.5rem;\n  position:absolute;\n  top:-0.25rem;\n  left:-0.15rem;\n  background:radial-gradient(var(--theme-color),#fff);\n  border-radius: 50%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n.projectIcon{\n  width:0.3rem;\n  height:0.3rem;\n}\n.projectContent {\n  width: 6.2rem;\n  margin-left: 0.3rem;\n  margin-bottom: 0.2rem;\n  padding:0.2rem;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  border-radius:0.1rem;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n\n.titleWrap{\n  height:1rem;\n  display:flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.title{\n  font-size:0.36rem;\n  font-weight: bolder;\n}\n.subTitle{\n  font-size:0.25rem;\n  font-weight: bolder;\n  display:flex;\n  align-items: center;\n}\n.subTitleIcon{\n  width:0.25rem;\n  height:0.25rem;\n}\n.subTitleText{\n  font-size:0.25rem;\n  margin-left:0.1rem;\n}\n.time{\n  font-size:0.25rem;\n}\n.projectDescWrap{\n  display:flex;\n  margin-bottom:0.1rem;\n}\n\n.projectDescIconWrap{\n  width: 0.5rem;\n  height: 0.5rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  background-color: #fff;\n  box-shadow: inset 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  .projectDescIcon{\n    width:0.25rem;\n    height:0.25rem;\n  }\n}\n.projectDesc{\n  width:5.8rem;\n  font-size:0.26rem;\n  line-height:0.5rem;\n  margin-left:0.1rem;\n}\n.projectDescLine{\n  border-bottom:solid 1px var(--theme-color);\n  position: relative;\n}\n.projectDescLine:after{\n  content:'';\n  display:block;\n  width:1px;\n  height:calc(100% - 0.4rem);\n  position:absolute;\n  left: -0.35rem;\n  top: 0.5rem;\n  background-color:var(--theme-color);\n}\n.projectResult{\n  font-size:0.26rem;\n  line-height:0.5rem;\n  text-indent:0.2rem;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"project": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__project--g1skX",
 	"projectIconWrap": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectIconWrap--HuWBg",
 	"projectIcon": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectIcon--Nn+Im",
 	"projectContent": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectContent--lq+L9",
-	"projectTitle": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectTitle--QiV+Z",
-	"projectName": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectName--ok913",
-	"projectTime": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectTime--mTwr3",
+	"titleWrap": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__titleWrap--WWyV3",
+	"title": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__title--F-4Fp",
+	"subTitle": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__subTitle--2vehe",
+	"subTitleIcon": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__subTitleIcon--26E0m",
+	"subTitleText": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__subTitleText--DTff3",
+	"time": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__time--bvOlt",
 	"projectDescWrap": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescWrap--eRirh",
 	"projectDescIconWrap": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIconWrap--KF18L",
 	"projectDescIcon": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIcon--a9xAE",
@@ -1491,10 +1552,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".project-list-wrap {\n  width: 100%;\n
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/Resume/components/ProjectList/index.less":
-/*!*************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/Resume/components/ProjectList/index.less ***!
-  \*************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/Resume/components/ProjectList/index.module.less":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/Resume/components/ProjectList/index.module.less ***!
+  \********************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1510,8 +1571,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".project-list-cell {\n  width: 3.2rem;\n  height: fit-content;\n  padding: 0.1rem;\n  border-radius: 0.1rem;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  margin-bottom: 0.1rem;\n  display: flex;\n  flex-direction: column;\n}\n.project-list-cell-title {\n  font-size: 0.32rem;\n  font-weight: bolder;\n}\n.project-list-cell-time {\n  height: 0.4rem;\n  line-height: 0.4rem;\n  font-size: 0.22rem;\n}\n.project-list-cell-desc {\n  font-size: 0.22rem;\n  text-indent: 0.4rem;\n  line-height: 0.4rem;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/ProjectList/index.less"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,mBAAA;EACA,eAAA;EACA,qBAAA;EAEA,6DAAA;EACA,yBAAA;EACA,qBAAA;EACA,aAAA;EACA,sBAAA;AAAF;AAEA;EACE,kBAAA;EACA,mBAAA;AAAF;AAEA;EACE,cAAA;EACA,mBAAA;EACA,kBAAA;AAAF;AAGA;EACE,kBAAA;EACA,mBAAA;EACA,mBAAA;AADF","sourcesContent":[".project-list-cell{\n  width:3.2rem;\n  height:fit-content;\n  padding:0.1rem;\n  border-radius:0.1rem;\n  // background-color:var(--theme-color);\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  margin-bottom:0.1rem;\n  display:flex;\n  flex-direction: column;\n}\n.project-list-cell-title{\n  font-size:0.32rem;\n  font-weight: bolder;\n}\n.project-list-cell-time{\n  height:0.4rem;\n  line-height:0.4rem;\n  font-size:0.22rem;\n\n}\n.project-list-cell-desc{\n  font-size:0.22rem;\n  text-indent:0.4rem;\n  line-height: 0.4rem;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".src-pages-Resume-components-ProjectList-index-module__wrap--zi\\+Az {\n  width: 3.2rem;\n  height: fit-content;\n  padding: 0.1rem;\n  border-radius: 0.1rem;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  margin-bottom: 0.1rem;\n  display: flex;\n  flex-direction: column;\n}\n.src-pages-Resume-components-ProjectList-index-module__title--pCGpG {\n  font-size: 0.32rem;\n  font-weight: bolder;\n}\n.src-pages-Resume-components-ProjectList-index-module__subTitleWrap--xlubH {\n  width: 100%;\n  height: 0.4rem;\n  display: flex;\n  align-items: center;\n}\n.src-pages-Resume-components-ProjectList-index-module__subTitleIcon--Qd46H {\n  width: 0.3rem;\n  height: 0.3rem;\n}\n.src-pages-Resume-components-ProjectList-index-module__subTitle--JUozm {\n  font-size: 0.22rem;\n  margin-left: 0.1rem;\n  font-weight: bolder;\n}\n.src-pages-Resume-components-ProjectList-index-module__desc--N5kgG {\n  font-size: 0.22rem;\n  text-indent: 0.4rem;\n  line-height: 0.5rem;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/ProjectList/index.module.less"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,mBAAA;EACA,eAAA;EACA,qBAAA;EACA,6DAAA;EACA,yBAAA;EACA,qBAAA;EACA,aAAA;EACA,sBAAA;AACF;AACA;EACE,kBAAA;EACA,mBAAA;AACF;AACA;EACE,WAAA;EACA,cAAA;EACA,aAAA;EACA,mBAAA;AACF;AACA;EACE,aAAA;EACA,cAAA;AACF;AACA;EACE,kBAAA;EACA,mBAAA;EACA,mBAAA;AACF;AACA;EACE,kBAAA;EACA,mBAAA;EACA,mBAAA;AACF","sourcesContent":[".wrap{\n  width:3.2rem;\n  height:fit-content;\n  padding:0.1rem;\n  border-radius:0.1rem;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  margin-bottom:0.1rem;\n  display:flex;\n  flex-direction: column;\n}\n.title{\n  font-size:0.32rem;\n  font-weight: bolder;\n}\n.subTitleWrap{\n  width:100%;\n  height:0.4rem;\n  display:flex;\n  align-items: center;\n}\n.subTitleIcon{\n  width:0.3rem;\n  height:0.3rem;\n}\n.subTitle{\n  font-size:0.22rem;\n  margin-left:0.1rem;\n  font-weight: bolder;\n}\n.desc{\n  font-size:0.22rem;\n  text-indent:0.4rem;\n  line-height: 0.5rem;\n}"],"sourceRoot":""}]);
 // Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"wrap": "src-pages-Resume-components-ProjectList-index-module__wrap--zi+Az",
+	"title": "src-pages-Resume-components-ProjectList-index-module__title--pCGpG",
+	"subTitleWrap": "src-pages-Resume-components-ProjectList-index-module__subTitleWrap--xlubH",
+	"subTitleIcon": "src-pages-Resume-components-ProjectList-index-module__subTitleIcon--Qd46H",
+	"subTitle": "src-pages-Resume-components-ProjectList-index-module__subTitle--JUozm",
+	"desc": "src-pages-Resume-components-ProjectList-index-module__desc--N5kgG"
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
@@ -1874,10 +1943,10 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./src/pages/Resume/components/ProjectList/index.less":
-/*!************************************************************!*\
-  !*** ./src/pages/Resume/components/ProjectList/index.less ***!
-  \************************************************************/
+/***/ "./src/pages/Resume/components/ProjectList/index.module.less":
+/*!*******************************************************************!*\
+  !*** ./src/pages/Resume/components/ProjectList/index.module.less ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1886,7 +1955,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../../../node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./index.less */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/Resume/components/ProjectList/index.less");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_module_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../../../node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./index.module.less */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/pages/Resume/components/ProjectList/index.module.less");
 
             
 
@@ -1895,11 +1964,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_less__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_module_less__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_less__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_module_less__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 

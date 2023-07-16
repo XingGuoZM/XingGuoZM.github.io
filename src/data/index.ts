@@ -259,9 +259,9 @@ export const data = {
     projectResult: []
   }],
   achievement: [
-    { id: '1', title: '在线博客', subTitle: '', url: 'https://xingguozm.github.io/mobile/blog' },
-    { id: '2', title: 'Github', subTitle: '', url: 'https://github.com' },
-    { id: '3', title: '组件库', subTitle: '', url: 'https://xingguozm.github.io/mobile/library' },
-    { id: '4', title: '在线演示', subTitle: '(建设中)', url: '' },
+    { id: 'blog', title: '在线博客', subTitle: '', url: 'https://xingguozm.github.io/mobile/blog' },
+    { id: 'github', title: 'Github', subTitle: '', url: 'https://github.com' },
+    { id: 'library', title: '组件库', subTitle: '', url: 'https://xingguozm.github.io/mobile/library' },
+    { id: 'demonstration', title: '在线演示', subTitle: '(建设中)', url: '' },
   ]
 };

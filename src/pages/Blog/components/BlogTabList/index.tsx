@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import TabList from '@/components/TabList';
 import Card, { CardTypeEnum } from '@/components/Card';
+import { ModalContext } from '@/components/PromisifyModal';
 import { data } from '../../data/data.js';
 import { IconMap } from '../../data';
 import { getBaseUrl } from '@/utils';
 import styles from './index.module.less';
 
-const iconFillColor = localStorage.getItem('--theme-color');
-
 export default function BlogTabList() {
+  const { theme } = useContext(ModalContext);
 
   const handleClick = (item) => {
     const { url } = item;
@@ -26,7 +26,7 @@ export default function BlogTabList() {
             const Comp = IconMap[item.dir];
             return <div className={styles.content} onClick={() => handleClick(item)}>
               <div className={styles.iconWrap}>
-                <Comp className={styles.icon} fill={iconFillColor} />
+                <Comp className={styles.icon} fill={theme} />
               </div>
               <div className={styles.titleWrap}>
                 <div className={styles.title}>{item.title}</div>

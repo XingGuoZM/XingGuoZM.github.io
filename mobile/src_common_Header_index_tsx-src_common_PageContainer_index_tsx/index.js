@@ -14,6 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AndroidSvg": () => (/* binding */ AndroidSvg),
 /* harmony export */   "ArrowSvg": () => (/* binding */ ArrowSvg),
 /* harmony export */   "AvatarSvg": () => (/* binding */ AvatarSvg),
+/* harmony export */   "BlogSvg": () => (/* binding */ BlogSvg),
 /* harmony export */   "CheckSvg": () => (/* binding */ CheckSvg),
 /* harmony export */   "CitySvg": () => (/* binding */ CitySvg),
 /* harmony export */   "ComponentsSvg": () => (/* binding */ ComponentsSvg),
@@ -21,13 +22,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CpuSvg": () => (/* binding */ CpuSvg),
 /* harmony export */   "CssSvg": () => (/* binding */ CssSvg),
 /* harmony export */   "DateSvg": () => (/* binding */ DateSvg),
+/* harmony export */   "DemonstrationSvg": () => (/* binding */ DemonstrationSvg),
 /* harmony export */   "EmailSvg": () => (/* binding */ EmailSvg),
+/* harmony export */   "GithubSvg": () => (/* binding */ GithubSvg),
 /* harmony export */   "GobackSvg": () => (/* binding */ GobackSvg),
 /* harmony export */   "HybridSvg": () => (/* binding */ HybridSvg),
 /* harmony export */   "InterviewSvg": () => (/* binding */ InterviewSvg),
 /* harmony export */   "IphoneSvg": () => (/* binding */ IphoneSvg),
 /* harmony export */   "JavascriptSvg": () => (/* binding */ JavascriptSvg),
 /* harmony export */   "JobSvg": () => (/* binding */ JobSvg),
+/* harmony export */   "LibrarySvg": () => (/* binding */ LibrarySvg),
 /* harmony export */   "MapSvg": () => (/* binding */ MapSvg),
 /* harmony export */   "MoreSvg": () => (/* binding */ MoreSvg),
 /* harmony export */   "NetworkSvg": () => (/* binding */ NetworkSvg),
@@ -180,11 +184,32 @@ function AvatarSvg(_ref5) {
   }));
 }
 ;
-function CheckSvg(_ref6) {
+function BlogSvg(_ref6) {
   var _ref6$fill = _ref6.fill,
       fill = _ref6$fill === void 0 ? "#ffffff" : _ref6$fill,
       _ref6$className = _ref6.className,
       className = _ref6$className === void 0 ? "" : _ref6$className;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    t: "1689486345516",
+    className: className,
+    viewBox: "0 0 1024 1024",
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    "p-id": "5553",
+    width: "200",
+    height: "200"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M384 192C631.424 192 832 392.576 832 640L736 640C736 545.984 699.392 457.568 632.896 391.104 566.432 324.608 478.016 288 384 288L384 192ZM384 0C737.472 0 1024 286.528 1024 640L928 640C928 566.528 913.632 495.296 885.28 428.288 857.888 363.52 818.656 305.312 768.672 255.328 718.688 205.344 660.48 166.112 595.712 138.72 528.704 110.368 457.472 96 384 96L384 0ZM574.4 449.6C618.144 493.376 640 550.72 639.968 608.064 576 704.064 576 832 576 832 320 832 128 1024 128 1024L114.016 1010.016 90.88 986.88 374.464 703.296C377.568 703.744 380.768 704 384 704 419.36 704 448 675.36 448 640 448 604.64 419.36 576 384 576 348.64 576 320 604.64 320 640 320 643.232 320.256 646.432 320.704 649.536L37.12 933.12 0 896C0 896 192 704 192 448 192 448 320 448 416 384 473.312 384 530.656 405.856 574.4 449.6Z",
+    fill: fill,
+    "p-id": "5554"
+  }));
+}
+;
+function CheckSvg(_ref7) {
+  var _ref7$fill = _ref7.fill,
+      fill = _ref7$fill === void 0 ? "#ffffff" : _ref7$fill,
+      _ref7$className = _ref7.className,
+      className = _ref7$className === void 0 ? "" : _ref7$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688654431008",
     className: className,
@@ -205,11 +230,11 @@ function CheckSvg(_ref6) {
   }));
 }
 ;
-function CitySvg(_ref7) {
-  var _ref7$fill = _ref7.fill,
-      fill = _ref7$fill === void 0 ? "#ffffff" : _ref7$fill,
-      _ref7$className = _ref7.className,
-      className = _ref7$className === void 0 ? "" : _ref7$className;
+function CitySvg(_ref8) {
+  var _ref8$fill = _ref8.fill,
+      fill = _ref8$fill === void 0 ? "#ffffff" : _ref8$fill,
+      _ref8$className = _ref8.className,
+      className = _ref8$className === void 0 ? "" : _ref8$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689057048556",
     className: className,
@@ -226,11 +251,11 @@ function CitySvg(_ref7) {
   }));
 }
 ;
-function ComponentsSvg(_ref8) {
-  var _ref8$fill = _ref8.fill,
-      fill = _ref8$fill === void 0 ? "#ffffff" : _ref8$fill,
-      _ref8$className = _ref8.className,
-      className = _ref8$className === void 0 ? "" : _ref8$className;
+function ComponentsSvg(_ref9) {
+  var _ref9$fill = _ref9.fill,
+      fill = _ref9$fill === void 0 ? "#ffffff" : _ref9$fill,
+      _ref9$className = _ref9.className,
+      className = _ref9$className === void 0 ? "" : _ref9$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688950160951",
     className: className,
@@ -247,11 +272,11 @@ function ComponentsSvg(_ref8) {
   }));
 }
 ;
-function CountdownSvg(_ref9) {
-  var _ref9$fill = _ref9.fill,
-      fill = _ref9$fill === void 0 ? "#ffffff" : _ref9$fill,
-      _ref9$className = _ref9.className,
-      className = _ref9$className === void 0 ? "" : _ref9$className;
+function CountdownSvg(_ref10) {
+  var _ref10$fill = _ref10.fill,
+      fill = _ref10$fill === void 0 ? "#ffffff" : _ref10$fill,
+      _ref10$className = _ref10.className,
+      className = _ref10$className === void 0 ? "" : _ref10$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689424372606",
     className: className,
@@ -276,11 +301,11 @@ function CountdownSvg(_ref9) {
   }));
 }
 ;
-function CpuSvg(_ref10) {
-  var _ref10$fill = _ref10.fill,
-      fill = _ref10$fill === void 0 ? "#ffffff" : _ref10$fill,
-      _ref10$className = _ref10.className,
-      className = _ref10$className === void 0 ? "" : _ref10$className;
+function CpuSvg(_ref11) {
+  var _ref11$fill = _ref11.fill,
+      fill = _ref11$fill === void 0 ? "#ffffff" : _ref11$fill,
+      _ref11$className = _ref11.className,
+      className = _ref11$className === void 0 ? "" : _ref11$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688692156275",
     className: className,
@@ -297,11 +322,11 @@ function CpuSvg(_ref10) {
   }));
 }
 ;
-function CssSvg(_ref11) {
-  var _ref11$fill = _ref11.fill,
-      fill = _ref11$fill === void 0 ? "#ffffff" : _ref11$fill,
-      _ref11$className = _ref11.className,
-      className = _ref11$className === void 0 ? "" : _ref11$className;
+function CssSvg(_ref12) {
+  var _ref12$fill = _ref12.fill,
+      fill = _ref12$fill === void 0 ? "#ffffff" : _ref12$fill,
+      _ref12$className = _ref12.className,
+      className = _ref12$className === void 0 ? "" : _ref12$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689259302772",
     className: className,
@@ -318,11 +343,11 @@ function CssSvg(_ref11) {
   }));
 }
 ;
-function DateSvg(_ref12) {
-  var _ref12$fill = _ref12.fill,
-      fill = _ref12$fill === void 0 ? "#ffffff" : _ref12$fill,
-      _ref12$className = _ref12.className,
-      className = _ref12$className === void 0 ? "" : _ref12$className;
+function DateSvg(_ref13) {
+  var _ref13$fill = _ref13.fill,
+      fill = _ref13$fill === void 0 ? "#ffffff" : _ref13$fill,
+      _ref13$className = _ref13.className,
+      className = _ref13$className === void 0 ? "" : _ref13$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689321140726",
     className: className,
@@ -339,11 +364,36 @@ function DateSvg(_ref12) {
   }));
 }
 ;
-function EmailSvg(_ref13) {
-  var _ref13$fill = _ref13.fill,
-      fill = _ref13$fill === void 0 ? "#ffffff" : _ref13$fill,
-      _ref13$className = _ref13.className,
-      className = _ref13$className === void 0 ? "" : _ref13$className;
+function DemonstrationSvg(_ref14) {
+  var _ref14$fill = _ref14.fill,
+      fill = _ref14$fill === void 0 ? "#ffffff" : _ref14$fill,
+      _ref14$className = _ref14.className,
+      className = _ref14$className === void 0 ? "" : _ref14$className;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    t: "1689489912766",
+    className: className,
+    viewBox: "0 0 1024 1024",
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    "p-id": "10583",
+    width: "200",
+    height: "200"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M928 641.5v-384c0-52.935-43.065-96-96-96H544v-32c0-17.673-14.327-32-32-32s-32 14.327-32 32v32H192c-52.935 0-96 43.065-96 96v384c0 52.935 43.065 96 96 96h49.746L105.373 873.873c-12.497 12.497-12.497 32.758 0 45.255 6.248 6.249 14.438 9.373 22.627 9.373s16.379-3.124 22.627-9.373L332.254 737.5h359.491l181.627 181.627c6.248 6.249 14.438 9.373 22.627 9.373s16.379-3.124 22.627-9.373c12.497-12.497 12.497-32.758 0-45.255L782.254 737.5H832c52.935 0 96-43.065 96-96z m-768 0v-384c0-17.645 14.355-32 32-32h640c17.645 0 32 14.355 32 32v384c0 17.645-14.355 32-32 32H192c-17.645 0-32-14.355-32-32z",
+    "p-id": "10584",
+    fill: fill
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M512 289.5c-17.673 0-32 14.327-32 32v256c0 17.673 14.327 32 32 32 17.673 0 32-14.327 32-32v-256c0-17.673-14.327-32-32-32zM320 449.5c-17.673 0-32 14.327-32 32v96c0 17.673 14.327 32 32 32s32-14.327 32-32v-96c0-17.673-14.327-32-32-32zM704 385.5c-17.673 0-32 14.327-32 32v160c0 17.673 14.327 32 32 32s32-14.327 32-32v-160c0-17.673-14.327-32-32-32z",
+    "p-id": "10585",
+    fill: fill
+  }));
+}
+;
+function EmailSvg(_ref15) {
+  var _ref15$fill = _ref15.fill,
+      fill = _ref15$fill === void 0 ? "#ffffff" : _ref15$fill,
+      _ref15$className = _ref15.className,
+      className = _ref15$className === void 0 ? "" : _ref15$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689058098952",
     className: className,
@@ -360,11 +410,32 @@ function EmailSvg(_ref13) {
   }));
 }
 ;
-function GobackSvg(_ref14) {
-  var _ref14$fill = _ref14.fill,
-      fill = _ref14$fill === void 0 ? "#ffffff" : _ref14$fill,
-      _ref14$className = _ref14.className,
-      className = _ref14$className === void 0 ? "" : _ref14$className;
+function GithubSvg(_ref16) {
+  var _ref16$fill = _ref16.fill,
+      fill = _ref16$fill === void 0 ? "#ffffff" : _ref16$fill,
+      _ref16$className = _ref16.className,
+      className = _ref16$className === void 0 ? "" : _ref16$className;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    t: "1689489703614",
+    className: className,
+    viewBox: "0 0 1024 1024",
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    "p-id": "6573",
+    width: "200",
+    height: "200"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M682.215454 981.446137c-25.532318 0-42.553863-17.021545-42.553864-42.553864v-165.960067c4.255386-34.043091-8.510773-59.575409-29.787704-80.852341-12.766159-12.766159-17.021545-29.787704-8.510773-42.553864 4.255386-17.021545 21.276932-25.532318 34.043091-29.787704 123.406204-12.766159 238.301635-55.320023 238.301635-255.323181 0-46.80925-17.021545-93.6185-51.064636-131.916976-12.766159-12.766159-12.766159-29.787704-8.510772-42.553864 12.766159-34.043091 12.766159-68.086182 4.255386-102.129272-21.276932 4.255386-55.320023 17.021545-110.640045 55.320022-8.510773 8.510773-21.276932 8.510773-34.043091 4.255387-89.363113-25.532318-187.236999-25.532318-276.600112 0-12.766159 4.255386-25.532318 4.255386-38.298477-4.255387C307.741455 104.836549 269.442978 92.07039 248.166047 87.815004c-8.510773 34.043091-8.510773 68.086182 4.255386 102.129272 4.255386 17.021545 4.255386 34.043091-8.510773 42.553864-34.043091 38.298477-51.064636 85.107727-51.064636 131.916976 0 200.003158 114.895431 242.557022 238.301635 255.323181 17.021545 0 29.787704 12.766159 34.043091 29.787704 4.255386 17.021545 0 34.043091-8.510773 42.553864-21.276932 21.276932-29.787704 46.80925-29.787704 76.596954v165.960068c0 25.532318-17.021545 42.553863-42.553863 42.553863s-42.553863-17.021545-42.553864-42.553863v-72.341568c-127.66159 21.276932-182.981613-51.064636-221.28009-97.873886-17.021545-21.276932-29.787704-38.298477-46.80925-42.553864-21.276932-4.255386-38.298477-29.787704-29.787704-51.064636 4.255386-21.276932 29.787704-38.298477 51.064636-29.787704 42.553863 12.766159 68.086182 42.553863 93.6185 72.341568 34.043091 46.80925 63.830795 80.852341 153.193908 63.830795v-4.255386c0-25.532318 4.255386-55.320023 12.766159-76.596955-119.150818-25.532318-246.812408-102.129272-246.812408-327.664748 0-63.830795 21.276932-123.406204 59.575409-170.215454-17.021545-59.575409-12.766159-114.895431 12.766159-170.215454 4.255386-12.766159 12.766159-21.276932 25.532318-25.532318 17.021545-4.255386 72.341568-12.766159 187.236999 59.575409 93.6185-21.276932 191.492386-21.276932 280.855499 0 110.640045-72.341568 170.215454-63.830795 187.236999-59.575409 12.766159 4.255386 21.276932 12.766159 25.532319 25.532318 21.276932 55.320023 25.532318 110.640045 12.766159 165.960067 38.298477 46.80925 59.575409 106.384659 59.575408 170.215454 0 242.557022-144.683136 306.387817-246.812408 331.920135 8.510773 25.532318 12.766159 55.320023 12.766159 80.852341V938.892273c0 25.532318-17.021545 42.553863-42.553863 42.553864z",
+    "p-id": "6574",
+    fill: fill
+  }));
+}
+;
+function GobackSvg(_ref17) {
+  var _ref17$fill = _ref17.fill,
+      fill = _ref17$fill === void 0 ? "#ffffff" : _ref17$fill,
+      _ref17$className = _ref17.className,
+      className = _ref17$className === void 0 ? "" : _ref17$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688729082038",
     className: className,
@@ -381,11 +452,11 @@ function GobackSvg(_ref14) {
   }));
 }
 ;
-function HybridSvg(_ref15) {
-  var _ref15$fill = _ref15.fill,
-      fill = _ref15$fill === void 0 ? "#ffffff" : _ref15$fill,
-      _ref15$className = _ref15.className,
-      className = _ref15$className === void 0 ? "" : _ref15$className;
+function HybridSvg(_ref18) {
+  var _ref18$fill = _ref18.fill,
+      fill = _ref18$fill === void 0 ? "#ffffff" : _ref18$fill,
+      _ref18$className = _ref18.className,
+      className = _ref18$className === void 0 ? "" : _ref18$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688691976793",
     className: className,
@@ -442,11 +513,11 @@ function HybridSvg(_ref15) {
   }));
 }
 ;
-function InterviewSvg(_ref16) {
-  var _ref16$fill = _ref16.fill,
-      fill = _ref16$fill === void 0 ? "#ffffff" : _ref16$fill,
-      _ref16$className = _ref16.className,
-      className = _ref16$className === void 0 ? "" : _ref16$className;
+function InterviewSvg(_ref19) {
+  var _ref19$fill = _ref19.fill,
+      fill = _ref19$fill === void 0 ? "#ffffff" : _ref19$fill,
+      _ref19$className = _ref19.className,
+      className = _ref19$className === void 0 ? "" : _ref19$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689176007551",
     className: className,
@@ -479,11 +550,11 @@ function InterviewSvg(_ref16) {
   }));
 }
 ;
-function IphoneSvg(_ref17) {
-  var _ref17$fill = _ref17.fill,
-      fill = _ref17$fill === void 0 ? "#ffffff" : _ref17$fill,
-      _ref17$className = _ref17.className,
-      className = _ref17$className === void 0 ? "" : _ref17$className;
+function IphoneSvg(_ref20) {
+  var _ref20$fill = _ref20.fill,
+      fill = _ref20$fill === void 0 ? "#ffffff" : _ref20$fill,
+      _ref20$className = _ref20.className,
+      className = _ref20$className === void 0 ? "" : _ref20$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688693903226",
     className: className,
@@ -516,11 +587,11 @@ function IphoneSvg(_ref17) {
   }));
 }
 ;
-function JavascriptSvg(_ref18) {
-  var _ref18$fill = _ref18.fill,
-      fill = _ref18$fill === void 0 ? "#ffffff" : _ref18$fill,
-      _ref18$className = _ref18.className,
-      className = _ref18$className === void 0 ? "" : _ref18$className;
+function JavascriptSvg(_ref21) {
+  var _ref21$fill = _ref21.fill,
+      fill = _ref21$fill === void 0 ? "#ffffff" : _ref21$fill,
+      _ref21$className = _ref21.className,
+      className = _ref21$className === void 0 ? "" : _ref21$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688691666564",
     className: className,
@@ -541,11 +612,11 @@ function JavascriptSvg(_ref18) {
   }));
 }
 ;
-function JobSvg(_ref19) {
-  var _ref19$fill = _ref19.fill,
-      fill = _ref19$fill === void 0 ? "#ffffff" : _ref19$fill,
-      _ref19$className = _ref19.className,
-      className = _ref19$className === void 0 ? "" : _ref19$className;
+function JobSvg(_ref22) {
+  var _ref22$fill = _ref22.fill,
+      fill = _ref22$fill === void 0 ? "#ffffff" : _ref22$fill,
+      _ref22$className = _ref22.className,
+      className = _ref22$className === void 0 ? "" : _ref22$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689056959849",
     className: className,
@@ -562,11 +633,36 @@ function JobSvg(_ref19) {
   }));
 }
 ;
-function MapSvg(_ref20) {
-  var _ref20$fill = _ref20.fill,
-      fill = _ref20$fill === void 0 ? "#ffffff" : _ref20$fill,
-      _ref20$className = _ref20.className,
-      className = _ref20$className === void 0 ? "" : _ref20$className;
+function LibrarySvg(_ref23) {
+  var _ref23$fill = _ref23.fill,
+      fill = _ref23$fill === void 0 ? "#ffffff" : _ref23$fill,
+      _ref23$className = _ref23.className,
+      className = _ref23$className === void 0 ? "" : _ref23$className;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    t: "1689490549372",
+    className: className,
+    viewBox: "0 0 1024 1024",
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    "p-id": "22535",
+    width: "200",
+    height: "200"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M963.413333 349.013333L554.666667 61.44a74.24 74.24 0 0 0-85.333334 0L60.586667 349.013333a42.666667 42.666667 0 0 0-10.24 59.733334 42.666667 42.666667 0 0 0 59.733333 10.24L512 135.253333l401.92 283.733334A42.666667 42.666667 0 0 0 938.666667 426.666667a42.666667 42.666667 0 0 0 34.986666-17.92 42.666667 42.666667 0 0 0-10.24-59.733334zM853.333333 448a42.666667 42.666667 0 0 0-42.666666 42.666667V896H213.333333v-405.333333a42.666667 42.666667 0 0 0-85.333333 0v410.453333A80.64 80.64 0 0 0 208.64 981.333333h606.72A80.64 80.64 0 0 0 896 901.12V490.666667a42.666667 42.666667 0 0 0-42.666667-42.666667z",
+    "p-id": "22536",
+    fill: fill
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M682.666667 832a64 64 0 0 0 64-64v-85.333333a64 64 0 0 0-64-64h-85.333334a64 64 0 0 0-64 64v85.333333a64 64 0 0 0 64 64zM576 768v-85.333333a21.333333 21.333333 0 0 1 21.333333-21.333334h85.333334a21.333333 21.333333 0 0 1 21.333333 21.333334v85.333333a21.333333 21.333333 0 0 1-21.333333 21.333333h-85.333334a21.333333 21.333333 0 0 1-21.333333-21.333333zM341.333333 576h85.333334a64 64 0 0 0 64-64v-85.333333A64 64 0 0 0 426.666667 362.666667H341.333333A64 64 0 0 0 277.333333 426.666667v85.333333A64 64 0 0 0 341.333333 576zM320 426.666667a21.333333 21.333333 0 0 1 21.333333-21.333334h85.333334a21.333333 21.333333 0 0 1 21.333333 21.333334v85.333333a21.333333 21.333333 0 0 1-21.333333 21.333333H341.333333a21.333333 21.333333 0 0 1-21.333333-21.333333zM277.333333 768A64 64 0 0 0 341.333333 832h85.333334a64 64 0 0 0 64-64v-85.333333a64 64 0 0 0-64-64H341.333333A64 64 0 0 0 277.333333 682.666667z m42.666667-85.333333a21.333333 21.333333 0 0 1 21.333333-21.333334h85.333334a21.333333 21.333333 0 0 1 21.333333 21.333334v85.333333a21.333333 21.333333 0 0 1-21.333333 21.333333H341.333333a21.333333 21.333333 0 0 1-21.333333-21.333333z",
+    "p-id": "22537",
+    fill: fill
+  }));
+}
+;
+function MapSvg(_ref24) {
+  var _ref24$fill = _ref24.fill,
+      fill = _ref24$fill === void 0 ? "#ffffff" : _ref24$fill,
+      _ref24$className = _ref24.className,
+      className = _ref24$className === void 0 ? "" : _ref24$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689054634120",
     className: className,
@@ -587,11 +683,11 @@ function MapSvg(_ref20) {
   }));
 }
 ;
-function MoreSvg(_ref21) {
-  var _ref21$fill = _ref21.fill,
-      fill = _ref21$fill === void 0 ? "#ffffff" : _ref21$fill,
-      _ref21$className = _ref21.className,
-      className = _ref21$className === void 0 ? "" : _ref21$className;
+function MoreSvg(_ref25) {
+  var _ref25$fill = _ref25.fill,
+      fill = _ref25$fill === void 0 ? "#ffffff" : _ref25$fill,
+      _ref25$className = _ref25.className,
+      className = _ref25$className === void 0 ? "" : _ref25$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688694512631",
     className: className,
@@ -616,11 +712,11 @@ function MoreSvg(_ref21) {
   }));
 }
 ;
-function NetworkSvg(_ref22) {
-  var _ref22$fill = _ref22.fill,
-      fill = _ref22$fill === void 0 ? "#ffffff" : _ref22$fill,
-      _ref22$className = _ref22.className,
-      className = _ref22$className === void 0 ? "" : _ref22$className;
+function NetworkSvg(_ref26) {
+  var _ref26$fill = _ref26.fill,
+      fill = _ref26$fill === void 0 ? "#ffffff" : _ref26$fill,
+      _ref26$className = _ref26.className,
+      className = _ref26$className === void 0 ? "" : _ref26$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688692129874",
     className: className,
@@ -637,11 +733,11 @@ function NetworkSvg(_ref22) {
   }));
 }
 ;
-function ProjectSvg(_ref23) {
-  var _ref23$fill = _ref23.fill,
-      fill = _ref23$fill === void 0 ? "#ffffff" : _ref23$fill,
-      _ref23$className = _ref23.className,
-      className = _ref23$className === void 0 ? "" : _ref23$className;
+function ProjectSvg(_ref27) {
+  var _ref27$fill = _ref27.fill,
+      fill = _ref27$fill === void 0 ? "#ffffff" : _ref27$fill,
+      _ref27$className = _ref27.className,
+      className = _ref27$className === void 0 ? "" : _ref27$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689481453996",
     className: className,
@@ -666,11 +762,11 @@ function ProjectSvg(_ref23) {
   }));
 }
 ;
-function ReactSvg(_ref24) {
-  var _ref24$fill = _ref24.fill,
-      fill = _ref24$fill === void 0 ? "#ffffff" : _ref24$fill,
-      _ref24$className = _ref24.className,
-      className = _ref24$className === void 0 ? "" : _ref24$className;
+function ReactSvg(_ref28) {
+  var _ref28$fill = _ref28.fill,
+      fill = _ref28$fill === void 0 ? "#ffffff" : _ref28$fill,
+      _ref28$className = _ref28.className,
+      className = _ref28$className === void 0 ? "" : _ref28$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688691810908",
     className: className,
@@ -687,11 +783,11 @@ function ReactSvg(_ref24) {
   }));
 }
 ;
-function RenderSvg(_ref25) {
-  var _ref25$fill = _ref25.fill,
-      fill = _ref25$fill === void 0 ? "#ffffff" : _ref25$fill,
-      _ref25$className = _ref25.className,
-      className = _ref25$className === void 0 ? "" : _ref25$className;
+function RenderSvg(_ref29) {
+  var _ref29$fill = _ref29.fill,
+      fill = _ref29$fill === void 0 ? "#ffffff" : _ref29$fill,
+      _ref29$className = _ref29.className,
+      className = _ref29$className === void 0 ? "" : _ref29$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688694897797",
     className: className,
@@ -716,11 +812,11 @@ function RenderSvg(_ref25) {
   }));
 }
 ;
-function ResultSvg(_ref26) {
-  var _ref26$fill = _ref26.fill,
-      fill = _ref26$fill === void 0 ? "#ffffff" : _ref26$fill,
-      _ref26$className = _ref26.className,
-      className = _ref26$className === void 0 ? "" : _ref26$className;
+function ResultSvg(_ref30) {
+  var _ref30$fill = _ref30.fill,
+      fill = _ref30$fill === void 0 ? "#ffffff" : _ref30$fill,
+      _ref30$className = _ref30.className,
+      className = _ref30$className === void 0 ? "" : _ref30$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689227230243",
     className: className,
@@ -741,11 +837,11 @@ function ResultSvg(_ref26) {
   }));
 }
 ;
-function SchoolSvg(_ref27) {
-  var _ref27$fill = _ref27.fill,
-      fill = _ref27$fill === void 0 ? "#ffffff" : _ref27$fill,
-      _ref27$className = _ref27.className,
-      className = _ref27$className === void 0 ? "" : _ref27$className;
+function SchoolSvg(_ref31) {
+  var _ref31$fill = _ref31.fill,
+      fill = _ref31$fill === void 0 ? "#ffffff" : _ref31$fill,
+      _ref31$className = _ref31.className,
+      className = _ref31$className === void 0 ? "" : _ref31$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689057395513",
     className: className,
@@ -762,11 +858,11 @@ function SchoolSvg(_ref27) {
   }));
 }
 ;
-function SchoolcourseSvg(_ref28) {
-  var _ref28$fill = _ref28.fill,
-      fill = _ref28$fill === void 0 ? "#ffffff" : _ref28$fill,
-      _ref28$className = _ref28.className,
-      className = _ref28$className === void 0 ? "" : _ref28$className;
+function SchoolcourseSvg(_ref32) {
+  var _ref32$fill = _ref32.fill,
+      fill = _ref32$fill === void 0 ? "#ffffff" : _ref32$fill,
+      _ref32$className = _ref32.className,
+      className = _ref32$className === void 0 ? "" : _ref32$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689057512893",
     className: className,
@@ -795,11 +891,11 @@ function SchoolcourseSvg(_ref28) {
   }));
 }
 ;
-function SchooldateSvg(_ref29) {
-  var _ref29$fill = _ref29.fill,
-      fill = _ref29$fill === void 0 ? "#ffffff" : _ref29$fill,
-      _ref29$className = _ref29.className,
-      className = _ref29$className === void 0 ? "" : _ref29$className;
+function SchooldateSvg(_ref33) {
+  var _ref33$fill = _ref33.fill,
+      fill = _ref33$fill === void 0 ? "#ffffff" : _ref33$fill,
+      _ref33$className = _ref33.className,
+      className = _ref33$className === void 0 ? "" : _ref33$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689057730152",
     className: className,
@@ -828,11 +924,11 @@ function SchooldateSvg(_ref29) {
   }));
 }
 ;
-function SettingSvg(_ref30) {
-  var _ref30$fill = _ref30.fill,
-      fill = _ref30$fill === void 0 ? "#ffffff" : _ref30$fill,
-      _ref30$className = _ref30.className,
-      className = _ref30$className === void 0 ? "" : _ref30$className;
+function SettingSvg(_ref34) {
+  var _ref34$fill = _ref34.fill,
+      fill = _ref34$fill === void 0 ? "#ffffff" : _ref34$fill,
+      _ref34$className = _ref34.className,
+      className = _ref34$className === void 0 ? "" : _ref34$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688694472619",
     className: className,
@@ -869,11 +965,11 @@ function SettingSvg(_ref30) {
   }));
 }
 ;
-function SituationSvg(_ref31) {
-  var _ref31$fill = _ref31.fill,
-      fill = _ref31$fill === void 0 ? "#ffffff" : _ref31$fill,
-      _ref31$className = _ref31.className,
-      className = _ref31$className === void 0 ? "" : _ref31$className;
+function SituationSvg(_ref35) {
+  var _ref35$fill = _ref35.fill,
+      fill = _ref35$fill === void 0 ? "#ffffff" : _ref35$fill,
+      _ref35$className = _ref35.className,
+      className = _ref35$className === void 0 ? "" : _ref35$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689227330902",
     className: className,
@@ -906,11 +1002,11 @@ function SituationSvg(_ref31) {
   }));
 }
 ;
-function TaskSvg(_ref32) {
-  var _ref32$fill = _ref32.fill,
-      fill = _ref32$fill === void 0 ? "#ffffff" : _ref32$fill,
-      _ref32$className = _ref32.className,
-      className = _ref32$className === void 0 ? "" : _ref32$className;
+function TaskSvg(_ref36) {
+  var _ref36$fill = _ref36.fill,
+      fill = _ref36$fill === void 0 ? "#ffffff" : _ref36$fill,
+      _ref36$className = _ref36.className,
+      className = _ref36$className === void 0 ? "" : _ref36$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689226928558",
     className: className,
@@ -931,11 +1027,11 @@ function TaskSvg(_ref32) {
   }));
 }
 ;
-function TelphoneSvg(_ref33) {
-  var _ref33$fill = _ref33.fill,
-      fill = _ref33$fill === void 0 ? "#ffffff" : _ref33$fill,
-      _ref33$className = _ref33.className,
-      className = _ref33$className === void 0 ? "" : _ref33$className;
+function TelphoneSvg(_ref37) {
+  var _ref37$fill = _ref37.fill,
+      fill = _ref37$fill === void 0 ? "#ffffff" : _ref37$fill,
+      _ref37$className = _ref37.className,
+      className = _ref37$className === void 0 ? "" : _ref37$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689058049283",
     className: className,
@@ -952,11 +1048,11 @@ function TelphoneSvg(_ref33) {
   }));
 }
 ;
-function WebpackSvg(_ref34) {
-  var _ref34$fill = _ref34.fill,
-      fill = _ref34$fill === void 0 ? "#ffffff" : _ref34$fill,
-      _ref34$className = _ref34.className,
-      className = _ref34$className === void 0 ? "" : _ref34$className;
+function WebpackSvg(_ref38) {
+  var _ref38$fill = _ref38.fill,
+      fill = _ref38$fill === void 0 ? "#ffffff" : _ref38$fill,
+      _ref38$className = _ref38.className,
+      className = _ref38$className === void 0 ? "" : _ref38$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1688691781343",
     className: className,
@@ -973,11 +1069,11 @@ function WebpackSvg(_ref34) {
   }));
 }
 ;
-function WechatSvg(_ref35) {
-  var _ref35$fill = _ref35.fill,
-      fill = _ref35$fill === void 0 ? "#ffffff" : _ref35$fill,
-      _ref35$className = _ref35.className,
-      className = _ref35$className === void 0 ? "" : _ref35$className;
+function WechatSvg(_ref39) {
+  var _ref39$fill = _ref39.fill,
+      fill = _ref39$fill === void 0 ? "#ffffff" : _ref39$fill,
+      _ref39$className = _ref39.className,
+      className = _ref39$className === void 0 ? "" : _ref39$className;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     t: "1689058077272",
     className: className,
@@ -1086,9 +1182,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ PageContainer)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/utils */ "./src/utils/index.ts");
-/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/constant */ "./src/constant/index.ts");
-/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.less */ "./src/common/PageContainer/index.less");
+/* harmony import */ var _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/PromisifyModal */ "./src/components/PromisifyModal/index.tsx");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/utils */ "./src/utils/index.ts");
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/constant */ "./src/constant/index.ts");
+/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.less */ "./src/common/PageContainer/index.less");
 var _ClassNameMap;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1097,17 +1194,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var ClassNameMap = (_ClassNameMap = {}, _defineProperty(_ClassNameMap, _constant__WEBPACK_IMPORTED_MODULE_2__.PageType.Resume, 'resumeWrap'), _defineProperty(_ClassNameMap, _constant__WEBPACK_IMPORTED_MODULE_2__.PageType.Blog, 'blogWrap'), _defineProperty(_ClassNameMap, _constant__WEBPACK_IMPORTED_MODULE_2__.PageType.Article, 'articleWrap'), _defineProperty(_ClassNameMap, _constant__WEBPACK_IMPORTED_MODULE_2__.PageType.Library, 'libraryWrap'), _ClassNameMap);
-(0,_utils__WEBPACK_IMPORTED_MODULE_1__.viewport)();
+
+var ClassNameMap = (_ClassNameMap = {}, _defineProperty(_ClassNameMap, _constant__WEBPACK_IMPORTED_MODULE_3__.PageType.Resume, 'resumeWrap'), _defineProperty(_ClassNameMap, _constant__WEBPACK_IMPORTED_MODULE_3__.PageType.Blog, 'blogWrap'), _defineProperty(_ClassNameMap, _constant__WEBPACK_IMPORTED_MODULE_3__.PageType.Article, 'articleWrap'), _defineProperty(_ClassNameMap, _constant__WEBPACK_IMPORTED_MODULE_3__.PageType.Library, 'libraryWrap'), _ClassNameMap);
+(0,_utils__WEBPACK_IMPORTED_MODULE_2__.viewport)();
 function PageContainer(_ref) {
   var children = _ref.children,
       type = _ref.type;
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    var theme = localStorage.getItem(_constant__WEBPACK_IMPORTED_MODULE_2__.LocalStorageKey.ThemeColor);
 
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_components_PromisifyModal__WEBPACK_IMPORTED_MODULE_1__.ModalContext),
+      theme = _useContext.theme;
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (theme) {
-      (0,_utils__WEBPACK_IMPORTED_MODULE_1__.setBodyStyleProperty)(_constant__WEBPACK_IMPORTED_MODULE_2__.LocalStorageKey.ThemeColor, theme);
-      (0,_utils__WEBPACK_IMPORTED_MODULE_1__.setBodyStyleProperty)('color', theme);
+      (0,_utils__WEBPACK_IMPORTED_MODULE_2__.setBodyStyleProperty)(_constant__WEBPACK_IMPORTED_MODULE_3__.LocalStorageKey.ThemeColor, theme);
+      (0,_utils__WEBPACK_IMPORTED_MODULE_2__.setBodyStyleProperty)('color', theme);
     }
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1169,18 +1269,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/PromisifyModal */ "./src/components/PromisifyModal/index.tsx");
 /* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Modal */ "./src/components/Modal/Modal/index.tsx");
 /* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index.module.less */ "./src/components/Modal/SettingModal/index.module.less");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 
 
 
@@ -1191,10 +1279,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function SettingModal(_ref) {
   var data = _ref.data;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(localStorage.getItem(_constant__WEBPACK_IMPORTED_MODULE_3__.LocalStorageKey.ThemeColor)),
-      _useState2 = _slicedToArray(_useState, 2),
-      theme = _useState2[0],
-      setTheme = _useState2[1];
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_components_PromisifyModal__WEBPACK_IMPORTED_MODULE_4__["default"].ModalContext),
+      theme = _useContext.theme,
+      setTheme = _useContext.setTheme;
 
   var handleSetting = function handleSetting(item) {
     if (item.id === 'white') {
@@ -1452,6 +1539,10 @@ function PageHeader(_ref) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Provider": () => (/* binding */ Provider),
+/* harmony export */   "ModalContext": () => (/* binding */ ModalContext),
+/* harmony export */   "show": () => (/* binding */ show),
+/* harmony export */   "hide": () => (/* binding */ hide),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -1465,7 +1556,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var symModalId = Symbol("ModalId");
 var initialState = {};
 var ModalContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(initialState);
-;
 var TypeEnum;
 
 (function (TypeEnum) {
@@ -1562,8 +1652,9 @@ function hide(modal) {
 }
 
 function Provider(_ref2) {
-  var children = _ref2.children;
-  var arr = (0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(reducer, initialState);
+  var children = _ref2.children,
+      value = _ref2.value;
+  var arr = (0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(reducer, _objectSpread({}, initialState));
   var modalIds = Object.keys(arr[0]);
   dispatch = arr[1];
   var toRender = modalIds.map(function (id) {
@@ -1578,7 +1669,7 @@ function Provider(_ref2) {
     });
   }, [modalIds]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ModalContext.Provider, {
-    value: arr[0]
+    value: _objectSpread(_objectSpread({}, arr[0]), value)
   }, children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "modals"
   }, toRender.map(function (t) {
@@ -1590,9 +1681,11 @@ function Provider(_ref2) {
 
 var Modal = {
   Provider: Provider,
+  ModalContext: ModalContext,
   show: show,
   hide: hide
 };
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Modal);
 
 /***/ }),
@@ -1870,22 +1963,22 @@ var data = {
     projectResult: []
   }],
   achievement: [{
-    id: '1',
+    id: 'blog',
     title: '在线博客',
     subTitle: '',
     url: 'https://xingguozm.github.io/mobile/blog'
   }, {
-    id: '2',
+    id: 'github',
     title: 'Github',
     subTitle: '',
     url: 'https://github.com'
   }, {
-    id: '3',
+    id: 'library',
     title: '组件库',
     subTitle: '',
     url: 'https://xingguozm.github.io/mobile/library'
   }, {
-    id: '4',
+    id: 'demonstration',
     title: '在线演示',
     subTitle: '(建设中)',
     url: ''

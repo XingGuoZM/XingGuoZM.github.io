@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "svg2react": "node scripts/convert/svg2react.js",
+    "md2html": "node scripts/convert/md2html.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

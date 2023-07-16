@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import checkedIcon from '@/assets/check.svg';
 import { setBodyStyleProperty } from '@/utils';
 import { LocalStorageKey } from '@/constant';
@@ -15,7 +15,7 @@ interface IProps {
 }
 
 export default function SettingModal({ data }: IProps) {
-  const [theme, setTheme] = useState(localStorage.getItem(LocalStorageKey.ThemeColor));
+  const { theme, setTheme } = useContext(promiseModal.ModalContext);
   const handleSetting = (item: ITheme) => {
     if (item.id === 'white') {
       setBodyStyleProperty('color', '#000');

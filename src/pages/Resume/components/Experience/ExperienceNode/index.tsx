@@ -5,7 +5,7 @@ import styles from "./index.module.less";
 
 export default function Experience(props) {
   const { time, name, job } = props;
-  const theme = localStorage.getItem('--theme-color');
+
   return (
     <div className={styles.wrap}>
       <div className={styles.iconWrap}>
