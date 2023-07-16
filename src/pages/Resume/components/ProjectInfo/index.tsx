@@ -24,7 +24,7 @@ export default function ProjectInfo({ data }: IProps) {
                 className="project-item-bar"
                 barClassName="project-item-bar-inner"
                 direction={DirectionEnum.Column}
-                percent={100}
+                percent={0}
                 strokeWidth={strokeList[index]}
               />
               <div className="project-item">
