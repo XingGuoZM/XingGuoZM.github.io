@@ -376,7 +376,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _components_ArticleList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ArticleList */ "./src/pages/Article/components/ArticleList/index.tsx");
 /* harmony import */ var _common_PageWithHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/common/PageWithHeader */ "./src/common/PageWithHeader/index.tsx");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/utils */ "./src/utils/index.ts");
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/constant */ "./src/constant/index.ts");
 /* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Article/index.module.less");
 
 
@@ -387,7 +387,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Article() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_common_PageWithHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    type: _utils__WEBPACK_IMPORTED_MODULE_4__.PageType.Article
+    type: _constant__WEBPACK_IMPORTED_MODULE_4__.PageType.Article
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].article
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ArticleList__WEBPACK_IMPORTED_MODULE_2__["default"], null)));

@@ -4,7 +4,7 @@ import "./index.less";
 
 const testList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-export default function TestMarquee() {
+export default function Marquee() {
   const listRef = useRef();
   const wrapRef = useRef();
   const [data, setData] = useState([]);

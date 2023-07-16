@@ -1,5 +1,6 @@
 import React from "react";
 import { IProject } from '@/data';
+import { ProjectSvg } from '@/assets';
 import classnames from 'classnames';
 import styles from "./index.module.less";
 
@@ -9,7 +10,9 @@ export default function ProjectNode({ projectName, projectTime, projectRole, pro
 
   return (
     <div className={styles.project}>
-      <div className={styles.projectIcon} />
+      <div className={styles.projectIconWrap} >
+        <ProjectSvg className={styles.projectIcon} />
+      </div>
       <div className={styles.projectContent}>
         <div className={styles.projectTitle}>
           <div className={styles.projectName}>{projectName}</div>

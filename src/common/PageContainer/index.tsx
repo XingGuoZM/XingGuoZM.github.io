@@ -1,5 +1,6 @@
 import React, { useEffect, ReactElement } from 'react';
-import { viewport, PageType, setBodyStyleProperty, LocalStorageKey } from '@/utils';
+import { viewport, setBodyStyleProperty } from '@/utils';
+import { PageType, LocalStorageKey } from '@/constant';
 import './index.less';
 
 interface IProps {

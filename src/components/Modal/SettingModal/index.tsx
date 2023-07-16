@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import checkedIcon from '@/assets/check.svg';
-import { setBodyStyleProperty, LocalStorageKey } from '@/utils';
+import { setBodyStyleProperty } from '@/utils';
+import { LocalStorageKey } from '@/constant';
 import promiseModal from '@/components/PromisifyModal';
 import Modal from '../Modal';
 import styles from "./index.module.less";

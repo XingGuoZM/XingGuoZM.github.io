@@ -12,14 +12,14 @@ import ProjectList from './components/ProjectList';
 import Achievement from './components/Achievement';
 import Floater from './components/Floater';
 import { data } from '@/data';
-import { PageType } from '@/utils';
+import { PageType } from '@/constant';
 
 function Resume() {
 
   return <PageWithHeader type={PageType.Resume}>
-    <UserInfo data={data.userInfo} />
+    <UserInfo />
     <Floor>
-      <Experience data={data.experience} />
+      <Experience />
     </Floor>
     <Floor>
       <UserDetail data={data.userDetail} />

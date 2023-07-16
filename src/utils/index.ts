@@ -1,3 +1,4 @@
+import { MutableRefObject } from 'react'
 export const getDeviceInfo = (() => {
   const ua = window.navigator?.userAgent;
 
@@ -67,7 +68,7 @@ export const navbarHeight = (() => {
 })();
 
 
-export const getRpx2px = (rpx) => (rpx * window.screen.width) / 750;
+export const getRpx2px = (rpx: number) => (rpx * window.screen.width) / 750;
 // ms->hh时mm分ss秒
 export const formatMs = (ms: number) => {
   let remain = 0;
@@ -180,7 +181,6 @@ export function viewport() {
   refreshRem();
 };
 
-
 export function getBaseUrl() {
   let baseUrl = ''
   if (location.hostname === 'localhost') {
@@ -199,14 +199,8 @@ export function getBodyStyleProperty(key: string) {
   return document.body.style.getPropertyValue(key)
 }
 
-export function depsAreSame(oldDeps, deps) {
-  if (oldDeps === deps) return true;
-  for (let i = 0; i < oldDeps.length; i++) {
-    if (!Object.is(oldDeps[i], deps[i])) return false;
-  }
-  return true;
-}
-export function getTargetElement(target, defaultElement) {
+
+export function getTargetElement(target: HTMLDivElement | MutableRefObject<HTMLDivElement> | string, defaultElement: HTMLDivElement) {
 
   if (!target) {
     return defaultElement;
@@ -224,13 +218,3 @@ export function getTargetElement(target, defaultElement) {
   return targetElement;
 }
 
-export enum PageType {
-  Resume = 'Resume',
-  Blog = 'Blog',
-  Article = 'Article',
-  Library = 'Library'
-}
-
-export enum LocalStorageKey {
-  ThemeColor = '--theme-color'
-}

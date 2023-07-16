@@ -5,7 +5,7 @@ import SettingModal from "@/components/Modal/SettingModal";
 import MoreIcon from '@/assets/more.svg';
 import GobackIcon from '@/assets/goback.svg';
 import { data } from '@/data';
-import { PageType } from '@/utils';
+import { PageType } from '@/constant';
 import styles from './index.module.less';
 
 interface IProps {

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ArticlePage from './components/ArticleList';
 import PageWithHeader from '@/common/PageWithHeader';
-import { PageType } from '@/utils';
+import { PageType } from '@/constant';
 import styles from './index.module.less';
 
 function Article() {

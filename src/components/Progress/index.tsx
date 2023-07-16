@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import classnames from "classnames";
-import { IProps } from "../../hooks/useProgressBehavior";
-import useProgressBehavior from "../../hooks/useProgressBehavior";
-import "./index.css";
+import useProgressBehavior, { IProps } from "../../hooks/useProgressBehavior";
+import "./index.less";
 
 function Progress(props: IProps) {
   const { children, className, barClassName } = props;

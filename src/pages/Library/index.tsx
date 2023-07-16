@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import PageContainer from '@/common/PageContainer';
 import Header from '@/common/Header';
 import Button, { ButtonType } from './BizLib/Button';
-import { viewport, PageType, getDeviceInfo } from '@/utils';
+import { viewport, getDeviceInfo } from '@/utils';
+import { PageType } from '@/constant';
 import styles from './index.module.less';
 
 viewport();

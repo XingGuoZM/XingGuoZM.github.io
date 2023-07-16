@@ -1,5 +1,5 @@
 import { useMemo, ReactNode, useEffect } from "react";
-import { DirectionEnum } from "../constant";
+import { DirectionEnum } from "@/constant";
 
 export interface IProps {
   target?: HTMLDivElement | null;

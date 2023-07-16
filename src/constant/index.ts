@@ -9,3 +9,14 @@ export enum DirectionEnum {
   Row = "row",
   Column = "column"
 }
+
+export enum PageType {
+  Resume = 'Resume',
+  Blog = 'Blog',
+  Article = 'Article',
+  Library = 'Library'
+}
+
+export enum LocalStorageKey {
+  ThemeColor = '--theme-color'
+}

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import PageWithHeader from '@/common/PageWithHeader';
 import BlogCarousel from './components/BlogCarousel';
 import BlogTabList from './components/BlogTabList';
-import { PageType } from '@/utils';
+import { PageType } from '@/constant';
 import Footer from '@/common/Footer';
 
 ReactDOM.render(

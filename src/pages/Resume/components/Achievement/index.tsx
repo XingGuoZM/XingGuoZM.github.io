@@ -5,7 +5,6 @@ import { data } from '@/data';
 import styles from './index.module.less';
 
 export default function Achievement() {
-
   const handleClick = (url) => {
     if (url) {
       window.location.href = url;

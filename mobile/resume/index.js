@@ -228,7 +228,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _hooks_useProgressBehavior__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../hooks/useProgressBehavior */ "./src/hooks/useProgressBehavior.ts");
-/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.css */ "./src/components/Progress/index.css");
+/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.less */ "./src/components/Progress/index.less");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -263,35 +263,6 @@ function Progress(props) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Progress);
-
-/***/ }),
-
-/***/ "./src/constant/index.ts":
-/*!*******************************!*\
-  !*** ./src/constant/index.ts ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "StatusEnum": () => (/* binding */ StatusEnum),
-/* harmony export */   "DirectionEnum": () => (/* binding */ DirectionEnum)
-/* harmony export */ });
-var StatusEnum;
-
-(function (StatusEnum) {
-  StatusEnum["Pending"] = "1";
-  StatusEnum["Active"] = "0";
-  StatusEnum["Done"] = "-1";
-  StatusEnum["Error"] = "";
-})(StatusEnum || (StatusEnum = {}));
-
-var DirectionEnum;
-
-(function (DirectionEnum) {
-  DirectionEnum["Row"] = "row";
-  DirectionEnum["Column"] = "column";
-})(DirectionEnum || (DirectionEnum = {}));
 
 /***/ }),
 
@@ -373,7 +344,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ useProgressBehavior)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constant */ "./src/constant/index.ts");
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/constant */ "./src/constant/index.ts");
 
 
 function useProgressBehavior(props) {
@@ -596,8 +567,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Experience)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _assets_arrow_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets/arrow.svg */ "./src/assets/arrow.svg");
+/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets */ "./src/assets/index.tsx");
 /* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/Experience/ExperienceNode/index.module.less");
+ // import Arrow from '@/assets/arrow.svg';
 
 
 
@@ -605,13 +577,13 @@ function Experience(props) {
   var time = props.time,
       name = props.name,
       job = props.job;
+  var theme = localStorage.getItem('--theme-color');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].wrap
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].iconWrap
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].icon,
-    src: _assets_arrow_svg__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets__WEBPACK_IMPORTED_MODULE_1__.ArrowSvg, {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].icon
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].time
   }, time), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -638,7 +610,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Progress__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/Progress */ "./src/components/Progress/index.tsx");
 /* harmony import */ var _hooks_useElementScroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/hooks/useElementScroll */ "./src/hooks/useElementScroll.ts");
 /* harmony import */ var _ExperienceNode__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ExperienceNode */ "./src/pages/Resume/components/Experience/ExperienceNode/index.tsx");
-/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/Experience/index.module.less");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/data */ "./src/data/index.ts");
+/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/Experience/index.module.less");
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
@@ -647,9 +620,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
-function Experience(_ref) {
-  var data = _ref.data;
-  var stageList = data.stageList; // 节点间距
+
+function Experience() {
+  var stageList = _data__WEBPACK_IMPORTED_MODULE_5__.data.experience.stageList; // 节点间距
 
   var range = new Array(stageList.length).fill(5); // 节点间进度条粗细
 
@@ -664,7 +637,7 @@ function Experience(_ref) {
   });
   var scrollRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
 
-  var _useStageProgress = (0,_hooks_useProgressStage__WEBPACK_IMPORTED_MODULE_1__["default"])(data),
+  var _useStageProgress = (0,_hooks_useProgressStage__WEBPACK_IMPORTED_MODULE_1__["default"])(_data__WEBPACK_IMPORTED_MODULE_5__.data.experience),
       percentList = _useStageProgress.percentList;
 
   (0,_hooks_useElementScroll__WEBPACK_IMPORTED_MODULE_3__["default"])({
@@ -672,17 +645,17 @@ function Experience(_ref) {
     left: left
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].listWrap,
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_6__["default"].listWrap,
     ref: scrollRef
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].list
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_6__["default"].list
   }, stageList.map(function (item, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].item,
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_6__["default"].item,
       key: item.id
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Progress__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      className: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].bar,
-      barClassName: _index_module_less__WEBPACK_IMPORTED_MODULE_5__["default"].barInner,
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_6__["default"].bar,
+      barClassName: _index_module_less__WEBPACK_IMPORTED_MODULE_6__["default"].barInner,
       total: "".concat(range[index], "rem"),
       percent: percentList[index],
       strokeWidth: "".concat(stroke[index], "rem")
@@ -897,10 +870,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ ProjectNode)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/ProjectInfo/ProjectNode/index.module.less");
+/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets */ "./src/assets/index.tsx");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/ProjectInfo/ProjectNode/index.module.less");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -912,30 +887,32 @@ function ProjectNode(_ref) {
       projectDetail = _ref.projectDetail;
   var theme = localStorage.getItem('--theme-color');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].project
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].project
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].projectIcon
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].projectContent
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectIconWrap
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets__WEBPACK_IMPORTED_MODULE_1__.ProjectSvg, {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectIcon
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectContent
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].projectTitle
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectTitle
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].projectName
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectName
   }, projectName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].projectTime
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectTime
   }, projectTime, "\uFF5C", projectRole)), projectDetail.map(function (item, index) {
     var _classnames;
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].projectDescWrap,
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectDescWrap,
       key: item.id
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].projectDescIconWrap
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectDescIconWrap
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(item.Icon, {
       fill: theme,
-      className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].projectDescIcon
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectDescIcon
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: classnames__WEBPACK_IMPORTED_MODULE_1___default()((_classnames = {}, _defineProperty(_classnames, _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].projectDescLine, index !== 3), _defineProperty(_classnames, _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].projectDesc, true), _classnames))
+      className: classnames__WEBPACK_IMPORTED_MODULE_2___default()((_classnames = {}, _defineProperty(_classnames, _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectDescLine, index !== 3), _defineProperty(_classnames, _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].projectDesc, true), _classnames))
     }, Array.isArray(item.desc) ? item.desc.map(function (ele) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         key: ele
@@ -1089,21 +1066,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets */ "./src/assets/index.tsx");
-/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/UserInfo/index.module.less");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/data */ "./src/data/index.ts");
+/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/Resume/components/UserInfo/index.module.less");
 
 
 
-function UserInfo(_ref) {
-  var data = _ref.data;
+
+function UserInfo() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].wrap
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].wrap
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].avatarWrap
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].avatarWrap
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets__WEBPACK_IMPORTED_MODULE_1__.AvatarSvg, {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].avatar
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].avatar
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _index_module_less__WEBPACK_IMPORTED_MODULE_2__["default"].item
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, data.value)));
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_3__["default"].item
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, _data__WEBPACK_IMPORTED_MODULE_2__.data.userInfo.value)));
 }
 
 /***/ }),
@@ -1129,7 +1107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Achievement__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/Achievement */ "./src/pages/Resume/components/Achievement/index.tsx");
 /* harmony import */ var _components_Floater__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/Floater */ "./src/pages/Resume/components/Floater/index.tsx");
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @/data */ "./src/data/index.ts");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @/utils */ "./src/utils/index.ts");
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @/constant */ "./src/constant/index.ts");
 
 
 
@@ -1148,12 +1126,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function Resume() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_common_PageWithHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    type: _utils__WEBPACK_IMPORTED_MODULE_14__.PageType.Resume
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_UserInfo__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    data: _data__WEBPACK_IMPORTED_MODULE_13__.data.userInfo
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Floor__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Experience__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    data: _data__WEBPACK_IMPORTED_MODULE_13__.data.experience
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Floor__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_UserDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    type: _constant__WEBPACK_IMPORTED_MODULE_14__.PageType.Resume
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_UserInfo__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Floor__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Experience__WEBPACK_IMPORTED_MODULE_7__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Floor__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_UserDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
     data: _data__WEBPACK_IMPORTED_MODULE_13__.data.userDetail
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Floor__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: "\u4E13\u4E1A\u6280\u80FD"
@@ -1245,10 +1219,10 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/Progress/index.css":
-/*!********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/Progress/index.css ***!
-  \********************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/Progress/index.less":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/Progress/index.less ***!
+  \*********************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1264,7 +1238,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".progress-wrap {\n  width: 100%;\n  height: 100%;\n}\n.progress {\n  background-color: gray;\n  overflow: hidden;\n}\n.progress-bar {\n  width: 100%;\n  height: 100%;\n  background-color: red;\n}\n", "",{"version":3,"sources":["webpack://./src/components/Progress/index.css"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,YAAA;AACF;AACA;EACE,sBAAA;EACA,gBAAA;AACF;AACA;EACE,WAAA;EACA,YAAA;EACA,qBAAA;AACF","sourcesContent":[".progress-wrap {\n  width: 100%;\n  height: 100%;\n}\n.progress {\n  background-color: gray;\n  overflow: hidden;\n}\n.progress-bar {\n  width: 100%;\n  height: 100%;\n  background-color: red;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".progress-wrap {\n  width: 100%;\n  height: 100%;\n}\n.progress {\n  background-color: gray;\n  overflow: hidden;\n}\n.progress-bar {\n  width: 100%;\n  height: 100%;\n  background-color: red;\n}\n", "",{"version":3,"sources":["webpack://./src/components/Progress/index.less"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,YAAA;AACF;AACA;EACE,sBAAA;EACA,gBAAA;AACF;AACA;EACE,WAAA;EACA,YAAA;EACA,qBAAA;AACF","sourcesContent":[".progress-wrap {\n  width: 100%;\n  height: 100%;\n}\n.progress {\n  background-color: gray;\n  overflow: hidden;\n}\n.progress-bar {\n  width: 100%;\n  height: 100%;\n  background-color: red;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1322,7 +1296,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".src-pages-Resume-components-Experience-ExperienceNode-index-module__wrap--rTSnJ {\n  position: absolute;\n  top: -0.5rem;\n}\n.src-pages-Resume-components-Experience-ExperienceNode-index-module__iconWrap--okcMS {\n  width: 0.3rem;\n  height: 0.3rem;\n  background-color: var(--theme-color);\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  border-radius: 50%;\n  margin-top: 0.4rem;\n}\n.src-pages-Resume-components-Experience-ExperienceNode-index-module__icon--\\+eJo\\+ {\n  width: 0.2rem;\n  height: 0.2rem;\n}\n.src-pages-Resume-components-Experience-ExperienceNode-index-module__time--k82lZ {\n  position: absolute;\n  top: 0;\n  font-weight: bolder;\n  font-size: 0.26rem;\n}\n.src-pages-Resume-components-Experience-ExperienceNode-index-module__name--qOSwZ {\n  width: 5rem;\n  position: absolute;\n  left: 0.3rem;\n  top: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  font-weight: bolder;\n}\n.src-pages-Resume-components-Experience-ExperienceNode-index-module__job--4Drty {\n  width: 5rem;\n  position: absolute;\n  left: 0.25rem;\n  top: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  font-weight: bolder;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/Experience/ExperienceNode/index.module.less"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,YAAA;AADF;AAGA;EACE,aAAA;EACA,cAAA;EACA,oCAAA;EACA,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,kBAAA;EACA,kBAAA;AADF;AAGA;EACE,aAAA;EACA,cAAA;AADF;AAGA;EACE,kBAAA;EACA,MAAA;EACA,mBAAA;EACA,kBAAA;AADF;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,SAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,WAAA;EACA,kBAAA;EACA,aAAA;EACA,MAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AADF","sourcesContent":["\n\n.wrap {\n  position: absolute;\n  top: -0.5rem;\n}\n.iconWrap{\n  width: 0.3rem;\n  height: 0.3rem;\n  background-color: var(--theme-color);\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  border-radius: 50%;\n  margin-top:0.4rem;\n}\n.icon{\n  width:0.2rem;\n  height:0.2rem;\n}\n.time {\n  position:absolute;\n  top:0;\n  font-weight: bolder;\n  font-size:0.26rem;\n}\n.name{\n  width:5rem;\n  position:absolute;\n  left:0.3rem;\n  top:100%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size:0.26rem;\n  font-weight: bolder;\n}\n.job{\n  width:5rem;\n  position:absolute;\n  left:0.25rem;\n  top:0;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size:0.26rem;\n  font-weight: bolder;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".src-pages-Resume-components-Experience-ExperienceNode-index-module__wrap--rTSnJ {\n  position: absolute;\n  top: -0.5rem;\n}\n.src-pages-Resume-components-Experience-ExperienceNode-index-module__iconWrap--okcMS {\n  width: 0.3rem;\n  height: 0.3rem;\n  background: radial-gradient(var(--theme-color) 20%, #fff);\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  border-radius: 50%;\n  margin-top: 0.4rem;\n}\n.src-pages-Resume-components-Experience-ExperienceNode-index-module__icon--\\+eJo\\+ {\n  width: 0.2rem;\n  height: 0.2rem;\n}\n.src-pages-Resume-components-Experience-ExperienceNode-index-module__time--k82lZ {\n  position: absolute;\n  top: 0;\n  font-weight: bolder;\n  font-size: 0.26rem;\n}\n.src-pages-Resume-components-Experience-ExperienceNode-index-module__name--qOSwZ {\n  width: 5rem;\n  position: absolute;\n  left: 0.3rem;\n  top: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  font-weight: bolder;\n}\n.src-pages-Resume-components-Experience-ExperienceNode-index-module__job--4Drty {\n  width: 5rem;\n  position: absolute;\n  left: 0.25rem;\n  top: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  font-weight: bolder;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/Experience/ExperienceNode/index.module.less"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,YAAA;AADF;AAGA;EACE,aAAA;EACA,cAAA;EAGA,yDAAA;EAEA,mBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,kBAAA;EACA,kBAAA;AAJF;AAMA;EACE,aAAA;EACA,cAAA;AAJF;AAMA;EACE,kBAAA;EACA,MAAA;EACA,mBAAA;EACA,kBAAA;AAJF;AAMA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,SAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AAJF;AAMA;EACE,WAAA;EACA,kBAAA;EACA,aAAA;EACA,MAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AAJF","sourcesContent":["\n\n.wrap {\n  position: absolute;\n  top: -0.5rem;\n}\n.iconWrap{\n  width: 0.3rem;\n  height: 0.3rem;\n  // background-color: var(--theme-color);\n  // background-color: #fff;\n  background:radial-gradient(var(--theme-color) 20%,#fff);\n  // box-shadow: inset 0.01rem 0.01rem 0.2rem 0.01rem var(--theme-color);\n  font-weight: bolder;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.26rem;\n  border-radius: 50%;\n  margin-top:0.4rem;\n}\n.icon{\n  width:0.2rem;\n  height:0.2rem;\n}\n.time {\n  position:absolute;\n  top:0;\n  font-weight: bolder;\n  font-size:0.26rem;\n}\n.name{\n  width:5rem;\n  position:absolute;\n  left:0.3rem;\n  top:100%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size:0.26rem;\n  font-weight: bolder;\n}\n.job{\n  width:5rem;\n  position:absolute;\n  left:0.25rem;\n  top:0;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size:0.26rem;\n  font-weight: bolder;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"wrap": "src-pages-Resume-components-Experience-ExperienceNode-index-module__wrap--rTSnJ",
@@ -1356,7 +1330,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".src-pages-Resume-components-Experience-index-module__listWrap--I37Mc {\n  overflow-x: scroll;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  border-radius: 0.05rem;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n}\n.src-pages-Resume-components-Experience-index-module__list--1sJyv {\n  width: 100%;\n  height: 1.5rem;\n  display: flex;\n  align-items: center;\n}\n.src-pages-Resume-components-Experience-index-module__item--WYiYo {\n  position: relative;\n}\n.src-pages-Resume-components-Experience-index-module__bar--7OOnU {\n  border-radius: 0.01rem;\n}\n.src-pages-Resume-components-Experience-index-module__barInner--zYwVW {\n  background-color: var(--theme-color);\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/Experience/index.module.less"],"names":[],"mappings":"AACA;EACE,kBAAA;EACA,6DAAA;EACA,sBAAA;EACA,oBAAA;EACA,qBAAA;AAAF;AAEA;EACE,WAAA;EACA,cAAA;EACA,aAAA;EACA,mBAAA;AAAF;AAEA;EACE,kBAAA;AAAF;AAEA;EACE,sBAAA;AAAF;AAEA;EACE,oCAAA;AAAF","sourcesContent":["\n.listWrap {\n  overflow-x: scroll;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  border-radius: 0.05rem;\n  padding-left:0.5rem;\n  padding-right:0.5rem;\n}\n.list {\n  width:100%;\n  height:1.5rem;\n  display: flex;\n  align-items: center;\n}\n.item {\n  position: relative;\n}\n.bar {\n  border-radius: 0.01rem;\n}\n.barInner {\n  background-color: var(--theme-color);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".src-pages-Resume-components-Experience-index-module__listWrap--I37Mc {\n  overflow-x: scroll;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  border-radius: 0.05rem;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n}\n.src-pages-Resume-components-Experience-index-module__list--1sJyv {\n  width: 100%;\n  height: 1.5rem;\n  display: flex;\n  align-items: center;\n}\n.src-pages-Resume-components-Experience-index-module__item--WYiYo {\n  position: relative;\n}\n.src-pages-Resume-components-Experience-index-module__bar--7OOnU {\n  border-radius: 0.01rem;\n}\n.src-pages-Resume-components-Experience-index-module__barInner--zYwVW {\n  background-color: #fff;\n  box-shadow: inset 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/Experience/index.module.less"],"names":[],"mappings":"AACA;EACE,kBAAA;EACA,6DAAA;EACA,sBAAA;EACA,oBAAA;EACA,qBAAA;AAAF;AAEA;EACE,WAAA;EACA,cAAA;EACA,aAAA;EACA,mBAAA;AAAF;AAEA;EACE,kBAAA;AAAF;AAEA;EACE,sBAAA;AAAF;AAEA;EAEE,sBAAA;EACA,mEAAA;AADF","sourcesContent":["\n.listWrap {\n  overflow-x: scroll;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  border-radius: 0.05rem;\n  padding-left:0.5rem;\n  padding-right:0.5rem;\n}\n.list {\n  width:100%;\n  height:1.5rem;\n  display: flex;\n  align-items: center;\n}\n.item {\n  position: relative;\n}\n.bar {\n  border-radius: 0.01rem;\n}\n.barInner {\n  // background-color: var(--theme-color);\n  background-color: #fff;\n  box-shadow: inset 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"listWrap": "src-pages-Resume-components-Experience-index-module__listWrap--I37Mc",
@@ -1469,10 +1443,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__project--g1skX {\n  display: flex;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectIcon--Nn\\+Im {\n  width: 0.2rem;\n  height: 0.2rem;\n  background-color: var(--theme-color);\n  border-radius: 50%;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectContent--lq\\+L9 {\n  width: 6.2rem;\n  margin-left: 0.1rem;\n  margin-bottom: 0.2rem;\n  padding: 0.2rem;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  border-radius: 0.1rem;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectTitle--QiV\\+Z {\n  height: 1rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectName--ok913 {\n  font-size: 0.36rem;\n  font-weight: bolder;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectTime--mTwr3 {\n  font-size: 0.25rem;\n  font-weight: bolder;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescWrap--eRirh {\n  display: flex;\n  margin-bottom: 0.1rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIconWrap--KF18L {\n  width: 0.5rem;\n  height: 0.5rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  border: solid 1px var(--theme-color);\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIconWrap--KF18L .src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIcon--a9xAE {\n  width: 0.25rem;\n  height: 0.25rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDesc--JnRKt {\n  width: 5.8rem;\n  font-size: 0.26rem;\n  line-height: 0.5rem;\n  margin-left: 0.1rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescLine--bZgYu {\n  border-bottom: solid 1px var(--theme-color);\n  position: relative;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescLine--bZgYu:after {\n  content: '';\n  display: block;\n  width: 1px;\n  height: calc(100% - 0.4rem);\n  position: absolute;\n  left: -0.35rem;\n  top: 0.5rem;\n  background-color: var(--theme-color);\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectResult--oxmqd {\n  font-size: 0.26rem;\n  line-height: 0.5rem;\n  text-indent: 0.2rem;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/ProjectInfo/ProjectNode/index.module.less"],"names":[],"mappings":"AACA;EACE,aAAA;AAAF;AAEA;EACE,aAAA;EACA,cAAA;EACA,oCAAA;EACA,kBAAA;AAAF;AAEA;EACE,aAAA;EACA,mBAAA;EACA,qBAAA;EACA,eAAA;EACA,6DAAA;EACA,yBAAA;EACA,qBAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AAAF;AAGA;EACE,YAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AADF;AAGA;EACE,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,aAAA;EACA,qBAAA;AADF;AAIA;EACE,aAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oCAAA;AAFF;AALA;EASI,cAAA;EACA,eAAA;AADJ;AAIA;EACE,aAAA;EACA,kBAAA;EACA,mBAAA;EACA,mBAAA;AAFF;AAIA;EACE,2CAAA;EACA,kBAAA;AAFF;AAIA;EACE,WAAA;EACA,cAAA;EACA,UAAA;EACA,2BAAA;EACA,kBAAA;EACA,cAAA;EACA,WAAA;EACA,oCAAA;AAFF;AAIA;EACE,kBAAA;EACA,mBAAA;EACA,mBAAA;AAFF","sourcesContent":["\n.project {\n  display: flex;\n}\n.projectIcon {\n  width: 0.2rem;\n  height: 0.2rem;\n  background-color: var(--theme-color);\n  border-radius: 50%;\n}\n.projectContent {\n  width: 6.2rem;\n  margin-left: 0.1rem;\n  margin-bottom: 0.2rem;\n  padding:0.2rem;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  border-radius:0.1rem;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n\n.projectTitle{\n  height:1rem;\n  display:flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.projectName{\n  font-size:0.36rem;\n  font-weight: bolder;\n}\n.projectTime{\n  font-size:0.25rem;\n  font-weight: bolder;\n}\n.projectDescWrap{\n  display:flex;\n  margin-bottom:0.1rem;\n}\n\n.projectDescIconWrap{\n  width: 0.5rem;\n  height: 0.5rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  border: solid 1px var(--theme-color);\n  .projectDescIcon{\n    width:0.25rem;\n    height:0.25rem;\n  }\n}\n.projectDesc{\n  width:5.8rem;\n  font-size:0.26rem;\n  line-height:0.5rem;\n  margin-left:0.1rem;\n}\n.projectDescLine{\n  border-bottom:solid 1px var(--theme-color);\n  position: relative;\n}\n.projectDescLine:after{\n  content:'';\n  display:block;\n  width:1px;\n  height:calc(100% - 0.4rem);\n  position:absolute;\n  left: -0.35rem;\n  top: 0.5rem;\n  background-color:var(--theme-color);\n}\n.projectResult{\n  font-size:0.26rem;\n  line-height:0.5rem;\n  text-indent:0.2rem;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__project--g1skX {\n  display: flex;\n  position: relative;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectIconWrap--HuWBg {\n  width: 0.5rem;\n  height: 0.5rem;\n  position: absolute;\n  top: -0.25rem;\n  left: -0.2rem;\n  background: radial-gradient(var(--theme-color), #fff);\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectIcon--Nn\\+Im {\n  width: 0.3rem;\n  height: 0.3rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectContent--lq\\+L9 {\n  width: 6.2rem;\n  margin-left: 0.3rem;\n  margin-bottom: 0.2rem;\n  padding: 0.2rem;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  border-radius: 0.1rem;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectTitle--QiV\\+Z {\n  height: 1rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectName--ok913 {\n  font-size: 0.36rem;\n  font-weight: bolder;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectTime--mTwr3 {\n  font-size: 0.25rem;\n  font-weight: bolder;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescWrap--eRirh {\n  display: flex;\n  margin-bottom: 0.1rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIconWrap--KF18L {\n  width: 0.5rem;\n  height: 0.5rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  background-color: #fff;\n  box-shadow: inset 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIconWrap--KF18L .src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescIcon--a9xAE {\n  width: 0.25rem;\n  height: 0.25rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDesc--JnRKt {\n  width: 5.8rem;\n  font-size: 0.26rem;\n  line-height: 0.5rem;\n  margin-left: 0.1rem;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescLine--bZgYu {\n  border-bottom: solid 1px var(--theme-color);\n  position: relative;\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectDescLine--bZgYu:after {\n  content: '';\n  display: block;\n  width: 1px;\n  height: calc(100% - 0.4rem);\n  position: absolute;\n  left: -0.35rem;\n  top: 0.5rem;\n  background-color: var(--theme-color);\n}\n.src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectResult--oxmqd {\n  font-size: 0.26rem;\n  line-height: 0.5rem;\n  text-indent: 0.2rem;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/ProjectInfo/ProjectNode/index.module.less"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,kBAAA;AAAF;AAEA;EACE,aAAA;EACA,cAAA;EACA,kBAAA;EACA,aAAA;EACA,aAAA;EACA,qDAAA;EACA,kBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAEA;EACE,aAAA;EACA,cAAA;AAAF;AAEA;EACE,aAAA;EACA,mBAAA;EACA,qBAAA;EACA,eAAA;EACA,6DAAA;EACA,yBAAA;EACA,qBAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AAAF;AAGA;EACE,YAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;AADF;AAGA;EACE,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,kBAAA;EACA,mBAAA;AADF;AAGA;EACE,aAAA;EACA,qBAAA;AADF;AAIA;EACE,aAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,sBAAA;EACA,mEAAA;AAFF;AANA;EAUI,cAAA;EACA,eAAA;AADJ;AAIA;EACE,aAAA;EACA,kBAAA;EACA,mBAAA;EACA,mBAAA;AAFF;AAIA;EACE,2CAAA;EACA,kBAAA;AAFF;AAIA;EACE,WAAA;EACA,cAAA;EACA,UAAA;EACA,2BAAA;EACA,kBAAA;EACA,cAAA;EACA,WAAA;EACA,oCAAA;AAFF;AAIA;EACE,kBAAA;EACA,mBAAA;EACA,mBAAA;AAFF","sourcesContent":["\n.project {\n  display: flex;\n  position: relative;\n}\n.projectIconWrap {\n  width: 0.5rem;\n  height: 0.5rem;\n  position:absolute;\n  top:-0.25rem;\n  left:-0.2rem;\n  background:radial-gradient(var(--theme-color),#fff);\n  border-radius: 50%;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n.projectIcon{\n  width:0.3rem;\n  height:0.3rem;\n}\n.projectContent {\n  width: 6.2rem;\n  margin-left: 0.3rem;\n  margin-bottom: 0.2rem;\n  padding:0.2rem;\n  box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  color: var(--theme-color);\n  border-radius:0.1rem;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n\n.projectTitle{\n  height:1rem;\n  display:flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.projectName{\n  font-size:0.36rem;\n  font-weight: bolder;\n}\n.projectTime{\n  font-size:0.25rem;\n  font-weight: bolder;\n}\n.projectDescWrap{\n  display:flex;\n  margin-bottom:0.1rem;\n}\n\n.projectDescIconWrap{\n  width: 0.5rem;\n  height: 0.5rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  background-color: #fff;\n  box-shadow: inset 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n  .projectDescIcon{\n    width:0.25rem;\n    height:0.25rem;\n  }\n}\n.projectDesc{\n  width:5.8rem;\n  font-size:0.26rem;\n  line-height:0.5rem;\n  margin-left:0.1rem;\n}\n.projectDescLine{\n  border-bottom:solid 1px var(--theme-color);\n  position: relative;\n}\n.projectDescLine:after{\n  content:'';\n  display:block;\n  width:1px;\n  height:calc(100% - 0.4rem);\n  position:absolute;\n  left: -0.35rem;\n  top: 0.5rem;\n  background-color:var(--theme-color);\n}\n.projectResult{\n  font-size:0.26rem;\n  line-height:0.5rem;\n  text-indent:0.2rem;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"project": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__project--g1skX",
+	"projectIconWrap": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectIconWrap--HuWBg",
 	"projectIcon": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectIcon--Nn+Im",
 	"projectContent": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectContent--lq+L9",
 	"projectTitle": "src-pages-Resume-components-ProjectInfo-ProjectNode-index-module__projectTitle--QiV+Z",
@@ -1509,7 +1484,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".project-list-wrap {\n  width: 100%;\n  display: flex;\n  align-items: center;\n}\n.project-list {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n.project-item-wrap {\n  width: 100%;\n  display: flex;\n}\n.project-item-bar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.project-item-bar-inner {\n  border-radius: 0.1rem;\n  background-color: var(--theme-color);\n}\n.project-item {\n  margin-left: -0.14rem;\n  position: relative;\n  display: flex;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/ProjectInfo/index.less"],"names":[],"mappings":"AACA;EACE,WAAA;EACA,aAAA;EACA,mBAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;EACA,sBAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;AAAF;AAEA;EACE,qBAAA;EACA,yBAAA;AAAF;AAEA;EACE,qBAAA;EACA,oCAAA;AAAF;AAEA;EACE,qBAAA;EACA,kBAAA;EACA,aAAA;AAAF","sourcesContent":["\n.project-list-wrap {\n  width:100%;\n  display: flex;\n  align-items: center;\n}\n.project-list {\n  width:100%;\n  display: flex;\n  flex-direction: column;\n}\n.project-item-wrap {\n  width:100%;\n  display: flex;\n}\n.project-item-bar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.project-item-bar-inner {\n  border-radius: 0.1rem;\n  background-color: var(--theme-color);\n}\n.project-item {\n  margin-left:-0.14rem;\n  position: relative;\n  display: flex;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".project-list-wrap {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  margin-top: 0.1rem;\n}\n.project-list {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n.project-item-wrap {\n  width: 100%;\n  display: flex;\n}\n.project-item-bar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.project-item-bar-inner {\n  border-radius: 0.1rem;\n  background-color: #fff;\n  box-shadow: inset 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n}\n.project-item {\n  margin-left: -0.14rem;\n  position: relative;\n  display: flex;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Resume/components/ProjectInfo/index.less"],"names":[],"mappings":"AACA;EACE,WAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;EACA,sBAAA;AAAF;AAEA;EACE,WAAA;EACA,aAAA;AAAF;AAEA;EACE,qBAAA;EACA,yBAAA;AAAF;AAEA;EACE,qBAAA;EAEA,sBAAA;EACA,mEAAA;AADF;AAGA;EACE,qBAAA;EACA,kBAAA;EACA,aAAA;AADF","sourcesContent":["\n.project-list-wrap {\n  width:100%;\n  display: flex;\n  align-items: center;\n  margin-top:0.1rem;\n}\n.project-list {\n  width:100%;\n  display: flex;\n  flex-direction: column;\n}\n.project-item-wrap {\n  width:100%;\n  display: flex;\n}\n.project-item-bar {\n  border-radius: 0.1rem;\n  background-color: #ebeef5;\n}\n.project-item-bar-inner {\n  border-radius: 0.1rem;\n  // background-color: var(--theme-color);\n  background-color: #fff;\n  box-shadow: inset 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);\n}\n.project-item {\n  margin-left:-0.14rem;\n  position: relative;\n  display: flex;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1667,10 +1642,10 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./src/components/Progress/index.css":
-/*!*******************************************!*\
-  !*** ./src/components/Progress/index.css ***!
-  \*******************************************/
+/***/ "./src/components/Progress/index.less":
+/*!********************************************!*\
+  !*** ./src/components/Progress/index.less ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1679,7 +1654,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./index.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/Progress/index.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./index.less */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/Progress/index.less");
 
             
 
@@ -1688,11 +1663,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_less__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_less__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -1983,20 +1958,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_less_loader_dist_cjs_js_ruleSet_1_rules_2_use_2_index_module_less__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
-
-/***/ }),
-
-/***/ "./src/assets/arrow.svg":
-/*!******************************!*\
-  !*** ./src/assets/arrow.svg ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/svg+xml;base64,PHN2ZyB0PSIxNjg5MDUyOTkxNjQyIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQ0ODEiIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cGF0aCBkPSJNNzI0LjIzMTE2OCAxNzAuMTA1ODU2TDM4MC41Mjk2NjQgNTEwLjE4MTM3NmwzNDEuNDc3Mzc2IDM0NS4xMTE1NTJjMTUuMTU1MiAxNS4xNTQxNzYgMTUuMTAwOTI4IDM5Ljc4MjQtMC4xMTY3MzYgNTUuMDAwMDY0LTE1LjIyMDczNiAxNS4yMjA3MzYtMzkuODQ0ODY0IDE1LjI3MTkzNi01NC45OTM5Mi0zLjc3MTM5MkwzMDIuNjI5ODg4IDU0Mi4yNTUxMDRjLTQuOTE2MjI0LTUuNDk5OTA0LTEwLjU2MTUzNi0xMS45OTUxMzYtMTEuNDk3NDcyLTE1LjUwNDM4NC01Ljc1NDg4LTE0LjMwMTE4NC0yLjg3NDM2OC0zMS44NzMwMjQgOC42Mzc0NC00Ni4zMTc1NjhsMzY5LjM1NTc3Ni0zNjkuMzU2OGMxNS4yODQyMjQtMTEuMzg3OTA0IDQwLjAyMjAxNi0xMS40NDcyOTYgNTUuMjQzNzc2IDMuNzc2NTEyIDE1LjIxNzY2NCAxNS4yMjA3MzYgMTUuMTU4MjcyIDM5Ljk1ODUyOC0wLjEzMzEyIDU1LjI1MTk2OGwtMC4wMDUxMiAwLjAwMTAyNHoiIHAtaWQ9IjQ0ODIiIGZpbGw9IiNmZmZmZmYiPjwvcGF0aD48L3N2Zz4=");
 
 /***/ })
 

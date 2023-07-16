@@ -2,7 +2,7 @@ import React, { useRef, ReactElement, useEffect } from 'react';
 import Modal from '@/components/PromisifyModal';
 import Header from '@/common/Header';
 import PageContainer from '@/common/PageContainer';
-import { PageType } from '@/utils';
+import { PageType } from '@/constant';
 
 interface IProps {
   children: ReactElement | ReactElement[];

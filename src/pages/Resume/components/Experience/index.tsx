@@ -3,10 +3,11 @@ import useStageProgress from "@/hooks/useProgressStage";
 import Progress from "@/components/Progress";
 import useElementScroll from "@/hooks/useElementScroll";
 import ExperienceNode from './ExperienceNode';
+import { data } from '@/data';
 import styles from "./index.module.less";
 
-export default function Experience({ data }) {
-  const { stageList } = data;
+export default function Experience() {
+  const { stageList } = data.experience;
   // 节点间距
   const range = new Array(stageList.length).fill(5);
   // 节点间进度条粗细
@@ -16,7 +17,7 @@ export default function Experience({ data }) {
   const targetIndex = stageList.findIndex((item) => item.id === targetId);
   const left = range.slice(0, targetIndex).reduce((pre, cur) => pre + cur);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const { percentList } = useStageProgress(data);
+  const { percentList } = useStageProgress(data.experience);
 
   useElementScroll({ scrollRef, left });
 
