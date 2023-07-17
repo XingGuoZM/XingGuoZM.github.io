@@ -1,8 +1,7 @@
 # HTTP
 
-关键词
-
-[http rfc 规范](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Resources_and_specifications)
+## 关键词
+- [http rfc 规范](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Resources_and_specifications)
 
 ## HTTP起源
 Tim Berners-Lee博士在1989年发表一篇论文，提出了万维网项目，是一个通过网络传输超文本的系统。为了实现这个系统，需要确定传输的格式（HTML）、传输的协议（HTTP）、web客户端（浏览器）和web服务器（httpd）。

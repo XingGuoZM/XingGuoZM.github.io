@@ -1,22 +1,16 @@
 import { MutableRefObject } from 'react'
+
 export const getDeviceInfo = (() => {
   const ua = window.navigator?.userAgent;
 
   const isAndroid = /android/i.test(ua);
   const isIos = /iPhone|iPad|iPod|iOS/i.test(ua);
   const isMobile = /Mobi|Android|iPhone/i.test(ua);
-  const matchs = typeof ua === "string" && ua.match(/AliApp\(LT\/([\d.]+)\)/i);
-  let appVersion = "";
-
-  if (matchs && matchs[1]) {
-    appVersion = matchs[1];
-  }
 
   return {
     isMobile,
     isAndroid,
     isIos,
-    appVersion
   };
 })();
 export const isHair = () => {
@@ -67,10 +61,9 @@ export const navbarHeight = (() => {
   };
 })();
 
-
-export const getRpx2px = (rpx: number) => (rpx * window.screen.width) / 750;
+export const getRpx2px = (rpx: number): number => (rpx * window.screen.width) / 750;
 // ms->hh时mm分ss秒
-export const formatMs = (ms: number) => {
+export const formatMs = (ms: number): string => {
   let remain = 0;
   const h = Math.floor(ms / (1000 * 60 * 60));
   remain = ms % (1000 * 60 * 60);
@@ -90,9 +83,9 @@ export function viewport() {
   let metaEl = doc.querySelector('meta[name="viewport"]');
   const flexibleEl = doc.querySelector('meta[name="flexible"]');
   const { isMobile } = getDeviceInfo;
-  let dpr = 0;
-  let scale = 0;
-  let tid;
+  let dpr: number = 0;
+  let scale: number = 0;
+  let tid: number;
 
   if (metaEl) {
     console.warn('将根据已有的meta标签来设置缩放比例');
@@ -100,7 +93,7 @@ export function viewport() {
 
     if (match) {
       scale = parseFloat(match[1]);
-      dpr = parseInt("".concat(1 / scale), 10);
+      dpr = parseInt(String(1 / scale), 10);
     }
   } else if (flexibleEl) {
     const content = flexibleEl.getAttribute('content');
@@ -142,12 +135,12 @@ export function viewport() {
     scale = 1 / dpr;
   }
 
-  docEl.setAttribute('data-dpr', "".concat(dpr));
+  docEl.setAttribute('data-dpr', "".concat(String(dpr)));
 
   if (!metaEl) {
     metaEl = doc.createElement('meta');
     metaEl.setAttribute('name', 'viewport');
-    metaEl.setAttribute('content', "initial-scale=".concat(scale, ", maximum-scale=").concat(scale, ", minimum-scale=").concat(scale, ", user-scalable=no"));
+    metaEl.setAttribute('content', "initial-scale=".concat(String(scale), ", maximum-scale=").concat(scale, ", minimum-scale=").concat(scale, ", user-scalable=no"));
 
     if (docEl.firstElementChild) {
       docEl.firstElementChild.appendChild(metaEl);
@@ -159,8 +152,8 @@ export function viewport() {
   }
   function refreshRem() {
     const width = docEl.clientWidth || docEl.getBoundingClientRect().width;
-    const rem = isMobile ? 100 * (width / 750) : '60';
-    docEl.style.fontSize = "".concat(rem, "px"); // @ts-ignore
+    const rem: number = isMobile ? 100 * (width / 750) : 60;
+    docEl.style.fontSize = `${rem}px`; // @ts-ignore
 
     if (window._customerStore) {
       window._customerStore.globalRem = width / 750;
@@ -170,12 +163,12 @@ export function viewport() {
   const resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
   window.addEventListener(resizeEvt, function () {
     clearTimeout(tid);
-    tid = setTimeout(refreshRem, 300);
+    tid = window.setTimeout(refreshRem, 300);
   }, false);
   window.addEventListener('pageshow', function (e) {
     if (e.persisted) {
       clearTimeout(tid);
-      tid = setTimeout(refreshRem, 300);
+      tid = window.setTimeout(refreshRem, 300);
     }
   }, false);
   refreshRem();
@@ -190,6 +183,9 @@ export function getBaseUrl() {
   }
   return baseUrl;
 }
+export function jump2Page(url: string) {
+  window.location.href = url;
+}
 
 export function setBodyStyleProperty(key: string, value: string) {
   document.body.style.setProperty(key, value)
@@ -198,7 +194,6 @@ export function setBodyStyleProperty(key: string, value: string) {
 export function getBodyStyleProperty(key: string) {
   return document.body.style.getPropertyValue(key)
 }
-
 
 export function getTargetElement(target: HTMLDivElement | MutableRefObject<HTMLDivElement> | string, defaultElement: HTMLDivElement) {
 

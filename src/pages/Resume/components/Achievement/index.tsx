@@ -8,7 +8,7 @@ import styles from './index.module.less';
 
 export default function Achievement() {
   const { theme } = useContext(ModalContext);
-  const handleClick = (url) => {
+  const handleClick = (url: string) => {
     if (url) {
       window.location.href = url;
     }

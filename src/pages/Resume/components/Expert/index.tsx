@@ -21,11 +21,15 @@ export default function Expert({ data }) {
                   [styles.expertTitle]: true,
                   [styles['filter-shadow']]: true
                 })}>{item.title}</div>
-                {item.desc && item.desc.map(desc => <div
-                  className={classnames({
-                    [styles.expertDesc]: true,
-                    [styles['filter-shadow']]: true
-                  })} key={desc}>➣ {desc}</div>)}
+                {item.desc && item.desc.map(ele => (
+                  <div
+                    className={classnames({
+                      [styles.expertDesc]: true,
+                      [styles['filter-shadow']]: true
+                    })}
+                    key={ele}
+                  >➣ {ele}</div>)
+                )}
               </div>
             </div>
           </div>

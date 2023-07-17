@@ -2,7 +2,11 @@ import React, { createContext, useEffect, useReducer, ReactElement } from "react
 
 const symModalId = Symbol("ModalId");
 
-const initialState = {};
+interface IModalContext {
+  theme?: string;
+}
+
+const initialState: IModalContext = {};
 
 const ModalContext = createContext(initialState);
 

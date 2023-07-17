@@ -4,17 +4,17 @@ import Card, { CardTypeEnum } from '@/components/Card';
 import { ModalContext } from '@/components/PromisifyModal';
 import { data } from '../../data/data.js';
 import { IconMap } from '../../data';
-import { getBaseUrl } from '@/utils';
+import { getBaseUrl, jump2Page } from '@/utils';
 import styles from './index.module.less';
 
 export default function BlogTabList() {
   const { theme } = useContext(ModalContext);
 
-  const handleClick = (item) => {
+  const handleClick = (item: { url: string }) => {
     const { url } = item;
     const baseUrl = getBaseUrl();
     if (url) {
-      location.replace(baseUrl + url)
+      jump2Page(baseUrl + url)
     }
   }
   return <div className={styles.tablistWrap}>
