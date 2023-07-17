@@ -14,10 +14,15 @@
     return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h1>原型链</h1>
 <h3>关键词</h3>
 <ul>
+<li>TC39</li>
 <li>__proto__、prototype、constructor</li>
 <li>class、extends、super、new、new.target</li>
 <li>instanceof、Object.create</li>
 <li>Object.getPrototypeOf、Object.setPrototypeOf</li>
+</ul>
+<h3>原型</h3>
+<ul>
+<li>prototype：TC39上原话object that provides shared properties for other objects，翻译过来就是一个给其他对象提供共享属性的对象</li>
 </ul>
 <h3>原型链</h3>
 <p>原型：构造函数和实例对象的连接的纽带，函数和对象的关系（横向），js中原型是继承的基础。每个对象（object）都有一个原型链对象（也叫隐式原型）__proto__（现在__proto__已经废弃，改为使用Object.getPrototypeOf()和Object.setPrototypeOf()来实现），所有构造函数都有一个原型对象prototype</p>
