@@ -2,7 +2,7 @@
 
 const { getAllFileFromDir, cleanAllFileFromDir } = require('../utils/dir');
 const { setStr2File, getStrFromFile } = require('../utils/file');
-const { getLastDirName, getFileName, removeHtmlTag } = require('../utils/index');
+const { getLastDirName, getFileName, removeHtmlTag, removeSensitiveWord } = require('../utils/index');
 const MarkdownIt = require('markdown-it');
 // 将md字符串转成html字符串
 const parseMd2Html = (mdStr) => {
@@ -102,7 +102,7 @@ const generatorBlogFile = async ({ sourceDir, targetDir }) => {
     const dirname = getLastDirName(file.filepath)
     const fileObj = {
       id: file.id,
-      dir: dirname,
+      dir: removeSensitiveWord(dirname),
       name: filename,
       title: filename,
       desc: removeHtmlTag(resHtmlStr).slice(0, 100),

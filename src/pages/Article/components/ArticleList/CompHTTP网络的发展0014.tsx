@@ -13,13 +13,15 @@
       });
     },[])
     return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h1>HTTP</h1>
-<p>关键词</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Resources_and_specifications">http rfc 规范</a></p>
+<h2>关键词</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Resources_and_specifications">http rfc 规范</a></li>
+</ul>
 <h2>HTTP起源</h2>
 <p>Tim Berners-Lee博士在1989年发表一篇论文，提出了万维网项目，是一个通过网络传输超文本的系统。为了实现这个系统，需要确定传输的格式（HTML）、传输的协议（HTTP）、web客户端（浏览器）和web服务器（httpd）。</p>
 <p>HTTP发展至今共经历了HTTP0.9、HTTP1.0、HTTP1.1和HTTP2.0共4个大版本</p>
 <pre><code>0.9版本完成了基本功能实现
-1.0版本主要亮点扩展性
+1.0版本主要扩展性
 1.1版本定义了规范，制定了标准
 2.0版本主要体现在传输效率优化上
 </code></pre>

@@ -9,11 +9,15 @@ function getLastDirName (filepath) {
 }
 // 获取文件名称
 function getFileName (filename) {
-  return filename.split('.')[0];
+  return removeSensitiveWord(filename.split('.')[0]);
 }
 // 去除html标签及换行\n
 function removeHtmlTag (htmlstr) {
   return htmlstr.replace(/(<[^>]+>|\n)/g, '');
+}
+
+function removeSensitiveWord (str) {
+  return str.replace(/(-|,)/g, '')
 }
 
 
@@ -22,4 +26,5 @@ module.exports = {
   getLastDirName,
   getFileName,
   removeHtmlTag,
+  removeSensitiveWord,
 }

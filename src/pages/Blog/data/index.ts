@@ -11,14 +11,16 @@ import {
   RenderSvg,
   AlgorithmSvg,
   InterviewSvg,
-
 } from '@/assets';
 
 export const IconMap = {
   ['网络']: NetworkSvg,
-  ['js基础']: JavascriptSvg,
-  ['React组件封装']: ReactSvg,
+  ['Js基础']: JavascriptSvg,
   ['Js算法']: AlgorithmSvg,
+  ['React']: ReactSvg,
+  ['React组件封装']: ReactSvg,
+  ['Webpack']: WebpackSvg,
+  ['性能优化']: RenderSvg,
 }
 
 export const data = {
