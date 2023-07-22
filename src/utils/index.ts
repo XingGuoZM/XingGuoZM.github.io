@@ -187,6 +187,11 @@ export function jump2Page(url: string) {
   window.location.href = url;
 }
 
+export function getRootStyleProperty(key: string) {
+  const root = document.querySelector(':root') as HTMLDivElement;
+  return window.getComputedStyle(root).getPropertyValue(key);
+}
+
 export function setBodyStyleProperty(key: string, value: string) {
   document.body.style.setProperty(key, value)
 }

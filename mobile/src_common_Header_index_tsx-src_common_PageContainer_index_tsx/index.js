@@ -2055,6 +2055,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "viewport": () => (/* binding */ viewport),
 /* harmony export */   "getBaseUrl": () => (/* binding */ getBaseUrl),
 /* harmony export */   "jump2Page": () => (/* binding */ jump2Page),
+/* harmony export */   "getRootStyleProperty": () => (/* binding */ getRootStyleProperty),
 /* harmony export */   "setBodyStyleProperty": () => (/* binding */ setBodyStyleProperty),
 /* harmony export */   "getBodyStyleProperty": () => (/* binding */ getBodyStyleProperty),
 /* harmony export */   "getTargetElement": () => (/* binding */ getTargetElement)
@@ -2259,6 +2260,10 @@ function getBaseUrl() {
 }
 function jump2Page(url) {
   window.location.href = url;
+}
+function getRootStyleProperty(key) {
+  var root = document.querySelector(':root');
+  return window.getComputedStyle(root).getPropertyValue(key);
 }
 function setBodyStyleProperty(key, value) {
   document.body.style.setProperty(key, value);

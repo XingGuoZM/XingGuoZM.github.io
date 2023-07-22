@@ -17,7 +17,7 @@ function removeHtmlTag (htmlstr) {
 }
 
 function removeSensitiveWord (str) {
-  return str.replace(/(-|,)/g, '')
+  return str.replace(/(-|,|\s)/g, '')
 }
 
 

@@ -21,6 +21,8 @@ export const IconMap = {
   ['React组件封装']: ReactSvg,
   ['Webpack']: WebpackSvg,
   ['性能优化']: RenderSvg,
+  ['面试题']: InterviewSvg,
+  ['Typescript']: CpuSvg
 }
 
 export const data = {

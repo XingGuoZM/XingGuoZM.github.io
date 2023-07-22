@@ -38,6 +38,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_PromisifyModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/PromisifyModal */ "./src/components/PromisifyModal/index.tsx");
 /* harmony import */ var _common_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/common/Header */ "./src/common/Header/index.tsx");
 /* harmony import */ var _common_PageContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/common/PageContainer */ "./src/common/PageContainer/index.tsx");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/utils */ "./src/utils/index.ts");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -54,11 +55,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function PageWithHeader(_ref) {
   var children = _ref.children,
       type = _ref.type;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(localStorage.getItem('--theme-color')),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils__WEBPACK_IMPORTED_MODULE_4__.getRootStyleProperty)('--theme-color')),
       _useState2 = _slicedToArray(_useState, 2),
       theme = _useState2[0],
       setTheme = _useState2[1];
