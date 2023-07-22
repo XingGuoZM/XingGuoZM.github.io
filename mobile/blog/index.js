@@ -510,14 +510,14 @@ var data = [{
     "dir": "面试题",
     "name": "Javascript",
     "title": "Javascript",
-    "desc": "js试题不定时更新历史题目最新：2021.02.27infinity代表什么数据？请解释下面题目输出的结果如何计算动画的帧率（FPS）？如何排查页面中CPU占用高的情况？如何把10.36四舍五入为最接",
+    "desc": "js试题infinity代表什么数据？请解释下面题目输出的结果如何计算动画的帧率（FPS）？如何排查页面中CPU占用高的情况？如何把10.36四舍五入为最接近的整数？写一个方法探测CPU占比情况jav",
     "url": "/article?id=0036"
   }, {
     "id": "0037",
     "dir": "面试题",
     "name": "React",
     "title": "React",
-    "desc": "React面试题鼓励PR，持续更新（React v16.6.0）历史题目(最新：2019.07.18)React | ReactNative | React-Router | Redux/Mobx |",
+    "desc": "React面试题React什么时候使用状态管理器？render函数中return如果没有使用()会有什么问题？componentWillUpdate可以直接修改state的值吗？说说你对React的渲",
     "url": "/article?id=0037"
   }, {
     "id": "0038",
@@ -531,7 +531,7 @@ var data = [{
     "dir": "面试题",
     "name": "Vue",
     "title": "Vue",
-    "desc": "vue面试题鼓励PR，持续更新（Vue v2.6.10）历史题目(最新：2019.07.27)vue | vue-cli | vue-router | vuex  | ElementUI | Elem",
+    "desc": "vue面试题vue从0到1自己构架一个vue项目，说说有哪些步骤、哪些重要插件、目录结构你会怎么组织你知道vue的模板语法用的是哪个web模板引擎的吗？说说你对这模板引擎的理解你知道v-model的原",
     "url": "/article?id=0039"
   }, {
     "id": "0040",

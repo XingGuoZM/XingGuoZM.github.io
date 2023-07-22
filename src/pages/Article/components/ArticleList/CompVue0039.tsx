@@ -13,11 +13,6 @@
       });
     },[])
     return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h1>vue面试题</h1>
-<blockquote>
-<p>鼓励PR，持续更新（Vue v2.6.10）</p>
-</blockquote>
-<h2>历史题目(最新：2019.07.27)</h2>
-<p><a href="#vue">vue</a> | <a href="#vue-cli">vue-cli</a> | <a href="#vue-router">vue-router</a> | <a href="#vuex">vuex</a>  | <a href="#ElementUI">ElementUI</a> | <a href="#ElementUI">ElementUI</a> | <a href="#mint-ui">mint-ui</a></p>
 <h3>vue</h3>
 <ul>
 <li><a href="https://github.com/haizlin/fe-interview/issues/983">从0到1自己构架一个vue项目，说说有哪些步骤、哪些重要插件、目录结构你会怎么组织</a></li>

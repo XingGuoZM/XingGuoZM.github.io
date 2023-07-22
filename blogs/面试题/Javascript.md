@@ -1,8 +1,5 @@
 # js试题
-> 不定时更新
 
-## 历史题目
-> 最新：2021.02.27
 
 - [infinity代表什么数据？](https://github.com/haizlin/fe-interview/issues/3619)
 - [请解释下面题目输出的结果](https://github.com/haizlin/fe-interview/issues/3615)

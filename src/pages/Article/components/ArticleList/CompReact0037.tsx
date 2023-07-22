@@ -13,11 +13,6 @@
       });
     },[])
     return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h1>React面试题</h1>
-<blockquote>
-<p>鼓励PR，持续更新（React v16.6.0）</p>
-</blockquote>
-<h2>历史题目(最新：2019.07.18)</h2>
-<p><a href="#React">React</a> | <a href="#ReactNative">ReactNative</a> | <a href="#React-Router">React-Router</a> | <a href="#Redux/Mobx">Redux/Mobx</a> | <a href="#Flux">Flux</a></p>
 <h3>React</h3>
 <ul>
 <li><a href="https://github.com/haizlin/fe-interview/issues/953">什么时候使用状态管理器？</a></li>

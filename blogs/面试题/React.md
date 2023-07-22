@@ -1,8 +1,4 @@
 # React面试题
-> 鼓励PR，持续更新（React v16.6.0）
-
-## 历史题目(最新：2019.07.18)
-[React](#React) | [ReactNative](#ReactNative) | [React-Router](#React-Router) | [Redux/Mobx](#Redux/Mobx) | [Flux](#Flux)
 
 ### React
 - [什么时候使用状态管理器？](https://github.com/haizlin/fe-interview/issues/953)

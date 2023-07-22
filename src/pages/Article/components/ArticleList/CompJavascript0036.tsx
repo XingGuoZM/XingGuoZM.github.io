@@ -13,13 +13,6 @@
       });
     },[])
     return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h1>js试题</h1>
-<blockquote>
-<p>不定时更新</p>
-</blockquote>
-<h2>历史题目</h2>
-<blockquote>
-<p>最新：2021.02.27</p>
-</blockquote>
 <ul>
 <li><a href="https://github.com/haizlin/fe-interview/issues/3619">infinity代表什么数据？</a></li>
 <li><a href="https://github.com/haizlin/fe-interview/issues/3615">请解释下面题目输出的结果</a></li>
