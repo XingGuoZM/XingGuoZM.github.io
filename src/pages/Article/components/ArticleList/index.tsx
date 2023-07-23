@@ -15,32 +15,33 @@ import Comp链表0013 from './Comp链表0013'
 import CompHooks0014 from './CompHooks0014'
 import CompReact发展历史0015 from './CompReact发展历史0015'
 import CompReact提问0016 from './CompReact提问0016'
-import Comp如何写一个按钮组件0017 from './Comp如何写一个按钮组件0017'
-import Comp组件封装总结0018 from './Comp组件封装总结0018'
-import Compts发展历史0019 from './Compts发展历史0019'
-import Compts常用知识0020 from './Compts常用知识0020'
-import Compdevserver工作原理0021 from './Compdevserver工作原理0021'
-import Compwebpack工作原理0022 from './Compwebpack工作原理0022'
-import Comp前端工程化发展历史0023 from './Comp前端工程化发展历史0023'
-import Comp常用的plugin和loader0024 from './Comp常用的plugin和loader0024'
-import Comp1px问题0025 from './Comp1px问题0025'
-import Comphybridh5特点0026 from './Comphybridh5特点0026'
-import Comp包体积优化0027 from './Comp包体积优化0027'
-import Comp图片优化0028 from './Comp图片优化0028'
-import Comp渲染优化0029 from './Comp渲染优化0029'
-import Comp离线包优化0030 from './Comp离线包优化0030'
-import Comp网络优化0031 from './Comp网络优化0031'
-import CompDNS和CDN0032 from './CompDNS和CDN0032'
-import CompHTTP网络的发展0033 from './CompHTTP网络的发展0033'
-import Comp网络模型0034 from './Comp网络模型0034'
-import CompCoding0035 from './CompCoding0035'
-import CompJavascript0036 from './CompJavascript0036'
-import CompReact0037 from './CompReact0037'
-import CompTypescript0038 from './CompTypescript0038'
-import CompVue0039 from './CompVue0039'
-import CompWebpack0040 from './CompWebpack0040'
-import Comp请求0041 from './Comp请求0041'
-import Comp项目0042 from './Comp项目0042'
+import CompReact理解0017 from './CompReact理解0017'
+import Comp如何写一个按钮组件0018 from './Comp如何写一个按钮组件0018'
+import Comp组件封装总结0019 from './Comp组件封装总结0019'
+import Compts发展历史0020 from './Compts发展历史0020'
+import Compts常用知识0021 from './Compts常用知识0021'
+import Compdevserver工作原理0022 from './Compdevserver工作原理0022'
+import Compwebpack工作原理0023 from './Compwebpack工作原理0023'
+import Comp前端工程化发展历史0024 from './Comp前端工程化发展历史0024'
+import Comp常用的plugin和loader0025 from './Comp常用的plugin和loader0025'
+import Comp1px问题0026 from './Comp1px问题0026'
+import Comphybridh5特点0027 from './Comphybridh5特点0027'
+import Comp包体积优化0028 from './Comp包体积优化0028'
+import Comp图片优化0029 from './Comp图片优化0029'
+import Comp渲染优化0030 from './Comp渲染优化0030'
+import Comp离线包优化0031 from './Comp离线包优化0031'
+import Comp网络优化0032 from './Comp网络优化0032'
+import CompDNS和CDN0033 from './CompDNS和CDN0033'
+import CompHTTP网络的发展0034 from './CompHTTP网络的发展0034'
+import Comp网络模型0035 from './Comp网络模型0035'
+import CompCoding0036 from './CompCoding0036'
+import CompJavascript0037 from './CompJavascript0037'
+import CompReact0038 from './CompReact0038'
+import CompTypescript0039 from './CompTypescript0039'
+import CompVue0040 from './CompVue0040'
+import CompWebpack0041 from './CompWebpack0041'
+import Comp请求0042 from './Comp请求0042'
+import Comp项目0043 from './Comp项目0043'
 
   const CompMap: {[key: string]: ReactElement} = {
     '0001':<Compjs发展历史0001/>,
@@ -59,32 +60,33 @@ import Comp项目0042 from './Comp项目0042'
   '0014':<CompHooks0014/>,
   '0015':<CompReact发展历史0015/>,
   '0016':<CompReact提问0016/>,
-  '0017':<Comp如何写一个按钮组件0017/>,
-  '0018':<Comp组件封装总结0018/>,
-  '0019':<Compts发展历史0019/>,
-  '0020':<Compts常用知识0020/>,
-  '0021':<Compdevserver工作原理0021/>,
-  '0022':<Compwebpack工作原理0022/>,
-  '0023':<Comp前端工程化发展历史0023/>,
-  '0024':<Comp常用的plugin和loader0024/>,
-  '0025':<Comp1px问题0025/>,
-  '0026':<Comphybridh5特点0026/>,
-  '0027':<Comp包体积优化0027/>,
-  '0028':<Comp图片优化0028/>,
-  '0029':<Comp渲染优化0029/>,
-  '0030':<Comp离线包优化0030/>,
-  '0031':<Comp网络优化0031/>,
-  '0032':<CompDNS和CDN0032/>,
-  '0033':<CompHTTP网络的发展0033/>,
-  '0034':<Comp网络模型0034/>,
-  '0035':<CompCoding0035/>,
-  '0036':<CompJavascript0036/>,
-  '0037':<CompReact0037/>,
-  '0038':<CompTypescript0038/>,
-  '0039':<CompVue0039/>,
-  '0040':<CompWebpack0040/>,
-  '0041':<Comp请求0041/>,
-  '0042':<Comp项目0042/>
+  '0017':<CompReact理解0017/>,
+  '0018':<Comp如何写一个按钮组件0018/>,
+  '0019':<Comp组件封装总结0019/>,
+  '0020':<Compts发展历史0020/>,
+  '0021':<Compts常用知识0021/>,
+  '0022':<Compdevserver工作原理0022/>,
+  '0023':<Compwebpack工作原理0023/>,
+  '0024':<Comp前端工程化发展历史0024/>,
+  '0025':<Comp常用的plugin和loader0025/>,
+  '0026':<Comp1px问题0026/>,
+  '0027':<Comphybridh5特点0027/>,
+  '0028':<Comp包体积优化0028/>,
+  '0029':<Comp图片优化0029/>,
+  '0030':<Comp渲染优化0030/>,
+  '0031':<Comp离线包优化0031/>,
+  '0032':<Comp网络优化0032/>,
+  '0033':<CompDNS和CDN0033/>,
+  '0034':<CompHTTP网络的发展0034/>,
+  '0035':<Comp网络模型0035/>,
+  '0036':<CompCoding0036/>,
+  '0037':<CompJavascript0037/>,
+  '0038':<CompReact0038/>,
+  '0039':<CompTypescript0039/>,
+  '0040':<CompVue0040/>,
+  '0041':<CompWebpack0041/>,
+  '0042':<Comp请求0042/>,
+  '0043':<Comp项目0043/>
   }
   
   export default ()=> {

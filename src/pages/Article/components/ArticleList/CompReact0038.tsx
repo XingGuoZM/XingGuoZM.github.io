@@ -12,7 +12,7 @@
         hljs.highlightElement(el);
       });
     },[])
-    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h1>React常见的面试题</h1>
+    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h1>React面试题</h1>
 <p>问题形式构成包括是什么?为什么？优缺点？例如React单向数据流</p>
 <pre><code>什么是数据流？
 为什么是自顶向下的？
