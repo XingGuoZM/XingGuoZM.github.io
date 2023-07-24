@@ -89,11 +89,11 @@ export const data = {
     },
   ],
   expert: [
-    { title: '性能优化', desc: ['网络瓶颈', 'CUP瓶颈', '渲染瓶颈'], iconList: [RenderSvg, NetworkSvg, CpuSvg] },
-    { title: 'React', desc: ['Function Components', 'React Hook', '渲染优化'], iconList: [ReactSvg] },
+    { title: '性能优化', desc: ['熟悉计算机网络技术', 'CUP瓶颈', '熟悉浏览器原理'], iconList: [RenderSvg, NetworkSvg, CpuSvg] },
+    { title: 'React生态', desc: ['熟悉React', '熟悉Redux', '熟悉Mobx'], iconList: [ReactSvg] },
     { title: 'Hybrid H5', desc: ['Webview', 'JsBridge', '兼容性'], iconList: [IphoneSvg, AndroidSvg] },
-    { title: 'Webpack', desc: ['原理 & 优化', 'Plugin & Loader', 'webpack-dev-server'], iconList: [WebpackSvg] },
-    { title: 'JavaScript', desc: ['Es6/7', '对象 & 原型链', '作用域 & 执行上下文', '事件循环'], iconList: [JavascriptSvg] }
+    { title: '前端工程化', desc: ['熟悉webpack', '熟悉rollup'], iconList: [WebpackSvg] },
+    { title: 'JavaScript', desc: ['熟悉Es6/7', '能脱离框架开发', '熟悉Typescript'], iconList: [JavascriptSvg] }
   ],
   experience: {
     amount: "300",

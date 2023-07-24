@@ -11,6 +11,9 @@ import ProjectInfo from './components/ProjectInfo';
 import ProjectList from './components/ProjectList';
 import Achievement from './components/Achievement';
 import Floater from './components/Floater';
+
+import Modal from '@/components/PromisifyModal';
+import { ExpertModal } from './components/Modal';
 import { data } from '@/data';
 import { PageType } from '@/constant';
 
@@ -23,7 +26,12 @@ function Resume() {
     <Floor>
       <UserDetail data={data.userDetail} />
     </Floor>
-    <Floor title='专业技能'>
+
+    <Floor
+      title='专业技能'
+      more='更多技能'
+      moreClk={() => Modal.show(ExpertModal, { title: '更多技能' })}
+    >
       <Expert data={data.expert} />
     </Floor>
     <Floor title='重点项目'>

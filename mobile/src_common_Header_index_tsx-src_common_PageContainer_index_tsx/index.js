@@ -1817,23 +1817,23 @@ var data = {
   }],
   expert: [{
     title: '性能优化',
-    desc: ['网络瓶颈', 'CUP瓶颈', '渲染瓶颈'],
+    desc: ['熟悉计算机网络技术', 'CUP瓶颈', '熟悉浏览器原理'],
     iconList: [_assets__WEBPACK_IMPORTED_MODULE_0__.RenderSvg, _assets__WEBPACK_IMPORTED_MODULE_0__.NetworkSvg, _assets__WEBPACK_IMPORTED_MODULE_0__.CpuSvg]
   }, {
-    title: 'React',
-    desc: ['Function Components', 'React Hook', '渲染优化'],
+    title: 'React生态',
+    desc: ['熟悉React', '熟悉Redux', '熟悉Mobx'],
     iconList: [_assets__WEBPACK_IMPORTED_MODULE_0__.ReactSvg]
   }, {
     title: 'Hybrid H5',
     desc: ['Webview', 'JsBridge', '兼容性'],
     iconList: [_assets__WEBPACK_IMPORTED_MODULE_0__.IphoneSvg, _assets__WEBPACK_IMPORTED_MODULE_0__.AndroidSvg]
   }, {
-    title: 'Webpack',
-    desc: ['原理 & 优化', 'Plugin & Loader', 'webpack-dev-server'],
+    title: '前端工程化',
+    desc: ['熟悉webpack', '熟悉rollup'],
     iconList: [_assets__WEBPACK_IMPORTED_MODULE_0__.WebpackSvg]
   }, {
     title: 'JavaScript',
-    desc: ['Es6/7', '对象 & 原型链', '作用域 & 执行上下文', '事件循环'],
+    desc: ['熟悉Es6/7', '能脱离框架开发', '熟悉Typescript'],
     iconList: [_assets__WEBPACK_IMPORTED_MODULE_0__.JavascriptSvg]
   }],
   experience: {

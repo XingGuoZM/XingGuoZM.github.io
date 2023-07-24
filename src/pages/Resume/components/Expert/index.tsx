@@ -2,7 +2,6 @@ import React from 'react';
 import Carousel from '@/components/Carousel';
 import classnames from 'classnames';
 import IconList from '@/components/IconList';
-
 import styles from './index.module.less';
 
 export default function Expert({ data }) {
@@ -36,6 +35,5 @@ export default function Expert({ data }) {
         </div>
       }}
     </Carousel>
-
-  </div >
+  </div>
 }
