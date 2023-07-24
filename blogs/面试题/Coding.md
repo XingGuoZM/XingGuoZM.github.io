@@ -6,39 +6,96 @@ css实现一个扇形
 css实现一个三角形
 css实现一个水波纹效果
 
+手动实现一个Promisify函数
+手动实现一个防抖/节流函数
+实现一个函数柯里化
+手动实现Promise、Promise.then、Promise.all、
+用 typescript 实现函数 caller，接收一个函数作为第一个参数，其返回参数类型由接收的函数参数决定
+请给出识别 Email 的正则表达式
+设计一个函数，奇数次执行的时候打印 1，偶数次执行的时候打印 2
+给定起止日期，返回中间的所有月份
+输入两个字符串，输出他们中间的月份
+简单封装一个异步fecth，使用async await的方式来使用
+请写一个函数，输出出多级嵌套结构的Object的所有key值
+动手实现一个repeat方法
+versions 是一个项目的版本号列表，因多人维护，不规则，动手实现一个版本号处理函数
+实现一个函数将中文数字转成数字
+
+
+动手实现一个左右固定100px，中间自适应的三列布局？(至少三种)
+屏幕占满和未占满的情况下，使 footer 固定在底部，尽量多种方法
+Css 实现多列等高布局，要求元素实际占用的高度以多列中较高的为准
 ```
 
-- [动手实现一个左右固定100px，中间自适应的三列布局？(至少三种)](#动手实现一个左右固定100px中间自适应的三列布局至少三种)
-- [屏幕占满和未占满的情况下，使 footer 固定在底部，尽量多种方法](#屏幕占满和未占满的情况下使-footer-固定在底部尽量多种方法)
+- 请实现如下的函数
+```js
+/*
+	可以批量请求数据，所有的 URL 地址在 urls 参数中，同时可以通过 max 参数控制请求的并发度，当所有请求结束之后，需要执行 callback 回调函数。发请求的函数可以直接使用 fetch 即可
+*/
+```
 
-- [Css 实现多列等高布局，要求元素实际占用的高度以多列中较高的为准](#css-实现多列等高布局要求元素实际占用的高度以多列中较高的为准)
-- [用 typescript 实现函数 caller，接收一个函数作为第一个参数，其返回参数类型由接收的函数参数决定](#用-typescript-实现函数-caller接收一个函数作为第一个参数其返回参数类型由接收的函数参数决定)
-- [手动实现一个 Promisify 函数](#手动实现一个-promisify-函数)
-- [介绍防抖节流原理、区别以及应用，并用JavaScript进行实现](#介绍防抖节流原理区别以及应用并用javascript进行实现)
-- [介绍下 promise 的特性、优缺点，内部是如何实现的，动手实现 Promise](#介绍下-promise-的特性优缺点内部是如何实现的动手实现-promise)
-- [实现 Promise.all](#实现-promiseall)
-- [请实现如下的函数](#请实现如下的函数)
-- [设计一个函数，奇数次执行的时候打印 1，偶数次执行的时候打印 2](#设计一个函数奇数次执行的时候打印-1偶数次执行的时候打印-2)
-- [实现 Promise.then](#实现-promisethen)
-- [给定起止日期，返回中间的所有月份](#给定起止日期返回中间的所有月份)
-- [输入两个字符串，输出他们中间的月份](#输入两个字符串输出他们中间的月份)
-- [简单封装一个异步 fecth，使用 async await 的方式来使用](#简单封装一个异步-fecth使用-async-await-的方式来使用)
-- [请写一个函数，输出出多级嵌套结构的 Object 的所有 key 值](#请写一个函数输出出多级嵌套结构的-object-的所有-key-值)
-- [动手实现一个 repeat 方法](#动手实现一个-repeat-方法)
-- [versions 是一个项目的版本号列表，因多人维护，不规则，动手实现一个版本号处理函数](#versions-是一个项目的版本号列表因多人维护不规则动手实现一个版本号处理函数)
-- [按要求实现一个 sum 函数](#按要求实现一个-sum-函数)
-- [实现一个函数将中文数字转成数字](#实现一个函数将中文数字转成数字)
-- [节流](#节流)
-- [已知函数 A，要求构造⼀个函数 B 继承 A](#已知函数-a要求构造个函数-b-继承-a)
-- [要求⽤不同⽅式对 A 进⾏改造实现 A.name 发⽣变化时⽴即执⾏ A.getName](#要求不同式对-a-进改造实现-aname-发变化时即执-agetname)
-- [修改以下代码，使得最后⼀⾏代码能够输出数字 0-9（最好能给多种答案）](#修改以下代码使得最后代码能够输出数字-0-9最好能给多种答案)
-- [请给出识别 Email 的正则表达式](#请给出识别-email-的正则表达式)
-- [实现函数接受任意二叉树，求二叉树所有根到叶子路径组成的数字之和](#实现函数接受任意二叉树求二叉树所有根到叶子路径组成的数字之和)
+- 按要求实现一个 sum 函数
+```js
+const a = sum(); // => a === 0
+const b = sum(); // => b === 2
+const c = sum(4)(5); // c === 9
+const k = sum(n1)...(nk) // k === n1 + n2 + ... + nk
+```
+
+- 已知函数 A，要求构造⼀个函数 B 继承 A（[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/333)）
+
+```js
+function A(name) {
+  this.name = name;
+}
+A.prototype.getName = function () {
+  console.log(this.name);
+};
+```
+- 要求⽤不同⽅式对 A 进⾏改造实现 A.name 发⽣变化时⽴即执⾏ A.getName（[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/329)）
+```js
+/*
+	已知对象A = {name: 'sfd', getName: function(){console.log(this.name)}},
+	现要求⽤不同⽅式对A进⾏改造实现A.name发⽣变化时⽴即执⾏A.getName
+*/
+```
+- 修改以下代码，使得最后⼀⾏代码能够输出数字 0-9（最好能给多种答案）（[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/328)）
+```js
+var arrys = [];
+for (var i = 0; i < 10; i++) {
+  arrys.push(function () {
+    return i;
+  });
+}
+arrys.forEach(function (fn) {
+  console.log(fn());
+}); //本⾏不能修改
+```
+- 
+- 实现函数接受任意二叉树，求二叉树所有根到叶子路径组成的数字之和
+```js
+class TreeNode{
+  value:number
+  left?:TreeNode
+  right?:TreeNode
+}
+function getPathSum(root){
+  // your code
+}
+// 例子，一层二叉树如下定义，路径包括1 —> 2 ,1 -> 3
+const node = new TreeNode();
+node.value = 1;
+node.left = new TreeNode();
+node.left.value = 2;
+node.right = new TreeNode();
+node.right.value = 3;
+getPathSum(node); // return 7 = (1+2) + (1+3)
+```
 - [Promise 链式调用如何实现](#promise-链式调用如何实现)
 - [如何把真实 dom 转变为虚拟 dom，代码实现一下](#如何把真实-dom-转变为虚拟-dom代码实现一下)
 - [实现以下代码](#实现以下代码)
 - [请实现一个 cacheRequest 方法，保证发出多次同一个 ajax 请求时都能拿到数据，而实际上只发出一次请求](#请实现一个-cacherequest-方法保证发出多次同一个-ajax-请求时都能拿到数据而实际上只发出一次请求)
-- [实现一个函数柯里化](#实现一个函数柯里化)
+
 - [用 Promise 封装一个 ajax](#用-promise-封装一个-ajax)
 - [请实现$on,$emit](#请实现onemit)
 - [实现 bind 方法，不能使用 call、apply、bind](#实现-bind-方法不能使用-callapplybind)
@@ -80,75 +137,8 @@ css实现一个水波纹效果
 - [给 JavaScript 的 String 原生对象添加一个名为 trim 的原型方法，用于截取字符串前后的空白字符](#给-javascript-的-string-原生对象添加一个名为-trim-的原型方法用于截取字符串前后的空白字符)
 - [有这样一个函数 A,要求在不改变原有函数 A 功能以及调用方式的情况下，使得每次调用该函数都能在控制台打印出“HelloWorld”](#有这样一个函数-a要求在不改变原有函数-a-功能以及调用方式的情况下使得每次调用该函数都能在控制台打印出helloworld)
 
-### Css 如何画出一个扇形，动手实现下
 
-公司：头条
 
-分类：Css、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/228)
-
-<br/>
-
-### 使用 Css 实现一个水波纹效果
-
-参考：[第二屏中的水波纹效果](https://mp.toutiao.com/auth/page/login/?redirect_url=JTJG#/?_k=1hjyly)
-
-公司：头条
-
-分类：Css、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/151)
-
-<br/>
-
-### 动手实现一个左右固定100px，中间自适应的三列布局？(至少三种)
-
-公司：自如、头条
-
-分类：Css、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/275)
-
-<br/>
-
-### 屏幕占满和未占满的情况下，使 footer 固定在底部，尽量多种方法
-
-分类：Css、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/256)
-
-<br/>
-
-### Css 画一个三角形
-
-公司：会小二、高思教育、58
-
-分类：Css、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/413)
-
-<br/>
-
-### Css 实现多列等高布局，要求元素实际占用的高度以多列中较高的为准
-
-公司：快手
-
-分类：Css、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/645)
-
-<br/>
-
-### 用 typescript 实现函数 caller，接收一个函数作为第一个参数，其返回参数类型由接收的函数参数决定
-
-公司：快手
-
-分类：其它、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/801)
-
-<br/>
 
 ### 手动实现一个 Promisify 函数
 
@@ -198,11 +188,7 @@ Promise.all = function (arr) {
 
 ### 请实现如下的函数
 
-```js
-/*
-	可以批量请求数据，所有的 URL 地址在 urls 参数中，同时可以通过 max 参数控制请求的并发度，当所有请求结束之后，需要执行 callback 回调函数。发请求的函数可以直接使用 fetch 即可
-*/
-```
+
 
 分类：JavaScript、编程题
 
@@ -330,22 +316,7 @@ function sortVersion(versions) {
 
 <br/>
 
-### 按要求实现一个 sum 函数
 
-```js
-const a = sum(); // => a === 0
-const b = sum(); // => b === 2
-const c = sum(4)(5); // c === 9
-const k = sum(n1)...(nk) // k === n1 + n2 + ... + nk
-```
-
-公司：头条
-
-分类：JavaScript、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/141)
-
-<br/>
 
 ### 实现一个函数将中文数字转成数字
 
@@ -357,104 +328,10 @@ const k = sum(n1)...(nk) // k === n1 + n2 + ... + nk
 
 <br/>
 
-### 节流
-
-公司：微软
-
-分类：JavaScript、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/342)
-
-<br/>
-
-### 已知函数 A，要求构造⼀个函数 B 继承 A
-
-```js
-function A(name) {
-  this.name = name;
-}
-A.prototype.getName = function () {
-  console.log(this.name);
-};
-```
-
-公司：新东方
-
-分类：JavaScript、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/333)
-
-<br/>
-
-### 要求⽤不同⽅式对 A 进⾏改造实现 A.name 发⽣变化时⽴即执⾏ A.getName
-
-```js
-/*
-	已知对象A = {name: 'sfd', getName: function(){console.log(this.name)}},
-	现要求⽤不同⽅式对A进⾏改造实现A.name发⽣变化时⽴即执⾏A.getName
-*/
-```
-
-公司：新东方
-
-分类：JavaScript、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/329)
-
-<br/>
-
-### 修改以下代码，使得最后⼀⾏代码能够输出数字 0-9（最好能给多种答案）
-
-```js
-var arrys = [];
-for (var i = 0; i < 10; i++) {
-  arrys.push(function () {
-    return i;
-  });
-}
-arrys.forEach(function (fn) {
-  console.log(fn());
-}); //本⾏不能修改
-```
-
-公司：新东方
-
-分类：JavaScript、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/328)
-
-<br/>
-
-### 请给出识别 Email 的正则表达式
-
-公司：头条
-
-分类：JavaScript、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/325)
-
-<br/>
 
 ### 实现函数接受任意二叉树，求二叉树所有根到叶子路径组成的数字之和
 
-```js
-class TreeNode{
-  value:number
-  left?:TreeNode
-  right?:TreeNode
-}
-function getPathSum(root){
-  // your code
-}
-// 例子，一层二叉树如下定义，路径包括1 —> 2 ,1 -> 3
-const node = new TreeNode();
-node.value = 1;
-node.left = new TreeNode();
-node.left.value = 2;
-node.right = new TreeNode();
-node.right.value = 3;
-getPathSum(node); // return 7 = (1+2) + (1+3)
-```
+
 
 公司：头条
 
@@ -518,15 +395,6 @@ console.log(add(two(one()))); //3
 
 <br/>
 
-### 实现一个函数柯里化
-
-公司：快手
-
-分类：JavaScript、编程题
-
-[答案&解析](https://github.com/lgwebdream/FE-Interview/issues/292)
-
-<br/>
 
 ### 用 Promise 封装一个 ajax
 

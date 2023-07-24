@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import PageWithHeader from '@/common/PageWithHeader';
 import Footer from '@/common/Footer';
 import Floor from '@/components/Floor';
@@ -40,6 +40,5 @@ function Resume() {
   </PageWithHeader>
 }
 
-ReactDOM.render(<Resume />,
-  document.querySelector('#root')
-);
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+root.render(<Resume />);

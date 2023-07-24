@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import ArticlePage from './components/ArticleList';
 import PageWithHeader from '@/common/PageWithHeader';
 import { PageType } from '@/constant';
@@ -13,4 +13,5 @@ function Article() {
   </PageWithHeader>
 }
 
-ReactDOM.render(<Article />, document.querySelector('#root'));
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+root.render(<Article />)

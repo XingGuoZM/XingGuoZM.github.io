@@ -23,7 +23,6 @@ immutable的原理是什么？
 React是什么？主要特点？设计思想？工作原理？优缺点？对比其他框架
 
 研究过 React 的运行时吗？
-React是哪个公司开发的？
 
 你是如何学习React的？
 你觉得React上手快不快？它有哪些限制？
@@ -37,33 +36,36 @@ React与angular、vue有什么区别？
 
 ### JSX和虚拟DOM
 ```
-JSX和HTML有什么区别？
-浏览器为什么无法直接JSX？怎么解决呢？
-说说Real DOM和Virtual DOM的区别？优缺点？框架为什么要设计Virtual DOM？
-React的虚拟DOM和Vue的虚拟DOM有什么区别？
-你知道Virtual DOM的工作原理吗？
-说说React diff的原理是什么？
-JSX是什么，它和JS有什么区别？说说React jsx转换成真实DOM的过程？如何解析JSX？
 React必须使用JSX吗？
+JSX和HTML有什么区别？
+JSX是什么，它和JS有什么区别？说说React jsx转换成真实DOM的过程？如何解析JSX？
+浏览器为什么无法直接JSX？怎么解决呢？
 写个例子说明什么是JSX的内联条件渲染？写例子说明React如何在JSX中实现for循环
 在JSX中如何写注释？
 怎么在JSX里属性可以被覆盖吗？覆盖的原则是什么？
 怎么在JSX里使用自定义属性？
 怎么防止HTML被转义？
+写React你是用es6还是es5的语法？有什么区别？
+ES6的语法'...'在React中有哪些应用？
+给组件设置很多属性时不想一个个去设置有什么办法可以解决这问题呢？
+
+说说Real DOM和Virtual DOM的区别？优缺点？框架为什么要设计Virtual DOM？
+React的虚拟DOM和Vue的虚拟DOM有什么区别？
+你知道Virtual DOM的工作原理吗？
+说说React diff的原理是什么？
 ```
 
 ### React组件化
 ```
+说说你对“在React中，一切都是组件”的理解
 在构造函数中调用super(props)的目的是什么？
 React的书写规范有哪些？
 React声明组件有哪几种方法，各有什么不同？
-写React你是用es6还是es5的语法？有什么区别？
-ES6的语法'...'在React中有哪些应用？
-给组件设置很多属性时不想一个个去设置有什么办法可以解决这问题呢？
+
 React中你知道creatClass的原理吗？
 React.createClass和extends Component的区别有哪些？
-有用过React的严格模式吗？
-React的严格模式有什么用处？
+有用过React的严格模式吗？有什么用？
+
 请说说React中Portal是什么？
 怎样在React中使用innerHTML？
 有用过React的Fragment吗？它的运用场景是什么？
@@ -73,8 +75,7 @@ props.children.map和js的map有什么区别？为什么优先选择React的？
 React中什么是非控组件和受控组件？
 在React中无状态组件有什么运用场景？
 描述下在React中无状态组件和有状态组件的区别是什么？
-写一个React的高阶组件(HOC)并说明你对它的理解
-说说你对“在React中，一切都是组件”的理解
+
 createElement与cloneElement两者有什么区别？
 解释下React中Element 和Component两者的区别是什么？
 解释下React中component和pureComponent两者的区别是什么？
@@ -88,12 +89,14 @@ React有几种构建组件的方式？可以写出来吗？
 使用ES6的class定义的组件不支持mixins了，那用什么可以替代呢？
 React的mixins有什么作用？适用于什么场景？
 
+写一个React的高阶组件(HOC)并说明你对它的理解
 对函数式编程的理解？对高阶组件（HOC）的理解？什么渲染劫持？
 举例说明什么是高阶组件(HOC)的属性代理？
 举例说明什么是高阶组件(HOC)的反向继承？
 在React使用高阶组件(HOC)有遇到过哪些问题？如何解决？
 在使用React过程中什么时候用高阶组件(HOC)？
 高阶组件(HOC)有哪些优点和缺点？
+
 说说你是怎么理解React的业务组件和技术组件的？
 展示组件和容器组件有什么区别？
 React怎么拿到组件对应的DOM元素？
