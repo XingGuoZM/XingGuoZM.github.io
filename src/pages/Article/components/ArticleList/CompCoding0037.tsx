@@ -17,83 +17,94 @@
 css实现一个三角形
 css实现一个水波纹效果
 
+手动实现一个Promisify函数
+手动实现一个防抖/节流函数
+实现一个函数柯里化
+手动实现Promise、Promise.then、Promise.all、
+用 typescript 实现函数 caller，接收一个函数作为第一个参数，其返回参数类型由接收的函数参数决定
+请给出识别 Email 的正则表达式
+设计一个函数，奇数次执行的时候打印 1，偶数次执行的时候打印 2
+给定起止日期，返回中间的所有月份
+输入两个字符串，输出他们中间的月份
+简单封装一个异步fecth，使用async await的方式来使用
+请写一个函数，输出出多级嵌套结构的Object的所有key值
+动手实现一个repeat方法
+versions 是一个项目的版本号列表，因多人维护，不规则，动手实现一个版本号处理函数
+实现一个函数将中文数字转成数字
+
+
+动手实现一个左右固定100px，中间自适应的三列布局？(至少三种)
+屏幕占满和未占满的情况下，使 footer 固定在底部，尽量多种方法
+Css 实现多列等高布局，要求元素实际占用的高度以多列中较高的为准
 </code></pre>
 <ul>
-<li>
-<p><a href="#%E5%8A%A8%E6%89%8B%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%B7%A6%E5%8F%B3%E5%9B%BA%E5%AE%9A100px%E4%B8%AD%E9%97%B4%E8%87%AA%E9%80%82%E5%BA%94%E7%9A%84%E4%B8%89%E5%88%97%E5%B8%83%E5%B1%80%E8%87%B3%E5%B0%91%E4%B8%89%E7%A7%8D">动手实现一个左右固定100px，中间自适应的三列布局？(至少三种)</a></p>
-</li>
-<li>
-<p><a href="#%E5%B1%8F%E5%B9%95%E5%8D%A0%E6%BB%A1%E5%92%8C%E6%9C%AA%E5%8D%A0%E6%BB%A1%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E4%BD%BF-footer-%E5%9B%BA%E5%AE%9A%E5%9C%A8%E5%BA%95%E9%83%A8%E5%B0%BD%E9%87%8F%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95">屏幕占满和未占满的情况下，使 footer 固定在底部，尽量多种方法</a></p>
-</li>
-<li>
-<p><a href="#css-%E5%AE%9E%E7%8E%B0%E5%A4%9A%E5%88%97%E7%AD%89%E9%AB%98%E5%B8%83%E5%B1%80%E8%A6%81%E6%B1%82%E5%85%83%E7%B4%A0%E5%AE%9E%E9%99%85%E5%8D%A0%E7%94%A8%E7%9A%84%E9%AB%98%E5%BA%A6%E4%BB%A5%E5%A4%9A%E5%88%97%E4%B8%AD%E8%BE%83%E9%AB%98%E7%9A%84%E4%B8%BA%E5%87%86">Css 实现多列等高布局，要求元素实际占用的高度以多列中较高的为准</a></p>
-</li>
-<li>
-<p><a href="#%E7%94%A8-typescript-%E5%AE%9E%E7%8E%B0%E5%87%BD%E6%95%B0-caller%E6%8E%A5%E6%94%B6%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0%E5%85%B6%E8%BF%94%E5%9B%9E%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%94%B1%E6%8E%A5%E6%94%B6%E7%9A%84%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E5%86%B3%E5%AE%9A">用 typescript 实现函数 caller，接收一个函数作为第一个参数，其返回参数类型由接收的函数参数决定</a></p>
-</li>
-<li>
-<p><a href="#%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA-promisify-%E5%87%BD%E6%95%B0">手动实现一个 Promisify 函数</a></p>
-</li>
-<li>
-<p><a href="#%E4%BB%8B%E7%BB%8D%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81%E5%8E%9F%E7%90%86%E5%8C%BA%E5%88%AB%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8%E5%B9%B6%E7%94%A8javascript%E8%BF%9B%E8%A1%8C%E5%AE%9E%E7%8E%B0">介绍防抖节流原理、区别以及应用，并用JavaScript进行实现</a></p>
-</li>
-<li>
-<p><a href="#%E4%BB%8B%E7%BB%8D%E4%B8%8B-promise-%E7%9A%84%E7%89%B9%E6%80%A7%E4%BC%98%E7%BC%BA%E7%82%B9%E5%86%85%E9%83%A8%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8A%A8%E6%89%8B%E5%AE%9E%E7%8E%B0-promise">介绍下 promise 的特性、优缺点，内部是如何实现的，动手实现 Promise</a></p>
-</li>
-<li>
-<p><a href="#%E5%AE%9E%E7%8E%B0-promiseall">实现 Promise.all</a></p>
-</li>
-<li>
-<p><a href="#%E8%AF%B7%E5%AE%9E%E7%8E%B0%E5%A6%82%E4%B8%8B%E7%9A%84%E5%87%BD%E6%95%B0">请实现如下的函数</a></p>
-</li>
-<li>
-<p><a href="#%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E5%A5%87%E6%95%B0%E6%AC%A1%E6%89%A7%E8%A1%8C%E7%9A%84%E6%97%B6%E5%80%99%E6%89%93%E5%8D%B0-1%E5%81%B6%E6%95%B0%E6%AC%A1%E6%89%A7%E8%A1%8C%E7%9A%84%E6%97%B6%E5%80%99%E6%89%93%E5%8D%B0-2">设计一个函数，奇数次执行的时候打印 1，偶数次执行的时候打印 2</a></p>
-</li>
-<li>
-<p><a href="#%E5%AE%9E%E7%8E%B0-promisethen">实现 Promise.then</a></p>
-</li>
-<li>
-<p><a href="#%E7%BB%99%E5%AE%9A%E8%B5%B7%E6%AD%A2%E6%97%A5%E6%9C%9F%E8%BF%94%E5%9B%9E%E4%B8%AD%E9%97%B4%E7%9A%84%E6%89%80%E6%9C%89%E6%9C%88%E4%BB%BD">给定起止日期，返回中间的所有月份</a></p>
-</li>
-<li>
-<p><a href="#%E8%BE%93%E5%85%A5%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BE%93%E5%87%BA%E4%BB%96%E4%BB%AC%E4%B8%AD%E9%97%B4%E7%9A%84%E6%9C%88%E4%BB%BD">输入两个字符串，输出他们中间的月份</a></p>
-</li>
-<li>
-<p><a href="#%E7%AE%80%E5%8D%95%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AA%E5%BC%82%E6%AD%A5-fecth%E4%BD%BF%E7%94%A8-async-await-%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9D%A5%E4%BD%BF%E7%94%A8">简单封装一个异步 fecth，使用 async await 的方式来使用</a></p>
-</li>
-<li>
-<p><a href="#%E8%AF%B7%E5%86%99%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E8%BE%93%E5%87%BA%E5%87%BA%E5%A4%9A%E7%BA%A7%E5%B5%8C%E5%A5%97%E7%BB%93%E6%9E%84%E7%9A%84-object-%E7%9A%84%E6%89%80%E6%9C%89-key-%E5%80%BC">请写一个函数，输出出多级嵌套结构的 Object 的所有 key 值</a></p>
-</li>
-<li>
-<p><a href="#%E5%8A%A8%E6%89%8B%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA-repeat-%E6%96%B9%E6%B3%95">动手实现一个 repeat 方法</a></p>
-</li>
-<li>
-<p><a href="#versions-%E6%98%AF%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%89%88%E6%9C%AC%E5%8F%B7%E5%88%97%E8%A1%A8%E5%9B%A0%E5%A4%9A%E4%BA%BA%E7%BB%B4%E6%8A%A4%E4%B8%8D%E8%A7%84%E5%88%99%E5%8A%A8%E6%89%8B%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%89%88%E6%9C%AC%E5%8F%B7%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0">versions 是一个项目的版本号列表，因多人维护，不规则，动手实现一个版本号处理函数</a></p>
-</li>
-<li>
-<p><a href="#%E6%8C%89%E8%A6%81%E6%B1%82%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA-sum-%E5%87%BD%E6%95%B0">按要求实现一个 sum 函数</a></p>
-</li>
-<li>
-<p><a href="#%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E5%B0%86%E4%B8%AD%E6%96%87%E6%95%B0%E5%AD%97%E8%BD%AC%E6%88%90%E6%95%B0%E5%AD%97">实现一个函数将中文数字转成数字</a></p>
-</li>
-<li>
-<p><a href="#%E8%8A%82%E6%B5%81">节流</a></p>
-</li>
-<li>
-<p><a href="#%E5%B7%B2%E7%9F%A5%E5%87%BD%E6%95%B0-a%E8%A6%81%E6%B1%82%E6%9E%84%E9%80%A0%E4%B8%AA%E5%87%BD%E6%95%B0-b-%E7%BB%A7%E6%89%BF-a">已知函数 A，要求构造⼀个函数 B 继承 A</a></p>
-</li>
-<li>
-<p><a href="#%E8%A6%81%E6%B1%82%E4%B8%8D%E5%90%8C%E5%BC%8F%E5%AF%B9-a-%E8%BF%9B%E6%94%B9%E9%80%A0%E5%AE%9E%E7%8E%B0-aname-%E5%8F%91%E5%8F%98%E5%8C%96%E6%97%B6%E5%8D%B3%E6%89%A7-agetname">要求⽤不同⽅式对 A 进⾏改造实现 A.name 发⽣变化时⽴即执⾏ A.getName</a></p>
-</li>
-<li>
-<p><a href="#%E4%BF%AE%E6%94%B9%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E4%BD%BF%E5%BE%97%E6%9C%80%E5%90%8E%E4%BB%A3%E7%A0%81%E8%83%BD%E5%A4%9F%E8%BE%93%E5%87%BA%E6%95%B0%E5%AD%97-0-9%E6%9C%80%E5%A5%BD%E8%83%BD%E7%BB%99%E5%A4%9A%E7%A7%8D%E7%AD%94%E6%A1%88">修改以下代码，使得最后⼀⾏代码能够输出数字 0-9（最好能给多种答案）</a></p>
-</li>
-<li>
-<p><a href="#%E8%AF%B7%E7%BB%99%E5%87%BA%E8%AF%86%E5%88%AB-email-%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">请给出识别 Email 的正则表达式</a></p>
-</li>
-<li>
-<p><a href="#%E5%AE%9E%E7%8E%B0%E5%87%BD%E6%95%B0%E6%8E%A5%E5%8F%97%E4%BB%BB%E6%84%8F%E4%BA%8C%E5%8F%89%E6%A0%91%E6%B1%82%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%80%E6%9C%89%E6%A0%B9%E5%88%B0%E5%8F%B6%E5%AD%90%E8%B7%AF%E5%BE%84%E7%BB%84%E6%88%90%E7%9A%84%E6%95%B0%E5%AD%97%E4%B9%8B%E5%92%8C">实现函数接受任意二叉树，求二叉树所有根到叶子路径组成的数字之和</a></p>
-</li>
+<li>请实现如下的函数</li>
+</ul>
+<pre><code class="language-js">/*
+	可以批量请求数据，所有的 URL 地址在 urls 参数中，同时可以通过 max 参数控制请求的并发度，当所有请求结束之后，需要执行 callback 回调函数。发请求的函数可以直接使用 fetch 即可
+*/
+</code></pre>
+<ul>
+<li>按要求实现一个 sum 函数</li>
+</ul>
+<pre><code class="language-js">const a = sum(); // => a === 0
+const b = sum(); // => b === 2
+const c = sum(4)(5); // c === 9
+const k = sum(n1)...(nk) // k === n1 + n2 + ... + nk
+</code></pre>
+<ul>
+<li>已知函数 A，要求构造⼀个函数 B 继承 A（<a href="https://github.com/lgwebdream/FE-Interview/issues/333">答案&amp;解析</a>）</li>
+</ul>
+<pre><code class="language-js">function A(name) {
+  this.name = name;
+}
+A.prototype.getName = function () {
+  console.log(this.name);
+};
+</code></pre>
+<ul>
+<li>要求⽤不同⽅式对 A 进⾏改造实现 A.name 发⽣变化时⽴即执⾏ A.getName（<a href="https://github.com/lgwebdream/FE-Interview/issues/329">答案&amp;解析</a>）</li>
+</ul>
+<pre><code class="language-js">/*
+	已知对象A = {name: 'sfd', getName: function(){console.log(this.name)}},
+	现要求⽤不同⽅式对A进⾏改造实现A.name发⽣变化时⽴即执⾏A.getName
+*/
+</code></pre>
+<ul>
+<li>修改以下代码，使得最后⼀⾏代码能够输出数字 0-9（最好能给多种答案）（<a href="https://github.com/lgwebdream/FE-Interview/issues/328">答案&amp;解析</a>）</li>
+</ul>
+<pre><code class="language-js">var arrys = [];
+for (var i = 0; i < 10; i++) {
+  arrys.push(function () {
+    return i;
+  });
+}
+arrys.forEach(function (fn) {
+  console.log(fn());
+}); //本⾏不能修改
+</code></pre>
+<ul>
+<li></li>
+<li>实现函数接受任意二叉树，求二叉树所有根到叶子路径组成的数字之和</li>
+</ul>
+<pre><code class="language-js">class TreeNode{
+  value:number
+  left?:TreeNode
+  right?:TreeNode
+}
+function getPathSum(root){
+  // your code
+}
+// 例子，一层二叉树如下定义，路径包括1 —> 2 ,1 -> 3
+const node = new TreeNode();
+node.value = 1;
+node.left = new TreeNode();
+node.left.value = 2;
+node.right = new TreeNode();
+node.right.value = 3;
+getPathSum(node); // return 7 = (1+2) + (1+3)
+</code></pre>
+<ul>
 <li>
 <p><a href="#promise-%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0">Promise 链式调用如何实现</a></p>
 </li>
@@ -105,9 +116,6 @@ css实现一个水波纹效果
 </li>
 <li>
 <p><a href="#%E8%AF%B7%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA-cacherequest-%E6%96%B9%E6%B3%95%E4%BF%9D%E8%AF%81%E5%8F%91%E5%87%BA%E5%A4%9A%E6%AC%A1%E5%90%8C%E4%B8%80%E4%B8%AA-ajax-%E8%AF%B7%E6%B1%82%E6%97%B6%E9%83%BD%E8%83%BD%E6%8B%BF%E5%88%B0%E6%95%B0%E6%8D%AE%E8%80%8C%E5%AE%9E%E9%99%85%E4%B8%8A%E5%8F%AA%E5%8F%91%E5%87%BA%E4%B8%80%E6%AC%A1%E8%AF%B7%E6%B1%82">请实现一个 cacheRequest 方法，保证发出多次同一个 ajax 请求时都能拿到数据，而实际上只发出一次请求</a></p>
-</li>
-<li>
-<p><a href="#%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96">实现一个函数柯里化</a></p>
 </li>
 <li>
 <p><a href="#%E7%94%A8-promise-%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AA-ajax">用 Promise 封装一个 ajax</a></p>
@@ -230,41 +238,6 @@ css实现一个水波纹效果
 <p><a href="#%E6%9C%89%E8%BF%99%E6%A0%B7%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0-a%E8%A6%81%E6%B1%82%E5%9C%A8%E4%B8%8D%E6%94%B9%E5%8F%98%E5%8E%9F%E6%9C%89%E5%87%BD%E6%95%B0-a-%E5%8A%9F%E8%83%BD%E4%BB%A5%E5%8F%8A%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E4%BD%BF%E5%BE%97%E6%AF%8F%E6%AC%A1%E8%B0%83%E7%94%A8%E8%AF%A5%E5%87%BD%E6%95%B0%E9%83%BD%E8%83%BD%E5%9C%A8%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%89%93%E5%8D%B0%E5%87%BAhelloworld">有这样一个函数 A,要求在不改变原有函数 A 功能以及调用方式的情况下，使得每次调用该函数都能在控制台打印出“HelloWorld”</a></p>
 </li>
 </ul>
-<h3>Css 如何画出一个扇形，动手实现下</h3>
-<p>公司：头条</p>
-<p>分类：Css、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/228">答案&amp;解析</a></p>
-<p><br/></p>
-<h3>使用 Css 实现一个水波纹效果</h3>
-<p>参考：<a href="https://mp.toutiao.com/auth/page/login/?redirect_url=JTJG#/?_k=1hjyly">第二屏中的水波纹效果</a></p>
-<p>公司：头条</p>
-<p>分类：Css、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/151">答案&amp;解析</a></p>
-<p><br/></p>
-<h3>动手实现一个左右固定100px，中间自适应的三列布局？(至少三种)</h3>
-<p>公司：自如、头条</p>
-<p>分类：Css、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/275">答案&amp;解析</a></p>
-<p><br/></p>
-<h3>屏幕占满和未占满的情况下，使 footer 固定在底部，尽量多种方法</h3>
-<p>分类：Css、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/256">答案&amp;解析</a></p>
-<p><br/></p>
-<h3>Css 画一个三角形</h3>
-<p>公司：会小二、高思教育、58</p>
-<p>分类：Css、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/413">答案&amp;解析</a></p>
-<p><br/></p>
-<h3>Css 实现多列等高布局，要求元素实际占用的高度以多列中较高的为准</h3>
-<p>公司：快手</p>
-<p>分类：Css、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/645">答案&amp;解析</a></p>
-<p><br/></p>
-<h3>用 typescript 实现函数 caller，接收一个函数作为第一个参数，其返回参数类型由接收的函数参数决定</h3>
-<p>公司：快手</p>
-<p>分类：其它、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/801">答案&amp;解析</a></p>
-<p><br/></p>
 <h3>手动实现一个 Promisify 函数</h3>
 <p>公司：高德</p>
 <p>分类：Node、编程题</p>
@@ -290,10 +263,6 @@ css实现一个水波纹效果
 <p><a href="https://github.com/lgwebdream/FE-Interview/issues/30">答案&amp;解析</a></p>
 <p><br/></p>
 <h3>请实现如下的函数</h3>
-<pre><code class="language-js">/*
-	可以批量请求数据，所有的 URL 地址在 urls 参数中，同时可以通过 max 参数控制请求的并发度，当所有请求结束之后，需要执行 callback 回调函数。发请求的函数可以直接使用 fetch 即可
-*/
-</code></pre>
 <p>分类：JavaScript、编程题</p>
 <p><a href="https://github.com/lgwebdream/FE-Interview/issues/185">答案&amp;解析</a></p>
 <p><br/></p>
@@ -367,86 +336,12 @@ function sortVersion(versions) {
 <p>分类：JavaScript、编程题</p>
 <p><a href="https://github.com/lgwebdream/FE-Interview/issues/146">答案&amp;解析</a></p>
 <p><br/></p>
-<h3>按要求实现一个 sum 函数</h3>
-<pre><code class="language-js">const a = sum(); // => a === 0
-const b = sum(); // => b === 2
-const c = sum(4)(5); // c === 9
-const k = sum(n1)...(nk) // k === n1 + n2 + ... + nk
-</code></pre>
-<p>公司：头条</p>
-<p>分类：JavaScript、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/141">答案&amp;解析</a></p>
-<p><br/></p>
 <h3>实现一个函数将中文数字转成数字</h3>
 <p>公司：微软</p>
 <p>分类：JavaScript、编程题</p>
 <p><a href="https://github.com/lgwebdream/FE-Interview/issues/343">答案&amp;解析</a></p>
 <p><br/></p>
-<h3>节流</h3>
-<p>公司：微软</p>
-<p>分类：JavaScript、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/342">答案&amp;解析</a></p>
-<p><br/></p>
-<h3>已知函数 A，要求构造⼀个函数 B 继承 A</h3>
-<pre><code class="language-js">function A(name) {
-  this.name = name;
-}
-A.prototype.getName = function () {
-  console.log(this.name);
-};
-</code></pre>
-<p>公司：新东方</p>
-<p>分类：JavaScript、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/333">答案&amp;解析</a></p>
-<p><br/></p>
-<h3>要求⽤不同⽅式对 A 进⾏改造实现 A.name 发⽣变化时⽴即执⾏ A.getName</h3>
-<pre><code class="language-js">/*
-	已知对象A = {name: 'sfd', getName: function(){console.log(this.name)}},
-	现要求⽤不同⽅式对A进⾏改造实现A.name发⽣变化时⽴即执⾏A.getName
-*/
-</code></pre>
-<p>公司：新东方</p>
-<p>分类：JavaScript、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/329">答案&amp;解析</a></p>
-<p><br/></p>
-<h3>修改以下代码，使得最后⼀⾏代码能够输出数字 0-9（最好能给多种答案）</h3>
-<pre><code class="language-js">var arrys = [];
-for (var i = 0; i < 10; i++) {
-  arrys.push(function () {
-    return i;
-  });
-}
-arrys.forEach(function (fn) {
-  console.log(fn());
-}); //本⾏不能修改
-</code></pre>
-<p>公司：新东方</p>
-<p>分类：JavaScript、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/328">答案&amp;解析</a></p>
-<p><br/></p>
-<h3>请给出识别 Email 的正则表达式</h3>
-<p>公司：头条</p>
-<p>分类：JavaScript、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/325">答案&amp;解析</a></p>
-<p><br/></p>
 <h3>实现函数接受任意二叉树，求二叉树所有根到叶子路径组成的数字之和</h3>
-<pre><code class="language-js">class TreeNode{
-  value:number
-  left?:TreeNode
-  right?:TreeNode
-}
-function getPathSum(root){
-  // your code
-}
-// 例子，一层二叉树如下定义，路径包括1 —> 2 ,1 -> 3
-const node = new TreeNode();
-node.value = 1;
-node.left = new TreeNode();
-node.left.value = 2;
-node.right = new TreeNode();
-node.right.value = 3;
-getPathSum(node); // return 7 = (1+2) + (1+3)
-</code></pre>
 <p>公司：头条</p>
 <p>分类：JavaScript、编程题</p>
 <p><a href="https://github.com/lgwebdream/FE-Interview/issues/323">答案&amp;解析</a></p>
@@ -482,11 +377,6 @@ console.log(add(two(one()))); //3
 <p>公司：快手</p>
 <p>分类：JavaScript、编程题</p>
 <p><a href="https://github.com/lgwebdream/FE-Interview/issues/293">答案&amp;解析</a></p>
-<p><br/></p>
-<h3>实现一个函数柯里化</h3>
-<p>公司：快手</p>
-<p>分类：JavaScript、编程题</p>
-<p><a href="https://github.com/lgwebdream/FE-Interview/issues/292">答案&amp;解析</a></p>
 <p><br/></p>
 <h3>用 Promise 封装一个 ajax</h3>
 <p>公司：脉脉</p>
