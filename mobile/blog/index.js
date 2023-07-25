@@ -335,7 +335,7 @@ var data = [{
     "dir": "React",
     "name": "Hooks",
     "title": "Hooks",
-    "desc": "Hooks历史mvc软件架构模式BackboneBackbone.js 的最佳应用场景有哪些？React作用（解决了什么问题/产生什么影响/核心的几个版本）react提出了全新的组织代码的方式，使其更",
+    "desc": "Hooks来源为细粒度的代码复用，不和组件复用捆绑在一起。HOC和Render Props都是基于组件的组合方案，先把要复用的逻辑封装成组件，再利用组件复用机制实现逻辑复用。将函数当成最小的代码复用单",
     "url": "/article?id=0014"
   }, {
     "id": "0015",
@@ -376,29 +376,29 @@ var data = [{
     "title": "如何封装一个插槽",
     "desc": "",
     "url": "/article?id=0019"
-  }, {
-    "id": "0020",
-    "dir": "React组件封装",
-    "name": "组件封装总结",
-    "title": "组件封装总结",
-    "desc": "组件封装",
-    "url": "/article?id=0020"
   }]
 }, {
   "id": 4,
   "tabTitle": "Typescript",
   "tabData": [{
+    "id": "0020",
+    "dir": "Typescript",
+    "name": "ts常用知识",
+    "title": "ts常用知识",
+    "desc": "",
+    "url": "/article?id=0020"
+  }, {
     "id": "0021",
     "dir": "Typescript",
-    "name": "ts发展历史",
-    "title": "ts发展历史",
-    "desc": "",
+    "name": "ts理解",
+    "title": "ts理解",
+    "desc": "ts优点代码的规范约束：主要在于约束，能更准确的表达出写代码人的意图代码可阅读性：一般来说命名+输入输出的类型定义可以大致猜测出某段代码的用途，我们都知道js类型隐式转换非常恶心，如果加上类型约束，那",
     "url": "/article?id=0021"
   }, {
     "id": "0022",
     "dir": "Typescript",
-    "name": "ts常用知识",
-    "title": "ts常用知识",
+    "name": "类型的发展历史",
+    "title": "类型的发展历史",
     "desc": "",
     "url": "/article?id=0022"
   }]
@@ -569,7 +569,7 @@ var data = [{
     "dir": "面试题",
     "name": "项目",
     "title": "项目",
-    "desc": "大流量下前端页面优化服务器瘫痪，前端请求不到数据，对前端页面的容错容灾有更高的要求大流量意味着各种终端都可能存在，高中低端机适配，兼容性的要求服务器压力大，前端需要做一些措施,前端层面缓解服务器压力的",
+    "desc": "经验熟练掌握Javascript，能脱离框架进行原生开发，熟悉Typescript熟练使用React框架以及相关生态技术，能独立完成项目的搭建和项目部署熟悉浏览器原理以及计算机网络相关技术，在性能优化",
     "url": "/article?id=0044"
   }]
 }];

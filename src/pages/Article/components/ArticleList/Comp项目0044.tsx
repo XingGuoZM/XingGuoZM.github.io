@@ -12,7 +12,16 @@
         hljs.highlightElement(el);
       });
     },[])
-    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h3>大流量下前端页面优化</h3>
+    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h3>经验</h3>
+<ol>
+<li>熟练掌握Javascript，能脱离框架进行原生开发，熟悉Typescript</li>
+<li>熟练使用React框架以及相关生态技术，能独立完成项目的搭建和项目部署</li>
+<li>熟悉浏览器原理以及计算机网络相关技术，在性能优化方面有较多实践经验</li>
+<li>对前端工程化/模块化有一定了解，熟悉webpack、rollup等打包工具及其日常开发配置，有过从0到1的独立搭建项目经验，并优化构建流程</li>
+<li>了解vue框架技术，有相关实践经验</li>
+<li>了解node.js和常用模块，</li>
+</ol>
+<h3>大流量下前端页面优化</h3>
 <ol>
 <li>服务器瘫痪，前端请求不到数据，对前端页面的容错容灾有更高的要求</li>
 <li>大流量意味着各种终端都可能存在，高中低端机适配，兼容性的要求</li>

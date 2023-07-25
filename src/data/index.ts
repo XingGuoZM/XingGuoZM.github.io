@@ -89,11 +89,12 @@ export const data = {
     },
   ],
   expert: [
-    { title: '性能优化', desc: ['熟悉计算机网络技术', 'CUP瓶颈', '熟悉浏览器原理'], iconList: [RenderSvg, NetworkSvg, CpuSvg] },
-    { title: 'React生态', desc: ['熟悉React', '熟悉Redux', '熟悉Mobx'], iconList: [ReactSvg] },
-    { title: 'Hybrid H5', desc: ['Webview', 'JsBridge', '兼容性'], iconList: [IphoneSvg, AndroidSvg] },
-    { title: '前端工程化', desc: ['熟悉webpack', '熟悉rollup'], iconList: [WebpackSvg] },
-    { title: 'JavaScript', desc: ['熟悉Es6/7', '能脱离框架开发', '熟悉Typescript'], iconList: [JavascriptSvg] }
+    { title: '性能优化', level: 'high', desc: ['熟悉计算机网络技术', 'CUP瓶颈', '熟悉浏览器原理'], iconList: [RenderSvg, NetworkSvg, CpuSvg] },
+    { title: 'React生态', level: 'high', desc: ['熟悉React', '熟悉Redux', '熟悉Mobx'], iconList: [ReactSvg] },
+    { title: 'Hybrid H5', level: 'high', desc: ['Webview', 'JsBridge', '兼容性'], iconList: [IphoneSvg, AndroidSvg] },
+    { title: '前端工程化', level: 'high', desc: ['熟悉webpack', '熟悉rollup'], iconList: [WebpackSvg] },
+    { title: 'JavaScript', level: 'high', desc: ['熟悉Es6/7', '能脱离框架开发', '熟悉Typescript'], iconList: [JavascriptSvg] },
+    { title: 'Vue', level: 'medium', desc: ['熟悉Es6/7', '能脱离框架开发', '熟悉Typescript'] }
   ],
   experience: {
     amount: "300",

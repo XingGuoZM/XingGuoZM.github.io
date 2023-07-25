@@ -63,7 +63,8 @@ HTML也是xml协议，有由浏览器解析，而JSX是由js解析。浏览器�
 jsx能有效防止xss攻击,ReactElement的$$typeof属性是一个symbol类型，通过JSON.stringify之后会被丢失
 </code></pre>
 <p>React class组件</p>
-<pre><code>适用
+<pre><code>class组件特点：耦合性高、逻辑复用困难
+适用
 1. 适合用于高内聚的公共模块，解决某一类特定问题
 2. errorboundary组件，必须用class组件
 
@@ -81,8 +82,59 @@ commit 阶段，根据 render 阶段的计算结果，执行更新操作，这�
 
 第二层含义是react最新版本虚拟DOM节点的数据结构。它是一个链表的结构，通过child、sibling、return三个属性记录了树型结构中的子节点、兄弟节点、父节点的关系信息，从而可以实现从任一节点出发，都可以访问其他节点的特性
 </code></pre>
-<p>Hook</p>
-<pre><code>
+<p>Mixin（混合）/Extend（继承）</p>
+<pre><code>特点：强耦合，隐式依赖，不可预测
+场景：Mixin经常依赖组件的特定方法/状态，但是在定义组件的时候并不知道这种依赖关系
+
+由于依赖关系不透明，Mixin逻辑最后会合并到一起，又很难搞清楚一个Mixin的输入输出，导致难以快速理解组件的行为
+由于需要全盘了解所有依赖Mixin的扩展行为以及它们之间的相互影响，导致维护成本和理解成本增加,并且可能存在(命名)冲突
+由于Mixin倾向于增加更多状态，降低应用的可预测性，导致复杂度剧增
+</code></pre>
+<p>HOC（高阶组件）接收一个组件作为参数，返回一个新的组件，是对装饰模式的一种实现</p>
+<pre><code>特点：原组件不会感知HOC的存在，HOC会在原组件基础上增强功能
+优点：复用、逻辑和抽象，可以劫持render方法，控制props于state等
+缺点：
+1. 无法从外部访问子组件的state
+2. ref传递问题
+3. dom层级变深,调试困难
+4. props变得混乱
+
+HOC需要注意的地方
+1. 不能修改原始组件
+2. 过滤props
+3. 最大化可组合性
+4. 不要在render中使用HOC
+5. 务必复制静态方法
+6. refs不会被传递
+
+实现HOC的方式有
+1. 属性代理
+2. 反向继承：返回的组件去继承之前的组件
+
+HOC的应用
+1. 非受控组件转化为受控组件
+</code></pre>
+<p>Render Props:一个值为函数的props，这个函数返回一个react元素</p>
+<pre><code>优点：
+1. 动态构建
+缺点：
+1. 丢失组件上下问题，没有this.props属性
+2. render props基于闭包实现的
+
+</code></pre>
+<p>Hook：逻辑复用</p>
+<pre><code>来源
+为细粒度的代码复用，不和组件复用捆绑在一起。HOC和Render Props都是基于组件的组合方案，先把要复用的逻辑封装成组件，再利用组件复用机制实现逻辑复用。将函数当成最小的代码复用单元同时内置一些模式简化状态逻辑复用
+
+缺点
+1. 额外学习成本，函数组件和类组件的比较
+2. 写法限制，增加重构成本
+3. 破坏了PureComponent、React.memo浅比较的性能优化效果
+4. 闭包场景可能引用到旧的state、props值
+5. 内部实现上不直观，依赖一份可变的全局状态，不再那么pure
+6. React.memo并不能完全替代ShouldComponentUpdate（拿不到state change，只针对props change）
+7. useState API设计上不完美（初始化、可选链、闭包陷阱、引用类型、多个状态）
+
 </code></pre>
 `}}></div>
   }

@@ -1817,24 +1817,33 @@ var data = {
   }],
   expert: [{
     title: '性能优化',
+    level: 'high',
     desc: ['熟悉计算机网络技术', 'CUP瓶颈', '熟悉浏览器原理'],
     iconList: [_assets__WEBPACK_IMPORTED_MODULE_0__.RenderSvg, _assets__WEBPACK_IMPORTED_MODULE_0__.NetworkSvg, _assets__WEBPACK_IMPORTED_MODULE_0__.CpuSvg]
   }, {
     title: 'React生态',
+    level: 'high',
     desc: ['熟悉React', '熟悉Redux', '熟悉Mobx'],
     iconList: [_assets__WEBPACK_IMPORTED_MODULE_0__.ReactSvg]
   }, {
     title: 'Hybrid H5',
+    level: 'high',
     desc: ['Webview', 'JsBridge', '兼容性'],
     iconList: [_assets__WEBPACK_IMPORTED_MODULE_0__.IphoneSvg, _assets__WEBPACK_IMPORTED_MODULE_0__.AndroidSvg]
   }, {
     title: '前端工程化',
+    level: 'high',
     desc: ['熟悉webpack', '熟悉rollup'],
     iconList: [_assets__WEBPACK_IMPORTED_MODULE_0__.WebpackSvg]
   }, {
     title: 'JavaScript',
+    level: 'high',
     desc: ['熟悉Es6/7', '能脱离框架开发', '熟悉Typescript'],
     iconList: [_assets__WEBPACK_IMPORTED_MODULE_0__.JavascriptSvg]
+  }, {
+    title: 'Vue',
+    level: 'medium',
+    desc: ['熟悉Es6/7', '能脱离框架开发', '熟悉Typescript']
   }],
   experience: {
     amount: "300",

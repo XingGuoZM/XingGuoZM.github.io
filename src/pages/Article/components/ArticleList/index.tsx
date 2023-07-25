@@ -18,9 +18,9 @@ import CompReact提问0016 from './CompReact提问0016'
 import CompReact理解0017 from './CompReact理解0017'
 import Comp如何写一个按钮组件0018 from './Comp如何写一个按钮组件0018'
 import Comp如何封装一个插槽0019 from './Comp如何封装一个插槽0019'
-import Comp组件封装总结0020 from './Comp组件封装总结0020'
-import Compts发展历史0021 from './Compts发展历史0021'
-import Compts常用知识0022 from './Compts常用知识0022'
+import Compts常用知识0020 from './Compts常用知识0020'
+import Compts理解0021 from './Compts理解0021'
+import Comp类型的发展历史0022 from './Comp类型的发展历史0022'
 import Compdevserver工作原理0023 from './Compdevserver工作原理0023'
 import Compwebpack工作原理0024 from './Compwebpack工作原理0024'
 import Comp前端工程化发展历史0025 from './Comp前端工程化发展历史0025'
@@ -64,9 +64,9 @@ import Comp项目0044 from './Comp项目0044'
   '0017':<CompReact理解0017/>,
   '0018':<Comp如何写一个按钮组件0018/>,
   '0019':<Comp如何封装一个插槽0019/>,
-  '0020':<Comp组件封装总结0020/>,
-  '0021':<Compts发展历史0021/>,
-  '0022':<Compts常用知识0022/>,
+  '0020':<Compts常用知识0020/>,
+  '0021':<Compts理解0021/>,
+  '0022':<Comp类型的发展历史0022/>,
   '0023':<Compdevserver工作原理0023/>,
   '0024':<Compwebpack工作原理0024/>,
   '0025':<Comp前端工程化发展历史0025/>,

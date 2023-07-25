@@ -1,26 +1,14 @@
+
 # Hooks
 
-## 历史
+### 来源
+为细粒度的代码复用，不和组件复用捆绑在一起。HOC和Render Props都是基于组件的组合方案，先把要复用的逻辑封装成组件，再利用组件复用机制实现逻辑复用。将函数当成最小的代码复用单元同时内置一些模式简化状态逻辑复用
 
-mvc软件架构模式
-
-Backbone
-- [Backbone.js 的最佳应用场景有哪些？](https://www.zhihu.com/question/19720745/answer/14315565)
-
-
-### React作用（解决了什么问题/产生什么影响/核心的几个版本）
-react提出了全新的组织代码的方式，使其更可预测，即页面组件化。并且加入了DOM diff，当DOM发生变化时，通过dom diff算法计算出变化点，以最小粒度更新。通过将用户界面拆分成更细粒度的包含逻辑代码段的组件描述来减少构建UI时发生的错误。
-
-react核心版本16.8，全新的Fiber架构、加入Hook
-
-### React特点（优缺点）
-react是一个组件化、单向数据流、支持函数式编程、基于Virtual DOM、专注视图层的UI框架，其优点是代码逻辑简单、性能出众、能和其他库一起使用，渲染到特定的环境。由于其特定的更新方式，非常容易造成重渲染，导致不需要更新的组件更新了
-
-### 应对后来的框架
-
-preact：能实现react的核心功能，体积比react小很多
-
-vue：mvvm框架，能达到视图细粒度的更新
-
-solid：去除Virtual DOM
-svelet：去除Virtual DOM
+### Hook不足
+1. 额外学习成本，函数组件和类组件的比较
+2. 写法限制，增加重构成本
+3. 破坏了PureComponent、React.memo浅比较的性能优化效果
+4. 闭包场景可能引用到旧的state、props值
+5. 内部实现上不直观，依赖一份可变的全局状态，不再那么pure
+6. React.memo并不能完全替代ShouldComponentUpdate（拿不到state change，只针对props change）
+7. useState API设计上不完美（初始化、可选链、闭包陷阱、引用类型、多个状态）
