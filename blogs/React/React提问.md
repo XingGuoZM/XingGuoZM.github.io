@@ -48,7 +48,10 @@ JSX是什么，它和JS有什么区别？说说React jsx转换成真实DOM的过
 写React你是用es6还是es5的语法？有什么区别？
 ES6的语法'...'在React中有哪些应用？
 给组件设置很多属性时不想一个个去设置有什么办法可以解决这问题呢？
+为什么建议Fragment包裹元素？它的简写是什么？你有用过React.Fragment吗？说说它有什么用途？
 
+React中怎么操作虚拟DOM的Class属性？
+为什么属性使用className而不是class呢？
 说说Real DOM和Virtual DOM的区别？优缺点？框架为什么要设计Virtual DOM？
 React的虚拟DOM和Vue的虚拟DOM有什么区别？
 你知道Virtual DOM的工作原理吗？
@@ -122,92 +125,8 @@ React中除了在构造函数中绑定this,还有别的方式吗？
 React中可以在render访问refs吗？为什么？
 React中refs的作用是什么？有哪些应用场景？
 为什么建议不要过渡使用Refs？
-```
-
-### React更新(setState)和渲染(render)
-```
-能简单介绍一下React执行过程吗？
-React16的reconciliation和commit分别是什么？
-React的状态提升是什么？使用场景有哪些？
-如何更新组件的状态？
-说说React中setState执行机制？setState是同步的还是异步的？
-React中可以在render访问refs吗？为什么？
-render方法的原理你有了解吗？它返回的数据类型是什么？
-自定义组件时render是可选的吗？为什么？
-React中怎样有条件地渲染组件？怎样阻止组件渲染？
-React为什么不要直接修改state？如果想修改怎么做？
-React中如何监听state的变化？
-在React中怎样改变组件状态，以及状态改变的过程是什么？
-React中的setState和replaceState的区别是什么？
-React中的setState缺点是什么呢？
-为什么建议setState的第一个参数是callback而不是一个对象呢？
-React多个setState调用的原理是什么？
-React中setState的第二个参数作用是什么呢？
-React中的setState是同步还是异步的呢？为什么state并不一定会同步更新？
-React中的setState批量更新的过程是什么？
-React中的setState执行机制是什么呢？
-请说说你对React的render方法的理解
-React的render中可以写{if else}这样的判断吗？
-```
 
 
-### React优化
-```
-为何说虚拟DOM会提高性能？
-在React中如何避免不必要的render？React的优化方法？
-React中key的作用？key改了，会发生什么，会执行哪些周期函数？
-需要把keys设置为全局唯一吗？
-使用webpack打包React项目，怎么减小生成的js大小？
-React根据不同的环境打包不同的域名？
-为什么建议Fragment包裹元素？它的简写是什么？你有用过React.Fragment吗？说说它有什么用途？
-你知道的React性能优化有哪些方法？
-如何提高组件的渲染效率呢？
-在React中如何避免不必要的render？
-render在什么时候会被触发？
-React怎样跳过重新渲染？
-React怎么判断什么时候重新渲染组件呢？
-写出React动态改变class切换组件样式
-React中怎么操作虚拟DOM的Class属性？
-为什么属性使用className而不是class呢？
-请说下react组件更新的机制是什么？
-React怎么提高列表渲染的性能？
-怎样实现React组件的记忆？原理是什么？
-shouldComponentUpdate方法是做什么的？
-React中遍历时为什么不用索引作为唯一的key值？
-React中的key有什么作用？
-如何解决引用类型在pureComponent下修改值的时候，页面不渲染的问题？
-```
-
-### React事件
-```
-说说react的事件机制？16和17有什么区别？
-在React中什么是合成事件？有什么用？
-
-请描述下事件在React中的处理方式是什么？
-怎样将事件传递给子组件？
-React的事件和普通的HTML事件有什么不同？
-在React中怎么将参数传递给事件？
-在React中怎么阻止事件的默认行为？
-举例说明如何在React创建一个事件?
-组件卸载前，加在DOM元素的监听事件和定时器要不要手动清除？为什么？
-React的触摸事件有哪几种？
-```
-
-### React规范
-- 
-- React中在哪捕获错误？
-- 什么是React.forwardRef？它有什么作用？
-- 在React中怎么使用async/await？
-- 在React中什么时候使用箭头函数更方便呢？
-- 使用PropTypes和Flow有什么区别？
-- React v15中怎么处理错误边界？
-- 说说你对Error Boundaries的理解
-- 在React中你有遇到过安全问题吗？怎么解决？
-- 
-- 使用React的memo和forwardRef包装的组件为什么提示children类型不对？
-
-### React生命周期
-```
 React 废弃了哪些生命周期？为什么？
 React16跟之前的版本生命周期有哪些变化？
 说说React的生命周期有哪些？？说说React生命周期有哪些不同的阶段？每个阶段对应的方法是？
@@ -222,6 +141,78 @@ React中修改prop引发的生命周期有哪几个？
 React中调用setState会更新的生命周期有哪几个？
 React中发起网络请求应该在哪个生命周期中进行？为什么？
 ```
+
+### React更新(setState)和渲染(render)
+```
+React的状态提升是什么？使用场景有哪些？
+请说说你对React的render方法的理解
+React中可以在render访问refs吗？为什么？
+render方法的原理你有了解吗？它返回的数据类型是什么？
+自定义组件时render是可选的吗？为什么？
+render在什么时候会被触发？
+React中怎样有条件地渲染组件？怎样阻止组件渲染？
+React的render中可以写{if else}这样的判断吗？
+
+能简单介绍一下React执行过程吗？
+请说下react组件更新的机制是什么？
+React16的reconciliation和commit分别是什么？
+
+
+在React中怎样改变组件状态，以及状态改变的过程是什么？
+React为什么不要直接修改state？如果想修改怎么做？
+说说React中setState执行机制？setState是同步的还是异步的？
+React中的setState批量更新的过程是什么？
+React多个setState调用的原理是什么？
+React中如何监听state的变化？
+React中的setState和replaceState的区别是什么？
+React中的setState缺点是什么呢？
+为什么建议setState的第一个参数是callback而不是一个对象呢？
+React中setState的第二个参数作用是什么呢？
+```
+### React优化
+```
+你知道的React性能优化有哪些方法？
+为何说虚拟DOM会提高性能？
+
+使用webpack打包React项目，怎么减小生成的js大小？
+
+如何提高组件的渲染效率呢？
+在React中如何避免不必要的render？React的优化方法？
+React怎样跳过重新渲染？
+React怎么判断什么时候重新渲染组件呢？
+怎样实现React组件的记忆？原理是什么？
+shouldComponentUpdate方法是做什么的？
+如何解决引用类型在pureComponent下修改值的时候，页面不渲染的问题？
+
+React怎么提高列表渲染的性能？
+React中的key有什么作用？
+React中遍历时为什么不用索引作为唯一的key值？
+React中key的作用？key改了，会发生什么，会执行哪些周期函数？
+需要把keys设置为全局唯一吗？
+
+什么是React.forwardRef？它有什么作用？
+在React中怎么使用async/await？
+在React中什么时候使用箭头函数更方便呢？
+使用PropTypes和Flow有什么区别？
+React中在哪捕获错误？
+React v15中怎么处理错误边界？
+说说你对Error Boundaries的理解
+在React中你有遇到过安全问题吗？怎么解决？
+使用React的memo和forwardRef包装的组件为什么提示children类型不对？
+```
+
+### React合成事件
+```
+说说react的事件机制？16和17有什么区别？
+在React中什么是合成事件？有什么用？
+请描述下事件在React中的处理方式是什么？
+React的事件和普通的HTML事件有什么不同？
+在React中怎么阻止事件的默认行为？
+组件卸载前，加在DOM元素的监听事件和定时器要不要手动清除？为什么？
+React的触摸事件有哪几种？
+```
+
+
 ### Fiber/Hook
 ```
 类组件和函数式组件有什么区别？
@@ -249,41 +240,48 @@ useEffect 依赖为空数组与 componentDidMount 区别？
 ### React工程化与三方库
 ```
 简单描述下你有做过哪些React项目？
+
 你用过React版本有哪些？
-React18有哪些更新？React 16+和React15的区别？IE支持情况？
 React16新特性有哪些？
+React18有哪些更新？React 16+和React15的区别？IE支持情况？
 从旧版本的React升级到新版本的React有做过吗？有遇到过什么坑？
 
+有用过React Devtools吗？说说它的优缺点分别是什么？
+Mern和Yeoman脚手架有什么区别？
+你有在项目中使用过Yeoman脚手架吗？
+你有在项目中使用过Mern脚手架吗？
 create-react-app有什么好处？
 create-react-app创建新运用怎么解决卡的问题？
+不用脚手架，你会手动搭建React项目吗？
+说说你对React的组件命名规范的理解
+说说你对React的项目结构的理解
+React如何进行代码拆分？拆分的原则是什么？
 怎么在React中引入其它的UI库/插件等，例如Bootstrap、jQuery
-有用过React Devtools吗？说说它的优缺点分别是什么？
+同时引用这三个库React.js、React-dom.js和babel.js它们都有什么作用？
+
 你有用过哪些React的UI库？它们的优缺点分别是什么？
 有在项目中使用过Antd吗？说说它的好处
 你有做过React的单元测试吗？如果有，用的是哪些工具？怎么做的？
 什么是浅层渲染？
 你有使用过formik库吗？说说它的优缺点
 
-说说你对React的组件命名规范的理解
-说说你对React的项目结构的理解
-
+React根据不同的环境打包不同的域名？
 怎样在React中开启生产模式？
 在React中如何去除生产环境上的sourcemap？
-不用脚手架，你会手动搭建React项目吗？
-Mern和Yeoman脚手架有什么区别？
-你有在项目中使用过Yeoman脚手架吗？
-你有在项目中使用过Mern脚手架吗？
 React的应用如何打包发布？它的步骤是什么？
 
-同时引用这三个库React.js、React-dom.js和babel.js它们都有什么作用？
 说说你对受控组件和非受控组件的理解？应用场景？如何给非控组件设置默认的值？
 React什么是有状态组件？
 常用的React组件
-
 你有用过哪些React的表单库吗？说说它们的优缺点
-
 你有使用过loadable组件吗？它帮我们解决了什么问题？
 你有使用过suspense组件吗？它帮我们解决了什么问题？
+使用高阶组件(HOC)实现一个loading组件
+如何封装一个React的全局公共组件？
+怎么定时更新一个组件？
+使用React写一个todo应用，说说你的思路
+写出React动态改变class切换组件样式
+怎样将多个组件嵌入到一个组件中？
 
 React怎样引入svg的文件？
 在React中怎么使用字体图标？
@@ -291,19 +289,11 @@ React怎样引入svg的文件？
 举例说明在React中怎么使用样式？
 在React中怎么引用sass或less？
 怎样动态导入组件？
-使用高阶组件(HOC)实现一个loading组件
-如何封装一个React的全局公共组件？
-React如何进行代码拆分？拆分的原则是什么？
-
-怎么定时更新一个组件？
-使用React写一个todo应用，说说你的思路
 
 创建React动画有哪些方式？
 如何用React实现滚动动画？
 在React项目中你用过哪些动画的包？
 React有哪几种方法来处理表单输入？
-
-怎样将多个组件嵌入到一个组件中？
 
 有用过React的服务端渲染吗？怎么做的？
 
@@ -351,8 +341,7 @@ Redux的thunk作用是什么？
 Redux的数据存储和本地储存有什么区别？
 在Redux中，什么是reducer？它有什么作用？
 举例说明怎么在Redux中定义action？
-在Redux中，什么是action？
-在Redux中，什么是store？
+在Redux中，什么是action？store？
 为什么Redux能做到局部渲染呢？
 说说Redux的优缺点分别是什么？
 Redux和Flux的区别是什么？

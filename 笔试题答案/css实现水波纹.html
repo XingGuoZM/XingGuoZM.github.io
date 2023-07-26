@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>实现水波纹</title>
+  <style>
+    .wave-wrap {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .wave {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      opacity: 0;
+      position: absolute;
+      animation: waveAnim 4s infinite;
+    }
+
+    .w1 {
+      background-color: gold;
+      animation-delay: 0s;
+    }
+
+    .w2 {
+      background-color: green;
+      animation-delay: 1s;
+    }
+
+    .w3 {
+      background-color: red;
+      animation-delay: 2s;
+    }
+
+    .w4 {
+      background-color: blue;
+      animation-delay: 3s;
+    }
+
+    @-webkit-keyframes waveAnim {
+      from {
+        opacity: 1;
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+      }
+
+      to {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class='wave-wrap'>
+    <div class='wave w1'></div>
+    <div class='wave w2'></div>
+    <div class='wave w3'></div>
+    <div class='wave w4'></div>
+  </div>
+</body>
+
+</html>
