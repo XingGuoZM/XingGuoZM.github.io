@@ -30,6 +30,12 @@
 <pre><code>1. 函数是一等公民
 2. 纯函数
 </code></pre>
+<h3>react-like库</h3>
+<ul>
+<li>Inferno</li>
+<li>snabbdom.js</li>
+<li>preact</li>
+</ul>
 <p>React是一个专注于构建UI界面的库。遵循组件化的开发模式、声明式编程范式和函数式编程概念，让前端应用的开发更加高效。
 它的特点有虚拟DOM、单向数据流、状态驱动视图，页面组件化。</p>
 <h3>React虚拟DOM</h3>
@@ -43,27 +49,54 @@ diff算法遵循三个层级策略
 组件层级：组件的type对比，判断是否同一类型的组件
 元素层级：列表key，每个节点对应层级用唯一的key标识
 </code></pre>
-<p>React单向数据流</p>
+<h3>React单向数据流</h3>
 <pre><code>在React中对数据的流向做了限制，即数据在组件树中通过props自顶向下由外层组件向内层组件的单向流动。
 数据变化之后只会影响单方向的其他节点，从而保证了状态变化的可追溯和可预测，这是一种更加规范的约定。
 </code></pre>
-<p>React状态驱动视图</p>
+<h3>React状态驱动视图</h3>
 <pre><code>唯有状态的变化才能引起渲染，通过setState/useState更新函数触发，批量更新
 UI=F(data)
 
 状态的immutable：React更新时只是浅比较引用是否发生变化，由于引用类型的可变和共享的特性，为了加速diff算法中reconcile的过程，需要保证数据的引用和值的一致性。保持一致性的方式有纯函数操作、深拷贝+修改数据同时改变其引用、immutable.js
 视图的批量更新
+
+React执行过程
+1. jsx->js
+2. js->vdom
+3.vdom->dom
+
+由于React更新时浅比较（引用是否变化）状态来判断是否需要更新视图，所以不建议直接修改state，需要更新只能使用setState来触发。setState的调用执行是同步的，因为React为了提升性能而批量更新机制所以状态的更新是异步的。setState的执行过程
+
+1.将setState传入的partialState参数存储在当前组件实例的state暂存队列中。
+2.判断当前React是否处于批量更新状态，如果是，将当前组件加入待更新的组件队列中。
+3.如果未处于批量更新状态，将批量更新状态标识设置为true，用事务再次调用前一步方法，保证当前组件加入到了待更新组件队列中。
+4.调用事务的waper方法，遍历待更新组件队列依次执行更新。
+5.componentWillReceiveProps。
+6.将组件的state暂存队列中的state进行合并，获得最终要更新的state对象，并将队列置为空。
+7.componentShouldUpdate，根据返回值判断是否要继续更新。
+8.componentWillUpdate。
+9.render。
+10.componentDidUpdate。
+
+setState和replaceState类似，setState会先合并之前的状态，replaceState会先清空之前的状态。setState可能会引起不必要的重渲染，setState任何值都会触发更新
+
+React把所有的工作分成了两个阶段“render”和“commit”
+render阶段利用双缓冲技术，在内存中构造另一颗 Fiber 树，在其上进行协调计算，找到需要更新的节点并记录，这个过程会被重复中断恢复执行；
+commit 阶段，根据 render 阶段的计算结果，执行更新操作，这个过程是同步执行的
+
+
+
 </code></pre>
-<p>React组件化</p>
+<h3>React组件化</h3>
 <pre><code>React组件可以帮助我们将界面成了各个独立的小块，每一个块就是组件，这些组件之间可以组合、嵌套，构成整体页面。
 React类组件使用一个名为render()的方法或者函数组件return，接收输入的数据并返回需要展示的内容
 
 关于jsx
 HTML也是xml协议，有由浏览器解析，而JSX是由js解析。浏览器引擎没有固有的实现来读取和理解它们， JSX并非旨在由引擎或浏览器实现，它旨在被各种转译器用来将这些JSX转换为有效的js代码。
 jsx能有效防止xss攻击,ReactElement的$$typeof属性是一个symbol类型，通过JSON.stringify之后会被丢失
-</code></pre>
-<p>React class组件</p>
-<pre><code>class组件特点：耦合性高、逻辑复用困难
+
+React class组件
+class组件特点：耦合性高、逻辑复用困难
 适用
 1. 适合用于高内聚的公共模块，解决某一类特定问题
 2. errorboundary组件，必须用class组件
@@ -73,16 +106,7 @@ jsx能有效防止xss攻击,ReactElement的$$typeof属性是一个symbol类型�
 2. 很难tree-shaking
 3. componentdidupdate, 在复杂的情况下preState、nextstate、prevprop、nextprops的判断
 </code></pre>
-<p>React把所有的工作分成了两个阶段“render”和“commit”</p>
-<pre><code>render阶段利用双缓冲技术，在内存中构造另一颗 Fiber 树，在其上进行协调计算，找到需要更新的节点并记录，这个过程会被重复中断恢复执行；
-commit 阶段，根据 render 阶段的计算结果，执行更新操作，这个过程是同步执行的
-</code></pre>
-<p>Fiber</p>
-<pre><code>第一层含义是react的一种程序架构，最重要的特点就是异步可以中断和恢复的并发架构
-
-第二层含义是react最新版本虚拟DOM节点的数据结构。它是一个链表的结构，通过child、sibling、return三个属性记录了树型结构中的子节点、兄弟节点、父节点的关系信息，从而可以实现从任一节点出发，都可以访问其他节点的特性
-</code></pre>
-<p>Mixin（混合）/Extend（继承）</p>
+<h3>Mixin（混合）/Extend（继承）</h3>
 <pre><code>特点：强耦合，隐式依赖，不可预测
 场景：Mixin经常依赖组件的特定方法/状态，但是在定义组件的时候并不知道这种依赖关系
 
@@ -90,7 +114,7 @@ commit 阶段，根据 render 阶段的计算结果，执行更新操作，这�
 由于需要全盘了解所有依赖Mixin的扩展行为以及它们之间的相互影响，导致维护成本和理解成本增加,并且可能存在(命名)冲突
 由于Mixin倾向于增加更多状态，降低应用的可预测性，导致复杂度剧增
 </code></pre>
-<p>HOC（高阶组件）接收一个组件作为参数，返回一个新的组件，是对装饰模式的一种实现</p>
+<h3>HOC（高阶组件）接收一个组件作为参数，返回一个新的组件，是对装饰模式的一种实现</h3>
 <pre><code>特点：原组件不会感知HOC的存在，HOC会在原组件基础上增强功能
 优点：复用、逻辑和抽象，可以劫持render方法，控制props于state等
 缺点：
@@ -108,13 +132,17 @@ HOC需要注意的地方
 6. refs不会被传递
 
 实现HOC的方式有
-1. 属性代理
+1. 属性代理：对props进行代理
 2. 反向继承：返回的组件去继承之前的组件
 
 HOC的应用
 1. 非受控组件转化为受控组件
+2. 渲染劫持
+3. 抽象state
+4. 通过refs使用引用
+5. 控制props
 </code></pre>
-<p>Render Props:一个值为函数的props，这个函数返回一个react元素</p>
+<h3>Render Props:一个值为函数的props，这个函数返回一个react元素</h3>
 <pre><code>优点：
 1. 动态构建
 缺点：
@@ -122,7 +150,7 @@ HOC的应用
 2. render props基于闭包实现的
 
 </code></pre>
-<p>Hook：逻辑复用</p>
+<h3>Hook：逻辑复用</h3>
 <pre><code>来源
 为细粒度的代码复用，不和组件复用捆绑在一起。HOC和Render Props都是基于组件的组合方案，先把要复用的逻辑封装成组件，再利用组件复用机制实现逻辑复用。将函数当成最小的代码复用单元同时内置一些模式简化状态逻辑复用
 
@@ -135,6 +163,49 @@ HOC的应用
 6. React.memo并不能完全替代ShouldComponentUpdate（拿不到state change，只针对props change）
 7. useState API设计上不完美（初始化、可选链、闭包陷阱、引用类型、多个状态）
 
+</code></pre>
+<h3>Fiber</h3>
+<pre><code>第一层含义是react的一种程序架构，最重要的特点就是异步可以中断和恢复的并发架构
+
+第二层含义是react最新版本虚拟DOM节点的数据结构。它是一个链表的结构，通过child、sibling、return三个属性记录了树型结构中的子节点、兄弟节点、父节点的关系信息，从而可以实现从任一节点出发，都可以访问其他节点的特性
+</code></pre>
+<h3>React合成事件</h3>
+<pre><code>React为了更好的兼容IE等浏览器，自己实现了一套事件机制，通过对事件进行归类按照优先级进行处理，提高性能。它的处理方式是将事件统一绑定到根节点上（以前是document，现在是root），通过捕获或者冒泡的形式触发。
+React的合成事件和HTML原生事件是可以同时共存的，由于React基于事件冒泡，所以会先执行原生事件然后再执行合成事件。原生事件可以通过return false来阻止默认事件，合成事件只能通过event.preventDefault来阻止。
+关于事件的清除问题，除了直接绑定在jsx里的事件不用手动清除以外，其他的方式包括定时器都要手动清除，如addEventListener、setTimeout，如果不清除的话很容易造成变量引用不会被垃圾回收机制清除，造成内存泄漏。
+</code></pre>
+<h3>React优化</h3>
+<pre><code>React重渲染问题来源，在diff过程中，react只会对前后做浅比较，即引用的比较，所以极容易造成重渲染。可以通过一系列的方式进行优化重渲染问题
+1. React.memo、pureComponent
+2. shouldComponentUpdate
+3. 列表加唯一key,确保元素是否移动，提高节点复用
+4. 避免使用内联对象和匿名函数
+5. 组件懒加载
+6. React.Fragment
+7. React.lay和Suspense，代码分割，组件懒加载
+8. 关于useEvent，函数的引用不变，状态能拿到最新的。
+</code></pre>
+<h3>第三方组件库</h3>
+<pre><code>罗列我认为有用的第三方类库及重要实现
+react-table
+
+antd:
+Message静态方法
+
+ahooks:
+useRequest通过plugin来实现轮询、防抖节流、缓存、错误重试等功能
+useLatest实现
+useMemoizedFn
+useInfiniteScroll
+useVirtualList
+useCountDown
+useUnmount
+useDebounce
+useThrottle
+usePrevious
+useUpdateEffect
+useLockFn
+useEventListener
 </code></pre>
 `}}></div>
   }

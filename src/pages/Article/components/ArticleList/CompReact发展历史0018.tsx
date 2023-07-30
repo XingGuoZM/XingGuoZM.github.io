@@ -111,11 +111,20 @@ useState、useReducer、useEffect、useMemo、useCallback、useImperativeHandle�
 <p>react 17</p>
 <pre><code>解决一些问题 fix bugs
 移除一些没有用到的依赖
+将事件委托放在了root上而不是以前的 document上
 </code></pre>
 <p>react 18</p>
-<pre><code>react-dom/client
+<pre><code>停止对ie11支持
+react-dom/client
+1. 增加Hooks：useId、useTransition、useDeferredValue、useSyncExternalStore、useInsertionEffect
+2. 在所有情况下，setState更新都会批处理
+3. 退出批量更新的flushSync
+4. 移除了卸载组件时执行状态更新警告
+5. React组件允许返回undefined
+6. 对Suspense组件fallback属性做了处理，可以不写fallback，React不会跳过它
+
+
 react-dom/server
-useId、useTransition、useDeferredValue、useSyncExternalStore、useInsertionEffect
 
 client：reactDOM.createRoot()、reactDOM.hydrateRoot()
 </code></pre>

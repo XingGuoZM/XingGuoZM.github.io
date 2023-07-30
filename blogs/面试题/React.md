@@ -83,15 +83,18 @@ React有几种构建组件的方式？可以写出来吗？
 在React中组件和元素有什么区别？
 在React中声明组件时组件名的第一个字母必须是大写吗？为什么？
 什么是React的实例？函数式组件有没有实例？
-使用ES6的class定义的组件不支持mixins了，那用什么可以替代呢？
-React的mixins有什么作用？适用于什么场景？
 
-对函数式编程的理解？对高阶组件（HOC）的理解？什么渲染劫持？
-举例说明什么是高阶组件(HOC)的属性代理？
-举例说明什么是高阶组件(HOC)的反向继承？
-在React使用高阶组件(HOC)有遇到过哪些问题？如何解决？
-在使用React过程中什么时候用高阶组件(HOC)？
-高阶组件(HOC)有哪些优点和缺点？
+说说react的事件机制？16和17有什么区别？
+在React中什么是合成事件？有什么用？
+请描述下事件在React中的处理方式是什么？
+怎样将事件传递给子组件？
+React的事件和普通的HTML事件有什么不同？
+在React中怎么将参数传递给事件？
+在React中怎么阻止事件的默认行为？
+举例说明如何在React创建一个事件?
+组件卸载前，加在DOM元素的监听事件和定时器要不要手动清除？为什么？
+React的触摸事件有哪几种？
+
 说说你是怎么理解React的业务组件和技术组件的？
 展示组件和容器组件有什么区别？
 React怎么拿到组件对应的DOM元素？
@@ -110,6 +113,7 @@ React中验证props的目的是什么？
 在React中我们怎么做静态类型检测？都有哪些方法可以做到？
 React中你有使用过propType吗？它有什么作用？
 React中怎么检验props？
+使用PropTypes和Flow有什么区别？
 使用React的方式有哪几种？
 说说你对reader的context的理解
 React中除了在构造函数中绑定this,还有别的方式吗？
@@ -117,6 +121,28 @@ React中除了在构造函数中绑定this,还有别的方式吗？
 React中可以在render访问refs吗？为什么？
 React中refs的作用是什么？有哪些应用场景？
 为什么建议不要过渡使用Refs？
+什么是React.forwardRef？它有什么作用？
+使用React的memo和forwardRef包装的组件为什么提示children类型不对？
+
+在React中怎么使用async/await？
+在React中什么时候使用箭头函数更方便呢？
+React v15中怎么处理错误边界？
+React中在哪捕获错误？
+说说你对Error Boundaries的理解
+
+React 废弃了哪些生命周期？为什么？
+React16跟之前的版本生命周期有哪些变化？
+说说React的生命周期有哪些？？说说React生命周期有哪些不同的阶段？每个阶段对应的方法是？
+componentWillUpdate可以直接修改state的值吗？
+React组件的构造函数有什么作用？React组件的构造函数是必须的吗？
+super()和super(props)有什么区别？
+constructor和getInitialState有不同？
+在React中组件的props改变时更新组件的有哪些方法？
+React的性能优化在哪个生命周期？它优化的原理是什么？
+React的函数式组件有没有生命周期？
+React中修改prop引发的生命周期有哪几个？
+React中调用setState会更新的生命周期有哪几个？
+React中发起网络请求应该在哪个生命周期中进行？为什么？
 ```
 
 ### React更新(setState)和渲染(render)
@@ -170,54 +196,18 @@ shouldComponentUpdate方法是做什么的？
 React中遍历时为什么不用索引作为唯一的key值？
 React中的key有什么作用？
 如何解决引用类型在pureComponent下修改值的时候，页面不渲染的问题？
-```
 
-### React事件
-```
-说说react的事件机制？16和17有什么区别？
-在React中什么是合成事件？有什么用？
+在React中你有遇到过安全问题吗？怎么解决？
 
-请描述下事件在React中的处理方式是什么？
-怎样将事件传递给子组件？
-React的事件和普通的HTML事件有什么不同？
-在React中怎么将参数传递给事件？
-在React中怎么阻止事件的默认行为？
-举例说明如何在React创建一个事件?
-组件卸载前，加在DOM元素的监听事件和定时器要不要手动清除？为什么？
-React的触摸事件有哪几种？
-```
+使用ES6的class定义的组件不支持mixins了，那用什么可以替代呢？
+React的mixins有什么作用？适用于什么场景？
+对函数式编程的理解？对高阶组件（HOC）的理解？什么渲染劫持？
+举例说明什么是高阶组件(HOC)的属性代理？
+举例说明什么是高阶组件(HOC)的反向继承？
+在React使用高阶组件(HOC)有遇到过哪些问题？如何解决？
+在使用React过程中什么时候用高阶组件(HOC)？
+高阶组件(HOC)有哪些优点和缺点？
 
-### React规范
-- 
-- React中在哪捕获错误？
-- 什么是React.forwardRef？它有什么作用？
-- 在React中怎么使用async/await？
-- 在React中什么时候使用箭头函数更方便呢？
-- 使用PropTypes和Flow有什么区别？
-- React v15中怎么处理错误边界？
-- 说说你对Error Boundaries的理解
-- 在React中你有遇到过安全问题吗？怎么解决？
-- 
-- 使用React的memo和forwardRef包装的组件为什么提示children类型不对？
-
-### React生命周期
-```
-React 废弃了哪些生命周期？为什么？
-React16跟之前的版本生命周期有哪些变化？
-说说React的生命周期有哪些？？说说React生命周期有哪些不同的阶段？每个阶段对应的方法是？
-componentWillUpdate可以直接修改state的值吗？
-React组件的构造函数有什么作用？React组件的构造函数是必须的吗？
-super()和super(props)有什么区别？
-constructor和getInitialState有不同？
-在React中组件的props改变时更新组件的有哪些方法？
-React的性能优化在哪个生命周期？它优化的原理是什么？
-React的函数式组件有没有生命周期？
-React中修改prop引发的生命周期有哪几个？
-React中调用setState会更新的生命周期有哪几个？
-React中发起网络请求应该在哪个生命周期中进行？为什么？
-```
-### Fiber/Hook
-```
 类组件和函数式组件有什么区别？
 说说你对fiber架构的理解？解决了什么问题？可中断/恢复怎么实现的？fiber的更新机制
 函数式组件有没有生命周期？为什么？
@@ -240,6 +230,7 @@ useEffect 依赖为空数组与 componentDidMount 区别？
 为什么React useState要使用数组而不是对象? 
 怎样使用Hooks获取服务端数据？
 ```
+
 ### React工程化与三方库
 ```
 简单描述下你有做过哪些React项目？
@@ -300,7 +291,6 @@ React有哪几种方法来处理表单输入？
 怎样将多个组件嵌入到一个组件中？
 
 有用过React的服务端渲染吗？怎么做的？
-
 ```
 
 ### React组件通信和状态管理

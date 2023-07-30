@@ -166,24 +166,15 @@ const myCurry = (fn,len = fn.length)=>{
   return curry.call(this,fn,len)
 }
 
-const myCompose=(...fns)=>{
-  let isFirst = true;
-  return fns.reduceRight((result,fn)=>{
-    if(isFirst){
-      isFirst=false;
-      return fn(...result);
-    }
-    return fn(result);
-  },args)
-}
+const myCompose = (...fns) => fns.reduce((f1, f2) => (...args) => f1(f2(...args)));
 </code></pre>
 <ul>
-<li>
-<p>手写sleep函数（考虑兼容性）</p>
-</li>
-<li>
-<p>判断设备来源的方法（isIos、isAndroid、isIphoneX）</p>
-</li>
+<li>手写sleep函数（考虑兼容性）</li>
+</ul>
+<pre><code class="language-js">var sleep =(fn,ms)=> setTimeout(fn)
+</code></pre>
+<ul>
+<li>判断设备来源的方法（isIos、isAndroid、isIphoneX）</li>
 </ul>
 <pre><code class="language-js">const DeviceInfo = (() => {
   const ua = window.navigator?.userAgent;
