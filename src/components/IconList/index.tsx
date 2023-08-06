@@ -8,8 +8,7 @@ interface IProps {
   className?: string;
 }
 
-export default function IconList({ data = '', className = '', fill = '#fff' }: IProps) {
-
+export default function IconList({ data = [], className = '', fill = '#fff' }: IProps) {
   if (Array.isArray(data) && data.length === 2) {
     return (
       <div className='icon-list-2'>
@@ -37,5 +36,6 @@ export default function IconList({ data = '', className = '', fill = '#fff' }: I
     );
   }
   const Icon = data[0];
-  return <Icon className={classnames({ 'icon-list': true, [className]: true })} fill={fill} />
+  return Icon ? <Icon className={classnames({ 'icon-list': true, [className]: true })} fill={fill} /> : null
+
 }

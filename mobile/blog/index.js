@@ -192,7 +192,7 @@ function BlogTabList() {
           onClick: function onClick() {
             return handleClick(item);
           }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        }, Comp && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
           className: _index_module_less__WEBPACK_IMPORTED_MODULE_7__["default"].iconWrap
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Comp, {
           className: _index_module_less__WEBPACK_IMPORTED_MODULE_7__["default"].icon,

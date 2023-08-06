@@ -30,7 +30,6 @@ interface IProps {
  * type: Large 、medium、small
  */
 export default function Card({ type, children, data }: IProps) {
-
   const renderCardByType = useCallback(() => {
     switch (type) {
       case CardTypeEnum.Large:
@@ -77,7 +76,7 @@ export default function Card({ type, children, data }: IProps) {
       default:
         return;
     }
-  }, [children, data])
+  }, [children, data, type])
 
   return <div className='card-wrap'>
     <div className='card-content'>

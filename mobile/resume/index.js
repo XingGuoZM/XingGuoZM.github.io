@@ -754,7 +754,7 @@ function Expert(_ref) {
       className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].expert
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].expertCell
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    }, item.iconList && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: _index_module_less__WEBPACK_IMPORTED_MODULE_4__["default"].expertIconWrap
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_IconList__WEBPACK_IMPORTED_MODULE_3__["default"], {
       data: item.iconList,

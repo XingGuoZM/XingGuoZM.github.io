@@ -216,7 +216,7 @@ function Card(_ref) {
       default:
         return;
     }
-  }, [children, data]);
+  }, [children, data, type]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "card-wrap"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -293,7 +293,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function IconList(_ref) {
   var _ref$data = _ref.data,
-      data = _ref$data === void 0 ? '' : _ref$data,
+      data = _ref$data === void 0 ? [] : _ref$data,
       _ref$className = _ref.className,
       className = _ref$className === void 0 ? '' : _ref$className,
       _ref$fill = _ref.fill,
@@ -328,12 +328,12 @@ function IconList(_ref) {
   }
 
   var Icon = data[0];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icon, {
+  return Icon ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icon, {
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(_defineProperty({
       'icon-list': true
     }, className, true)),
     fill: fill
-  });
+  }) : null;
 }
 
 /***/ }),

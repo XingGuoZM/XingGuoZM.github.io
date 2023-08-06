@@ -25,9 +25,9 @@ export default function BlogTabList() {
           {(item) => {
             const Comp = IconMap[item.dir];
             return <div className={styles.content} onClick={() => handleClick(item)}>
-              <div className={styles.iconWrap}>
+              {Comp && <div className={styles.iconWrap}>
                 <Comp className={styles.icon} fill={theme} />
-              </div>
+              </div>}
               <div className={styles.titleWrap}>
                 <div className={styles.title}>{item.title}</div>
                 <div className={styles.subtitle}>
