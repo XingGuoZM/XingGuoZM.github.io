@@ -60,6 +60,15 @@ const flat2 = (arr)=>{
 </code></pre>
 <ul>
 <li>手写数组indexOf</li>
+</ul>
+<pre><code class="language-js">const myIndexOf = (arr, item) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === item) return i;
+  }
+  return -1;
+}
+</code></pre>
+<ul>
 <li>手写数组reduce</li>
 <li>手写数组map、forEach、</li>
 <li>用reduce实现map方法</li>

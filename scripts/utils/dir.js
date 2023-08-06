@@ -33,7 +33,9 @@ function getAllFileFromDir ({ dir, type }) {
     traverse(dir, ans);
     if (type) {
       ans = ans.filter(item => item.type === type);
+
     }
+    console.log('ans', ans)
     resolve(ans);
   })
 }

@@ -24,6 +24,16 @@
 <li>说一说函数式编程？函数柯里化是什么？</li>
 <li></li>
 </ol>
+<p>8.3</p>
+<ol>
+<li>性能优化怎么做的，webpack tree-shaking，优化之后包体积、webpack热更新</li>
+<li>说一说es6 map和set、weakmap和weakset</li>
+<li>怎么解决跨域问题</li>
+<li>react渲染优化</li>
+<li>怎么渲染一颗树</li>
+<li>vue的好用的地方</li>
+<li>vue更新引用类型</li>
+</ol>
 `}}></div>
   }
   

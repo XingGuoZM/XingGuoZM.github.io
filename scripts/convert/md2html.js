@@ -80,7 +80,7 @@ const generatorBlogFile = async ({ sourceDir, targetDir }) => {
   // 清空目标目录下所有文件
   await cleanAllFileFromDir({ dir: targetDir });
   // 遍历源目录下所有文件 保存文件id、路径、名称，存入数组
-  const allFile = await getAllFileFromDir({ dir: sourceDir });
+  const allFile = await getAllFileFromDir({ dir: sourceDir, type: 'md' });
   // 生成文件名->react组件的映射
   const reactMapStr = parseFileName2ReactMap(allFile);
 
@@ -108,7 +108,7 @@ const generatorBlogFile = async ({ sourceDir, targetDir }) => {
       desc: removeHtmlTag(resHtmlStr).slice(0, 100),
       url: `/article?id=${file.id}`
     }
-    console.log(getLastDirName(file.filepath))
+    // console.log(getLastDirName(file.filepath))
     fileArr.push(fileObj)
 
 
