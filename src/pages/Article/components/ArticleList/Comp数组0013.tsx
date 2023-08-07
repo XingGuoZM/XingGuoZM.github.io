@@ -70,9 +70,31 @@ const flat2 = (arr)=>{
 </code></pre>
 <ul>
 <li>手写数组reduce</li>
-<li>手写数组map、forEach、</li>
+</ul>
+<pre><code class="language-js">
+const myReduce = (array, callback, initialValue) => {
+  const fakeArray = [...array]
+  if (initialValue) {
+    fakeArray.unshift(initialValue);
+  }
+  let preValue = fakeArray[0];
+  for (let i = 0; i < fakeArray.length - 1; i++) {
+    preValue = callback(preValue, fakeArray[i + 1]);
+  }
+  console.log(preValue);
+  return preValue;
+}
+</code></pre>
+<ul>
 <li>用reduce实现map方法</li>
 </ul>
+<pre><code class="language-js">const mapFromReduce = (array, callback) => {
+  return array.reduce((value, currValue, currIndex, array) => {
+    value.push(callback(currValue, currIndex, array));
+    return value;
+  }, []);
+}
+</code></pre>
 `}}></div>
   }
   

@@ -1,14 +1,28 @@
-
-const array2Object = (arr) => {
-  return arr.reduce((pre, item) => {
-    pre[item[0]] = item[1];
-    return pre;
-  }, {});
+function LinkNode (val) {
+  this.next = null;
+  this.val = val;
 }
 
-const arr = [
-  ['name', 'jack'],
-  ['age', '11'],
-  ['sex', '男']
-]
-console.log(array2Object(arr));
+function createLinkList (arr) {
+  let head = new LinkNode(null);
+  let curr = new LinkNode(null);
+
+  head.next = curr;
+  for (const item of arr) {
+    const node = new LinkNode(item);
+    curr.next = node;
+    curr = curr.next;
+  }
+  return head.next;
+}
+
+function traverseLinkList (linkList) {
+  let currNode = linkList.next;
+  while (currNode) {
+    currNode = currNode.next;
+  }
+}
+
+const LinkList = createLinkList([1, 2, 3])
+traverseLinkList(LinkList)
+

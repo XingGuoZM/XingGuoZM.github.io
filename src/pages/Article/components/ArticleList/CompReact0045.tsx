@@ -563,6 +563,12 @@ state是组件内部的状态，用于存储组件的数据和更新组件，sta
 不太相关组件间通信：Context、发布-订阅模式、redux等全局管理库
 </code></pre>
 <ul>
+<li>如果组件的属性没有传值，那么它的默认值是什么？</li>
+</ul>
+<pre><code>undefined
+
+</code></pre>
+<ul>
 <li>React中验证props的目的是什么？</li>
 </ul>
 <pre><code>由于js是一门动态类型的语言，只有当程序运行时才能发现变量类型错误。react的props是当作组件的输入，对props的类型验证可以避免运行时的类型错误，并且可以提高程序的可读性。
@@ -1403,165 +1409,380 @@ React16改写了架构，将React15的同步更新，变成异步可中断的更
 6. 对Suspense组件fallback属性做了处理，可以不写fallback，React不会跳过它
 </code></pre>
 <ul>
-<li>
-<p>有用过React Devtools吗？说说它的优缺点分别是什么？</p>
-</li>
-<li>
-<p>create-react-app有什么好处？</p>
-</li>
-<li>
-<p>create-react-app创建新运用怎么解决卡的问题？</p>
-</li>
-<li>
-<p>不用脚手架，你会手动搭建React项目吗？</p>
-</li>
-<li>
-<p>说说你对React的组件命名规范的理解</p>
-</li>
-<li>
-<p>说说你对React的项目结构的理解</p>
-</li>
-<li>
-<p>React如何进行代码拆分？拆分的原则是什么？</p>
-</li>
-<li>
-<p>怎么在React中引入其它的UI库/插件等，例如Bootstrap、jQuery</p>
-</li>
-<li>
-<p>同时引用这三个库React.js、React-dom.js和babel.js它们都有什么作用？</p>
-</li>
-<li>
-<p>你有用过哪些React的UI库？它们的优缺点分别是什么？</p>
-</li>
-<li>
-<p>有在项目中使用过Antd吗？说说它的好处？</p>
-</li>
-<li>
-<p>有在项目中使用ahooks吗？</p>
-</li>
-<li>
-<p>你有做过React的单元测试吗？如果有，用的是哪些工具？怎么做的？</p>
-</li>
-<li>
-<p>什么是浅层渲染？</p>
-</li>
-<li>
-<p>你有使用过formik库吗？说说它的优缺点</p>
-</li>
-<li>
-<p>React根据不同的环境打包不同的域名？</p>
-</li>
-<li>
-<p>怎样在React中开启生产模式？</p>
-</li>
-<li>
-<p>在React中如何去除生产环境上的sourcemap？</p>
-</li>
-<li>
-<p>React的应用如何打包发布？它的步骤是什么？</p>
-</li>
-<li>
-<p>说说你对受控组件和非受控组件的理解？应用场景？如何给非控组件设置默认的值？</p>
-</li>
-<li>
-<p>React什么是有状态组件？</p>
-</li>
-<li>
-<p>常用的React组件</p>
-</li>
-<li>
-<p>你有用过哪些React的表单库吗？说说它们的优缺点</p>
-</li>
-<li>
-<p>你有使用过loadable组件吗？它帮我们解决了什么问题？</p>
-</li>
-<li>
-<p>你有使用过suspense组件吗？它帮我们解决了什么问题？</p>
-</li>
-<li>
-<p>使用高阶组件(HOC)实现一个loading组件</p>
-</li>
-<li>
-<p>如何封装一个React的全局公共组件？Antd的Message.error的调用方式</p>
-</li>
-<li>
-<p>怎么定时更新一个组件？</p>
-</li>
-<li>
-<p>使用React写一个todo应用，说说你的思路</p>
-</li>
-<li>
-<p>写出React动态改变class切换组件样式</p>
-</li>
-<li>
-<p>怎样将多个组件嵌入到一个组件中？</p>
-</li>
-<li>
-<p>React怎样引入svg的文件？</p>
-</li>
-<li>
-<p>在React中怎么使用字体图标？</p>
-</li>
-<li>
-<p>在React中如何引入图片？哪种方式更好？</p>
-</li>
-<li>
-<p>举例说明在React中怎么使用样式？</p>
-</li>
-<li>
-<p>在React中怎么引用sass或less？</p>
-</li>
-<li>
-<p>怎样动态导入组件？</p>
-</li>
-<li>
-<p>创建React动画有哪些方式？</p>
-</li>
-<li>
-<p>如何用React实现滚动动画？</p>
-</li>
-<li>
-<p>在React项目中你用过哪些动画的包？</p>
-</li>
-<li>
-<p>React有哪几种方法来处理表单输入？</p>
-</li>
-<li>
-<p>有用过React的服务端渲染吗？怎么做的？</p>
-</li>
-<li>
-<p>你用过React版本有哪些？</p>
-</li>
-<li>
-<p>简单描述下你有做过哪些React项目？</p>
-</li>
-<li>
-<p>从旧版本的React升级到新版本的React有做过吗？有遇到过什么坑？</p>
-</li>
+<li>有用过React Devtools吗？说说它的优缺点分别是什么？</li>
 </ul>
+<pre><code>优点
+可以查看组件、编辑props和state，并且可以识别性能问题。
+
+不足
+react在iframe里面，无法被检查到的
+</code></pre>
+<ul>
+<li>create-react-app有什么好处？</li>
+</ul>
+<pre><code>1. 免去繁杂的工程化的配置,专注编码，不用操心页面构建
+</code></pre>
+<ul>
+<li>create-react-app创建新应用怎么解决卡的问题？</li>
+</ul>
+<pre><code>使用cnpm或者yarn来替代npm，使用新的指令
+</code></pre>
+<ul>
+<li>不用脚手架，你会手动搭建React项目吗？</li>
+</ul>
+<pre><code>会
+webpack配置文件webpack.config.json，配置入口entry和output，css-loader和style-loader
+</code></pre>
+<ul>
+<li>说说你对React的项目结构的和组件命名规范的理解</li>
+</ul>
+<pre><code>项目结构：
+我们会把所有的组件都放在 components 目录下，除了页面。然后按照模块或者特性进行拆分和组合代码。每当一个组件会有不止一个文件的时候，我们会将这个组件和它对应的文件放在同一个文件夹下，并且使用同一个名字来命名。例如：现在我们有一个 Form.css 文件包含了 Form.jsx 的样式，我们的目录大概这样   Form->Form.jsx | Form.css，Form下面包含两个文件Form.jsx和Form.css，Form.jsx 的测试文件会放在同一个文件夹下并且命名为 Form.spec.jsx。除了通过模块拆分组件，我们还会在 src/components 放置一个 UI 目录，用于存放所有通用的组件
+
+组件命名：
+组件的命名在应用中应当清晰且唯一，这样可以让它们可以轻松被找到并且避免可能的困惑。当应用在运行时发生错误或者通过 React 开发者工具调试时，组件的名字是非常方便易用的，因为错误发生的地方往往都伴随着组件的名字。
+
+采用基于路径的组件命名方式，即根据相对于 components 文件目录的相对路径来命名，例如组件的路径如果是 components/User/List.jsx，那么它就被命名为 UserList；components/User/Form/Form.jsx 会命名为 UserForm 而不是 UserFormForm。
+
+这样命名的好处是便于在项目中搜索文件、可以避免在引入时重复名称
+
+页面命名：
+在应用中，通过使用组件相互组合的结果，就是一个页面。理想状态下，页面应该不包含任何逻辑。将不同页面分散在不同文件夹中，因为它们是根据路由定义而不是模块来划分成组的。当组件在组件目录外使用时，我们需要使用它们相对于 src 目录的路径来命名。位于 src/screens/User/List.jsx 的组件应该被命名为 ScreensUserList。
+
+</code></pre>
+<ul>
+<li>React如何进行组件拆分？拆分的原则是什么？</li>
+</ul>
+<pre><code>1.尽量使拆分后的组件更容易判断是否更新
+2.尽量使拆分组件的props和state数据扁平化
+</code></pre>
+<ul>
+<li>怎么在React中引入其它的UI库/插件等，例如Bootstrap、jQuery</li>
+</ul>
+<pre><code>在create-react-app建的项目目录中安装react-bootstrap。
+npm install react-bootstrap --save
+ 
+安装bootstrap。 
+npm install bootstrap@3.3.7 --save
+
+在index.js文件中增加css引用。
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+
+在需要用到bootstrap组件的代码中，引入所需组件。
+import { Navbar, Jumbotron, Button } from 'react-bootstrap';
+</code></pre>
+<ul>
+<li>同时引用这三个库React.js、React-dom.js和babel.js它们都有什么作用？</li>
+</ul>
+<pre><code>React.js: React中的组件(Component)、Context、hooks等核心Api，还有虚拟DOM的比较、Fiber的算法实现等
+React-dom.js 与web浏览器DOM相关的API，比如虚拟DOM的挂载，DOM的更新，Portal等
+babel.js ES6+代码的转义
+</code></pre>
+<ul>
+<li>你有用过哪些React的UI库？它们的优缺点分别是什么？</li>
+</ul>
+<pre><code>Ant Design
+优点：
+开箱即用的高质量的react组件
+使用typescript开发，提供完整的类型定义文件
+全链路的开发和设计工具
+数十个国际化语言支持
+主题定制能力
+
+缺点：
+包体积太大，1M多
+
+MUI
+优点：
+MUI 不仅是一个组件库，而是一个完整的设计系统。它具有一套完整的指南、设计原则和 UI 设计最佳实践系统
+MUI 组件可以具有类似于 Google 的外观和感觉，这意味着 MUI 可以成为构建 Android 应用程序的绝佳选择。
+
+
+React Bootstrap
+优点：
+组件高度可定制
+
+</code></pre>
+<ul>
+<li>有在项目中使用过Antd吗？说说它的好处？</li>
+</ul>
+<pre><code>
+好处：
+拥有完善的设计体系
+容易上手，拿来即用
+</code></pre>
+<ul>
+<li>有在项目中使用ahooks吗？</li>
+</ul>
+<pre><code>useRequest插件机制
+useCountdown倒计时计算
+useMount和useUnmount挂载卸载
+
+</code></pre>
+<ul>
+<li>你有做过React的单元测试吗？如果有，用的是哪些工具？怎么做的？</li>
+</ul>
+<pre><code>为我们测试运行和写断言将用到这三个库。它们定义了我们测试环境的不同方面。
+
+Karma是一个用来搜索测试文件、编译它们然后运行断言的测试器。
+Jasmine是一个断言库，它仅仅问“我们得到我们期待的东西了么？”。它提供类似describe，expect和it的函数，也提供监听一个函数或方法有没有被触发的监听器。
+Enzyme是一个React测试工具库。Enzyme提供渲染和遍历React组件的方法，可以用来测试与React的render、mount和事件有关的断言。
+</code></pre>
+<ul>
+<li>什么是浅层渲染？</li>
+</ul>
+<pre><code>当为 React 写单元测试时，浅层渲染(Shallow Renderer) 会变得十分有用。浅层渲染使你可以渲染 “单层深度” 的组件，并且对组件的 render 方法的返回值进行断言，不用担心子组件的行为，组件并没有实例化或被渲染。浅渲染并不需要 DOM。 
+</code></pre>
+<ul>
+<li>你有使用过formik库吗？说说它的优缺点</li>
+</ul>
+<pre><code>Formik是一个小型库。由React组件和hooks组成，它内置了表单的state管理操作，同时使用了Context，能够让表单组件多层嵌套，不再需要一层层传递
+
+优点：
+增强表单处理能力，简化表单处理流程
+</code></pre>
+<ul>
+<li>React根据不同的环境打包不同的域名？</li>
+</ul>
+<pre><code>如果是CRA的项目的话，可以使用.env、.env.development、.env.production文件来区分不同的环境； 比如生产环境域名http://www.prod.com，开发环境域名http://www.deve.com 则可以分别设置REACT_APP_BASE_URL = 'http://www.prod.com'、REACT_APP_BASE_URL = 'http://www.deve.com' 然后在程序中使用process.env.REACT_APP_BASE_URL来获取基础路径，此时打包的时候会根据不同的环境打包不同的域名
+</code></pre>
+<ul>
+<li>怎样在React中开启生产模式？</li>
+</ul>
+<pre><code>.env.developemnt配置
+REACT_APP_BASE_URL = 'https://test.com'
+REACT_APP_ENV = 'development'
+
+.env.production配置
+REACT_APP_BASE_URL = 'https://production.com'
+REACT_APP_ENV = 'production'
+
+配置package.json的scripts选项中添加如下代码
+&quot;build:prod&quot;: &quot;cross-env REACT_APP_ENV=production react-app-rewired build&quot;,
+&quot;build:dev&quot;: &quot;cross-env REACT_APP_ENV=development react-app-rewired build&quot;,
+
+安装cross-env插件，进行识别环境地址
+npm i -D cross-env
+
+在你统一配置接口请求地址的js文件中进行获取当前的接口地址
+const baseUrl = process.env.REACT_APP_ENV === &quot;production&quot; ? process.env.REACT_APP_BASE_URL: &quot;http://test.com&quot;;
+
+生产环境：
+npm build:prod
+</code></pre>
+<ul>
+<li>在React中如何去除生产环境上的sourcemap？</li>
+</ul>
+<pre><code>通过.env环境变量文件影响react-scripts start/build等命令
+</code></pre>
+<ul>
+<li>React的应用如何打包发布？它的步骤是什么？</li>
+</ul>
+<pre><code>1. 先将react项目打包，npm run build
+2. 将其放到服务器能够访问的root目录下，如果是root目录下的项目名称文件夹下需要修改访问资源的路径（默认位置为根目录，其修改后的路径为相对路径）否则控制台报错404，某些文件找不到，前台页面只能挂载index.html，其内部组件无法渲染。
+
+解决有三种方法：
+方法1、修改packpage.json文件，添加&quot;home&quot;:&quot;.&quot;
+方法2、修改webpack的默认配置，
+方法3、直接修改node_modules/react-scripts/config/paths.js这个文件中的 / 为 ./
+</code></pre>
+<ul>
+<li>说说你对受控组件和非受控组件的理解？应用场景？如何给非控组件设置默认的值？</li>
+</ul>
+<pre><code>受控组件的状态由开发者维护，非受控组件的状态由组件自身维护
+
+受控组件处理表单
+
+</code></pre>
+<ul>
+<li>React什么是有状态组件？</li>
+</ul>
+<pre><code>使用 class 关键字创建的组件，有自己的私有数据 this.state 和生命周期函数就是有状态组件
+</code></pre>
+<ul>
+<li>常用的React组件</li>
+</ul>
+<pre><code>异步组件react-loadable
+withRouter只有点击路由时才会加载相应的js
+用react-transition-group实现多个DOM元素的动画
+</code></pre>
+<ul>
+<li>你有用过哪些React的表单库吗？说说它们的优缺点</li>
+</ul>
+<pre><code>Formik：通过组件来抽象化你的表单以减少模板代码
+读取或者写入表单的 state 的值
+验证以及错误信息
+处理表单提交
+
+React-hook-form
+
+redux-form 
+</code></pre>
+<ul>
+<li>你有使用过loadable组件吗？它帮我们解决了什么问题？</li>
+</ul>
+<pre><code>loadable 是一个高阶组件（创建组件的function）用来轻易地在组件层面拆分bundle
+
+组件动态引入异步加载
+</code></pre>
+<ul>
+<li>你有使用过suspense组件吗？它帮我们解决了什么问题？</li>
+</ul>
+<pre><code>React中的Suspense组件是用来处理异步渲染的。当我们需要异步加载某些组件或数据时，通常会出现一个“抖动”问题，即页面在等待异步加载完成时会出现一些不必要的视觉变化，比如页面出现空白或者加载指示器。
+
+异步加载组件
+异步加载数据
+</code></pre>
+<ul>
+<li>如何封装一个React的全局公共组件？Antd的Message.error的调用方式</li>
+</ul>
+<pre><code>使用creatRoot动态创建一个root容器
+</code></pre>
+<ul>
+<li>怎么定时更新一个组件？</li>
+</ul>
+<pre><code>componentDidMount中setInterval调用setState
+</code></pre>
+<ul>
+<li>使用高阶组件(HOC)实现一个loading组件</li>
+<li>使用React写一个todo应用，说说你的思路</li>
+</ul>
+<pre><code>1. UI布局，输入框+列表
+2. 定义状态，一个数组用于存放列表数据
+3. 视图中使用state
+4. 添加事件，增删等操作
+</code></pre>
+<ul>
+<li>React怎样引入svg的文件？</li>
+<li>在React中怎么使用字体图标？</li>
+<li>在React中如何引入图片？哪种方式更好？</li>
+</ul>
+<pre><code>import
+require
+</code></pre>
+<ul>
+<li>在React中怎么引用sass或less？</li>
+</ul>
+<pre><code>1. 安装依赖包
+npm install less less-loader --save 
+
+2. 配置webpack，loader中加入less-loader相关配置
+</code></pre>
+<ul>
+<li>怎样动态导入组件？</li>
+</ul>
+<pre><code>在 React 中动态加载异步组件通常使用 React.lazy 和 Suspense API 实现。React.lazy 允许你定义一个动态加载的组件，该组件会在组件第一次渲染时进行加载。在组件内部，你可以通过 import() 语法动态引入组件，React.lazy 会自动把这个返回 Promise 的函数包装成一个组件。需要注意的是，React.lazy 目前只支持默认导出（default exports）的组件，如果你需要导出非默认组件，需要使用额外的包装。另外，React.lazy 和 Suspense API 目前还不支持服务端渲染。
+</code></pre>
+<ul>
+<li>创建React动画有哪些方式？在React项目中你用过哪些动画的包？</li>
+</ul>
+<pre><code>1. css方法
+2. React-transition-group ——它是用于简单实现基本CSS动画和过渡的附加组件。
+3. react-animations —react-animations实现了animate.css中的所有动画。简单易用！
+4. React Reveal — 这是React的动画框架。
+5. TweenOne 用于ant.design的动画库（重点）。
+</code></pre>
+<ul>
+<li>如何用React实现滚动动画？</li>
+</ul>
+<pre><code>1. css3 + setState
+2. requestAnimation+setState
+</code></pre>
+<ul>
+<li>React有哪几种方法来处理表单输入？</li>
+</ul>
+<pre><code>1. 让输入框变为受控组件： onChange+value
+
+</code></pre>
+<ul>
+<li>有用过React的服务端渲染吗？怎么做的？</li>
+</ul>
+<pre><code>react服务端渲染本质是建立在虚拟DOM上的，将虚拟DOM转换为字符串而非真实DOM，从而渲染在页面上
+</code></pre>
+<ul>
+<li>从旧版本的React升级到新版本的React有做过吗？有遇到过什么坑？</li>
+</ul>
+<pre><code>
+</code></pre>
 <h3>React组件通信和状态管理</h3>
-<p>React组件间的通信有哪些？兄弟/非兄弟/父子/非父子
-为什么说React中的props是只读的？在React中你有经常使用常量吗？
-如果组件的属性没有传值，那么它的默认值是什么？
-在React中你是怎么进行状态管理的？
-在React怎么使用Context？说说Context有哪些属性？
-怎么使用Context开发组件？
-为什么React并不推荐我们优先考虑使用Context？
-除了实例的属性可以获取Context外哪些地方还能直接获取Context呢？</p>
-<p>Consumer向上找不到Provider的时候怎么办？
-有使用过Consumer吗？
-状态管理器解决了什么问题？什么时候用状态管理器？状态管理器它精髓是什么？</p>
+<ul>
+<li>React组件间的通信有哪些？兄弟/非兄弟/父子/非父子</li>
+</ul>
+<pre><code>父子：props
+非父子非兄弟：context、第三方的全局状态管理库redux
+兄弟：状态提升，共同的父组件
+
+</code></pre>
+<ul>
+<li>为什么说React中的props是只读的？在React中你有经常使用常量吗？</li>
+</ul>
+<pre><code>React 组件都必须像纯函数一样保护它们的 props 不被更改。将react组件理解成纯函数,数据流驱动,参数传入不允许做更改。
+
+</code></pre>
+<ul>
+<li>在React中你是怎么进行状态管理的？</li>
+</ul>
+<pre><code>redux
+mobx
+</code></pre>
+<ul>
+<li>在React怎么使用Context？说说Context有哪些属性？ 有使用过Consumer吗？</li>
+</ul>
+<pre><code>使用 createContext 方法创建 context。
+获取创建的 context，然后把组件树包在 context provider 里。
+使用 value 属性把你想要的值放在 context provider 上。
+在任意组件中使用 context consumer 读取你设置的值。
+
+Context有Provider和Consumer属性
+</code></pre>
+<ul>
+<li>怎么使用Context开发组件？</li>
+</ul>
+<pre><code>const ThemeCtx = React.createContext('light')
+在父组件中
+<ThemeCtx.Provider value='dark'></ThemeCtx.Provider>
+
+在子组件中
+<ThemeCtx.Consumer value='dark'>{theme=>theme}</ThemeCtx.Consumer>
+</code></pre>
+<ul>
+<li>为什么React并不推荐我们优先考虑使用Context？</li>
+</ul>
+<pre><code>1、Context目前还处于实验阶段，可能会在后面的发行版本中有很大的变化，事实上这种情况已经发生了，所以为了避免给今后升级带来大的影响和麻烦，不建议在app中使用context。
+2、尽管不建议在app中使用context，但是独有组件而言，由于影响范围小于app，如果可以做到高内聚，不破坏组件树之间的依赖关系，可以考虑使用context
+3、对于组件之间的数据通信或者状态管理，有效使用props或者state解决，然后再考虑使用第三方的成熟库进行解决，以上的方法都不是最佳的方案的时候，在考context。
+4、context的更新需要通过setState()触发，但是这并不是很可靠的，Context支持跨组件的访问，但是如果中间的子组件通过一些方法不影响更新，比shouldComponentUpdate() 返回false 那么不能保证Context的更新一定可以使用Context的子组件，因此，Context的可靠性需要关注。
+</code></pre>
+<ul>
+<li>除了实例的属性可以获取Context外哪些地方还能直接获取Context呢？</li>
+</ul>
+<pre><code>方法一
+const contextValue = useContext(Context)
+方法二
+<Context.Consumer>{contextValue=>contextValue}<Context.Consumer>
+</code></pre>
+<ul>
+<li>Consumer向上找不到Provider的时候怎么办？</li>
+</ul>
+<pre><code>当consumer向上层找不到provider时，此时就会取创建context时传给createContext的那个值，也就是当前context对象的默认值，在定义provider时的value中的值不是默认值，而是表示需要被传递的值
+</code></pre>
+<ul>
+<li>状态管理器解决了什么问题？什么时候用状态管理器？状态管理器它精髓是什么？</li>
+</ul>
+<pre><code>当我们开发的项目越来越大、需要保存的数据和状态越来越多的时候，就需要一个专门的模块（状态管理器）来维护这些数据。
+</code></pre>
 <ul>
 <li>redux工作原理？mobx工作原理？</li>
 </ul>
 <pre><code>Redux整个工作过程中，数据流是严格单向的，只能通过dispatch action 的方式触发数据状态的修改。Action会进入对应的Reducer进行处理最终得到新的状态State，然后进一步的触发View的数据更新
 
-
 </code></pre>
 <ul>
 <li>什么是Redux？说说你对Redux的理解？有哪些运用场景？</li>
 </ul>
-<pre><code></code></pre>
+<pre><code>Redux 是 JavaScript 状态容器，提供可预测化的状态管理，可以让你构建一致化的应用，运行于不同的环境（客户端、服务器、原生应用），并且易于测试。当多个组件需要访问同一状态时，redux可以帮助你处理状态的共享
+</code></pre>
 <ul>
 <li>redux三个原则？</li>
 </ul>
@@ -1569,55 +1790,401 @@ React16改写了架构，将React15的同步更新，变成异步可中断的更
 2. state是只读的：唯一改变state的方法就是触发action，action是一个用于描述发生事件的普通对象；
 3. 使用纯函数修改数据；
 </code></pre>
-<p>你有了解Rxjs是什么吗？它是做什么的？
-在Redux中怎么发起网络请求？
-Redux怎样重置状态？
-Redux怎样设置初始状态？
-Context api可以取代Redux吗？为什么？
-推荐在reducer中触发Action吗？为什么？
-Redux怎么添加新的中间件？
-redux-saga和redux-thunk有什么本质的区别？
-在React中你是怎么对异步方案进行选型的？
-你知道redux-saga的原理吗？
-你有使用过redux-saga中间件吗？它是干什么的？
-Redux中异步action和同步action最大的区别是什么？
-Redux和vuex有什么区别？
-Redux的中间件是什么？你有用过哪些Redux的中间件？
-说说Redux的实现流程
-Mobx的设计思想是什么？
-Redux由哪些组件构成？
-Mobx和Redux有什么区别？
-在React项目中你是如何选择Redux和Mobx的？说说你的理解
-你有在React中使用过Mobx吗？它的运用场景有哪些？
-Redux的thunk作用是什么？
-Redux的数据存储和本地储存有什么区别？
-在Redux中，什么是reducer？它有什么作用？
-举例说明怎么在Redux中定义action？
-在Redux中，什么是action？store？
-为什么Redux能做到局部渲染呢？
-说说Redux的优缺点分别是什么？
-Redux和Flux的区别是什么？
-什么是单一数据源？</p>
-<p>你有写过React的中间件插件吗？
-React的中间件机制是怎么样的？这种机制有什么作用？
-React中你用过哪些第三方的中间件？</p>
+<ul>
+<li>你有了解Rxjs是什么吗？它是做什么的？</li>
+</ul>
+<pre><code>Rxjs是一个基于可观测数据流 Stream 结合观察者模式和迭代器模式的一种异步编程的应用库
+</code></pre>
+<ul>
+<li>在Redux中怎么发起网络请求？</li>
+</ul>
+<pre><code>使用中间件发送网络请求，redux-saga、redux-thunk
+</code></pre>
+<ul>
+<li>Redux怎样重置状态？</li>
+</ul>
+<pre><code>先在store初始化时对store的初始化数据状态进行保存，然后reducer中多定义一个重置状态的type=&quot;RESET&quot;的action的逻辑，这个操作里面直接返回初始的状态值，在需要重置状态的时候，直接dispatch这个RESET的actionType即可 
+</code></pre>
+<ul>
+<li>Redux怎样设置初始状态？</li>
+</ul>
+<pre><code>主要有两种方法来初始化应用的 state 。
+
+可以使用 createStore 方法中的第二个可选参数 preloadedState。
+
+也可以在 reducer 中为 undefined 的 state 参数指定的默认的初始值。这个可以通过在 reducer 中添加一个明确的检查来完成，也可以使用 ES6 中默认参数的语法 function myReducer(state = someDefaultValue, action)
+</code></pre>
+<ul>
+<li>Context api可以取代Redux吗？为什么？</li>
+</ul>
+<pre><code>可以，但是并不完美。 利用Context API+useReducer的方案可以实现简化版的Redux。
+ Redux除了能够存储数据之外，它的强大之处还在于数据修改的单一性，清晰的数据流向，依赖不可变性的数据实现时间旅行等等。而这些特点是原生的Context API所不具备的
+</code></pre>
+<ul>
+<li>推荐在reducer中触发Action吗？为什么？</li>
+</ul>
+<pre><code>不推荐。首先reducer应该是一个纯函数，reducer中的代码应该把代码逻辑限定在当前的reducer内，如果触发了action，会触发其它的reducer、甚至再次触发自身，可能引起死循环或者其它的不确定因素，增加调试成本。 
+</code></pre>
+<ul>
+<li>Redux的中间件是什么？你有用过哪些Redux的中间件？Redux怎么添加新的中间件？</li>
+</ul>
+<pre><code>中间件（Middleware）是介于应用系统和系统软件之间的一类软件，它使用系统软件所提供的基础服务（功能），衔接网络上应用系统的各个部分或不同的应用，能够达到资源共享、功能共享的目的
+Redux整个工作流程，当action发出之后，reducer立即算出state，整个过程是一个同步的操作。那么如果需要支持异步操作，或者支持错误处理、日志监控，这个过程就可以用上中间件,Redux中，中间件就是放在就是在dispatch过程，在分发action进行拦截处理。
+redux-thunk：用于异步操作
+redux-logger：用于日志记录
+
+添加中间件
+const store = createStore(
+  reducer,
+  applyMiddleware(thunk, logger)
+);
+</code></pre>
+<ul>
+<li>redux-thunk作用是什么？</li>
+</ul>
+<pre><code>redux-thunk的核心代码其实只有两行，就是判断每个经过它的action：如果是function类型，就调用这个function（并传入 dispatch 和 getState 及 extraArgument 为参数），而不是任由让它到达 reducer，因为 reducer 是个纯函数，Redux 规定到达 reducer 的 action 必须是一个 plain object 类型。
+
+function createThunkMiddleware(extraArgument) {
+  return ({ dispatch, getState }) => next => action => {
+    if (typeof action === 'function') {
+      return action(dispatch, getState, extraArgument);
+    }
+
+    return next(action);
+  };
+}
+
+const thunk = createThunkMiddleware();
+thunk.withExtraArgument = createThunkMiddleware;
+
+export default thunk;
+
+redux-thunk帮助你统一了异步和同步 action 的调用方式，把异步过程放在 action 级别解决，对 component 没有影响
+</code></pre>
+<ul>
+<li>redux-saga和redux-thunk有什么本质的区别？</li>
+</ul>
+<pre><code>对于redux-thunk的整个流程来说，它是等异步任务执行完成之后，我们再去调用dispatch，然后去store去调用reduces。对于redux-saga的整个流程来说，它是等执行完action和reducer之后，判断reducer中有没有这个action
+
+redux-thunk和redux-saga处理异步任务的时机不一样。对于redux-saga，相对于在redux的action基础上，重新开辟了一个 async action的分支，单独处理异步任务
+</code></pre>
+<ul>
+<li>在React中你是怎么对异步方案进行选型的？</li>
+</ul>
+<pre><code>小项目使用简单的redux-thunk方案,增加的代码量极少，只有两个api，上手成本低
+大项目使用基于redux-saga的dva.js，它简化了redux-saga的操作，使用上更加直观，降低了使用成本
+</code></pre>
+<ul>
+<li>你有使用过redux-saga中间件吗？它是干什么的？它的原理？</li>
+</ul>
+<pre><code>redux-saga 把异步获取数据这类的操作都叫做副作用（Side  Effect），它的目标就是把这些副作用管理好，让他们执行更高效，测试更简单，在处理故障时更容易
+
+使用 createSagaMiddleware 方法创建 saga 的 Middleware ，然后在创建的 redux 的 store 时，使用 applyMiddleware 函数将创建的 saga Middleware 实例绑定到 store 上，最后可以调用 saga Middleware 的 run 函数来执行某个或者某些 Middleware 。
+在 saga 的 Middleware 中，可以使用 takeEvery 或者 takeLatest 等 API 来监听某个 action ，当某个 action 触发后， saga 可以使用 call 发起异步操作，操作完成后使用 put 函数触发 action ，同步更新 state ，从而完成整个 State 的更新
+</code></pre>
+<ul>
+<li>Redux中异步action和同步action最大的区别是什么？</li>
+</ul>
+<pre><code>同步action：执行了dispatch函数之后，对应的reducer纯函数立即得到执行，reducer执行完了之后，state立即就改变了，此时用store.getState函数，取到的是最新的state值；
+
+异步action：原则上redux并没有提供异步action的处理方案，异步的action需要依赖第三方的中间件解决（如redux-thunk），dispatch了一个异步action（本质上是dispatch的一个函数）之后，目标state并不会立即响应，而是要看异步函数内部的逻辑，来决定state什么时候响应.
+</code></pre>
+<ul>
+<li>Redux和vuex有什么区别？</li>
+</ul>
+<pre><code>相同点
+state 共享数据
+流程一致：定义全局state，触发，修改state
+原理相似，通过全局注入store。
+
+不同点
+从实现原理上来说：
+Redux 使用的是不可变数据，而Vuex的数据是可变的。Redux每次都是用新的state替换旧的state，而Vuex是直接修改
+Redux 在检测数据变化的时候，是通过 diff 的方式比较差异的，而Vuex其实和Vue的原理一样，是通过 getter/setter来比较的
+
+从表现层来说：
+vuex定义了state、getter、mutation、action四个对象；redux定义了state、reducer、action。
+vuex中state统一存放，方便理解；reduxstate依赖所有reducer的初始值
+vuex有getter,目的是快捷得到state；redux没有这层，react-redux mapStateToProps参数做了这个工作。
+vuex中mutation只是单纯赋值(很浅的一层)；redux中reducer只是单纯设置新state(很浅的一层)。他俩作用类似，但书写方式不同
+vuex中action有较为复杂的异步ajax请求；redux中action中可简单可复杂,简单就直接发送数据对象（{type:xxx, your-data}）,复杂需要调用异步ajax（依赖redux-thunk插件）。
+
+vuex触发方式有两种commit同步和dispatch异步；redux同步和异步都使用dispatch
+</code></pre>
+<ul>
+<li>说说Redux的实现流程</li>
+</ul>
+<pre><code>redux 要求我们把数据都放在 store 公共存储空间
+
+通过dispatch action
+store 接收到 action , 把action和 oldState 当做参数发送给 reducers
+reducers 接收 action和 oldState 通过计算返回新的 newState 给 store
+</code></pre>
+<ul>
+<li>Mobx的设计思想是什么？</li>
+</ul>
+<pre><code>依赖收集。在Mobx中，定义了observable的属性，mobx会自动跟踪这个属性值的变化；在用了mobx与react的桥接库mobx-react之后，这种跟踪关系会体现了视图上，JSX依赖的observable属性值变化，视图就会自动的进行更新
+</code></pre>
+<ul>
+<li>Redux由哪些组件构成？</li>
+</ul>
+<pre><code>State：Redux中的数据
+Reducer：这是Redux的核心，内部处理接受到action后到返回新的state的逻辑；reducer可以进行嵌套，一个store只有一个根reducer
+Action：一般会写成actionCreator函数的形式，这个函数返回的就是action对象，这个对象至少会一个type属性，用于标识当前的动作
+Store: 以上三部分组成的就是一个Store，一般来说一个应用仅存在一个Store，它可以进行读取应用的state，监听state的变化，发起一个action等操作
+</code></pre>
+<ul>
+<li>Mobx和Redux有什么区别？</li>
+</ul>
+<pre><code>Redux的编程范式是函数式的而Mobx是面向对象的；
+从数据上来说Redux每次都返回一个新的数据，而Mobx从始至终都是一份引用。因此Redux是支持数据回溯的；
+和Redux相比，使用Mobx的组件可以做到精确更新，这一点得益于Mobx的observable；对应的，Redux是用dispath进行广播，通过Provider和connect来比对前后差别控制更新粒度；Mobx更加精细一点。
+</code></pre>
+<ul>
+<li>在React项目中你是如何选择Redux和Mobx的？说说你的理解</li>
+</ul>
+<pre><code>Redux
+优点
+1、流程规范，按照官方推荐的规范和结合团队风格打造一套属于自己的流程。
+2、函数式编程，在 Reducer 中，接受输入，然后输出，不会有副作用发生，幂等性。
+3、可追踪性，很容易追踪产生 BUG 的原因。
+
+缺点
+1、流畅太繁琐，需要写各种 Action，Reducer。
+2、要想完成异步数据，得配合其他库。
+
+Mobx
+优点
+1、学习成本少，基础知识非常简单，跟 Vue 一样的核心原理，响应式编程。
+2、写更少的代码，完成更多的事。不会跟 Redux 一样写非常多的样板代码。
+3、使组件更加颗粒化拆分。
+
+缺点
+1、过于自由，MobX 提供的约定及模版代码很少，如果团队不做一些约定，容易导致团队代码风格不统一。
+2、可拓展，可维护性，也许你会担心 Mobx 能不能适应后期项目发展壮大呢？确实 Mobx 更适合用在中小型项目中，但这并不表示其不能支撑大型项目，关键在于大型项目通常需要特别注意可拓展性，可维护性，相比而言，规范的 Redux 更有优势，而 Mobx 更自由，需要我们自己制定一些规则来确保项目后期拓展，维护难易程度；
+</code></pre>
+<ul>
+<li>你有在React中使用过Mobx吗？它的运用场景有哪些？</li>
+</ul>
+<pre><code>store :redux是单个store，mobx 可以是多个
+action :redux通过action来驱动数据的变化，是必选项，而mobx则为可选项,
+数据结构 :redux使用正常的javascript对象，而mobx进行包裹，得到observable数据,
+immutable :redux要求数据的不可变形，而mobx则没有要求,
+代码量 :mobx👍 代码量小，可以快速完成简单业务开发,
+耦合性 :redux 👍 耦合度低，可以便于复用，也方便进行单元测试,
+生态环境 :redux 👍的生态环境优于mobx,
+使用场景 :mobx 👍适用于简单的业务，快速完成开发；redux适用于复杂场景
+</code></pre>
+<ul>
+<li>Redux的数据存储和本地储存有什么区别？</li>
+</ul>
+<pre><code>Redux存储的数据本质上都是JS变量，都是在内存中的，页面刷新就会消失
+本质存储是像localStorage Cookie IndexDB WebSQL等缓存技术，它是存储在硬盘中的，不会随便页面刷新而消失
+</code></pre>
+<ul>
+<li>在Redux中，什么是reducer？它有什么作用？</li>
+</ul>
+<pre><code>redux当中的reducer之所以叫做reducer，是因为它和 Array.prototype.reduce 当中传入的回调函数非常相似,Reducer是用于根据业务逻辑更新state
+</code></pre>
+<ul>
+<li>举例说明怎么在Redux中定义action？</li>
+</ul>
+<pre><code>Action表示应用中的各类动作或操作，不同的操作会改变应用相应的state状态，说白了就是一个带type属性的对象，例如const increaseAction = {type:'increase'}
+</code></pre>
+<ul>
+<li>在Redux中，什么是action？store？</li>
+</ul>
+<pre><code>Action表示应用中的各类动作或操作，不同的操作会改变应用相应的state状态，说白了就是一个带type属性的对象。
+
+Store则是我们储存state的地方。我们通过redux当中的createStore方法来创建一个store，它提供3个主要的方法：getState、dispatch和subscribe
+</code></pre>
+<ul>
+<li>为什么Redux能做到局部渲染呢？</li>
+</ul>
+<pre><code>reducer从根往最子级的reducer中间各层总是返回一个新的state，这样的话，就会引起组件的大范围的re-render，但是这是可避免的
+
+合理的利用selector：在connect函数中的第一个函数mapStateToProps中从store state中返回当前组件需要使用的props，需要一个筛选，这个筛选函数就叫做selector，需要尽量细化传入的store state，即使根state发生了引用的变更，但是它下面的属性值可能是大部分都还是原来的引用，引用了这个老引用的情况下，是不会引起组件的re-render的;正因为如此，因为一般都不会将整个store state组为组件的props进行引用，所以利用这一点就可以实现局部渲染
+</code></pre>
+<ul>
+<li>说说Redux的优缺点分别是什么？</li>
+</ul>
+<pre><code>优点
+1. Redux轻量，生态丰富，可以结合流行的redux-thunk、redux-saga等进行使用
+2. Redux的写法比较固定，团队应用中风格比较稳定，提高协作中的可维护性
+3. 因为Redux中的reducer更新时，每次return的都是不可变对象，所以时间旅行操作相对容易
+
+缺点
+1. 每一次的dispatch都会从根reducer到子reducer嵌套递归的执行，所以效率相对较低；
+2. Redux核心是不可变对象，在Reducer中的操作都要比较小心，注意不能修改到state的属性
+3. Redux中写法固定，模板代码较多
+</code></pre>
+<ul>
+<li>Redux和Flux的区别是什么？</li>
+</ul>
+<pre><code>redux与flux很像，主要区别在于flux有多个可以改变应用状态的store，它通过事件来触发这些变化，组件可以订阅这些时间来和当前状态同步。redux中没有分发器dispatcher，但在flux中dispatcher被用来传递数据到注册的回调事件，另一个不同的是flux中有很多扩展是可用的，这也带来了一些混乱与矛盾。在redux中只能定义一个可以更新状态的store，flux中可以定义多个仓库。redux把store和dispatcher合并，结构更加简单清晰，新增state，对状态管理更加明确。
+</code></pre>
+<ul>
+<li>什么是单一数据源？</li>
+</ul>
+<pre><code>Redux的store.getState只能得到一个数据源，通常这是一个对象，通常这也是React App中的唯一Redux数据源，这个state对象中的属性值通过combineReducer整合了子Reducer返回的state的值 
+</code></pre>
+<ul>
+<li>你有写过Redux的中间件插件吗？</li>
+<li>Redux的中间件机制是怎么样的？这种机制有什么作用？</li>
+<li>Redux中你用过哪些第三方的中间件？</li>
+</ul>
+<pre><code>view在redux中会派发一个action，action通过store的dispatch方法派发给store，store接收到action连同之前老的state一起传给reducer，reducer返回新的数据给store，store去改变自己的state，这是redux的流程。
+
+redux中间件的中间指的是action和store之间，之前在redux中action只能返回一个对象，所以action返回的一个对象会直接派发给store，现在使用redux-thunk之后action可以返回一个函数了，action通过dispatch方法被传递给store，那么action和store之间就是dispatch这个方法。
+
+实际上中间件就是对dispatch方法的一个封装或者说对dispatch方法的一个升级，最原始的dispatch方法接收到一个对象之后会把这个对象传递给store。
+
+当把dispatch做了升级之后，比如说使用了redux-thunk 这个中间件，这个时候当调用dispatch方法给dispatch方法传递的参数是一个对象的话，那么dispatch就会把这个对象直接传递给store，跟之前我们写dispatch传递给它一个对象没什么区别，但是如果传递给dispatch方法是一个函数的话，这个时候dispatch已经升级了，它就不会把这个函数直接传递给store，它会先让这个函数执行，执行完了之后需要调用store的时候再去调用store。所以dispatch在这里会根据参数的不同执行不同的事情。
+
+所以redux的中间件就是对store的dispatch做了个升级，升级之后dispatch就可以对象和函数都可以接收了。
+
+redux-saga
+redux-thunk
+</code></pre>
 <h3>前端路由</h3>
-<pre><code>React-Router工作原理？为什么需要前端路由？前端路由解决了什么问题？前端通用路由解决方案？
-React-Router怎么获取历史对象？
-React-Router怎么获取URL的参数？
-在history模式中push和replace有什么区别？
-React-Router怎么设置重定向？
-React-Router 4中<Router>组件有几种类型？
-React-Router 3和React-Router 4有什么变化？添加了什么好的特性？
-React-Router的实现原理是什么？
-React-Router 4的switch有什么用？
-React-Router的路由有几种模式？
-React-Router 4怎样在路由变化时重新渲染同一个组件？
-React-Router的<Link>标签和<a>标签有什么区别？
-React的路由和普通路由有什么区别？
-请你说说React的路由的优缺点？
-请你说说React的路由是什么？
-路由切换时同一组件无法重新渲染的有什么方法可以解决？
+<ul>
+<li>React-Router工作原理？为什么需要前端路由？前端路由解决了什么问题？前端通用路由解决方案？</li>
+</ul>
+<pre><code>借助history库实现监听路由，内部支持hash和bowser两种路由变化,实现了URL和UI的同步。在单页面应用，大部分页面结构不变，只改变部分内容的使用
+
+前端路由好处
+1.用户体验好，不需要每次都从服务器全部获取，快速展现给用户
+
+不足
+1.使用浏览器的前进，后退键的时候会重新发送请求，没有合理地利用缓存
+2.单页面无法记住之前滚动的位置，无法在前进，后退的时候记住滚动的位置
+</code></pre>
+<ul>
+<li>React-Router怎么获取历史对象？</li>
+</ul>
+<pre><code>1.如果React >= 16.8 时可以使用 React Router中提供的Hooks
+import { useHistory } from &quot;react-router-dom&quot;;
+let history = useHistory(); 
+
+2.使用this.props.history获取历史对象
+let history = this.props.history;
+</code></pre>
+<ul>
+<li>React-Router怎么获取URL的参数？</li>
+</ul>
+<pre><code>1. 通过params 
+类组件：在保证props能获取到路由信息的前提下（如果不是直接嵌套在<Route/>下，需要使用withRouter的HOC），通过this.props.match.params
+
+2. 通过search
+</code></pre>
+<ul>
+<li>在history模式中push和replace有什么区别？</li>
+</ul>
+<pre><code>history.push() 页面跳转，并且往页面栈中添加一条记录
+history.replace() 页面跳转，但是不会添加一条记录，而是替换当前的记录
+</code></pre>
+<ul>
+<li>React-Router怎么设置重定向？</li>
+</ul>
+<pre><code>标签式重定向：就是利用<Redirect>标签来进行重定向，业务逻辑不复杂时建议使用这种。
+编程式重定向：这种是利用编程的方式，一般用于业务逻辑当中，比如登录成功挑战到会员中心页面。例如直接在构造函数constructor中加入this.props.history.push(&quot;/home/&quot;);
+</code></pre>
+<ul>
+<li>React-Router 4中<Router>组件有几种类型？</li>
+</ul>
+<pre><code>HashRouter：老浏览器的history,主要通过hash来实现，对应createHashHistory()
+BrowserRouter：高版本浏览器,通过html5里面的history，对应createBrowserHistory()
+MemeoryRouter：**node环境下,主要存储在memeory里面，对应createMemoryHistory()
+</code></pre>
+<ul>
+<li>React-Router 3和React-Router 4有什么变化？添加了什么好的特性？</li>
+</ul>
+<pre><code>React-Router 4 从设计思想上进行改变，引入动态路由，将路由进行了拆分，将其放到了各自的模块中，不再有单独的 router 模块，充分体现了组件化的思想，更加贴合 React 的思想。
+
+1. 包含式路由与exact 
+  在之前的版本中，在 Route 中写入的 path，在路由匹配时是独一无二的，路由的嵌套体现在 <Route> 组件的嵌套规则上
+  v4 版本则有了一个包含的关系：如匹配 path=&quot;/users&quot; 的路由会匹配 path=&quot;/&quot;的路由，在页面中这两个模块会同时进行渲染。
+  v4中多了 exact 关键词，表示只对当前的路由进行匹配。
+2. 独立路由：Switch（排他性路由） 
+  采用 <Switch>，只有一个路由会被渲染，并且总是渲染第一个匹配到的组件
+  配合使用 exact
+3. &quot;Index Routes&quot; 和 &quot;Not Found&quot; 
+  废弃了 <IndexRoute>，而该用 <Route exact> 的方式进行代替
+  如果没有匹配的路由，也可通过 <Redirect> 来进行重定向到默认页面或合理的路径。
+4. 嵌套布局
+5. 授权路由
+6. <Link> vs <NavLink>
+7. URL 查询字符串
+</code></pre>
+<ul>
+<li>React-Router的实现原理是什么？</li>
+</ul>
+<pre><code>在 React Router 内部主要依靠 history 库完成，这是由 React Router 自己封装的库，为了实现跨平台运行的特性，内部提供两套基础 history，一套是直接使用浏览器的 History API，用于支持 react-router-dom；另一套是基于内存实现的版本，这是自己做的一个数组，用于支持 react-router-native。
+
+React Router 的工作方式可以分为设计模式与关键模块两个部分。从设计模式的角度出发，在架构上通过 Monorepo 进行库的管理。Monorepo 具有团队间透明、迭代便利的优点。其次在整体的数据通信上使用了 Context API 完成上下文传递。
+
+在关键模块上，主要分为三类组件：第一类是 Context 容器，比如 Router 与 MemoryRouter；第二类是消费者组件，用以匹配路由，主要有 Route、Redirect、Switch 等；第三类是与平台关联的功能组件，比如 Link、NavLink、DeepLinking 等。
+
+</code></pre>
+<ul>
+<li>React-Router 4的switch有什么用？</li>
+</ul>
+<pre><code>switch的子组件只能是Route或者switch，它的作用是匹配到下面的第一个路由组件，如果匹配到了第一个后面的将不在进行匹配展示了。
+</code></pre>
+<ul>
+<li>React-Router的路由有几种模式？</li>
+</ul>
+<pre><code>React-Router 支持使用 hash（对应 HashRouter）和 browser（对应 BrowserRouter） 两种路由规则， react-router-dom 提供了 BrowserRouter 和 HashRouter 两个组件来实现应用的 UI 和 URL 同步：
+
+BrowserRouter 创建的 URL 格式：xxx.com/path,它使用 HTML5 提供的 history API（pushState、replaceState 和 popstate 事件）来保持 UI 和 URL 的同步
+
+HashRouter 创建的 URL 格式：xxx.com/#/path,使用 URL 的 hash 部分（即 window.location.hash）来保持 UI 和 URL 的同步
+</code></pre>
+<ul>
+<li>React-Router 4怎样在路由变化时重新渲染同一个组件？</li>
+</ul>
+<pre><code>1. 在不同的组件添加不同的key，例如<组件 {...props} key={search参数}/>
+
+2. 可以在这个组件的componentWillReceiveProps和shouldComponentUpdate生命周期方法中添加url变化的判断，如果url判断变化，就执行相关的逻辑代码(变化了就会就会重新执行render()函数，组件变会进行重新渲染。)
+</code></pre>
+<ul>
+<li>React-Router的<Link>标签和<a>标签有什么区别？</li>
+</ul>
+<pre><code><Link>是react-router 里实现路由跳转的链接，一般配合 <Route> 使用，react-router 会接管Link 的默认链接跳转行为，区别于传统的页面跳转，<Link> 的“跳转”行为只会触发相匹配的 <Route> 对应的页面内容更新，而不会刷新整个页面。 而 <a> 标签就是普通的超链接了，用于从当前页面跳转到 href 指向的另一个页面（非锚点情况）。
+
+对比<a>,Link组件避免了不必要的重渲染，react-router只更新变化的部分从而减少DOM性能消耗，react的创新之处在于，它利用虚拟DOM的概念和
+</code></pre>
+<ul>
+<li>React的路由和普通路由有什么区别？</li>
+</ul>
+<pre><code>1. React路由是前端的路由，普通路由指的是后端的路由
+2. React路由不管是hash还是browser的模式，都是在响应了hash/browser的change之后，再变更页面的DOM结构，由于是单页应用，页面文件始终没有变化;通过请求的path，然后相应不同的页面
+</code></pre>
+<ul>
+<li>请你说说React的路由的优缺点？</li>
+</ul>
+<pre><code>优点：
+1. 配置灵活
+2. 支持丰富的传参
+3. 兼容性，利用hashRouter也可以实现低版本的兼容
+
+缺点
+1. v4之后使用url query的方式传参比较繁琐，解析时需要使用queryString和location.search
+2. 利用react-router的query或state进行传参打开新的路由，刷新页面后数据会丢失
+3. BrowserRouter的模式需要服务器配合，保证在前端路由的切换范围内，都只相应同一个html文件
+4. BrowserRouter需要现代浏览器才能兼容
+</code></pre>
+<ul>
+<li>请你说说React的路由是什么？</li>
+</ul>
+<pre><code>React的路由是纯前端的路由，就是根据hash或browser path的变化，框架内封装好了方法，可以自由的切换DOM展示，来模拟页面或局部页面被替换的目的；让浏览器不用刷新，也能获取想要的页面结构，保存内存数据，提升用户体验 
+</code></pre>
+<ul>
+<li>路由切换时同一组件无法重新渲染的有什么方法可以解决？</li>
+</ul>
+<pre><code>1.唯一的不同的key
+2.如果你对是否结束此次生命周期并没有特别的要求，也可以通过componentDidUpdate（preProps）钩子 函数，或者componentWillReceiveProps(nextProps)判断props.match.params.type是否发生改变。如果变化，手动调用获取数据的接口。
+
 </code></pre>
 <h2>冷门</h2>
 <ul>
@@ -1654,6 +2221,11 @@ React的路由和普通路由有什么区别？
 <li>你有在项目中使用过Mern脚手架吗？</li>
 <li>childContextTypes是什么？它有什么用？</li>
 <li>contextType是什么？它有什么用？</li>
+<li>怎样将多个组件嵌入到一个组件中？</li>
+<li>写出React动态改变class切换组件样式</li>
+<li>举例说明在React中怎么使用样式？</li>
+<li>你用过React版本有哪些？</li>
+<li>简单描述下你有做过哪些React项目？</li>
 </ul>
 `}}></div>
   }

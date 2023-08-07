@@ -27,12 +27,22 @@ const myInstanceof = (object,constructor)=>{
 }
 </code></pre>
 <ul>
-<li>
-<p>写一个判断数据类型的方法</p>
-</li>
-<li>
-<p>手写let、const</p>
-</li>
+<li>写一个判断数据类型的方法</li>
+</ul>
+<pre><code class="language-js">const getType = (data) => {
+  const originType = Object.prototype.toString.call(data);
+  const index = originType.indexOf(' ');
+  const type = originType.slice(index + 1, -1);
+  return type.toLowerCase();
+}
+
+// 测试
+const arr = [true, 'hello', 123, Symbol(), []];
+
+arr.forEach((item) => console.log(getType(item)));
+</code></pre>
+<ul>
+<li>手写let、const</li>
 </ul>
 <pre><code class="language-js">/**
  * 块级作用域下有效
@@ -74,12 +84,7 @@ function myConst(key,value){
 }
 </code></pre>
 <ul>
-<li>
-<p>手写一个函数，获取对象的指定属性</p>
-</li>
-<li>
-<p>手写一个new方法</p>
-</li>
+<li>手写一个new方法</li>
 </ul>
 <pre><code class="language-js">// 实现一：
 const myNew = (fn,...args)=>{
@@ -214,6 +219,22 @@ const deepClone = (target)=>{
 </code></pre>
 <ul>
 <li>手写一个函数，数组转对象（二维数组，每一项都是一个仅有2项的字符串数组）</li>
+</ul>
+<pre><code class="language-js">const array2Object = (arr) => {
+  return arr.reduce((pre, item) => {
+    pre[item[0]] = item[1];
+    return pre;
+  }, {});
+}
+// 测试
+const arr = [
+  ['name', 'jack'],
+  ['age', '11'],
+  ['sex', '男']
+]
+console.log(array2Object(arr));
+</code></pre>
+<ul>
 <li>手写一个函数，数组转树（每一项带父级id：pid）</li>
 </ul>
 <pre><code class="language-js">const arrayToTree = (arr,treeArr,pid)=>{
@@ -323,21 +344,24 @@ function myJsonp(options) {
 
 </code></pre>
 <ul>
-<li>
-<p>实现一个极简的webpack</p>
-</li>
-<li>
-<p>实现一个极简的模版引擎</p>
-</li>
-<li>
-<p>实现一个极简的数据响应式</p>
-</li>
-<li>
-<p>用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值</p>
-</li>
-<li>
-<p>实现setTimeout、setInterval</p>
-</li>
+<li>用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值</li>
+</ul>
+<pre><code class="language-js">const getRandomNumber = (fromNumber, toNumber) => {
+  return Math.floor((toNumber - 1) * Math.random()) + fromNumber;
+}
+const getFiveNumberDuplicate = (len, set) => {
+  if (set.size === len) return;
+  set.add(getRandomNumber(2, 32));
+  getFiveNumberDuplicate(len, set);
+}
+
+// 测试
+const set = new Set([])
+getFiveNumberDuplicate(5, set);
+console.log(set)
+</code></pre>
+<ul>
+<li>实现setTimeout、setInterval</li>
 </ul>
 <pre><code class="language-js">const mySetInterval=(cb,delay)=>{
   const context =this;
@@ -348,6 +372,12 @@ function myJsonp(options) {
   },delay);
 }
 </code></pre>
+<ul>
+<li>手写一个函数getValue，获取对象的指定属性</li>
+<li>实现一个极简的webpack</li>
+<li>实现一个极简的模版引擎</li>
+<li>实现一个极简的数据响应式</li>
+</ul>
 `}}></div>
   }
   
