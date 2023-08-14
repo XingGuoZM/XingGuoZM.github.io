@@ -12,9 +12,6 @@
         hljs.highlightElement(el);
       });
     },[])
-    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:`<h1>JS发展历史</h1>
-<p>es5</p>
-<p>es6</p>
-`}}></div>
+    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:"<h1>JS发展历史</h1>\n<p>es5</p>\n<p>es6</p>\n"}}></div>
   }
   

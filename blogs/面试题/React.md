@@ -1052,12 +1052,17 @@ Flow是一个静态分析工具（静态检查器），它使用语言的超集�
 ```
 * React中在哪捕获错误？
 ```
-React 16引入了一个 “错误边界(Error Boundaries)” 的新概念。 错误边界是 React 组件，它可以在子组件树的任何位置捕获 JavaScript 错误，记录这些错误，并显示一个备用 UI ，而不是使整个组件树崩溃。 错误边界(Error Boundaries) 在渲染，生命周期方法以及整个组件树下的构造函数中捕获错误。
+React 16引入了一个 “错误边界(Error Boundaries)” 的新概念。 错误边界是 React 组件，它可以在子组件树的任何位置捕获 JavaScript 错误，记录这些错误，并显示一个备用 UI ，而不是使整个组件树崩溃。 错误边界(Error Boundaries) 在渲染，生命周期方法以及整个组件树下的构造函数中捕获错误。注意错误边界仅可以捕获其子组件的错误，它无法捕获其自身的错误。如果一个错误边界无法渲染错误信息，则错误会冒泡至最近的上层错误边界，这也类似于 JavaScript 中 catch {} 的工作机制。
+```
+* 错误边界的子组件可以为函数组件吗
+```
+可以
 ```
 * React v15中怎么处理错误边界？
 ```
 React 15 中有一个支持有限的错误边界方法 unstable_handleError。此方法不再起作用，同时自 React 16 beta 发布起你需要在代码中将其修改为 componentDidCatch。
 ```
+
 * 说说你对Error Boundaries的理解
 ```
 如果一个类组件定义了生命周期方法中的任何一个（或两个）static getDerivedStateFromError() 或 componentDidCatch()，那么它就成了一个错误边界。 使用在抛出错误后渲染回退UI。 使用 componentDidCatch() 来记录错误信息。它能捕获子组件渲染过程中、生命周期方法、子组件树各组件constructor构造函数中异常。不能捕获事件处理器中的异常，需要使用try/catch进行捕获；不能捕获异步任务中的异常，例如setTimeout，ajax请求等，需要使用window.addEventListener进行捕获；不能捕获服务端渲染异常；不能捕获异常边界组件自身的异常，需要将边界组件和业务组件分离，各司其职，不能在边界组件中处理逻辑代码，也不能在业务组件中使用didcatch
@@ -1067,6 +1072,17 @@ componentDidCatch 和 getDerivedStateFromError 的区别
 2. 在 commit phase 里产生异常大的时候， 会调用 componentDidCatch
 
 componentDidCatch 是不会在服务器端渲染的时候被调用的 而 getDerivedStateFromError 会。
+
+无法被错误边界捕获的情况
+1. 组件外的报错
+2. 异步代码的报错
+3. 事件函数中的报错
+4. 错误边界自身抛出的错误
+5. 错误边界的父组件报错
+6. 函数组件被卸载，触发 useEffect 的销毁
+7. 服务端渲染
+
+目前还没有办法将错误边界编写为函数式组件。但是你不必自己编写错误边界类。例如，你可以使用 react-error-boundary 包来代替
 
 ```
 * 在React中你有遇到过安全问题吗？怎么解决？

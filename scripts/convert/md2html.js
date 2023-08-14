@@ -25,7 +25,7 @@ const parseHtmlStr2ReactTemplate = (htmlStr) => {
         hljs.highlightElement(el);
       });
     },[])
-    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:\`${htmlStr}\`}}></div>
+    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:${JSON.stringify(htmlStr)}}}></div>
   }
   `
   return reactStr;
