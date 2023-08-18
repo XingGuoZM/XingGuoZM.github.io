@@ -72,6 +72,7 @@
 * 你有用过哪些ts的高级类型？
 * extends 和 implements 有什么区别？
 * interface 和 type 到底有什么区别？
+* Typescript 里有哪些 JavaScript 没有的类型？
 
 ### TS笔试题
 1. 为什么会报错？如何解决
