@@ -271,7 +271,7 @@ var data = [{
     "dir": "Js基础",
     "name": "常用正则表达式",
     "title": "常用正则表达式",
-    "desc": "常见正则汇总// 匹配手机号:现在虚拟号码的使用，所以第二位也不似以前的3|4|5|8的固定，所以此处是选择的3-9let telReg = /^1[3-9][0-9]{9}$/// 匹配邮箱let ",
+    "desc": "常见正则汇总// 匹配手机号:现在虚拟号码的使用，所以第二位也不似以前的3|4|5|8的固定，所以此处是选择的3-9let telReg = /^1[3-9][0-9]{9}$/// 匹配身份证let",
     "url": "/article?id=0007"
   }, {
     "id": "0008",
@@ -442,14 +442,14 @@ var data = [{
     "dir": "性能优化",
     "name": "渲染优化",
     "title": "渲染优化",
-    "desc": "渲染优化html解析渲染过程1. 解析HTML得到DOM树，解析CSS得到CSSOM树2. 将DOM树和CSSOM树结合得到渲染树（Render Tree）3. 布局（Layout）：根据生成的渲染树",
+    "desc": "渲染优化关键渲染路径解析HTML得到DOM树，解析CSS得到CSSOM树将DOM树和CSSOM树结合得到渲染树（Render Tree）布局（Layout）：根据生成的渲染树，确定页面上所有内容的大小",
     "url": "/article?id=0028"
   }, {
     "id": "0029",
     "dir": "性能优化",
     "name": "离线包优化",
     "title": "离线包优化",
-    "desc": "离线包离线包就是将html/js/css预先打包好提前下发到app本地，app加载网页的时候实际上是从本地加载，减少了网络请求。离线包技术适用于app内嵌h5页面。离线包的出现主要是为了解决nativ",
+    "desc": "离线包混合开发与离线包离线包就是将html/js/css预先打包好提前下发到app本地，app加载网页的时候实际上是从本地加载，减少了网络请求。离线包技术适用于app内嵌h5页面，它主要是为了解决na",
     "url": "/article?id=0029"
   }, {
     "id": "0030",
@@ -502,14 +502,14 @@ var data = [{
     "dir": "编程题",
     "name": "字符串",
     "title": "字符串",
-    "desc": "字符串写一个函数，去除字符串中的空格// 方法一const replaceEmpty = (str) => {  return str.replace(/ /g, '');}写一个函数，在给定一个ur",
+    "desc": "字符串写一个函数，去除字符串中的空格// 方法一const replaceEmpty = (str) => {  return str.replace(/\\s/g, '');}写一个函数，在给定一个u",
     "url": "/article?id=0037"
   }, {
     "id": "0038",
     "dir": "编程题",
     "name": "手写系列",
     "title": "手写系列",
-    "desc": "手写instanceof// 引用类型判断const myInstanceof = (object,constructor)=>{  let prototype = constructor.proto",
+    "desc": "手写原生方法考虑兼容性考虑方法本身特点手写instanceof// 引用类型判断const myInstanceof = (object,constructor)=>{  let prototype ",
     "url": "/article?id=0038"
   }, {
     "id": "0039",
@@ -523,7 +523,7 @@ var data = [{
     "dir": "编程题",
     "name": "数组",
     "title": "数组",
-    "desc": "数组手写数组去重(deduplicate)的方法（支持多维数组）// 去重const deduplicate = (arr)=>{  return [...new Set(arr)];}手写数组的ma",
+    "desc": "数组手写数组去重(deduplicate)的方法（支持多维数组）// 去重const deduplicate = (arr)=>{  return [...new Set(arr)];}请通过redu",
     "url": "/article?id=0040"
   }, {
     "id": "0041",
@@ -606,91 +606,119 @@ var data = [{
   "tabData": [{
     "id": "0051",
     "dir": "计算机基础",
+    "name": "数据结构与算法",
+    "title": "数据结构与算法",
+    "desc": "算法 + 数据结构 = 程序理解数据结构数据结构是计算机组织、存储数据元素的方式，它是具有一定逻辑关系和存储关系的结构的集合，这个集合中通常还包含这响应的操作方法。数据结构是相对固定的并且通常有特定应",
+    "url": "/article?id=0051"
+  }, {
+    "id": "0052",
+    "dir": "计算机基础",
     "name": "编码常识",
     "title": "编码常识",
     "desc": "编码常识关键词：utf-8、GBKASCII编码ASCII编码一共规定了128个字符的编码规则，这128个字符形成的集合就叫做ASCII字符集。在ASCII编码中，每个字符占用一个字节的后面7位，最前",
-    "url": "/article?id=0051"
+    "url": "/article?id=0052"
   }]
 }, {
   "id": 10,
   "tabTitle": "面试题",
   "tabData": [{
-    "id": "0052",
-    "dir": "面试题",
-    "name": "Javascript",
-    "title": "Javascript",
-    "desc": "js 面试题类型Infinity代表什么数据？全局属性 Infinity 是一个数值，表示无穷大。与 Number.POSITIVE_INFINITY 的数值相同Number.MAX_SAFE_INT",
-    "url": "/article?id=0052"
-  }, {
     "id": "0053",
     "dir": "面试题",
-    "name": "Node",
-    "title": "Node",
-    "desc": "说下你对 Node.js 支持高并发的理解？说下 Node 文件查找的优先级以及 Require 方法的文件查找策略说一下进程和线程的区别？node 如何做错误监控？如何生成日志？日志等级如何划分？N",
+    "name": "Css",
+    "title": "Css",
+    "desc": "盒子模型BFCpositionflexz-indextransform",
     "url": "/article?id=0053"
   }, {
     "id": "0054",
     "dir": "面试题",
-    "name": "React",
-    "title": "React",
-    "desc": "React常见的面试题问题形式构成包括是什么?为什么？优缺点？例如React单向数据流什么是数据流？为什么是自顶向下的？单向数据流是什么意思？为什么是单向的？不能是双向的数据流嘛？单向数据流有什么作用",
+    "name": "HybridH5",
+    "title": "HybridH5",
+    "desc": "h5离线包的原理客户端根据什么拦截静态资源请求jsbridge的原理，这套方案的优缺点？安全漏洞？怎么判断webview是否已经加载完成",
     "url": "/article?id=0054"
   }, {
     "id": "0055",
     "dir": "面试题",
-    "name": "Typescript",
-    "title": "Typescript",
-    "desc": "Typescript面试题在TypeScript中tsconfig.json有什么作用？在TypeScript中说说你对声明合并的理解在TypeScript中as语法是什么？在TypeScript中枚",
+    "name": "Javascript",
+    "title": "Javascript",
+    "desc": "js 面试题类型Infinity代表什么数据？全局属性 Infinity 是一个数值，表示无穷大。与 Number.POSITIVE_INFINITY 的数值相同Number.MAX_SAFE_INT",
     "url": "/article?id=0055"
   }, {
     "id": "0056",
     "dir": "面试题",
-    "name": "Vue",
-    "title": "Vue",
-    "desc": "vue面试题vue从0到1自己构架一个vue项目，说说有哪些步骤、哪些重要插件、目录结构你会怎么组织你知道vue的模板语法用的是哪个web模板引擎的吗？说说你对这模板引擎的理解你知道v-model的原",
+    "name": "Node",
+    "title": "Node",
+    "desc": "说下你对 Node.js 支持高并发的理解？说下 Node 文件查找的优先级以及 Require 方法的文件查找策略说一下进程和线程的区别？node 如何做错误监控？如何生成日志？日志等级如何划分？N",
     "url": "/article?id=0056"
   }, {
     "id": "0057",
     "dir": "面试题",
-    "name": "Webpack",
-    "title": "Webpack",
-    "desc": "工程化题目汇总说下webpack的loader和plugin的区别，都使用过哪些 loader 和 plugin介绍下 webpack，并说下Webpack的构建流程说下tree-shaking的原理",
+    "name": "React",
+    "title": "React",
+    "desc": "React常见的面试题问题形式构成包括是什么?为什么？优缺点？例如React单向数据流什么是数据流？为什么是自顶向下的？单向数据流是什么意思？为什么是单向的？不能是双向的数据流嘛？单向数据流有什么作用",
     "url": "/article?id=0057"
   }, {
     "id": "0058",
     "dir": "面试题",
-    "name": "hr面试题",
-    "title": "hr面试题",
-    "desc": "你最大的优点是什么？面试官关注的点：第一，申请人没有撒谎，而是真实地阐述了自己的优点。第二，他所阐述的优点，恰好是这个职位所需要的素质关键词：如实阐述，合乎逻辑，与职位相匹配例如动手能力强、擅长合理地",
+    "name": "Typescript",
+    "title": "Typescript",
+    "desc": "Typescript面试题在TypeScript中tsconfig.json有什么作用？在TypeScript中说说你对声明合并的理解在TypeScript中as语法是什么？在TypeScript中枚",
     "url": "/article?id=0058"
   }, {
     "id": "0059",
     "dir": "面试题",
-    "name": "单元测试",
-    "title": "单元测试",
-    "desc": "说一下单元测试、E2E测试？它们有什么区别？",
+    "name": "Vue",
+    "title": "Vue",
+    "desc": "vue面试题vue从0到1自己构架一个vue项目，说说有哪些步骤、哪些重要插件、目录结构你会怎么组织你知道vue的模板语法用的是哪个web模板引擎的吗？说说你对这模板引擎的理解你知道v-model的原",
     "url": "/article?id=0059"
   }, {
     "id": "0060",
     "dir": "面试题",
-    "name": "网络",
-    "title": "网络",
-    "desc": "get和post区别get表示读取一个资源，反复读取不应该对访问的数据有副作用（幂等）。幂等代表着非常有利于做缓存，可以对GET请求的数据做缓存，浏览器也是默认会对get请求做缓存的post表示创建一",
+    "name": "Webpack",
+    "title": "Webpack",
+    "desc": "工程化题目汇总说下webpack的loader和plugin的区别，都使用过哪些 loader 和 plugin介绍下 webpack，并说下Webpack的构建流程说下tree-shaking的原理",
     "url": "/article?id=0060"
   }, {
     "id": "0061",
     "dir": "面试题",
-    "name": "面试记录",
-    "title": "面试记录",
-    "desc": "7.28你的性能优化怎么做的http缓存写过哪些react自定义hook？怎么做的？说一说useState？react-router了解吗？操作权限和页面权限怎么做？前端跨域问题？怎么解决？类组件和函",
+    "name": "hr面试题",
+    "title": "hr面试题",
+    "desc": "你最大的优点是什么？面试官关注的点：第一，申请人没有撒谎，而是真实地阐述了自己的优点。第二，他所阐述的优点，恰好是这个职位所需要的素质关键词：如实阐述，合乎逻辑，与职位相匹配例如动手能力强、擅长合理地",
     "url": "/article?id=0061"
   }, {
     "id": "0062",
     "dir": "面试题",
+    "name": "单元测试",
+    "title": "单元测试",
+    "desc": "说一下单元测试、E2E测试？它们有什么区别？",
+    "url": "/article?id=0062"
+  }, {
+    "id": "0063",
+    "dir": "面试题",
+    "name": "网络",
+    "title": "网络",
+    "desc": "get和post区别get表示读取一个资源，反复读取不应该对访问的数据有副作用（幂等）。幂等代表着非常有利于做缓存，可以对GET请求的数据做缓存，浏览器也是默认会对get请求做缓存的post表示创建一",
+    "url": "/article?id=0063"
+  }, {
+    "id": "0064",
+    "dir": "面试题",
+    "name": "面试记录",
+    "title": "面试记录",
+    "desc": "7.28你的性能优化怎么做的http缓存写过哪些react自定义hook？怎么做的？说一说useState？react-router了解吗？操作权限和页面权限怎么做？前端跨域问题？怎么解决？类组件和函",
+    "url": "/article?id=0064"
+  }, {
+    "id": "0065",
+    "dir": "面试题",
     "name": "项目",
     "title": "项目",
     "desc": "经验熟练掌握Javascript，能脱离框架进行原生开发，熟悉Typescript熟练使用React框架以及相关生态技术，能独立完成项目的搭建和项目部署熟悉浏览器原理以及计算机网络相关技术，在性能优化",
-    "url": "/article?id=0062"
+    "url": "/article?id=0065"
+  }, {
+    "id": "0066",
+    "dir": "面试题",
+    "name": "高频面试题",
+    "title": "高频面试题",
+    "desc": "js相关事件循环，promise作用域，闭包引用类型，对象css相关positionflexreact相关setStatehookfiber合成事件diffhybrid h5native和web通信j",
+    "url": "/article?id=0066"
   }]
 }];
 

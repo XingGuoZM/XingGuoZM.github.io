@@ -108,9 +108,7 @@ const generatorBlogFile = async ({ sourceDir, targetDir }) => {
       desc: removeHtmlTag(resHtmlStr).slice(0, 100),
       url: `/article?id=${file.id}`
     }
-    // console.log(getLastDirName(file.filepath))
     fileArr.push(fileObj)
-
 
     // html string -> react string
     const reactStr = parseHtmlStr2ReactTemplate(resHtmlStr);

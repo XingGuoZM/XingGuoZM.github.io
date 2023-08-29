@@ -47,18 +47,22 @@ import CompHTTP缓存0047 from './CompHTTP缓存0047'
 import CompHTTP网络的发展0048 from './CompHTTP网络的发展0048'
 import Comp前端跨域0049 from './Comp前端跨域0049'
 import Comp网络模型0050 from './Comp网络模型0050'
-import Comp编码常识0051 from './Comp编码常识0051'
-import CompJavascript0052 from './CompJavascript0052'
-import CompNode0053 from './CompNode0053'
-import CompReact0054 from './CompReact0054'
-import CompTypescript0055 from './CompTypescript0055'
-import CompVue0056 from './CompVue0056'
-import CompWebpack0057 from './CompWebpack0057'
-import Comphr面试题0058 from './Comphr面试题0058'
-import Comp单元测试0059 from './Comp单元测试0059'
-import Comp网络0060 from './Comp网络0060'
-import Comp面试记录0061 from './Comp面试记录0061'
-import Comp项目0062 from './Comp项目0062'
+import Comp数据结构与算法0051 from './Comp数据结构与算法0051'
+import Comp编码常识0052 from './Comp编码常识0052'
+import CompCss0053 from './CompCss0053'
+import CompHybridH50054 from './CompHybridH50054'
+import CompJavascript0055 from './CompJavascript0055'
+import CompNode0056 from './CompNode0056'
+import CompReact0057 from './CompReact0057'
+import CompTypescript0058 from './CompTypescript0058'
+import CompVue0059 from './CompVue0059'
+import CompWebpack0060 from './CompWebpack0060'
+import Comphr面试题0061 from './Comphr面试题0061'
+import Comp单元测试0062 from './Comp单元测试0062'
+import Comp网络0063 from './Comp网络0063'
+import Comp面试记录0064 from './Comp面试记录0064'
+import Comp项目0065 from './Comp项目0065'
+import Comp高频面试题0066 from './Comp高频面试题0066'
 
   const CompMap: {[key: string]: ReactElement} = {
     '0002':<Compjs发展历史0002/>,
@@ -109,18 +113,22 @@ import Comp项目0062 from './Comp项目0062'
   '0048':<CompHTTP网络的发展0048/>,
   '0049':<Comp前端跨域0049/>,
   '0050':<Comp网络模型0050/>,
-  '0051':<Comp编码常识0051/>,
-  '0052':<CompJavascript0052/>,
-  '0053':<CompNode0053/>,
-  '0054':<CompReact0054/>,
-  '0055':<CompTypescript0055/>,
-  '0056':<CompVue0056/>,
-  '0057':<CompWebpack0057/>,
-  '0058':<Comphr面试题0058/>,
-  '0059':<Comp单元测试0059/>,
-  '0060':<Comp网络0060/>,
-  '0061':<Comp面试记录0061/>,
-  '0062':<Comp项目0062/>
+  '0051':<Comp数据结构与算法0051/>,
+  '0052':<Comp编码常识0052/>,
+  '0053':<CompCss0053/>,
+  '0054':<CompHybridH50054/>,
+  '0055':<CompJavascript0055/>,
+  '0056':<CompNode0056/>,
+  '0057':<CompReact0057/>,
+  '0058':<CompTypescript0058/>,
+  '0059':<CompVue0059/>,
+  '0060':<CompWebpack0060/>,
+  '0061':<Comphr面试题0061/>,
+  '0062':<Comp单元测试0062/>,
+  '0063':<Comp网络0063/>,
+  '0064':<Comp面试记录0064/>,
+  '0065':<Comp项目0065/>,
+  '0066':<Comp高频面试题0066/>
   }
   
   export default ()=> {
