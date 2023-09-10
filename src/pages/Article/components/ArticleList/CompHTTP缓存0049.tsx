@@ -12,6 +12,6 @@
         hljs.highlightElement(el);
       });
     },[])
-    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:"<h1>HTTP缓存</h1>\n<p>SWR和Cache-Control</p>\n"}}></div>
+    return <div style={{fontSize:'0.26rem'}} dangerouslySetInnerHTML={{__html:"<h1>HTTP缓存</h1>\n<p>Expires</p>\n<p>SWR和Cache-Control</p>\n<p>from disk cache &amp; from memory cache</p>\n"}}></div>
   }
   

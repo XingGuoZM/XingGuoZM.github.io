@@ -1845,6 +1845,22 @@ var data = {
     level: 'medium',
     desc: ['熟悉Es6/7', '能脱离框架开发', '熟悉Typescript']
   }],
+  skill: [{
+    tag: 'javascript',
+    percent: 0.9
+  }, {
+    tag: 'react',
+    percent: 0.8
+  }, {
+    tag: 'webpack',
+    percent: 0.65
+  }, {
+    tag: 'vue',
+    percent: 0.4
+  }, {
+    tag: 'http',
+    percent: 0.75
+  }],
   experience: {
     amount: "300",
     stageList: [{
@@ -2151,7 +2167,8 @@ var navbarHeight = function () {
   };
 }();
 var getRpx2px = function getRpx2px(rpx) {
-  return rpx * window.screen.width / 750;
+  var dpr = Number(window.document.documentElement.getAttribute('data-dpr'));
+  return rpx * window.screen.width * dpr / 750;
 }; // ms->hh时mm分ss秒
 
 var formatMs = function formatMs(ms) {

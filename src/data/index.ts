@@ -96,6 +96,14 @@ export const data = {
     { title: 'JavaScript', level: 'high', desc: ['熟悉Es6/7', '能脱离框架开发', '熟悉Typescript'], iconList: [JavascriptSvg] },
     { title: 'Vue', level: 'medium', desc: ['熟悉Es6/7', '能脱离框架开发', '熟悉Typescript'] }
   ],
+  skill:
+    [
+      { tag: 'javascript', percent: 0.9 },
+      { tag: 'react', percent: 0.8 },
+      { tag: 'webpack', percent: 0.65 },
+      { tag: 'vue', percent: 0.4 },
+      { tag: 'http', percent: 0.75 }
+    ],
   experience: {
     amount: "300",
     stageList: [

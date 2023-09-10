@@ -6,6 +6,7 @@ import Floor from '@/components/Floor';
 import UserInfo from './components/UserInfo';
 import UserDetail from './components/UserDetail';
 import Experience from './components/Experience';
+import Skill from './components/Skill';
 import Expert from './components/Expert';
 import ProjectInfo from './components/ProjectInfo';
 import ProjectList from './components/ProjectList';
@@ -26,14 +27,17 @@ function Resume() {
     <Floor>
       <UserDetail data={data.userDetail} />
     </Floor>
+    <Floor title='专业技能'>
+      <Skill />
+    </Floor>
 
-    <Floor
+    {/* <Floor
       title='专业技能'
       more='更多技能'
       moreClk={() => Modal.show(ExpertModal, { title: '更多技能' })}
     >
       <Expert data={data.expert} />
-    </Floor>
+    </Floor> */}
     <Floor title='重点项目'>
       <ProjectInfo data={data.project} />
     </Floor>
