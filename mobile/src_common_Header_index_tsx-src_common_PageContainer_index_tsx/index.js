@@ -2168,7 +2168,8 @@ var navbarHeight = function () {
 }();
 var getRpx2px = function getRpx2px(rpx) {
   var dpr = Number(window.document.documentElement.getAttribute('data-dpr'));
-  return rpx * window.screen.width * dpr / 750;
+  var ScreenWidth = getDeviceInfo.isMobile ? window.screen.width : 60 * 7.5;
+  return rpx * ScreenWidth * dpr / 750;
 }; // ms->hh时mm分ss秒
 
 var formatMs = function formatMs(ms) {

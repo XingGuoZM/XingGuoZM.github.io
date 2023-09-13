@@ -8,12 +8,10 @@ import styles from './index.module.less';
 const CWidth = getRpx2px(500);
 const CHeight = getRpx2px(500);
 
-
 export default function Skill() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const { theme } = useContext(promiseModal.ModalContext);
   useEffect(() => {
-
 
     function getDots(skillData, radius) {
       const len = skillData.length;

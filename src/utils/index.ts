@@ -62,8 +62,10 @@ export const navbarHeight = (() => {
 })();
 
 export const getRpx2px = (rpx: number): number => {
+
   const dpr: number = Number(window.document.documentElement.getAttribute('data-dpr'));
-  return (rpx * window.screen.width * dpr) / 750
+  const ScreenWidth = getDeviceInfo.isMobile ? window.screen.width : 60 * 7.5;
+  return (rpx * ScreenWidth * dpr) / 750;
 };
 // ms->hh时mm分ss秒
 export const formatMs = (ms: number): string => {
