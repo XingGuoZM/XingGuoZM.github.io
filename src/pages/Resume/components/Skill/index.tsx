@@ -12,14 +12,12 @@ export default function Skill() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const { theme } = useContext(promiseModal.ModalContext);
   useEffect(() => {
-
-    function getDots(skillData, radius) {
-      const len = skillData.length;
-      return skillData.map((item, index) => {
+    function getDots(data, radius: number) {
+      const len = data.length;
+      return data.map((item, index: number) => {
         const angle = Math.PI * 2 * index / len
         const x = radius * (1 - Number(Math.sin(angle).toFixed(2)));
         const y = radius * (1 - Number(Math.cos(angle).toFixed(2)));
-
         return { ...item, x, y, angle }
       })
     }
@@ -27,7 +25,6 @@ export default function Skill() {
       const radius = CWidth / 3
       const space = CWidth / 2 - radius
       ctx.beginPath();
-      // ctx.lineWidth = getRpx2px(2);
       const arr = getDots(data.skill, radius);
       arr.forEach(item => {
         ctx.lineTo(item.x + space, item.y + space);
