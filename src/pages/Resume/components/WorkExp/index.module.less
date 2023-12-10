@@ -1,0 +1,101 @@
+.wrap{
+    width:7rem;
+    height:5.5rem;
+    position:relative;
+    perspective: 1rem;
+    overflow:hidden;
+    transform-style: preserve-3d;
+}
+
+.timeline{
+    width: 0.1rem;
+    height: 4rem; 
+    animation:moveTimeline 3s 1 forwards;
+    background-color: var(--theme-color);
+    position:absolute;
+    left:3.5rem;
+    top:0;
+}
+.node{
+    width: 5rem;
+    height: 1rem;
+	-webkit-backdrop-filter: blur(0.1rem);
+	backdrop-filter: blur(0.1rem);
+    box-shadow: 0.01rem 0.01rem 0.1rem 0.01rem var(--theme-color);
+    position: absolute;
+    font-size: 0.32rem;
+    transform-origin: top left;
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+}
+.titleWrap{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:0.1rem;
+    margin-top:0.1rem;
+}
+.title{
+    font-size:0.28rem;
+}
+.subTitle{
+    font-size:0.26rem;
+
+}
+.node1{
+    animation:moveTimeNode1 3s linear  1 forwards;
+}
+.node2{
+    animation:moveTimeNode2 3s linear 1 forwards;
+}
+.node3{
+    animation:moveTimeNode3 3s linear 1 forwards;
+}
+.node4{
+    animation:moveTimeNode4 3s linear 1 forwards;
+}
+
+@keyframes moveTimeline {
+    0%{
+        transform:rotateX(45deg) rotateZ(15deg)  translateY(-6rem);
+    }
+    100%{
+        transform:rotateX(45deg) rotateZ(15deg) translateY(2rem);
+    }
+}
+@keyframes moveTimeNode1{
+    0%{
+        transform: translateX(3.2rem) translateY(2.2rem) scale(0.4);
+    }
+    100%{
+        transform: translateX(3.2rem) translateY(2.2rem) scale(0.4);
+    }
+}
+@keyframes moveTimeNode2{
+    0%{
+        // transform: translateX(3.5rem) translateY(2rem) scale(0.4);
+        transform: translateX(3.2rem) translateY(2.2rem) scale(0.4);
+    }
+    100%{
+        transform: translateX(2.5rem) translateY(2.7rem) scale(0.6);
+    }
+}
+@keyframes moveTimeNode3{
+    0%{
+        // transform: translateX(3.5rem) translateY(2rem) scale(0.6);
+        transform: translateX(3.2rem) translateY(2.2rem) scale(0.4);
+    }
+    100%{
+        transform: translateX(1.4rem) translateY(3.4rem) scale(0.8);
+    }
+}
+@keyframes moveTimeNode4{
+    0%{
+        // transform: translateX(3.5rem) translateY(2rem) scale(0.8);
+        transform: translateX(3.2rem) translateY(2.2rem) scale(0.4);
+    }
+    100%{
+        transform: translateX(0) translateY(4.3rem) scale(1);
+    }
+}
